@@ -10,6 +10,9 @@ its needed
 
 # Backup steps
 
+See the [media wiki index.php](https://www.mediawiki.org/wiki/Manual:Parameters_to_index.php) 
+page for more details on what you can pull from media wiki.
+
 ```bash
  # Backup the all pages special page
  curl http://opencores.org/or1k/Special:AllPages  -o opencores-allpages
@@ -18,5 +21,7 @@ its needed
  grep  -o 'a href=\"/or1k/[^\"]\+' opencores-allpages | cut -d\/ -f3 > opencores-pages.txt
  
  # for each page download and save the page from opencores
- cat opencores-pages.txt | while read page; do curl http://opencores.org/or1k/$page -o $page.raw ; done
+ cat opencores-pages.txt | while read page; do 
+  curl http://opencores.org/or1k/${page}?action=raw -o $page.raw
+ done
 ```
