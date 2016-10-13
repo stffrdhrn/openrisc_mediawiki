@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head>
+            
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="generator" content="MediaWiki 1.17.0" />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
+<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
+        <!--[if lt IE 7]>
+        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
+		<meta http-equiv="imagetoolbar" content="no" />
+        <![endif]-->
+        
+        <script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "Special", "wgCanonicalSpecialPageName": "Specialpages", "wgNamespaceNumber": -1, "wgPageName": "Special:SpecialPages", "wgTitle": "SpecialPages", "wgAction": "view", "wgArticleId": 0, "wgIsArticle": false, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 0, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionCreate": []});
+}
+</script>        
+        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
+		
+        <!-- Head Scripts -->
+                
+        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
+                
+                
+		        
+		        
+		        
+            <title>Special pages - OR1K :: OpenCores</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
+    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
+    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
+    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+    <script type="text/javascript">
+    GS_googleAddAdSenseService("ca-pub-0097483751598630");
+    GS_googleEnableAllServices();
+    </script>
+    <script type="text/javascript">
+    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
+    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
+    </script>
+    <script type="text/javascript">
+    GA_googleFetchAds();
+    </script>
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
+    <![endif]-->
+    <!--[if (IE 7)|(IE 8)]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <script type="text/javascript">
+        
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2763846-2']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+    </script>
+    
+</head>
+<body>
+<div class="main">
+    <div class="top">
+        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
+    </div>
+    <div class="line">
+	<div></div>
+	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
+    </div>
+    <div class="mid" id="dm">
+        <div class="mainmenu" id="dml">
+	            
+        <div class="menu menu-login">
+                Username:                                <form action="../login" method="post">
+                    <input class="design" name="user" type="text" />
+                    <br />
+                    Password:
+                    <br />
+                    <input class="design" name="pass" type="password" />
+                    <br />
+                    <input class="design" name="remember" type="checkbox" />Remember me
+                    <br />
+                    <input type="hidden" name="redirect" value="or1k/" />
+                    <input class="design" title="Login" type="submit" value="Login" />
+                </form>
+                <form action="../register" method="post">
+                    <input class="design" title="Register" type="submit" value="Register" />
+                </form>
+                        </div>
+        
+                
+        
+        <div class="menu" id="p-navigation">
+            <h2>Navigation</h2>
+		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
+        
+                
+        <div class="menu">
+            <h2><label for="searchInput">Search</label></h2>
+                <form action="/wiki1/index.php" id="searchform">
+                    <div>
+                        <input type='hidden' name="title" value="Special:Search"/>
+                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
+                        
+                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
+                        
+                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+                                                
+                    </div>
+                </form>
+        </div>
+        
+                
+        <div class="menu menu-tools">
+            <h2>Toolbox</h2>
+                <ul>
+                    <li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>                </ul>
+        </div>
+        
+        
+        </div>
+        <div class="content" id="dmc">
+	    
+<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
+    
+    <div style="float: left; width: 720px; height: 60px;">
+        <!-- 720x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("720x60");
+        </script>
+    </div>
+        <div style="float: left; width: 300px; height: 60px;">
+        <!-- 300x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("300x60");
+        </script>
+    </div>
+    
+</div>
+	                        
+        <a name="top" id="top"></a>
+        
+                
+        <div id="oc-actions">
+            <p id="ca-nstab-special" class="selected"><a href="/or1k/Special:SpecialPages" title="This is a special page, you cannot edit the page itself">Special page</a></p>        </div>
+        
+        <h1 id="firstHeading" class="firstHeading">
+            Special pages        </h1>
+        
+        <div id="bodyContent">
+            <h3 id="siteSub">From OR1K</h3>
+            <div id="contentSub"></div>
+                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
+            <h4 class="mw-specialpagesgroup" id="mw-specialpagesgroup-maintenance"> <span class="mw-headline" id="Maintenance_reports">Maintenance reports</span></h4>
+<table style="width:100%;" class="mw-specialpages-table">
+<tr>
+<td style="width:30%;vertical-align:top">
+<ul>
+<li><a href="/or1k/Special:BrokenRedirects" title="Special:BrokenRedirects">Broken redirects</a></li>
+<li><a href="/or1k/Special:DeadendPages" title="Special:DeadendPages">Dead-end pages</a></li>
+<li><a href="/or1k/Special:DoubleRedirects" title="Special:DoubleRedirects">Double redirects</a></li>
+<li><a href="/or1k/Special:LongPages" title="Special:LongPages">Long pages</a></li>
+<li><a href="/or1k/Special:AncientPages" title="Special:AncientPages">Oldest pages</a></li>
+<li><a href="/or1k/Special:LonelyPages" title="Special:LonelyPages">Orphaned pages</a></li>
+<li><a href="/or1k/Special:FewestRevisions" title="Special:FewestRevisions">Pages with the fewest revisions</a></li>
+<li><a href="/or1k/Special:WithoutInterwiki" title="Special:WithoutInterwiki">Pages without language links</a></li>
+<li><a href="/or1k/Special:ProtectedPages" title="Special:ProtectedPages">Protected pages</a></li>
+<li><a href="/or1k/Special:ProtectedTitles" title="Special:ProtectedTitles">Protected titles</a></li>
+<li><a href="/or1k/Special:ShortPages" title="Special:ShortPages">Short pages</a></li>
+</ul></td><td style="width:10%"></td><td style="width:30%"><ul>
+<li><a href="/or1k/Special:UncategorizedCategories" title="Special:UncategorizedCategories">Uncategorized categories</a></li>
+<li><a href="/or1k/Special:UncategorizedFiles" title="Special:UncategorizedFiles">Uncategorized files</a></li>
+<li><a href="/or1k/Special:UncategorizedPages" title="Special:UncategorizedPages">Uncategorized pages</a></li>
+<li><a href="/or1k/Special:UncategorizedTemplates" title="Special:UncategorizedTemplates">Uncategorized templates</a></li>
+<li><a href="/or1k/Special:UnusedCategories" title="Special:UnusedCategories">Unused categories</a></li>
+<li><a href="/or1k/Special:UnusedFiles" title="Special:UnusedFiles">Unused files</a></li>
+<li><a href="/or1k/Special:UnusedTemplates" title="Special:UnusedTemplates">Unused templates</a></li>
+<li><a href="/or1k/Special:WantedCategories" title="Special:WantedCategories">Wanted categories</a></li>
+<li><a href="/or1k/Special:WantedFiles" title="Special:WantedFiles">Wanted files</a></li>
+<li><a href="/or1k/Special:WantedPages" title="Special:WantedPages">Wanted pages</a></li>
+<li><a href="/or1k/Special:WantedTemplates" title="Special:WantedTemplates">Wanted templates</a></li>
+</ul></td><td style="width:30%"></td></tr></table>
+<h4 class="mw-specialpagesgroup" id="mw-specialpagesgroup-pages"> <span class="mw-headline" id="Lists_of_pages">Lists of pages</span></h4>
+<table style="width:100%;" class="mw-specialpages-table">
+<tr>
+<td style="width:30%;vertical-align:top">
+<ul>
+<li><a href="/or1k/Special:AllPages" title="Special:AllPages">All pages</a></li>
+<li><a href="/or1k/Special:PrefixIndex" title="Special:PrefixIndex">All pages with prefix</a></li>
+<li><a href="/or1k/Special:Categories" title="Special:Categories">Categories</a></li>
+</ul></td><td style="width:10%"></td><td style="width:30%"><ul>
+<li><a href="/or1k/Special:Disambiguations" title="Special:Disambiguations">Disambiguation pages</a></li>
+<li><a href="/or1k/Special:ListRedirects" title="Special:ListRedirects">List of redirects</a></li>
+</ul></td><td style="width:30%"></td></tr></table>
+<h4 class="mw-specialpagesgroup" id="mw-specialpagesgroup-login"> <span class="mw-headline" id="Login_.2F_sign_up">Login / sign up</span></h4>
+<table style="width:100%;" class="mw-specialpages-table">
+<tr>
+<td style="width:30%;vertical-align:top">
+<ul>
+<li><a href="/or1k/Special:UserLogin" title="Special:UserLogin">Log in / create account</a></li>
+</ul></td><td style="width:30%"></td></tr></table>
+<h4 class="mw-specialpagesgroup" id="mw-specialpagesgroup-users"> <span class="mw-headline" id="Users_and_rights">Users and rights</span></h4>
+<table style="width:100%;" class="mw-specialpages-table">
+<tr>
+<td style="width:30%;vertical-align:top">
+<ul>
+<li><a href="/or1k/Special:ActiveUsers" title="Special:ActiveUsers">Active users list</a></li>
+<li><a href="/or1k/Special:BlockList" title="Special:BlockList">Blocked IP addresses and usernames</a></li>
+<li><a href="/or1k/Special:ChangePassword" title="Special:ChangePassword">Change password</a></li>
+<li><a href="/or1k/Special:Preferences" title="Special:Preferences">Preferences</a></li>
+</ul></td><td style="width:10%"></td><td style="width:30%"><ul>
+<li><a href="/or1k/Special:Contributions" title="Special:Contributions">User contributions</a></li>
+<li><a href="/or1k/Special:ListGroupRights" title="Special:ListGroupRights">User group rights</a></li>
+<li><a href="/or1k/Special:ListUsers" title="Special:ListUsers">User list</a></li>
+</ul></td><td style="width:30%"></td></tr></table>
+<h4 class="mw-specialpagesgroup" id="mw-specialpagesgroup-changes"> <span class="mw-headline" id="Recent_changes_and_logs">Recent changes and logs</span></h4>
+<table style="width:100%;" class="mw-specialpages-table">
+<tr>
+<td style="width:30%;vertical-align:top">
+<ul>
+<li><a href="/or1k/Special:NewFiles" title="Special:NewFiles">Gallery of new files</a></li>
+<li><a href="/or1k/Special:Log" title="Special:Log">Logs</a></li>
+<li><a href="/or1k/Special:Watchlist" title="Special:Watchlist">My watchlist</a></li>
+<li><a href="/or1k/Special:NewPages" title="Special:NewPages">New pages</a></li>
+</ul></td><td style="width:10%"></td><td style="width:30%"><ul>
+<li><a href="/or1k/Special:RecentChanges" title="Special:RecentChanges">Recent changes</a></li>
+<li><a href="/or1k/Special:RecentChangesLinked" title="Special:RecentChangesLinked">Related changes</a></li>
+<li><a href="/or1k/Special:Tags" title="Special:Tags">Valid change tags</a></li>
+</ul></td><td style="width:30%"></td></tr></table>
+<h4 class="mw-specialpagesgroup" id="mw-specialpagesgroup-media"> <span class="mw-headline" id="Media_reports_and_uploads">Media reports and uploads</span></h4>
+<table style="width:100%;" class="mw-specialpages-table">
+<tr>
+<td style="width:30%;vertical-align:top">
+<ul>
+<li><a href="/or1k/Special:ListFiles" title="Special:ListFiles">File list</a></li>
+<li><a href="/or1k/Special:FilePath" title="Special:FilePath">File path</a></li>
+</ul></td><td style="width:10%"></td><td style="width:30%"><ul>
+<li><a href="/or1k/Special:MIMESearch" title="Special:MIMESearch">MIME search</a></li>
+<li><a href="/or1k/Special:FileDuplicateSearch" title="Special:FileDuplicateSearch">Search for duplicate files</a></li>
+</ul></td><td style="width:30%"></td></tr></table>
+<h4 class="mw-specialpagesgroup" id="mw-specialpagesgroup-wiki"> <span class="mw-headline" id="Wiki_data_and_tools">Wiki data and tools</span></h4>
+<table style="width:100%;" class="mw-specialpages-table">
+<tr>
+<td style="width:30%;vertical-align:top">
+<ul>
+<li><a href="/or1k/Special:PopularPages" title="Special:PopularPages">Popular pages</a></li>
+<li><a href="/or1k/Special:Statistics" title="Special:Statistics">Statistics</a></li>
+</ul></td><td style="width:10%"></td><td style="width:30%"><ul>
+<li><a href="/or1k/Special:AllMessages" title="Special:AllMessages">System messages</a></li>
+<li><a href="/or1k/Special:Version" title="Special:Version">Version</a></li>
+</ul></td><td style="width:30%"></td></tr></table>
+<h4 class="mw-specialpagesgroup" id="mw-specialpagesgroup-redirects"> <span class="mw-headline" id="Redirecting_special_pages">Redirecting special pages</span></h4>
+<table style="width:100%;" class="mw-specialpages-table">
+<tr>
+<td style="width:30%;vertical-align:top">
+<ul>
+<li><a href="/or1k/Special:LinkSearch" title="Special:LinkSearch">External links</a></li>
+<li><a href="/or1k/Special:Random" title="Special:Random">Random page</a></li>
+</ul></td><td style="width:10%"></td><td style="width:30%"><ul>
+<li><a href="/or1k/Special:RandomRedirect" title="Special:RandomRedirect">Random redirect</a></li>
+<li><a href="/or1k/Special:Search" title="Special:Search">Search</a></li>
+</ul></td><td style="width:30%"></td></tr></table>
+<h4 class="mw-specialpagesgroup" id="mw-specialpagesgroup-highuse"> <span class="mw-headline" id="High_use_pages">High use pages</span></h4>
+<table style="width:100%;" class="mw-specialpages-table">
+<tr>
+<td style="width:30%;vertical-align:top">
+<ul>
+<li><a href="/or1k/Special:MostLinkedCategories" title="Special:MostLinkedCategories">Most linked-to categories</a></li>
+<li><a href="/or1k/Special:MostLinkedFiles" title="Special:MostLinkedFiles">Most linked-to files</a></li>
+<li><a href="/or1k/Special:MostLinkedPages" title="Special:MostLinkedPages">Most linked-to pages</a></li>
+</ul></td><td style="width:10%"></td><td style="width:30%"><ul>
+<li><a href="/or1k/Special:MostLinkedTemplates" title="Special:MostLinkedTemplates">Most linked-to templates</a></li>
+<li><a href="/or1k/Special:MostCategories" title="Special:MostCategories">Pages with the most categories</a></li>
+<li><a href="/or1k/Special:MostRevisions" title="Special:MostRevisions">Pages with the most revisions</a></li>
+</ul></td><td style="width:30%"></td></tr></table>
+<h4 class="mw-specialpagesgroup" id="mw-specialpagesgroup-pagetools"> <span class="mw-headline" id="Page_tools">Page tools</span></h4>
+<table style="width:100%;" class="mw-specialpages-table">
+<tr>
+<td style="width:30%;vertical-align:top">
+<ul>
+<li><a href="/or1k/Special:ComparePages" title="Special:ComparePages">Compare pages</a></li>
+<li><a href="/or1k/Special:Export" title="Special:Export">Export pages</a></li>
+<li><a href="/or1k/Special:WhatLinksHere" title="Special:WhatLinksHere">What links here</a></li>
+</ul></td><td style="width:30%"></td></tr></table>
+<h4 class="mw-specialpagesgroup" id="mw-specialpagesgroup-other"> <span class="mw-headline" id="Other_special_pages">Other special pages</span></h4>
+<table style="width:100%;" class="mw-specialpages-table">
+<tr>
+<td style="width:30%;vertical-align:top">
+<ul>
+<li><a href="/or1k/Special:BookSources" title="Special:BookSources">Book sources</a></li>
+<li><a href="/or1k/Special:Bugs" title="Special:Bugs">Bugtracker</a></li>
+</ul></td><td style="width:10%"></td><td style="width:30%"><ul>
+<li><a href="/or1k/Special:News" title="Special:News">News</a></li>
+<li><a href="/or1k/Special:Overview" title="Special:Overview">Overview</a></li>
+</ul></td><td style="width:30%"></td></tr></table>
+<div class="printfooter">
+Retrieved from "<a href="http://opencores.org/or1k/Special:SpecialPages">http://opencores.org/or1k/Special:SpecialPages</a>"</div>
+            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
+                        <div class="visualClear"></div>
+        </div>
+        
+                
+        <div class="visualClear"><p></p></div>
+        
+        <div id="footer">
+            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
+<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "Special", "wgCanonicalSpecialPageName": "Specialpages", "wgNamespaceNumber": -1, "wgPageName": "Special:SpecialPages", "wgTitle": "SpecialPages", "wgAction": "view", "wgArticleId": 0, "wgIsArticle": false, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 0, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionCreate": []});
+}
+</script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+	mediaWiki.loader.go();
+}
+</script>
+
+<script>if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
+}
+</script><!-- Served in 23.203 secs. -->            
+        </div>
+        
+        
+        </div>
+	<div style="clear:both;margin-left:200px;">
+            <!-- 728x90 -->
+            <script type="text/javascript">
+            GA_googleFillSlot("728x90");
+            </script>
+	</div>
+    </div>
+    <div class="bot">
+	&copy; copyright 1999-2016
+OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
+    </div>
+</div>
+
+<!-- Google search -->
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+<!-- /Google search -->
+
+</body>
+</html>

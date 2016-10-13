@@ -1,0 +1,629 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head>
+            
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="generator" content="MediaWiki 1.17.0" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
+<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
+        <!--[if lt IE 7]>
+        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
+		<meta http-equiv="imagetoolbar" content="no" />
+        <![endif]-->
+        
+        <script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Newlib", "wgTitle": "Newlib", "wgAction": "view", "wgArticleId": 42, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1299, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>        
+        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
+		
+        <!-- Head Scripts -->
+                
+        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
+                
+                
+		        
+		        
+		        
+            <title>Newlib - OR1K :: OpenCores</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
+    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
+    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
+    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+    <script type="text/javascript">
+    GS_googleAddAdSenseService("ca-pub-0097483751598630");
+    GS_googleEnableAllServices();
+    </script>
+    <script type="text/javascript">
+    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
+    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
+    </script>
+    <script type="text/javascript">
+    GA_googleFetchAds();
+    </script>
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
+    <![endif]-->
+    <!--[if (IE 7)|(IE 8)]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <script type="text/javascript">
+        
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2763846-2']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+    </script>
+    
+</head>
+<body>
+<div class="main">
+    <div class="top">
+        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
+    </div>
+    <div class="line">
+	<div></div>
+	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
+    </div>
+    <div class="mid" id="dm">
+        <div class="mainmenu" id="dml">
+	            
+        <div class="menu menu-login">
+                Username:                                <form action="../login" method="post">
+                    <input class="design" name="user" type="text" />
+                    <br />
+                    Password:
+                    <br />
+                    <input class="design" name="pass" type="password" />
+                    <br />
+                    <input class="design" name="remember" type="checkbox" />Remember me
+                    <br />
+                    <input type="hidden" name="redirect" value="or1k/" />
+                    <input class="design" title="Login" type="submit" value="Login" />
+                </form>
+                <form action="../register" method="post">
+                    <input class="design" title="Register" type="submit" value="Register" />
+                </form>
+                        </div>
+        
+                
+        
+        <div class="menu" id="p-navigation">
+            <h2>Navigation</h2>
+		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
+        
+                
+        <div class="menu">
+            <h2><label for="searchInput">Search</label></h2>
+                <form action="/wiki1/index.php" id="searchform">
+                    <div>
+                        <input type='hidden' name="title" value="Special:Search"/>
+                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
+                        
+                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
+                        
+                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+                                                
+                    </div>
+                </form>
+        </div>
+        
+                
+        <div class="menu menu-tools">
+            <h2>Toolbox</h2>
+                <ul>
+                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/Newlib" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/Newlib" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=Newlib&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=Newlib&amp;oldid=1299" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
+        </div>
+        
+        
+        </div>
+        <div class="content" id="dmc">
+	    
+<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
+    
+    <div style="float: left; width: 720px; height: 60px;">
+        <!-- 720x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("720x60");
+        </script>
+    </div>
+        <div style="float: left; width: 300px; height: 60px;">
+        <!-- 300x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("300x60");
+        </script>
+    </div>
+    
+</div>
+	                        
+        <a name="top" id="top"></a>
+        
+                
+        <div id="oc-actions">
+            <p id="ca-nstab-main" class="selected"><a href="/or1k/Newlib" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:Newlib&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=Newlib&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=Newlib&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
+        
+        <h1 id="firstHeading" class="firstHeading">
+            Newlib        </h1>
+        
+        <div id="bodyContent">
+            <h3 id="siteSub">From OR1K</h3>
+            <div id="contentSub"></div>
+                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
+            <table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Port_acknowledgements"><span class="tocnumber">2</span> <span class="toctext">Port acknowledgements</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#OpenRISC_support_library"><span class="tocnumber">3</span> <span class="toctext">OpenRISC support library</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Support_library_functions"><span class="tocnumber">3.1</span> <span class="toctext">Support library functions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#TODO"><span class="tocnumber">3.1.1</span> <span class="toctext">TODO</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#Board_support_details"><span class="tocnumber">3.2</span> <span class="toctext">Board support details</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Adding_support_for_a_new_board"><span class="tocnumber">3.2.1</span> <span class="toctext">Adding support for a new board</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Introduction"> Introduction </span></h1>
+<p>The OpenRISC 1000 port of the newlib library aims to provide a library to provide support for running on bare-metal hardware without an operating system. It is also used when running the GNU toolchain regression suite.
+</p><p>The library is automatically linked when using the newlib version of the GCC compiler (or32-elf-gcc). The target board is specified by -m<i>boardname</i>. If no board is specified, the default (-mor1ksim) is suitable for use with <a href="/or1k/Or1ksim" title="Or1ksim">Or1ksim</a>.
+</p>
+<h1> <span class="mw-headline" id="Port_acknowledgements"> Port acknowledgements </span></h1>
+<p>This <a href="http://www.doc.ic.ac.uk/~jab00/or32-newlib/" class="external text" rel="nofollow">original port</a> was for newlib 1.13.0 by Jacob Bower, then of Imperial College, London.
+</p><p>The port was completely rewritten and tested for newlib 1.18.0 by <a href="/or1k/User:Jeremybennett" title="User:Jeremybennett">Jeremy Bennett</a> of <a href="http://www.embecosm.com" class="external text" rel="nofollow">Embecosm</a>.
+Further information is availble in <a href="http://www.embecosm.com/download/ean9.html" class="external text" rel="nofollow">Embecosm Application Note 9</a> <i>Howto: Porting Newlib: A Simple Guide</i>, which explains in full detail how the port for the OpenRISC 1000 architecture was done.
+</p><p>The port was subsequently extended by <a href="/or1k/User:Julius" title="User:Julius">Julius Baxter</a> to make support of multiple boards much more flexible.
+</p><p>Once again the port was rewritten mostly by Stefan Wallentowitz and is now a part of the official newlib library since 2.2.0
+</p>
+<h1> <span class="mw-headline" id="OpenRISC_support_library"> OpenRISC support library </span></h1>
+<p>To assist with using features of the OpenRISC processor such as exceptions, interrupts and timers, a support library has been implemented.
+</p><p>This library also provides support for particular boards in ORPSoC.
+</p>
+<h2> <span class="mw-headline" id="Support_library_functions"> Support library functions </span></h2>
+<p>These functions are implemented in the or1k-support.c and or1k-support-asm.S files in the <code>newlib/libc/machine/or32</code> path in the newlib port directory. The header, <code>or1k-newlib-support.h</code> is found in the <code>newlib/libc/machine/or32/include</code> path. Note that this header and the OR1K <code>spr-defs.h</code> header are installed also in the <code>/install_path/or32-elf/include</code> path.
+</p><p>They are accessible via the inclusion of the following header.
+</p>
+<pre><code>#include &lt;or1k-support.h&gt;</code>
+</pre>
+<p>The following functions are provided
+</p>
+<table border="1" align="center" style="text-align:center;">
+<tr>
+<td><b>Function Name</b>
+</td>
+<td><b>Arguments</b>
+</td>
+<td><b>Description</b>
+</td>
+<td><b>Return value</b>
+</td></tr>
+<tr>
+<td><code>or1k_interrupt_handler_add</code>
+</td>
+<td><code>int irq, void(*function_name)(void)</code>
+</td>
+<td>Install function_name as handler for interrupt at IRQ <code>irq</code>
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_interrupt_enable</code>
+</td>
+<td><code>int irq</code>
+</td>
+<td>Enable generation interrupt at IRQ irq in PICMR
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_interrupt_disable</code>
+</td>
+<td><code>int irq</code>
+</td>
+<td>Disable generation of interrupt at IRQ irq in PICMR
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_exception_handler_add</code>
+</td>
+<td><code>int vector, void(*function_name)(void*)</code>
+</td>
+<td>Install function_name as handler for vector at address (vector*0x100)
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_mtspr</code>
+</td>
+<td><code>unsigned long int spr, unsigned long int value</code>
+</td>
+<td>Write SPR[spr] = value
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_mfspr</code>
+</td>
+<td><code>unsigned long int spr</code>
+</td>
+<td>Read SPR[spr]
+</td>
+<td>SPR[spr]
+</td></tr>
+<tr>
+<td><code>or1k_report</code>
+</td>
+<td><code>unsigned long int value</code>
+</td>
+<td>Simulator report function with l.nop 0x2
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_icache_enable</code>
+</td>
+<td><code>void</code>
+</td>
+<td>Enable instruction cache in SR
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_icache_disable</code>
+</td>
+<td><code>void</code>
+</td>
+<td>Disable instruction cache in SR
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_icache_flush</code>
+</td>
+<td><code>unsigned long addr</code>
+</td>
+<td>Flush addr from instruction cache
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_dcache_enable</code>
+</td>
+<td><code>void</code>
+</td>
+<td>Enable data cache in SR
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_dcache_disable</code>
+</td>
+<td><code>void</code>
+</td>
+<td>Disable data cache in SR
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_dcache_flush</code>
+</td>
+<td><code>unsigned long addr</code>
+</td>
+<td>Flush addr from data cache
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_immu_enable</code>
+</td>
+<td><code>void</code>
+</td>
+<td>Enable instruction MMU in SR
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_immu_disable</code>
+</td>
+<td><code>void</code>
+</td>
+<td>Disable instruction MMU in SR
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_dmmu_enable</code>
+</td>
+<td><code>void</code>
+</td>
+<td>Enable data MMU in SR
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_dmmu_disable</code>
+</td>
+<td><code>void</code>
+</td>
+<td>Disable data MMU in SR
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_timer_init</code>
+</td>
+<td><code>unsigned int hz</code>
+</td>
+<td>Initialise timer to count at hz hertz, reset tick counter, install handler
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_timer_enable</code>
+</td>
+<td><code>void</code>
+</td>
+<td>Start timer, enable timer interrupt in SR
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_timer_disable</code>
+</td>
+<td><code>void</code>
+</td>
+<td>Stop timer interrupts
+</td>
+<td>none
+</td></tr>
+<tr>
+<td><code>or1k_timer_get_ticks</code>
+</td>
+<td><code>void</code>
+</td>
+<td>Read tick counter value
+</td>
+<td>tick counter
+</td></tr>
+<tr>
+<td><code>or1k_timer_reset_ticks</code>
+</td>
+<td><code>void</code>
+</td>
+<td>Reset tick counter value
+</td>
+<td>none
+</td></tr></table>
+<p>Contributions are welcome to help fix and improve this support library.
+</p><p>Feel free to post any suggestions or offers to assist the project to the <a href="http://opencores.org/forum,OpenRISC" class="external text" rel="nofollow">OpenRISC forum</a> or the <a href="/or1k/OR1K:Community_portal#Mailing_lists" title="OR1K:Community portal"> mailing lists</a>.
+</p>
+<h3> <span class="mw-headline" id="TODO"> TODO </span></h3>
+<p>Functions still missing: interrupt acknowledge/clear function to clear bit in PICSR, cache region flush, MMU map function.
+</p>
+<h2> <span class="mw-headline" id="Board_support_details"> Board support details </span></h2>
+<p>The OpenRISC portion of libgloss provides a simple way of adding support for boards by way of linking in a small library containing some values used at run-time to configure the system. Each board has its own path and <code>libboard.a</code> in the <code>/install_path/or32-elf/lib/boards/<i>boardname</i></code> directory. The <i>boardname</i> above should correspond to a directory under this path.
+</p><p>Libgloss also implements system calls, and at present only read and write system calls are supported via the UART.
+</p><p>In the version currently in the repository, a handful of boards and the or1ksim architectural simulator are supported.
+</p>
+<table border="1" align="center" style="text-align:center;">
+<tr>
+<td><b>Board</b>
+</td>
+<td><b>Description</b>
+</td></tr>
+<tr>
+<td>or1ksim
+</td>
+<td>or1ksim simulator, no peripherals
+</td></tr>
+<tr>
+<td>or1ksim-uart
+</td>
+<td>or1ksim simulator with a UART
+</td></tr>
+<tr>
+<td>ordb1a3pe1500
+</td>
+<td>ORSoC development board 1, A3PE1500 part, as in ORPSoC
+</td></tr>
+<tr>
+<td>ml501
+</td>
+<td>Xilinx ML501 board, as in ORPSoC
+</td></tr>
+<tr>
+<td>orpsocrefdesign
+</td>
+<td>ORPSoC reference design
+</td></tr>
+<tr>
+<td>de0_nano
+</td>
+<td>Terasic DE0 Nano
+</td></tr>
+<tr>
+<td>ordb2a
+</td>
+<td>ORSoC development board 2
+</td></tr>
+<tr>
+<td>atlys
+</td>
+<td>Digilent Atlys board
+</td></tr></table>
+<p>For example, to compile with support for the <i>de0_nano</i> board, one would pass the following options at compile-time.
+</p>
+<pre><code>or32-elf-gcc -mboard=de0_nano</code>
+</pre>
+<p>Each <code>libboard.a</code> defines the following symbols:
+</p>
+<table border="1" align="center" style="text-align:center;">
+<tr>
+<td><b>Symbol</b>
+</td>
+<td><b>Description</b>
+</td></tr>
+<tr>
+<td>_board_mem_base
+</td>
+<td>Base of main memory
+</td></tr>
+<tr>
+<td>_board_mem_size
+</td>
+<td>Size of main memory
+</td></tr>
+<tr>
+<td>_board_clk_freq
+</td>
+<td>Frequency in hertz of CPU clock, also presumed as UART clock
+</td></tr>
+<tr>
+<td>_board_uart_base
+</td>
+<td>Base address of a UART 16550 peripheral
+</td></tr>
+<tr>
+<td>_board_uart_baud
+</td>
+<td>Desired buad rate for UART
+</td></tr>
+<tr>
+<td>_board_uart_IRQ
+</td>
+<td>IRQ number of UART
+</td></tr>
+<tr>
+<td>_board_exit
+</td>
+<td>A board exit function (weak, may be overriden in C)
+</td></tr></table>
+<h3> <span class="mw-headline" id="Adding_support_for_a_new_board"> Adding support for a new board </span></h3>
+<p>Adding additional boards (without recompiling and installing the toolchain) is as simple as creating a creating a <code>libboard.a</code> with the appropriate symbols set to the right values and placing it in the <code>/install_path/or32-elf/lib/boards/<i>boardname</i></code> directory. The <i>boardname</i> should be the same as the one used when passing the <code>-mboard=<i>boardname</i></code> to the compiler.
+</p><p>To create this <code>libboard.a</code> see examples of the existing <code><i>boardname</i>.S</code> files in the <code>newlib-1.x.0/libgloss/or32</code> path in the newlib port source.
+</p><p>For example, the ml501 board's code is in the <code>newlib-1.x.0/libgloss/or32/ml501.S</code> file and is as follows:
+</p>
+<pre>#include "or1k-asm.h"
+
+/*
+ * Define symbols to be used during startup - file is linked at compile time
+ *
+ */
+.global _board_mem_base
+.global _board_mem_size
+.global _board_clk_freq 
+
+_board_mem_base:	.long	0x0
+_board_mem_size:	.long	0x800000
+
+_board_clk_freq:	.long	66666666 
+
+/* Peripheral information - Set base to 0 if not present*/
+.global _board_uart_base
+.global _board_uart_baud
+.global _board_uart_IRQ
+	
+_board_uart_base:	.long	0x90000000
+_board_uart_baud:	.long	115200
+_board_uart_IRQ:	.long	2
+
+.weak _board_exit
+_board_exit:
+        OR1K_DELAYED_NOP(l.j _board_exit)
+</pre>
+<p><br />
+This file should be assembled and archived, and then placed into the correct install path as mentioned above.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 26/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:42-0!*!0!!en!*!edit=0 and timestamp 20161008144125 -->
+<div class="printfooter">
+Retrieved from "<a href="http://opencores.org/or1k/Newlib">http://opencores.org/or1k/Newlib</a>"</div>
+            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
+                        <div class="visualClear"></div>
+        </div>
+        
+                
+        <div class="visualClear"><p></p></div>
+        
+        <div id="footer">
+            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 8 January 2015, at 20:01.<li id="lastmod"></li>This page has been accessed 12,943 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
+<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Newlib", "wgTitle": "Newlib", "wgAction": "view", "wgArticleId": 42, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1299, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+	mediaWiki.loader.go();
+}
+</script>
+
+<script>if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
+}
+</script><!-- Served in 1.961 secs. -->            
+        </div>
+        
+        
+        </div>
+	<div style="clear:both;margin-left:200px;">
+            <!-- 728x90 -->
+            <script type="text/javascript">
+            GA_googleFillSlot("728x90");
+            </script>
+	</div>
+    </div>
+    <div class="bot">
+	&copy; copyright 1999-2016
+OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
+    </div>
+</div>
+
+<!-- Google search -->
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+<!-- /Google search -->
+
+</body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head>
+            
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="generator" content="MediaWiki 1.17.0" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
+<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
+        <!--[if lt IE 7]>
+        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
+		<meta http-equiv="imagetoolbar" content="no" />
+        <![endif]-->
+        
+        <script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Architecture_Specification_1.0_proposals", "wgTitle": "Architecture Specification 1.0 proposals", "wgAction": "view", "wgArticleId": 76, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 907, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>        
+        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
+		
+        <!-- Head Scripts -->
+                
+        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
+                
+                
+		        
+		        
+		        
+            <title>Architecture Specification 1.0 proposals - OR1K :: OpenCores</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
+    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
+    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
+    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+    <script type="text/javascript">
+    GS_googleAddAdSenseService("ca-pub-0097483751598630");
+    GS_googleEnableAllServices();
+    </script>
+    <script type="text/javascript">
+    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
+    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
+    </script>
+    <script type="text/javascript">
+    GA_googleFetchAds();
+    </script>
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
+    <![endif]-->
+    <!--[if (IE 7)|(IE 8)]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <script type="text/javascript">
+        
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2763846-2']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+    </script>
+    
+</head>
+<body>
+<div class="main">
+    <div class="top">
+        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
+    </div>
+    <div class="line">
+	<div></div>
+	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
+    </div>
+    <div class="mid" id="dm">
+        <div class="mainmenu" id="dml">
+	            
+        <div class="menu menu-login">
+                Username:                                <form action="../login" method="post">
+                    <input class="design" name="user" type="text" />
+                    <br />
+                    Password:
+                    <br />
+                    <input class="design" name="pass" type="password" />
+                    <br />
+                    <input class="design" name="remember" type="checkbox" />Remember me
+                    <br />
+                    <input type="hidden" name="redirect" value="or1k/" />
+                    <input class="design" title="Login" type="submit" value="Login" />
+                </form>
+                <form action="../register" method="post">
+                    <input class="design" title="Register" type="submit" value="Register" />
+                </form>
+                        </div>
+        
+                
+        
+        <div class="menu" id="p-navigation">
+            <h2>Navigation</h2>
+		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
+        
+                
+        <div class="menu">
+            <h2><label for="searchInput">Search</label></h2>
+                <form action="/wiki1/index.php" id="searchform">
+                    <div>
+                        <input type='hidden' name="title" value="Special:Search"/>
+                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
+                        
+                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
+                        
+                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+                                                
+                    </div>
+                </form>
+        </div>
+        
+                
+        <div class="menu menu-tools">
+            <h2>Toolbox</h2>
+                <ul>
+                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/Architecture_Specification_1.0_proposals" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/Architecture_Specification_1.0_proposals" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=Architecture_Specification_1.0_proposals&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=Architecture_Specification_1.0_proposals&amp;oldid=907" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
+        </div>
+        
+        
+        </div>
+        <div class="content" id="dmc">
+	    
+<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
+    
+    <div style="float: left; width: 720px; height: 60px;">
+        <!-- 720x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("720x60");
+        </script>
+    </div>
+        <div style="float: left; width: 300px; height: 60px;">
+        <!-- 300x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("300x60");
+        </script>
+    </div>
+    
+</div>
+	                        
+        <a name="top" id="top"></a>
+        
+                
+        <div id="oc-actions">
+            <p id="ca-nstab-main" class="selected"><a href="/or1k/Architecture_Specification_1.0_proposals" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:Architecture_Specification_1.0_proposals&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=Architecture_Specification_1.0_proposals&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=Architecture_Specification_1.0_proposals&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
+        
+        <h1 id="firstHeading" class="firstHeading">
+            Architecture Specification 1.0 proposals        </h1>
+        
+        <div id="bodyContent">
+            <h3 id="siteSub">From OR1K</h3>
+            <div id="contentSub"></div>
+                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
+            <p>This page holds the content previously from <a href="/or1k/Architecture_Specification" title="Architecture Specification">Architecture_Specification</a> which was suggested and accepted into OR1K 1.0.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#GPR0_usage.2C_implementation"><span class="tocnumber">1</span> <span class="toctext">GPR0 usage, implementation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#l.trap_condition"><span class="tocnumber">2</span> <span class="toctext">l.trap condition</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Accessing_unimplemented_SPRs"><span class="tocnumber">3</span> <span class="toctext">Accessing unimplemented SPRs</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#ABI.2C_returning_structures_by_value"><span class="tocnumber">4</span> <span class="toctext">ABI, returning structures by value</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Typo_for_lf.sfle.d_instruction"><span class="tocnumber">5</span> <span class="toctext">Typo for lf.sfle.d instruction</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Remove_.22Signed.22_from_name_of_addition_and_subtraction_instructions"><span class="tocnumber">6</span> <span class="toctext">Remove "Signed" from name of addition and subtraction instructions</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Versioning"><span class="tocnumber">7</span> <span class="toctext">Versioning</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Version_Registers"><span class="tocnumber">7.1</span> <span class="toctext">Version Registers</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Architecture_Versions"><span class="tocnumber">7.2</span> <span class="toctext">Architecture Versions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Architecture_Revision_Register"><span class="tocnumber">7.2.1</span> <span class="toctext">Architecture Revision Register</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Architecture_Document_Versions"><span class="tocnumber">7.3</span> <span class="toctext">Architecture Document Versions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Exception_Vector_Base_Address"><span class="tocnumber">8</span> <span class="toctext">Exception Vector Base Address</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Delay_Slot_Optional"><span class="tocnumber">9</span> <span class="toctext">Delay Slot Optional</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Change_Use_of_Carry_and_Overflow_Flags_by_Multiply_Instructions"><span class="tocnumber">10</span> <span class="toctext">Change Use of Carry and Overflow Flags by Multiply Instructions</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Control_of_Carry_and_Overflow_Flags_and_Exceptions"><span class="tocnumber">11</span> <span class="toctext">Control of Carry and Overflow Flags and Exceptions</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Optional_overflow.2Fcarry_detection_logic_and_exception_trigger"><span class="tocnumber">12</span> <span class="toctext">Optional overflow/carry detection logic and exception trigger</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Multiply_and_Accumulate"><span class="tocnumber">13</span> <span class="toctext">Multiply and Accumulate</span></a></li>
+</ul>
+</td></tr></table>
+<h4> <span class="mw-headline" id="GPR0_usage.2C_implementation"> GPR0 usage, implementation </span></h4>
+<p>To eliminate confusion regarding the behaviour of writes to R0 when it's hardwired in implementation, the mention of its role according to the ABI and the potential implementation shortcuts should be removed. This is intended to imply that R0 must be implemented in the same way as the other general-purpose registers. The mention of its use as constant zero should only be present in the ABI section of the document.
+</p><p>The following paragraph in 4.4 should be removed:
+</p>
+<pre>R0 is used as a constant zero. Whether or not R0 is actually hardwired to zero is
+implementation dependent. R0 should never be used as a destination register.
+Functions of other registers are explained in chapter Application Binary Interface on page
+319.
+</pre>
+<p>The following sentence should replace it:
+</p>
+<pre>Functions of the registers are explained in chapter Application Binary Interface on page
+319.
+</pre>
+<p>In section 16.2.1, the following:
+</p>
+<pre>R0 [Zero] Always fixed to zero. 
+Even if it is writable in some embedded implementations, the software shouldn’t modify it.
+</pre>
+<p>Should be changed to:
+</p>
+<pre>R0 [Zero] Holds a zero value.
+</pre>
+<h4> <span class="mw-headline" id="l.trap_condition"> l.trap condition </span></h4>
+<p>The architecture spec currently indicates the trap instruction checks a bit in the SR to test whether it should occur:
+</p>
+<pre>Format:
+l.trap K
+
+Description:
+Execution of trap instruction results in the trap exception if specified bit in SR is set. Trap
+exception is a request to the operating system or to the debug facility to execute certain
+debug services. Immediate value is used to select which SR bit is tested by trap
+instruction.
+
+32-bit Implementation:
+if SR[K] = 1 then trap-exception()
+</pre>
+<p>This is not obeyed in any implementation and has no good justification for being specified this way. The specification should remove mention of being conditional on SR[K].
+</p>
+<h4> <span class="mw-headline" id="Accessing_unimplemented_SPRs"> Accessing unimplemented SPRs </span></h4>
+<p>It should be stated in section 4.3 that un-implemented or reserved SPR space should be read as zero and writing should have no consequence (ie l.mtspr for an unimplemented SPR should be equivalent to a l.nop).
+</p><p>rdiez: In my OR10 CPU accessing non-existing SPRs raises an exception. This helps catch bugs early.
+</p><p>firefalcon: +1 rdiez. Also, to make the ISA amenable to virtualization, any attempted access to any (existing or not) privileged SPR should result in an exception.
+</p>
+<h4> <span class="mw-headline" id="ABI.2C_returning_structures_by_value"> ABI, returning structures by value </span></h4>
+<p>Currently, the description for returning structures by value says:
+</p>
+<pre>A function that returns a structure or union places the address of the structure or 
+union in the general-purpose RV register."
+</pre>
+<p>This should be extended with the following information:
+</p>
+<pre>A function that returns a structure by value expects the location where that
+structure is to be placed to be supplied in function parameter word 0 (R3).
+</pre>
+<h4> <span class="mw-headline" id="Typo_for_lf.sfle.d_instruction"> Typo for lf.sfle.d instruction </span></h4>
+<p>The current lf.sfle.d (double precision set flag less or equal) states that register rA is 364 bits in size (rA[363:0]) instead of just 64 (rA[63:0]).
+</p>
+<h4> <span class="mw-headline" id="Remove_.22Signed.22_from_name_of_addition_and_subtraction_instructions"> Remove "Signed" from name of addition and subtraction instructions </span></h4>
+<p>At present, the l.add, l.addi, l.addc, l.addic and l.sub all say the instructions are "signed" whereas the instructions
+</p>
+<ul><li> work for both signed and unsigned operands
+</li><li> signal both signed overflow and and unsigned overflow (carry)
+</li></ul>
+<p>... so actually are not signed-specific. So removing the "Signed" from the name of the instructions makes things less confusing.
+</p>
+<h3> <span class="mw-headline" id="Versioning"> Versioning </span></h3>
+<p>There are a few version-tracking issues to be dealt with.
+</p>
+<h4> <span class="mw-headline" id="Version_Registers"> Version Registers </span></h4>
+<p>The existing implementation version registers are not as good as they could be, and some proposals for changing them have been made.
+</p>
+<ul><li> Add new 32-bit version register, VR2, in SPR space, address 21. It identifies the implementation (model) and version of the OpenRISC 1000 processor.
+</li></ul>
+<pre>[31:24] VER Version
+Implementation-specific version information. This value should 
+increase for more recent versions. The CPU implementation 
+specification document should indicate how to interpret this field.
+
+[23:0] CPUID CPU Identification
+Implementation-specific identification number. Each unique 
+implementation should have a unique identification value.
+</pre>
+<p>The 8-bit CPUID field of the VR can be used to determine the implementation. A list of know implementations and unique IDs can probably be maintained in a document kept alongside the architecture spec and/or on this wiki page. I think the OR1200 should have its ID as 0x12 and  or1ksim as 0x01. Any sufficiently different branch of any implementation, that is not likely to be re-merged, should get its own unique ID.
+</p>
+<ul><li> A VR2-presence bit in existing VR register - bit 15 (currently reserved)
+</li></ul>
+<ul><li> Implementation revision/build information registers, REVIR0-REVIR4, SPR addresses 22-26. These 5 registers provide detailed information on the CPU's revision. The exact use of these registers is implementation-specific but are big enough to store a 160-bit SHA1 hash value.
+</li></ul>
+<p>The REVI registers helps us use that neat trick with git, but is mostly designed to help keep track of local modifications to the project before synthesis is performed. If people aren't using git locally there's many other ways to store local modifications there. For or1ksim, it's a way of getting a useful size amount of information into registers which the software can read.
+</p>
+<h4> <span class="mw-headline" id="Architecture_Versions"> Architecture Versions </span></h4>
+<p>As the architecture is modified and possibly expanded there needs to be a way of tracking the various versions of the architecture, both in implementation (eg. via a register) and in the document itself.
+</p><p>Although optional individual features will all have newly added presence bits to test, adherence to other architectural advances will need to be conveyed via a register for quick and easy determination by software.
+</p><p>For example, the GPR0 issue - there can be assurance that any implementation with an architecture revision value above 0 will adhere to the clarified definition of its implementation and use.
+</p>
+<h5> <span class="mw-headline" id="Architecture_Revision_Register"> Architecture Revision Register </span></h5>
+<p>A new register, the Architecture Revision Register (ARR) should be added at address 27.
+</p><p>This register will contain the latest architecture revision the implementation contains features from. This will allow software to broadly detect which generation of CPU it is running on, and so which assumptions are safe.
+</p>
+<h4> <span class="mw-headline" id="Architecture_Document_Versions"> Architecture Document Versions </span></h4>
+<p>The document itself will change over time as its contents are amended, clarified or expanded. There needs to be a clear way of tracking the versions of the document.
+</p><p>As the document is amended at present, the document revision history table in section 1.3 must be updated. However the only way to track the document revision is by the recorded date of the edit. It is proposed a new column is added to table 1-2 with an entry for each document revision of the format X-Y where X is the architecture revision the document is at that point and Y is an integer beginning at 0 for each new revision and incrementing by 1 per document update. This would mean the existing document revision is '0-17' (17 recorded updates since March 2000.) The update corresponding with the addition of new features for architecture revision 1 would mean the document revision changes to '1-0'.
+</p>
+<h3> <span class="mw-headline" id="Exception_Vector_Base_Address"> Exception Vector Base Address </span></h3>
+<p>The current options for locations of the exception vectors are not very flexible, the only two possible locations are at
+address 0x0 or address 0xf0000000.
+</p><p>The proposal is for the addition of an (optional) SPR register (EVBA)in group 0 (System Control and Status registers) at address 1536 (right after the last possible GPR mapped into SPR space), which would hold the (upper part of the) base address of the exception vectors.
+</p>
+<pre>[31:13] Exception Vector Base Address
+Location for the start of exception vectors.
+Reset value: Implementation specific
+[12:0] Reserved / Constant 0
+</pre>
+<p>This register is optional, and in case EPH is asserted, it should be OR'ed together
+with the value in EVBA.
+</p><p>The presence of EVBA can be detected in software by writing a value to it and
+see if the same value reads back.
+</p><p>EVBA is only writable/readable when in supervisor mode (i.e. when SR[SM]=1)
+</p>
+<h3> <span class="mw-headline" id="Delay_Slot_Optional"> Delay Slot Optional </span></h3>
+<p>There is a proposal to make delay slots optional. This will be stated in the architecture specification. Whether a machine has branch delay slots will be indicated via a the <tt>ND</tt> bit (position 10) in <tt>CPUCFGR</tt>.
+</p><p>On machines where <tt>CPUCFGR[ND]</tt> is set, jumps and branches change the PC immediately, instead of after the following delay slot instruction.
+Additionally, the <tt>l.jal</tt> and <tt>l.jalr</tt> instructions write <tt>PC+4</tt> to the link register (<tt>R9</tt>), instead of <tt>PC+8</tt>.
+</p><p>The following changes will be made to the toolchain in order to facilitate the use of this option:
+</p>
+<ul><li> The <tt>EF_OR1K_NODELAY</tt> bit (position 0) in the flags field of the ELF header will be set in all binaries.  The linker should warn whenever this bit is incompatibly set, but not fail or abort.  This warning should be able to be turned off.
+</li></ul>
+<ul><li> GAS will now understand the directive <tt>.nodelay</tt>.  For now its only effect is to cause the EF_OR1K_NODELAY bit in the ELF file to be set.
+</li></ul>
+<ul><li> GCC will have the following new flags:
+</li></ul>
+<ul><li><ul><li> <tt>-mdelay</tt>: forces use of the delay slot
+</li><li> <tt>-mno-delay</tt>: forces branches and jumps to not have a delay slot
+</li><li> <tt>-mcompat-delay</tt>: forces delay slots, and fills them with nops
+</li></ul>
+</li></ul>
+<ul><li> The <tt>or1knd-elf</tt> and <tt>or1knd-linux</tt> machine specifications will be added.
+</li></ul>
+<ul><li><ul><li> When GCC is compiled for the <tt>or1k-*</tt> targets, <tt>-mdelay</tt> will be the default
+</li><li> When GCC is compiled for the <tt>or1knd-*</tt> targets, <tt>-mno-delay</tt> will be the default
+</li><li> GCC compiled for either target will understand all 3 flags
+</li><li> When using <tt>-mno-delay</tt> GCC will emit a <tt>.nodelay</tt> directive in the intermediate <tt>.s</tt> file, and the C preprocessor will include the predefined macro <tt>__OR1K_NODELAY__</tt>
+</li><li> Separate GCC multilib configurations might be useful for each of these flags
+</li></ul>
+</li></ul>
+<ul><li> <tt>or1ksim</tt> will be modified to allow the delay slot to be disabled.  This can be configured by setting the ND bit (position 10) in the <tt>cfg</tt> configuration variable of the <tt>cpu</tt> section of <tt>sim.cfg</tt>.
+</li></ul>
+<ul><li> Where necessary, assembly source files (in testsuites, newlib, etc.) will be modified to use the C preprocessor to detect whether delay slots are to be used, and possibly exchange the position of delay slot instructions.
+</li></ul>
+<h3> <span class="mw-headline" id="Change_Use_of_Carry_and_Overflow_Flags_by_Multiply_Instructions"> Change Use of Carry and Overflow Flags by Multiply Instructions </span></h3>
+<p>This proposal aims to simplify the implementation of the OpenRISC multiplier, as well as resolve conflicting implementation between the OR1200 and or1ksim.
+</p><p>The <tt>l.mul</tt> instruction is hard to implement in the current state.  It performs a signed multiply, but must the set CY flag to indicate that overflow would have happened if the numbers were treated as unsigned.  This is difficult to implement because multiplier macros and DSP slices on FPGAs only let you do either signed or unsigned multiply, and almost never give you the ability to detect unsigned overflow when doing signed multiply.  Implementing it pretty much requires a hand-coded multiplier.  The or1ksim simulator does get this requirement correct, but it does so by multiplying the operands twice, in both signed and unsigned modes.  Notably, the OR1200 does not appear to implement this correctly.  Instead, it appears to set the OV bit for both signed overflow in <tt>l.mul</tt> and unsigned overflow in <tt>l.mulu</tt>.
+</p><p>For consistency, we will always use OV to indicate signed overflow, and CY to indicate unsigned overflow.  We will add a CYE bit to the SR register that causes a RANGE exception to be triggered when the CY bit is set by an instruction.  Additionally, we will change the requirement that the <tt>l.mul</tt> instruction set the CY bit for unsigned overflow, and instead require that it always clear the bit.  (I had considered having it just leave that bit unchanged, but it seems all the arithmetic instructions write both, if only to clear them, so just clearing it is more consistent.)
+</p><p>Summary of changes:
+</p>
+<ul><li> Remove the requirement that the <tt>l.mul</tt> instruction set the CY flag to indicate unsigned overflow.  The instruction will instead always set CY to zero (for consistency with other arithmetic instructions).
+</li></ul>
+<ul><li> That's it!
+</li></ul>
+<h3> <span class="mw-headline" id="Control_of_Carry_and_Overflow_Flags_and_Exceptions"> Control of Carry and Overflow Flags and Exceptions </span></h3>
+<p>Continuing with the idea of fixing the definitions of instructions and their setting of carry and overflow flags, where we will have carry (SR[CY]) set on unsigned overflow, and overflow (SR[OV]) set on signed overflow, it's also likely we will want to have relatively fine-grained control over exceptions triggered by this arithmetic.
+</p><p>For instance, we may want an exception on signed multiply overflow, but not on addition overflow (addition is not specific about whether its operands are to be considered signed or unsigned, so it will be setting both OV and CY on signed and unsigned overflow, respectively.)
+</p><p>(Unfortunately the OR1K ISA lacks unsigned addition, so it's not possible to distinguish between unsigned and signed overflow for addition and subtraction.)
+</p><p>So to implement more useful arithmetic overflow detection and management I propose the addition of 2 SPRs for control and status of arithmetic overflow exceptions.
+</p>
+<pre>AECR - Arithmetic Exception Control Register
+
+[0] CYADDE
+  Carry flag set by unsigned overflow on integer addition and subtraction instructions causes exception
+[1] OVADDE
+  Overflow flag set by signed overflow on integer addition and subtraction instructions causes exception
+[2] CYMULE
+  Carry flag set by unsigned overflow on unsigned integer multiply instructions causes exception
+[3] OVMULE
+  Overflow flag set by signed overflow on signed integer multiply instructions causes exception
+[4] DBZE
+  Overflow flag set by divide-by-zero on integer division instruction, or carry flag set by divide-by-zero on l.divu instruction, causes exception
+[5] CYMACADDE
+  Carry flag set by unsigned overflow on MAC-unit add/sub operations causes exception
+[6] OVMACADDE
+  Overflow flag set by signed overflow on MAC-unit add/sub operations causes exception
+
+
+AESR - Arithmetic Exception Status Register
+
+[0] CYADDE
+  Carry flag set by unsigned overflow on integer addition and subtraction instructions caused exception
+[1] OVADDE
+  Overflow flag set by signed overflow on integer addition and subtraction instructions caused exception
+[2] CYMULE
+  Carry flag set by unsigned overflow on unsigned integer multiply instructions caused exception
+[3] OVMULE
+  Overflow flag set by signed overflow on signed integer multiply instructions caused exception
+[4] DBZE
+  Overflow flag set by divide-by-zero on l.div instruction, or carry flag set by divide-by-zero on l.divu instruction, caused exception
+[5] CYMACADDE
+  Carry flag set by unsigned overflow on MAC-unit add/sub operations caused exception
+[6] OVMACADDE
+  Overflow flag set by signed overflow on MAC-unit add/sub operations caused exception
+</pre>
+<p>Setting the SR[OVE] will cause a range exception to occur when any of the situations specified in AECR have their bit set. SR[OV] and SR[CY], as appropriate, shall be set regardless of whether an exception is triggered. This will cause the range exception to occur and set the bit corresponding to the cause for the exception in the AESR. Writing '0' to the bit in the AESR will cause it to be cleared. Only the occurrence of the exception will cause the range exception to occur, so leaving the bit set in the AESR and l.rfe with ESR[OVE] set shall not cause another exception.
+</p><p>Both registers will be R/W in supervisor mode only.
+</p><p>Function of bits [8:2] are obviously dependent on corresponding instructions/units being present.
+</p><p>Modifications to instructions are as follows:
+</p>
+<pre>l.add, l.addc, l.addi, l.addic, l.sub
+  Set SR[CY] on unsigned overflow, else clear
+  Set CR[OV] on signed overflow, else clear
+
+l.mul, l.muli
+  Clear SR[CY]
+  Set SR[OV] on signed overflow, else clear
+
+l.mulu
+  Set SR[CY] on unsigned overflow, else clear
+  Clear SR[OV]
+  * This differs from current definition, which sets SR[OV] instead of SR[CY] 
+
+l.div
+  Clear SR[CY]
+  Set SR[OV] on divide-by-zero, else clear
+
+l.divu
+  Set SR[CY] on divide-by-zero, else clear
+  Clear SR[OV]
+  * This differs from current definition, which sets SR[OV] instead of SR[CY] 
+
+signed l.mac instructions
+  Clear SR[CY]
+  Set CR[OV] on signed overflow of add/subtract with {MACHI,MACLO}, else clear
+  * This differs from current definition, which does not set either SR[OV] or SR[CY]
+
+(proposed) unsigned l.mac instructions
+  Set SR[CY] on unsigned overflow of add/subtract with {MACHI,MACLO}, else clear
+  Clear SR[OV]
+ * This will apply to an entirely new set of instructions
+</pre>
+<p>Update: I propose that when these registers are not present (as indicated in the CPUCFGR) then the default behaviour is that any carry or overflow occurrences (as defined by the updated instruction behaviour) cause a range exception when SR[OVE] is set (just like all bits in AECR are set to '1'.)
+</p>
+<h3> <span class="mw-headline" id="Optional_overflow.2Fcarry_detection_logic_and_exception_trigger"> Optional overflow/carry detection logic and exception trigger </span></h3>
+<p>I propose that the functionality of the carry and overflow detection be optional, and the capability of the CPU to perform it is indicated by a bit in the CPUCFGR.
+</p><p>In the case that it is not present, the SR[CY] and SR[OV] bits are tied low, and SR[OVE] cannot be set. If the AECR/AESR registers are implemented (silly if they are) then they have no effect.
+</p>
+<h3> <span class="mw-headline" id="Multiply_and_Accumulate"> Multiply and Accumulate </span></h3>
+<p>This is a potentially disruptive change, as it is different from the operation of the OR1200.  It may be a good idea to implement it under a new UPR code or similar.
+</p><p>The <tt>l.mac</tt> instructions truncate the product of the two registers to 32-bits before performing a 64-bit add.  This seems less useful, and unnecessary, since the simplest implementation of the <tt>l.mul</tt> instructions would use a 32x32-bit to 64-bit multiplier in order to be implemented using FPGA DSP slices, and still accurately capture the signed/unsigned overflow flags. Additionally, the MACHI register value is only useful if the programmer knows the product of the operands fits in 32 bits.
+</p><p>So I propose changing the <tt>l.mac</tt> instruction to perform a full 64-bit addition of the accumulator and the 64-bit product, without first truncating the product to 32 bits.
+</p><p>Note that if the programmer has already guaranteed that the products are smaller than 32 bits, the program will produce the same result after this ISA change.  Additionally, the the MACLO value produced will be identical to before, so if the program only uses <tt>l.mac</tt>, <tt>l.msb</tt>, and <tt>l.macrc</tt> instructions, there will be no visible difference.
+</p><p>Additionally, it seems simple and useful to add unsigned versions of the mac instructions, and a version that does not perform an add or subtraction, and allows the full 64-bit product to be recovered from the HI/LO registers.
+</p><p>Finally, these changes will simplify the implementation and improve the performance of C <tt>long long</tt> and bignums in general.
+</p><p>Summary of changes:
+</p>
+<ul><li> Change <tt>l.mac</tt> and <tt>l.msb</tt> to perform a full 32x32 to 64-bit product, and add the full 64-bit product to the 64-bit accumulator without any truncation.
+</li></ul>
+<ul><li> Add <tt>l.macu</tt> and <tt>l.msbu</tt>, which are like <tt>l.mac</tt> and <tt>l.msb</tt>, but perform an unsigned multiplication
+</li></ul>
+<ul><li> Add <tt>l.muld</tt> and <tt>l.muldu</tt>, which perform a signed/unsigned 32x32 to 64-bit product and write the result to MACHI/MACLO.
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 67/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:76-0!*!0!!en!*!edit=0 and timestamp 20161009123455 -->
+<div class="printfooter">
+Retrieved from "<a href="http://opencores.org/or1k/Architecture_Specification_1.0_proposals">http://opencores.org/or1k/Architecture_Specification_1.0_proposals</a>"</div>
+            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
+                        <div class="visualClear"></div>
+        </div>
+        
+                
+        <div class="visualClear"><p></p></div>
+        
+        <div id="footer">
+            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 13 December 2012, at 21:55.<li id="lastmod"></li>This page has been accessed 2,271 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
+<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Architecture_Specification_1.0_proposals", "wgTitle": "Architecture Specification 1.0 proposals", "wgAction": "view", "wgArticleId": 76, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 907, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+	mediaWiki.loader.go();
+}
+</script>
+
+<script>if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
+}
+</script><!-- Served in 1.792 secs. -->            
+        </div>
+        
+        
+        </div>
+	<div style="clear:both;margin-left:200px;">
+            <!-- 728x90 -->
+            <script type="text/javascript">
+            GA_googleFillSlot("728x90");
+            </script>
+	</div>
+    </div>
+    <div class="bot">
+	&copy; copyright 1999-2016
+OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
+    </div>
+</div>
+
+<!-- Google search -->
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+<!-- /Google search -->
+
+</body>
+</html>

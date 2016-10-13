@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head>
+            
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="generator" content="MediaWiki 1.17.0" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
+<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
+        <!--[if lt IE 7]>
+        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
+		<meta http-equiv="imagetoolbar" content="no" />
+        <![endif]-->
+        
+        <script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "ORPSoC_RTL_simulation_debugging", "wgTitle": "ORPSoC RTL simulation debugging", "wgAction": "view", "wgArticleId": 47, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 473, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>        
+        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
+		
+        <!-- Head Scripts -->
+                
+        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
+                
+                
+		        
+		        
+		        
+            <title>ORPSoC RTL simulation debugging - OR1K :: OpenCores</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
+    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
+    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
+    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+    <script type="text/javascript">
+    GS_googleAddAdSenseService("ca-pub-0097483751598630");
+    GS_googleEnableAllServices();
+    </script>
+    <script type="text/javascript">
+    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
+    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
+    </script>
+    <script type="text/javascript">
+    GA_googleFetchAds();
+    </script>
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
+    <![endif]-->
+    <!--[if (IE 7)|(IE 8)]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <script type="text/javascript">
+        
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2763846-2']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+    </script>
+    
+</head>
+<body>
+<div class="main">
+    <div class="top">
+        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
+    </div>
+    <div class="line">
+	<div></div>
+	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
+    </div>
+    <div class="mid" id="dm">
+        <div class="mainmenu" id="dml">
+	            
+        <div class="menu menu-login">
+                Username:                                <form action="../login" method="post">
+                    <input class="design" name="user" type="text" />
+                    <br />
+                    Password:
+                    <br />
+                    <input class="design" name="pass" type="password" />
+                    <br />
+                    <input class="design" name="remember" type="checkbox" />Remember me
+                    <br />
+                    <input type="hidden" name="redirect" value="or1k/" />
+                    <input class="design" title="Login" type="submit" value="Login" />
+                </form>
+                <form action="../register" method="post">
+                    <input class="design" title="Register" type="submit" value="Register" />
+                </form>
+                        </div>
+        
+                
+        
+        <div class="menu" id="p-navigation">
+            <h2>Navigation</h2>
+		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
+        
+                
+        <div class="menu">
+            <h2><label for="searchInput">Search</label></h2>
+                <form action="/wiki1/index.php" id="searchform">
+                    <div>
+                        <input type='hidden' name="title" value="Special:Search"/>
+                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
+                        
+                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
+                        
+                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+                                                
+                    </div>
+                </form>
+        </div>
+        
+                
+        <div class="menu menu-tools">
+            <h2>Toolbox</h2>
+                <ul>
+                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/ORPSoC_RTL_simulation_debugging" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/ORPSoC_RTL_simulation_debugging" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=ORPSoC_RTL_simulation_debugging&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=ORPSoC_RTL_simulation_debugging&amp;oldid=473" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
+        </div>
+        
+        
+        </div>
+        <div class="content" id="dmc">
+	    
+<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
+    
+    <div style="float: left; width: 720px; height: 60px;">
+        <!-- 720x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("720x60");
+        </script>
+    </div>
+        <div style="float: left; width: 300px; height: 60px;">
+        <!-- 300x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("300x60");
+        </script>
+    </div>
+    
+</div>
+	                        
+        <a name="top" id="top"></a>
+        
+                
+        <div id="oc-actions">
+            <p id="ca-nstab-main" class="selected"><a href="/or1k/ORPSoC_RTL_simulation_debugging" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:ORPSoC_RTL_simulation_debugging&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=ORPSoC_RTL_simulation_debugging&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=ORPSoC_RTL_simulation_debugging&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
+        
+        <h1 id="firstHeading" class="firstHeading">
+            ORPSoC RTL simulation debugging        </h1>
+        
+        <div id="bodyContent">
+            <h3 id="siteSub">From OR1K</h3>
+            <div id="contentSub"></div>
+                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
+            <table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Development_environment_setup"><span class="tocnumber">2</span> <span class="toctext">Development environment setup</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Check_setup"><span class="tocnumber">2.1</span> <span class="toctext">Check setup</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#If_in_doubt.2C_clean_it_out"><span class="tocnumber">2.2</span> <span class="toctext">If in doubt, clean it out</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Starting_simulation"><span class="tocnumber">3</span> <span class="toctext">Starting simulation</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Running_a_simulation_and_dumping_a_waveform_.28VCD.29"><span class="tocnumber">4</span> <span class="toctext">Running a simulation and dumping a waveform (VCD)</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Debugging_system_startup"><span class="tocnumber">5</span> <span class="toctext">Debugging system startup</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Run_a_simulation.2C_dump_a_VCD"><span class="tocnumber">5.1</span> <span class="toctext">Run a simulation, dump a VCD</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Preload_memories"><span class="tocnumber">5.2</span> <span class="toctext">Preload memories</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Check_clocks_and_resets"><span class="tocnumber">5.3</span> <span class="toctext">Check clocks and resets</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Check_processor_boot"><span class="tocnumber">5.4</span> <span class="toctext">Check processor boot</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#bootrom"><span class="tocnumber">5.4.1</span> <span class="toctext">bootrom</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Processor_instruction_bus"><span class="tocnumber">5.4.2</span> <span class="toctext">Processor instruction bus</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Bus_arbiters_and_memory_controllers"><span class="tocnumber">5.4.3</span> <span class="toctext">Bus arbiters and memory controllers</span></a>
+<ul>
+<li class="toclevel-4 tocsection-15"><a href="#Bus_arbiter_problems"><span class="tocnumber">5.4.3.1</span> <span class="toctext">Bus arbiter problems</span></a></li>
+<li class="toclevel-4 tocsection-16"><a href="#Memory_controller.2C_model.2C_preload_problems"><span class="tocnumber">5.4.3.2</span> <span class="toctext">Memory controller, model, preload problems</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-17"><a href="#Debugging_strategies"><span class="tocnumber">5.4.4</span> <span class="toctext">Debugging strategies</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Introduction"> Introduction </span></h1>
+<p>This page contains tips on how to debug the operation of an ORPSoC system under RTL simulation.
+</p>
+<h1> <span class="mw-headline" id="Development_environment_setup"> Development environment setup </span></h1>
+<p>The  following assumes the user already <a href="/or1k/ORPSoC#Download_ORPSoC" title="ORPSoC">has a copy of the ORPSoC source</a> and be attempting to run either the ORPSoC reference build (in the root of the project) from <code>PROJECT_ROOT/sim/run</code> or be attempting to simulate a particular board, in which case they will be in <code>$PROJECT_ROOT/boards/FPGA_VENDOR/BOARD_NAME/sim/run</code>.
+</p><p>The <a href="/or1k/OpenRISC_GNU_tool_chain" title="OpenRISC GNU tool chain"> OpenRISC GNU toolchain</a> must be installed and ready to go, too.
+</p><p>The following details will rely on the user having the <a href="/or1k/EDA#GTKWave" title="EDA"> GTKWave</a> waveform viewer installed, or have a suitable alternative setup.
+</p>
+<h2> <span class="mw-headline" id="Check_setup"> Check setup </span></h2>
+<p>A good test of the setup is to attempt to run tests in the reference design in <code>$PROJECT_ROOT/sim/run</code> with something like:
+</p>
+<pre>/path/to/orpsocv2/sim/run$ make rtl-test
+</pre>
+<p>Confirm the test compiles and runs and exits OK. A successful run of the simulation will finish with the following lines:
+</p>
+<pre>report (0x8000000d);
+exit(00000000)
+</pre>
+<h2> <span class="mw-headline" id="If_in_doubt.2C_clean_it_out"> If in doubt, clean it out </span></h2>
+<p>If things are not behaving correctly, it's advised to try a clean out of everything, which will remove all intermediate and resulting files from previous simulation builds.
+</p><p>From any <code>sim/run</code> directory run
+</p>
+<pre>/path/to/any/sim/run$ make distclean
+</pre>
+<h1> <span class="mw-headline" id="Starting_simulation"> Starting simulation </span></h1>
+<p>The very first simulation to run would be the <code>or1200-simple</code> test.
+</p><p>This test just goes through the processor initialisation, into the main loop of the C code and exits, reporting success. This test checks that part of the fundamentals of the system are in place - that is the processor can start, fetch code, access data and exit the simulation gracefully.
+</p><p>This simulation is typically the default one when no other test is specified for the <code>make rtl-test</code> command.
+</p>
+<h1> <span class="mw-headline" id="Running_a_simulation_and_dumping_a_waveform_.28VCD.29"> Running a simulation and dumping a waveform (VCD) </span></h1>
+<p>A convenient way of debugging the system is by looking a waveform of what is occurring on the bus.
+</p><p>This can be done by adding the <code>VCD=1</code> option to the command line when running the simulation.
+</p>
+<pre>/path/to/sim/run$ make rtl-test VCD=1
+</pre>
+<p>The VCD will be created in <code>/path/to/sim/out/test-name.vcd</code>.
+</p><p>When the VCD option is enabled, it will be indicated to the user, like the following:
+</p>
+<pre>* VCD in ../out/or1200-simple.vcd
+</pre>
+<pre>VCD info: dumpfile ../out/or1200-simple.vcd opened for output.
+</pre>
+<p>Running a simulation and generating a VCD will generally slow its execution time down as it must write out the system state at each step to the VCD file.
+</p><p>Once a simulation has run and finished, the VCD file can be opened with <a href="/or1k/EDA#GTKWave" title="EDA"> GTKWave</a> like so:
+</p>
+<pre>/path/to/sim/run$ gtkwave ../out/test-name/vcd
+</pre>
+<h1> <span class="mw-headline" id="Debugging_system_startup"> Debugging system startup </span></h1>
+<p>Outlined here are some basic steps to help double check the system starts OK under RTL simulation.
+</p>
+<h2> <span class="mw-headline" id="Run_a_simulation.2C_dump_a_VCD"> Run a simulation, dump a VCD </span></h2>
+<p>The first step to looking at the internal function of the system is to run a simulation and dump out a waveform. Do this by running the simulation with the <code>VCD=1</code> option on the end of the make command as <a href="#Running_a_simulation_and_dumping_a_waveform_.28VCD.29"> mentioned above</a>.
+</p><p>Open the VCD in the waveform viewer like <a href="/or1k/EDA#GTKWave" title="EDA"> GTKWave</a>.
+</p>
+<h2> <span class="mw-headline" id="Preload_memories"> Preload memories </span></h2>
+<p>A common method used to speed up notoriously slow RTL simulations is to preload the system's main memory with the software image to execute.
+</p><p>This feature is provided when simulating all board ports in ORPSoC as a way to allow quick testing of system functions without repeating the lengthy boot-from-non-volatile memory sequences.
+</p><p>The usual way of enabling this is to add <code>PRELOAD_RAM=1</code> to the command line when launching a simulation.
+</p>
+<pre>/path/to/sim/run$ make rtl-test PRELOAD_RAM=1
+</pre>
+<p>Note that this will usually also change the <a href="#bootrom"> bootrom</a> code to simply start execution from the reset vector in main memory.
+</p>
+<h2> <span class="mw-headline" id="Check_clocks_and_resets"> Check clocks and resets </span></h2>
+<p>If you are implementing a new ORPSoC board port, or have significantly altered an existing one, double check the system's clock and resets. If none of the clocking or reset configuration has been altered, then skip this step.
+</p><p>An ORPSoC build should have all of its clock and reset-generation infrastructure inside a build-specific module named <code>clkgen</code>. This is typically instantiated inside the ORPSoC top-level as <code>clkgen0</code>.
+</p><p>Double check all is well with this module - that is the clock supplied by the testbench is there, and is the right frequency. A mistake when working on new board ports is to have an incorrect timescale set in the top-level testbench (<code>/path/to/bench/verilog/orpsoc_testbench.v</code> which results in the clock being supplied to a PLL model being much too fast (or too slow) and odd behaviour, like a PLL not locking, can be seen.
+</p><p>Resets that are incorrect polarity, or even X'd, will also cause problems.
+</p><p>Double check everything going in and coming out to the internal system is OK. 
+</p><p>Note that this is just an RTL simulation and although things might look OK here, it's not neccessarily the case that what is done in clkgen is synthesizable or correct for use on FPGA or in silicon. If problems with clocks or resets are suspected on the board, then check this module at gatelevel. This is not covered here.
+</p>
+<h2> <span class="mw-headline" id="Check_processor_boot"> Check processor boot </span></h2>
+<p>Double checking the processor is starting up OK requires ensuring most of the basics of the system are OK.
+</p><p>In ORPSoC, a commonly used boot mechanism is implemented in the <code>bootrom</code> module. This provides some instructions that perform some basic bootstrapping of the processor. The routine used can be configured by a <code>#define</code> in the <code>/path/to/sw/board/include/board.h</code> software header file.
+</p><p>The bootrom usually causes the processor to access main memory and/or a non-volatile memory to load or start executing a program.
+</p><p>For this to function correctly, the processor must be configured appropriately, the system bus must be implemented correctly, and the various memory controllers and simulation models need to be instantiated and configured correctly.
+</p><p>The following steps help to check this is the case.
+</p>
+<h3> <span class="mw-headline" id="bootrom"> bootrom </span></h3>
+<p>The system typically starts by executing some code out of the <code>bootrom</code> module. This module is typically on the processor's instruction bus at address <code>0xf0000100</code> and will contain 40-50 instructions - enough to do some basic bootstrapping.
+</p><p>The details of the bootrom are not covered here, but probably should be at some point <a href="/wiki1/index.php?title=ORPSoC_bootrom&amp;action=edit&amp;redlink=1" class="new" title="ORPSoC bootrom (page does not exist)"> here</a>.
+</p>
+<h3> <span class="mw-headline" id="Processor_instruction_bus"> Processor instruction bus </span></h3>
+<p>When the processor is taken out of reset, it begins to fetch instructions from its reset address.
+</p><p>For the OR1200, this can be either <code>0xf000100</code> or <code>0x100</code>. If the <a href="#bootrom"> bootrom</a> is being used then it is usually <code>0xf0000100</code>.
+</p><p>In the waveform, descend into the <code>orpsoc_top</code> module - usually represented as <code>dut</code> in waveform viewers as this is its instantiated name.
+</p><p>Add the following signals to the waveform to view the processor's instruction Wishbone bus port.
+</p>
+<pre>wbm_i_or1200_ack_i
+wbm_i_or1200_dat_i
+wbm_i_or1200_err_i
+wbm_i_or1200_adr_o
+wbm_i_or1200_stb_o
+</pre>
+<p>It may also help to see the processor's clock and reset signals:
+</p>
+<pre>or1200_clk
+or1200_rst
+</pre>
+<p><a href="/or1k/File:Orpsoc_or1200_boot_1.png" class="image"><img alt="Orpsoc or1200 boot 1.png" src="/wiki1/images/a/aa/Orpsoc_or1200_boot_1.png" width="975" height="288" /></a>
+</p><p>Once the reset is deasserted the processor can be seen to fetch instructions by asserting the <code>wbm_i_or1200_stb_o</code> line and presenting the address it wants on the <code>wbm_i_or1200_adr_o</code> line.
+</p><p>The instruction bus only reads, so every access is a read request from a memory. Each time the <code>wbm_i_or1200_ack_i</code> signal is high for a cycle indicates that the data on <code>wbm_i_or1200_dat_i</code> is valid.
+</p><p>If the <code>wbm_i_or1200_err_i</code> line is ever high, it usually means an invalid read request was put out by the processor, usually to anon-existing address on the bus. This will cause the bus to go to its bus exception vector code at <code>0x200</code>.
+</p>
+<h3> <span class="mw-headline" id="Bus_arbiters_and_memory_controllers"> Bus arbiters and memory controllers </span></h3>
+<p>Depending on the configuration of the system, the processor's instruction bus requests will end up going through an arbiter and then onto a memory controller.
+</p>
+<h4> <span class="mw-headline" id="Bus_arbiter_problems"> Bus arbiter problems </span></h4>
+<p>If it looks like the processor's instruction requests are sane, and problems are encountered, then the next place to check is the system's bus arbiter or the memory controller.
+</p><p>The bus arbiter can be ruled out simply by looking at the input bus to the memory controller is the same as what is being generated on the processor's instruction bus. If the input to the appropriate memory controller is not the same as what's coming from the processor (ie. the address is not the same) then check the configuration of the bus wires, the bus arbiter, or its internal function.
+</p>
+<h4> <span class="mw-headline" id="Memory_controller.2C_model.2C_preload_problems"> Memory controller, model, preload problems </span></h4>
+<p>If the bus' function looks OK then problems can be isolated to the memory controller, memory model or preloading mechanism.
+</p><p>Of course, it's possible the bootrom is not correctly configured for the system and it is attempting to access a non-existant non-volatile memory controller, or for some reason the <a href="#Preload_memories"> PRELOAD_RAM=1</a> option is not getting into the bootrom and it is attempting an unexpected boot sequence.
+</p>
+<h3> <span class="mw-headline" id="Debugging_strategies"> Debugging strategies </span></h3>
+<p>Although it can be tedious, it helps to present all of the relevant signals in the instruction fetch path and ensure each is being completed correctly.
+</p><p>This means dumping the bus signals from the processor, the bus signals into the memory controller, the memory bus signals to the memory model and potentially internals of the memory controller.
+</p><p>An understanding of the mapping of the instructions to the memory's external bus helps to quickly identify problems with the content of the image has been preloaded into the memory model.
+</p><p>If the problem occurs well into boot, most memory models provide a verbose debug output option which will report exactly what is being fetched from what address to help follow the program's execution.
+</p><p>The OR1200 will also generate an execution log in <code>/path/to/sim/out/test-name-executed.log</code>. This file will contain the state of the processor for each instruction executed.
+</p><p>The OR1200 will also generate an instruction execution time log in <code>/path/to/sim/out/test-name-lookup.log</code>. This file will contain the time of each of the instructions executed which can be used in conjunction with the execution log to lookup what time, and thus where in the waveform, a particular instruction was fetched (either from cache or on the bus) and executed.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 66/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:47-0!*!0!!en!2!edit=0 and timestamp 20161009123713 -->
+<div class="printfooter">
+Retrieved from "<a href="http://opencores.org/or1k/ORPSoC_RTL_simulation_debugging">http://opencores.org/or1k/ORPSoC_RTL_simulation_debugging</a>"</div>
+            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
+                        <div class="visualClear"></div>
+        </div>
+        
+                
+        <div class="visualClear"><p></p></div>
+        
+        <div id="footer">
+            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 13 October 2011, at 23:56.<li id="lastmod"></li>This page has been accessed 7,140 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
+<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "ORPSoC_RTL_simulation_debugging", "wgTitle": "ORPSoC RTL simulation debugging", "wgAction": "view", "wgArticleId": 47, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 473, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+	mediaWiki.loader.go();
+}
+</script>
+
+<script>if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
+}
+</script><!-- Served in 2.186 secs. -->            
+        </div>
+        
+        
+        </div>
+	<div style="clear:both;margin-left:200px;">
+            <!-- 728x90 -->
+            <script type="text/javascript">
+            GA_googleFillSlot("728x90");
+            </script>
+	</div>
+    </div>
+    <div class="bot">
+	&copy; copyright 1999-2016
+OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
+    </div>
+</div>
+
+<!-- Google search -->
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+<!-- /Google search -->
+
+</body>
+</html>

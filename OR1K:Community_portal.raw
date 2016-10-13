@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head>
+            
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="generator" content="MediaWiki 1.17.0" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
+<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
+        <!--[if lt IE 7]>
+        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
+		<meta http-equiv="imagetoolbar" content="no" />
+        <![endif]-->
+        
+        <script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "Project", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 4, "wgPageName": "OR1K:Community_portal", "wgTitle": "Community portal", "wgAction": "view", "wgArticleId": 3, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1386, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>        
+        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
+		
+        <!-- Head Scripts -->
+                
+        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
+                
+                
+		        
+		        
+		        
+            <title>OR1K:Community portal - OR1K :: OpenCores</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
+    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
+    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
+    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+    <script type="text/javascript">
+    GS_googleAddAdSenseService("ca-pub-0097483751598630");
+    GS_googleEnableAllServices();
+    </script>
+    <script type="text/javascript">
+    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
+    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
+    </script>
+    <script type="text/javascript">
+    GA_googleFetchAds();
+    </script>
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
+    <![endif]-->
+    <!--[if (IE 7)|(IE 8)]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <script type="text/javascript">
+        
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2763846-2']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+    </script>
+    
+</head>
+<body>
+<div class="main">
+    <div class="top">
+        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
+    </div>
+    <div class="line">
+	<div></div>
+	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
+    </div>
+    <div class="mid" id="dm">
+        <div class="mainmenu" id="dml">
+	            
+        <div class="menu menu-login">
+                Username:                                <form action="../login" method="post">
+                    <input class="design" name="user" type="text" />
+                    <br />
+                    Password:
+                    <br />
+                    <input class="design" name="pass" type="password" />
+                    <br />
+                    <input class="design" name="remember" type="checkbox" />Remember me
+                    <br />
+                    <input type="hidden" name="redirect" value="or1k/" />
+                    <input class="design" title="Login" type="submit" value="Login" />
+                </form>
+                <form action="../register" method="post">
+                    <input class="design" title="Register" type="submit" value="Register" />
+                </form>
+                        </div>
+        
+                
+        
+        <div class="menu" id="p-navigation">
+            <h2>Navigation</h2>
+		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
+        
+                
+        <div class="menu">
+            <h2><label for="searchInput">Search</label></h2>
+                <form action="/wiki1/index.php" id="searchform">
+                    <div>
+                        <input type='hidden' name="title" value="Special:Search"/>
+                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
+                        
+                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
+                        
+                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+                                                
+                    </div>
+                </form>
+        </div>
+        
+                
+        <div class="menu menu-tools">
+            <h2>Toolbox</h2>
+                <ul>
+                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/OR1K:Community_portal" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/OR1K:Community_portal" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=OR1K:Community_portal&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=OR1K:Community_portal&amp;oldid=1386" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
+        </div>
+        
+        
+        </div>
+        <div class="content" id="dmc">
+	    
+<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
+    
+    <div style="float: left; width: 720px; height: 60px;">
+        <!-- 720x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("720x60");
+        </script>
+    </div>
+        <div style="float: left; width: 300px; height: 60px;">
+        <!-- 300x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("300x60");
+        </script>
+    </div>
+    
+</div>
+	                        
+        <a name="top" id="top"></a>
+        
+                
+        <div id="oc-actions">
+            <p id="ca-nstab-project" class="selected"><a href="/or1k/OR1K:Community_portal" title="View the project page [a]" accesskey="a">Project page</a></p><p id="ca-talk" class=""><a href="/or1k/OR1K_talk:Community_portal" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=OR1K:Community_portal&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=OR1K:Community_portal&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
+        
+        <h1 id="firstHeading" class="firstHeading">
+            OR1K:Community portal        </h1>
+        
+        <div id="bodyContent">
+            <h3 id="siteSub">From OR1K</h3>
+            <div id="contentSub"></div>
+                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
+            <p>The aim of the OpenRISC project is to create free and open source computing platforms. 
+</p><p>It aims to provide:
+</p>
+<ul><li> a free, open source RISC architecture with DSP features
+</li><li> a set of free, open source implementations of the architecture
+</li><li> a complete set of free, open source software development tools, libraries, operating systems and applications
+</li></ul>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview_of_the_OpenRISC_1000_project"><span class="tocnumber">1</span> <span class="toctext">Overview of the OpenRISC 1000 project</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Architecture_specification"><span class="tocnumber">1.1</span> <span class="toctext">Architecture specification</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Licensing"><span class="tocnumber">1.2</span> <span class="toctext">Licensing</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Processor_Implementations"><span class="tocnumber">1.3</span> <span class="toctext">Processor Implementations</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#SoCs_based_on_OpenRISC"><span class="tocnumber">1.4</span> <span class="toctext">SoCs based on OpenRISC</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Toolchains"><span class="tocnumber">1.5</span> <span class="toctext">Toolchains</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Operating_systems"><span class="tocnumber">1.6</span> <span class="toctext">Operating systems</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Bootloaders"><span class="tocnumber">1.7</span> <span class="toctext">Bootloaders</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Conferences_and_meetings"><span class="tocnumber">1.8</span> <span class="toctext">Conferences and meetings</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Get_source_code"><span class="tocnumber">2</span> <span class="toctext">Get source code</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Ubuntu_OpenRISC_VirtualBox_image"><span class="tocnumber">2.1</span> <span class="toctext">Ubuntu OpenRISC VirtualBox image</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Repositories_for_latest_versions"><span class="tocnumber">2.2</span> <span class="toctext">Repositories for latest versions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#GitHub"><span class="tocnumber">2.2.1</span> <span class="toctext">GitHub</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#OpenCores_SVN_repository"><span class="tocnumber">2.2.2</span> <span class="toctext">OpenCores SVN repository</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Bug_reporting"><span class="tocnumber">3</span> <span class="toctext">Bug reporting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Enabling_Bugzilla"><span class="tocnumber">3.1</span> <span class="toctext">Enabling Bugzilla</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Reporting_a_bug"><span class="tocnumber">3.2</span> <span class="toctext">Reporting a bug</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Bug_work_flow"><span class="tocnumber">3.3</span> <span class="toctext">Bug work flow</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#The_old_bugtracker"><span class="tocnumber">3.4</span> <span class="toctext">The old bugtracker</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#Guide_for_developers"><span class="tocnumber">4</span> <span class="toctext">Guide for developers</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#Contributor_guidelines"><span class="tocnumber">4.1</span> <span class="toctext">Contributor guidelines</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Project_maintainers"><span class="tocnumber">4.2</span> <span class="toctext">Project maintainers</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Future_work"><span class="tocnumber">4.3</span> <span class="toctext">Future work</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="#Further_information"><span class="tocnumber">5</span> <span class="toctext">Further information</span></a>
+<ul>
+<li class="toclevel-2 tocsection-25"><a href="#News"><span class="tocnumber">5.1</span> <span class="toctext">News</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Manuals"><span class="tocnumber">5.2</span> <span class="toctext">Manuals</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Tutorials"><span class="tocnumber">5.3</span> <span class="toctext">Tutorials</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#FAQ"><span class="tocnumber">5.4</span> <span class="toctext">FAQ</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Mailing_lists"><span class="tocnumber">5.5</span> <span class="toctext">Mailing lists</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#OpenRISC_forum"><span class="tocnumber">5.6</span> <span class="toctext">OpenRISC forum</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#IRC"><span class="tocnumber">5.7</span> <span class="toctext">IRC</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Overview_of_the_OpenRISC_1000_project"> Overview of the OpenRISC 1000 project </span></h2>
+<p>The OpenRISC 1000 architecture is the first set of specifications for a family of 32- and 64-bit RISC/DSP processors. Its open and modular architecture allows a spectrum of chip and system implementations at a variety of price/performance points for a range of applications. Designed with emphasis on performance, simplicity, low power consumption, scalability and versatile implementation, it targets medium and high performance networking, portable, embedded, and automotive applications.
+</p>
+<h3> <span class="mw-headline" id="Architecture_specification"> Architecture specification </span></h3>
+<p>The latest version of the architecture specification can be downloaded<a href="http://opencores.org/websvn,filedetails?repname=openrisc&amp;path=%2Fopenrisc%2Ftrunk%2Fdocs%2Fopenrisc-arch-1.0-rev0.pdf" class="external text" rel="nofollow">here</a>
+</p><p>More information can be found on the <a href="/or1k/Architecture_Specification" title="Architecture Specification">Architecture Specification</a> page.
+</p>
+<h3> <span class="mw-headline" id="Licensing"> Licensing </span></h3>
+<p>The architecture specifications are published under the<a href="http://www.gnu.org/licenses/gpl.html" class="external text" rel="nofollow">GNU General Public License</a> (GPL). The reference implementations in Verilog on this website are licensed under the<a href="http://www.gnu.org/licenses/lgpl.html" class="external text" rel="nofollow">GNU Lesser General Public License</a> (LGPL). The reference toolchain and operating systems are published under the license of the upstream software, which is typically the GPL, but also other open source licenses, such as the Berkeley Software Distribution (BSD) license.
+</p><p>Third parties are free to create their own proprietary processor implementations. It is also possible to port proprietary software to the OpenRISC platform. Use and development of the implementations and software provided by the project is encouraged.
+</p>
+<h3> <span class="mw-headline" id="Processor_Implementations"> Processor Implementations </span></h3>
+<p>There are several OR1k-compliant processor implementations available. They exist both in the form of RTL implementations that can be synthesized for FPGA/ASIC, and as software models that can run programs compiled for the OpenRISC architecture in a simulated software environment. 
+</p><p>See the <a href="/or1k/OR1K_CPU_Cores" title="OR1K CPU Cores">OR1K CPU Cores</a> page for more details on these cores.
+</p>
+<h3> <span class="mw-headline" id="SoCs_based_on_OpenRISC"> SoCs based on OpenRISC </span></h3>
+<p>In order to do something useful with your OpenRISC processor you need to connect it to peripheral controllers, perform system level simulations and put it in an FPGA or ASIC. To make this process easier there exists several tools that can help build a SoC based on the OpenRISC processor and the Wishbone bus. The two most prominent platforms for building a SoC are:
+</p>
+<ul><li> <a href="/or1k/OR1K:MinSoC" title="OR1K:MinSoC">MinSoC</a>, (the Minimal OpenRISC System on Chip), developed by <a href="/wiki1/index.php?title=User:Rfajardo&amp;action=edit&amp;redlink=1" class="new" title="User:Rfajardo (page does not exist)">Raul Fajardo</a> based on the OpenRISC 1200.
+</li><li> <a href="/or1k/ORPSoC" title="ORPSoC">ORPSoC</a> (<b>O</b>penRISC <b>R</b>eference <b>P</b>latform <b>S</b>ystem <b>o</b>n <b>C</b>hip), an OpenRISC-based reference SoC. It consists of a test bench for OpenRISC processor RTL and a set of push-button builds for various FPGA development boards.
+</li></ul>
+<h3> <span class="mw-headline" id="Toolchains"> Toolchains </span></h3>
+<p>In order to produce executable binaries for the OpenRISC architecture, a toolchain is needed. In addition to compiling and linking files, the toolchain can also be used for debugging and analysis of programs. Both major toolchains (GNU and LLVM) are supported by OpenRISC. The GNU toolchain is the most wide-spread and used, while LLVM is still considered experimental. More information about how to build and use the toolchains can be found here:
+</p>
+<ul><li> <a href="/or1k/OpenRISC_GNU_tool_chain" title="OpenRISC GNU tool chain">GNU toolchain</a>
+</li><li> <a href="/or1k/LLVM" title="LLVM">LLVM toolchain</a>
+</li></ul>
+<h3> <span class="mw-headline" id="Operating_systems"> Operating systems </span></h3>
+<p>There are several operating systems of varying size and capability that have OpenRISC 1000 architecture support to some degree. Both <a href="/or1k/Linux" title="Linux">Linux</a> and several RTOS (Real Time Operating Systems) are available. See the <a href="/or1k/Operating_Systems" title="Operating Systems">Operating Systems</a> page for an overview of all the supported Operating systems
+</p>
+<h3> <span class="mw-headline" id="Bootloaders"> Bootloaders </span></h3>
+<p>Instead of directly booting an application from an on-board memory, a boot loader can be used to perform advanced tasks such as loading a program from TFTP or SD card. For this purpose several boot loaders have been ported to OpenRISC 1000. 
+</p>
+<ul><li> <a href="http://barebox.org" class="external text" rel="nofollow">barebox</a>, The U-boot replacement
+</li><li> <a href="/or1k/U-Boot" title="U-Boot">U-Boot</a>, <a href="http://www.denx.de/wiki/U-Boot" class="external text" rel="nofollow">the universal bootloader</a>.
+</li><li> <s>ORPmon, the OpenRISC boot monitor</s> (Deprecated)
+</li></ul>
+<h3> <span class="mw-headline" id="Conferences_and_meetings"> Conferences and meetings </span></h3>
+<p>Meetings of project developers, maintainers and users are held regularly. 
+</p><p>The next event is <a href="http://www.orconf.org" class="external text" rel="nofollow">ORCONF 2014</a>.
+</p><p>See the <a href="/or1k/OpenRISC_Project_Meeting" title="OpenRISC Project Meeting">OpenRISC Project Meeting</a> page for details.
+</p>
+<h2> <span class="mw-headline" id="Get_source_code"> Get source code </span></h2>
+<h3> <span class="mw-headline" id="Ubuntu_OpenRISC_VirtualBox_image"> Ubuntu OpenRISC VirtualBox image </span></h3>
+<p>The purpose with the <a href="/or1k/Ubuntu_VirtualBox-image_updates_and_information" title="Ubuntu VirtualBox-image updates and information">Ubuntu OpenRISC VirtualBox image</a> is to make it SUPER easy to get started with the OpenRISC processor platform, both with hardware and software. The VirtualBox image contain the necessary tools pre-installed for both hardware and software.
+</p><p><b>NOTE:</b> The VM image is old by now and uses the legacy (or32-) toolchain. A new VM image would be highly appreciated
+</p>
+<h3> <span class="mw-headline" id="Repositories_for_latest_versions"> Repositories for latest versions </span></h3>
+<p>OpenRISC is a large project with many different repositories for storing source code. Most of the repositories are found in OpenCores SVN or on Github
+</p>
+<h4> <span class="mw-headline" id="GitHub"> GitHub </span></h4>
+<p>Most of the code you will need can be found at <a href="https://github.com/openrisc" class="external free" rel="nofollow">https://github.com/openrisc</a>
+</p>
+<ul><li> or1k-gcc - GCC
+</li><li> or1k-src - binutils and GDB
+</li><li> or1ksim  - Simulator for or1k
+</li><li> uClibc-or1k - uClibc
+</li><li> Linux kernel port
+</li></ul>
+<p>...and many other
+</p><p>Instructions on building can be found here: <a href="http://opencores.org/or1k/OpenRISC_GNU_tool_chain#Installation_of_development_versions" class="external text" rel="nofollow">OpenRISC GNU toolchain</a>
+</p>
+<h4> <span class="mw-headline" id="OpenCores_SVN_repository"> OpenCores SVN repository </span></h4>
+<p>The SVN repository has over time become a dumping grounds for things related to OpenRISC development. In general, the development versions of most projects in this huge repository has moved somewhere else, but we will keep the files in SVN for backwards compatibility. The projects that still uses the OpenCores OpenRISC SVN repo as its main VCS are:
+</p>
+<ul><li>OR1200
+</li><li><a href="/or1k/OR1K:Community_Portal#ORPSoC" title="OR1K:Community Portal" class="mw-redirect">ORPSoCv2</a>
+</li><li>Legacy (or32) GNU toolchain port source
+</li><li>RTOS ports
+</li></ul>
+<p>Browse the SVN repository via the <a href="http://opencores.org/websvn,listing,openrisc" class="external text" rel="nofollow">web-SVN-GUI</a>.
+</p><p>Get a subversion checkout of the repository with
+</p>
+<pre>svn co http://opencores.org/ocsvn/openrisc/openrisc/trunk
+</pre>
+<p><b>Note:</b> The checkout process may take a while. It may also fail to completely checkout the repository - performing an SVN update will make the checkout continue.
+</p>
+<h2> <span class="mw-headline" id="Bug_reporting"> Bug reporting </span></h2>
+<p>We have now moved to using <a href="http://bugzilla.opencores.org" class="external text" rel="nofollow">Bugzilla</a> for all bug and issue tracking. This is still relatively new, so please tell us of any problems via the <a href="#Mailing_lists">mailing lists</a> or <a href="#IRC">IRC</a>.
+</p>
+<h3> <span class="mw-headline" id="Enabling_Bugzilla"> Enabling Bugzilla </span></h3>
+<p><b>Important.</b> Before you can file a bug in Bugzilla, you must register. The mechanism to do this was changed at the start of 2012, to allow self-registration using your opencores.org email address.
+</p><p>At the Bugzilla main page click on "New Account" at the top. This link doesn't always show - you may see text boxes for "Username" and "Password" instead. In this case, click on [X] to the right of the password box and "New Account" will appear.
+</p><p>Click on "New Account" and follow the instructions, remembering you must use your OpenCores email address (<i>username</i>@opencores.org).
+</p>
+<h3> <span class="mw-headline" id="Reporting_a_bug"> Reporting a bug </span></h3>
+<p>The first step is to see if anyone else has already reported the bug. Use Bugzilla's search functionality to check this. If you find the bug is already there, add your own comment and add yourself to the CC list (so you get notified when the bug is fixed).
+</p><p>Otherwise add a new bug. You'll need to login using your opencores email address. If your user id is fred.bloggs, you will login using fred.bloggs@opencores.org. Your password will be the same as your main OpenCores password.
+</p><p><b>Note:</b> This catches everyone out. The login is your opencores email address, <i>not</i> your opencores user id.
+</p><p>The product is "OpenRISC" and you should select the component to which the bug applies.
+</p><p>The severity needs some explanation:
+</p>
+<ul><li> blocker. This bug stops other components working
+</li><li> critical. This bug stops this component working
+</li><li> major. This bug stops this component working, but there is a workaround
+</li><li> normal. Most bugs!
+</li><li> minor. Would be nice to fix, but you can live with this bug.
+</li><li> trivial. Yes it's a bug, but there is no real need to fix it.
+</li><li> enhancement. Nothing's broken, but this would make the product better.
+</li></ul>
+<p>Leave the priority field untouched (Normal). It is for the bug fixer to prioritize his or her work.
+</p><p>Then add a comment explaining how to reproduce this bug. If you have a fix, then please post that as well.
+</p>
+<h3> <span class="mw-headline" id="Bug_work_flow"> Bug work flow </span></h3>
+<p>The standard Bugzilla work flow (diagram from the Bugzilla user guide) is as follows:
+</p><p><a href="/or1k/File:BzLifecycle.png" class="image"><img alt="BzLifecycle.png" src="/wiki1/images/2/22/BzLifecycle.png" width="593" height="470" /></a>
+</p><p>In large projects, each resolution requires separate verification. However, because OpenRISC is still quite a small project, that QA function may be carried out by the developer themself. However that is something we want to change as soon as the project is large enough.
+</p>
+<h3> <span class="mw-headline" id="The_old_bugtracker"> The old bugtracker </span></h3>
+<p>The old <a href="http://opencores.org/openrisc,bugtracker" class="external text" rel="nofollow">OpenRISC bugtracker system</a> is still online, but only as a historical record. It is no longer possible to enter new bugs into it. All the open bugs have been transferred to Bugzilla.
+</p>
+<h2> <span class="mw-headline" id="Guide_for_developers"> Guide for developers </span></h2>
+<p>We're still working on this. Feel free to update, or add to the discussion.
+</p>
+<h3> <span class="mw-headline" id="Contributor_guidelines"> Contributor guidelines </span></h3>
+<p>We ask those who wish to contribute to any part of the project to check out the <a href="/or1k/Contributor_Guidelines" title="Contributor Guidelines">contributor guidelines</a> page. These outline the general contribution practices for the OpenRISC project and any specific preferences of individual parts fo the project.
+</p>
+<h3> <span class="mw-headline" id="Project_maintainers"> Project maintainers </span></h3>
+<p>Central to development are the <a href="/or1k/Project_Maintainers" title="Project Maintainers">Project maintainers</a> who are ultimately responsible for the quality of development.
+</p>
+<h3> <span class="mw-headline" id="Future_work"> Future work </span></h3>
+<p>We have a list of projects, wishlists, what people are working on <a href="/or1k/OR1K:FutureWork" title="OR1K:FutureWork">here</a>.
+</p>
+<h2> <span class="mw-headline" id="Further_information"> Further information </span></h2>
+<h3> <span class="mw-headline" id="News"> News </span></h3>
+<p><b>Note</b>: This section isn't updated very much anymore. That isn't to say that there's nothing going on with the project - on the contrary, there is plenty going on. We'll figure out a better system of keeping people up to date with what is going on soon. In the meantime check out the <a href="#IRC">IRC channel</a> and <a href="#Mailing_lists">mailing lists</a> for an idea of what is going on.
+</p>
+<table>
+<tr>
+<td>11-April-2011 </td>
+<td> OpenRISC newlib toolchain 1.0rc1 released.
+</td></tr>
+<tr>
+<td>31-March-2011 </td>
+<td> New OR1200 tests added to ORPSoC further validating exception handling behavior.
+</td></tr>
+<tr>
+<td>17-March-2011 </td>
+<td> ORPSoC OR1200 Update - adding extra instruction support, implementing range exception for overflow support. ALU comparisons improved.
+</td></tr></table>
+<p>An archive of <a href="http://opencores.org/openrisc,news" class="external text" rel="nofollow">older news items</a> is also maintained.
+</p>
+<h3> <span class="mw-headline" id="Manuals"> Manuals </span></h3>
+<p>See the <a href="/or1k/Architecture_Specification" title="Architecture Specification">architecture specification</a> page for the architecture manual. 
+</p><p>A <a href="http://opencores.org/openrisc,file,b3BlbnJpc2MxMjAwX3NwZWNfMC43X2pwLnBkZg==" class="external text" rel="nofollow">Japanese version</a> of the OR1200 specification by Takashi Okawa is also available.
+</p>
+<h3> <span class="mw-headline" id="Tutorials"> Tutorials </span></h3>
+<p>This tutorial section contains guides and information that helps new OpenRISC users to get started more easily.
+</p><p>Material for beginners to soft cores on FPGA:
+</p>
+<ul><li> <a href="/wiki1/index.php?title=User:Svenand&amp;action=edit&amp;redlink=1" class="new" title="User:Svenand (page does not exist)">Sven-Åke Andersson</a> has written a comprehensive <a href="http://www.rte.se/blog/blogg-modesty-corex/openrisc-1200-soft-processor" class="external text" rel="nofollow">blog on OpenRISC for newbies</a>, which offers a guide to the complete design flow.
+</li></ul>
+<p>Guides to the toolchain:
+</p>
+<ul><li> <a href="/or1k/User:Jeremybennett" title="User:Jeremybennett">Jeremy Bennett</a>. <a href="http://www.embecosm.com/download/ean2.html" class="external text" rel="nofollow">Embecosm Application Note 2</a>. <i>The OpenCores OpenRISC 1000 Simulator and Tool Chain: Installation Guide</i>. Issue 3, November 2008.
+</li><li> Robert Guenzel. <a href="http://chschroeder.gamiro.de/rg/or1ksim_macOS10.4.pdf" class="external text" rel="nofollow">Embecosm Application Notes 1 and 2 and MacOS 10.4</a>
+</li></ul>
+<p>SystemC interfaces:
+</p>
+<ul><li> <a href="/or1k/User:Jeremybennett" title="User:Jeremybennett">Jeremy Bennett</a>. <a href="http://www.embecosm.com/download/ean1.html" class="external text" rel="nofollow">Embecosm Application Note 1</a>. <i>Building a Loosely Timed SoC Model with OSCI TLM 2.0: A Case Study Using an Open Source ISS and Linux 2.6 Kernel.</i> Issue 2, May 2010. 
+</li><li> Robert Guenzel. <a href="http://chschroeder.gamiro.de/rg/or1ksim_macOS10.4.pdf" class="external text" rel="nofollow">Embecosm Application Notes 1 and 2 and MacOS 10.4</a>
+</li></ul>
+<p>Tutorials on how to implement OR1200 on Altera FPGA and Xilinx FPGA. Credits go to <a href="http://emsys.denayer.wenk.be/" class="external text" rel="nofollow">Resarch Group Digital Techniques</a>, Hogeschool voor Wetenschap &amp; Kunst, Campus de Nayer
+</p>
+<ul><li> Altera HW tutorial <a href="http://cdn.opencores.org/pdf/openrisc-HW-tutorial-Altera.pdf" class="external text" rel="nofollow">local copy</a> of the PDF and possibly <a href="http://emsys.denayer.wenk.be/empro/openrisc-HW-tutorial-Altera.pdf" class="external text" rel="nofollow">updated version</a> at the original site.
+</li><li> Xilinx HW tutorial <a href="http://cdn.opencores.org/pdf/openrisc-HW-tutorial-Xilinx.pdf" class="external text" rel="nofollow">local copy</a> of the PDF and possibly <a href="http://emsys.denayer.wenk.be/empro/openrisc-HW-tutorial-Xilinx.pdf" class="external text" rel="nofollow">updated version</a> at the original site.
+</li></ul>
+<p>Tutorials on how to implement OR1200 on Xilinx Spartan-6 FPGA.
+</p>
+<ul><li> OpenRISC implemented on the Digilent Atlys board <a href="http://www.rte.se/blog/blogg-modesty-corex/openrisc-1200-soft-processor" class="external autonumber" rel="nofollow">[1]</a>
+</li></ul>
+<p>Tutorials on how to implement OR1200 on Xilinx and Altera FPGAs using MinSoC.
+</p>
+<ul><li> MinSoC Tutorials <a href="http://www.minsoc.com/1_0:start" class="external autonumber" rel="nofollow">[2]</a>
+</li></ul>
+<p>Tutorials on compiling and running software in or1ksim:
+</p>
+<ul><li> Simple C program compilation and execution from rte.se: <a href="http://www.rte.se/blog/blogg-modesty-corex/writing-application-program" class="external text" rel="nofollow">Writing an application program</a>
+</li></ul>
+<p>A Dynamic Reconfigurable OpenRISC Framework called Proteus&#160;: <a href="http://proteus-project.org/" class="external text" rel="nofollow">Proteus Framework</a>
+</p>
+<h3> <span class="mw-headline" id="FAQ"> FAQ </span></h3>
+<p>In the <a href="/or1k/FAQ" title="FAQ">FAQ</a> you can see all commonly asked questions. Feel free to add more.
+This FAQ focus on the OpenRISC project.
+</p>
+<h3> <span class="mw-headline" id="Mailing_lists"> Mailing lists </span></h3>
+<p>Two <a href="http://lists.opencores.org/" class="external text" rel="nofollow">by mailing lists</a> are provided by opencores.org. These tend to carry more technical discussion by developers and would-be developers than the forum.
+</p>
+<ul><li> The <a href="http://lists.opencores.org/listinfo/openrisc" class="external text" rel="nofollow">OpenRISC mailing list</a> (<a href="mailto:openrisc@lists.opencores.org" class="external text" rel="nofollow">openrisc@lists.opencores.org</a>) is for general discussion of the OpenRISC archtiecture. <a href="http://lists.opencores.org/pipermail/openrisc/" class="external text" rel="nofollow">Monthly archives</a> are maintained, which can be browsed by name, subject, date or thread.
+</li></ul>
+<ul><li> The <a href="http://lists.opencores.org/listinfo/wishbone" class="external text" rel="nofollow">WishBone mailing list</a> is for discussion of the WishBone bus architecture. <a href="http://lists.opencores.org/pipermail/wishbone/" class="external text" rel="nofollow">Monthly archives</a> are maintained, which can be browsed by name, subject, date or thread.
+</li></ul>
+<p>If you subscribe to the <a href="/or1k/OR1K:Community_portal#OpenRISC_forum" title="OR1K:Community portal">OpenRISC forum</a>, you will be automatically subscribed to the OpenRISC mailing list as well.
+</p>
+<h3> <span class="mw-headline" id="OpenRISC_forum"> OpenRISC forum </span></h3>
+<p>The <a href="http://opencores.org/forum,OpenRISC" class="external text" rel="nofollow">OpenRISC forum</a> is maintained on the opencores.org website, and is a web based discussion forum. Users can use full HTML to format their messages, and all messages are help in a simple archive online. You can ask to receive notifications of new messages, by going to "My Account" (top left of this page, beneath the OpenCores logo) and selecting "OpenRISC" under the <b>Subscriptions</b> section. Note. This will also add you to the <a href="/or1k/OR1K:Community_portal#Mailing_lists_on_opencores.org" title="OR1K:Community portal">opencores.org OpenRISC mailing list</a>.
+</p><p>A number of <a href="http://opencores.org/forum" class="external text" rel="nofollow">other forums</a> address other OpenCores projects (the Ethernet MAC, PCI, USB etc).
+</p>
+<h3> <span class="mw-headline" id="IRC"> IRC </span></h3>
+<p>Most of the regular contributors can be found on channel <b>#opencores</b> or <b>#openrisc</b> at <b>freenode.net</b>. They are a friendly bunch, and a good source of advice.
+</p><p>A <a href="http://webchat.freenode.net/?channels=openrisc" class="external text" rel="nofollow">webchat client is available</a>.
+</p><p>Logs of the <b>#openrisc</b> channel can be found <a href="http://juliusbaxter.net/openrisc-irc/" class="external text" rel="nofollow">here</a>.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 141/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:3-0!*!0!!en!2!edit=0 and timestamp 20161009001909 -->
+<div class="printfooter">
+Retrieved from "<a href="http://opencores.org/or1k/OR1K:Community_portal">http://opencores.org/or1k/OR1K:Community_portal</a>"</div>
+            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
+                        <div class="visualClear"></div>
+        </div>
+        
+                
+        <div class="visualClear"><p></p></div>
+        
+        <div id="footer">
+            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 14 May 2015, at 10:40.<li id="lastmod"></li>This page has been accessed 188,066 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
+<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "Project", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 4, "wgPageName": "OR1K:Community_portal", "wgTitle": "Community portal", "wgAction": "view", "wgArticleId": 3, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1386, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+	mediaWiki.loader.go();
+}
+</script>
+
+<script>if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
+}
+</script><!-- Served in 1.398 secs. -->            
+        </div>
+        
+        
+        </div>
+	<div style="clear:both;margin-left:200px;">
+            <!-- 728x90 -->
+            <script type="text/javascript">
+            GA_googleFillSlot("728x90");
+            </script>
+	</div>
+    </div>
+    <div class="bot">
+	&copy; copyright 1999-2016
+OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
+    </div>
+</div>
+
+<!-- Google search -->
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+<!-- /Google search -->
+
+</body>
+</html>

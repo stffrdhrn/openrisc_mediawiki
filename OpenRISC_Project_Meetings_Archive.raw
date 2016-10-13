@@ -1,0 +1,791 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head>
+            
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="generator" content="MediaWiki 1.17.0" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
+<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
+        <!--[if lt IE 7]>
+        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
+		<meta http-equiv="imagetoolbar" content="no" />
+        <![endif]-->
+        
+        <script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "OpenRISC_Project_Meetings_Archive", "wgTitle": "OpenRISC Project Meetings Archive", "wgAction": "view", "wgArticleId": 81, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1392, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>        
+        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
+		
+        <!-- Head Scripts -->
+                
+        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
+                
+                
+		        
+		        
+		        
+            <title>OpenRISC Project Meetings Archive - OR1K :: OpenCores</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
+    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
+    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
+    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+    <script type="text/javascript">
+    GS_googleAddAdSenseService("ca-pub-0097483751598630");
+    GS_googleEnableAllServices();
+    </script>
+    <script type="text/javascript">
+    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
+    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
+    </script>
+    <script type="text/javascript">
+    GA_googleFetchAds();
+    </script>
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
+    <![endif]-->
+    <!--[if (IE 7)|(IE 8)]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <script type="text/javascript">
+        
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2763846-2']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+    </script>
+    
+</head>
+<body>
+<div class="main">
+    <div class="top">
+        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
+    </div>
+    <div class="line">
+	<div></div>
+	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
+    </div>
+    <div class="mid" id="dm">
+        <div class="mainmenu" id="dml">
+	            
+        <div class="menu menu-login">
+                Username:                                <form action="../login" method="post">
+                    <input class="design" name="user" type="text" />
+                    <br />
+                    Password:
+                    <br />
+                    <input class="design" name="pass" type="password" />
+                    <br />
+                    <input class="design" name="remember" type="checkbox" />Remember me
+                    <br />
+                    <input type="hidden" name="redirect" value="or1k/" />
+                    <input class="design" title="Login" type="submit" value="Login" />
+                </form>
+                <form action="../register" method="post">
+                    <input class="design" title="Register" type="submit" value="Register" />
+                </form>
+                        </div>
+        
+                
+        
+        <div class="menu" id="p-navigation">
+            <h2>Navigation</h2>
+		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
+        
+                
+        <div class="menu">
+            <h2><label for="searchInput">Search</label></h2>
+                <form action="/wiki1/index.php" id="searchform">
+                    <div>
+                        <input type='hidden' name="title" value="Special:Search"/>
+                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
+                        
+                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
+                        
+                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+                                                
+                    </div>
+                </form>
+        </div>
+        
+                
+        <div class="menu menu-tools">
+            <h2>Toolbox</h2>
+                <ul>
+                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/OpenRISC_Project_Meetings_Archive" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/OpenRISC_Project_Meetings_Archive" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=OpenRISC_Project_Meetings_Archive&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=OpenRISC_Project_Meetings_Archive&amp;oldid=1392" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
+        </div>
+        
+        
+        </div>
+        <div class="content" id="dmc">
+	    
+<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
+    
+    <div style="float: left; width: 720px; height: 60px;">
+        <!-- 720x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("720x60");
+        </script>
+    </div>
+        <div style="float: left; width: 300px; height: 60px;">
+        <!-- 300x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("300x60");
+        </script>
+    </div>
+    
+</div>
+	                        
+        <a name="top" id="top"></a>
+        
+                
+        <div id="oc-actions">
+            <p id="ca-nstab-main" class="selected"><a href="/or1k/OpenRISC_Project_Meetings_Archive" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:OpenRISC_Project_Meetings_Archive&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=OpenRISC_Project_Meetings_Archive&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=OpenRISC_Project_Meetings_Archive&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
+        
+        <h1 id="firstHeading" class="firstHeading">
+            OpenRISC Project Meetings Archive        </h1>
+        
+        <div id="bodyContent">
+            <h3 id="siteSub">From OR1K</h3>
+            <div id="contentSub"></div>
+                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
+            <p>This page is an archive of previous OpenRISC meeting and conference events wiki content.
+</p><p>For the latest information see the <a href="/or1k/OpenRISC_Project_Meeting" title="OpenRISC Project Meeting">main page</a>.
+</p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#ORCONF_2014"><span class="tocnumber">1</span> <span class="toctext">ORCONF 2014</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Presentation_Proposals"><span class="tocnumber">1.1</span> <span class="toctext">Presentation Proposals</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Conference_Format"><span class="tocnumber">1.2</span> <span class="toctext">Conference Format</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#ORCONF_2013"><span class="tocnumber">2</span> <span class="toctext">ORCONF 2013</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Registration"><span class="tocnumber">2.1</span> <span class="toctext">Registration</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Audience"><span class="tocnumber">2.2</span> <span class="toctext">Audience</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Date_.26_Time"><span class="tocnumber">2.3</span> <span class="toctext">Date &amp; Time</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Venue"><span class="tocnumber">2.4</span> <span class="toctext">Venue</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Accommodation"><span class="tocnumber">2.4.1</span> <span class="toctext">Accommodation</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Travel"><span class="tocnumber">2.4.2</span> <span class="toctext">Travel</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#Cost"><span class="tocnumber">2.5</span> <span class="toctext">Cost</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Schedule"><span class="tocnumber">2.6</span> <span class="toctext">Schedule</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Sponsors"><span class="tocnumber">2.7</span> <span class="toctext">Sponsors</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Contact"><span class="tocnumber">2.8</span> <span class="toctext">Contact</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Talk_and_workshop_abstracts"><span class="tocnumber">3</span> <span class="toctext">Talk and workshop abstracts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#A_SystemC_model_of_a_multicore_OpenRISC_with_power_annotation"><span class="tocnumber">3.1</span> <span class="toctext">A SystemC model of a multicore OpenRISC with power annotation</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Defining_a_Domain_Specific_Language_for_the_Configuration_of_SoPCs_Based_on_the_OpenRISC_Platform"><span class="tocnumber">3.2</span> <span class="toctext">Defining a Domain Specific Language for the Configuration of SoPCs Based on the OpenRISC Platform</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#OpTiMSoC_-_an_OpenRISC-based_Manycore_System-on-Chip"><span class="tocnumber">3.3</span> <span class="toctext">OpTiMSoC - an OpenRISC-based Manycore System-on-Chip</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#ORPSoC_on_the_DE0-nano"><span class="tocnumber">3.4</span> <span class="toctext">ORPSoC on the DE0-nano</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#mor1kx_progress_report_and_demo"><span class="tocnumber">3.5</span> <span class="toctext">mor1kx progress report and demo</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Hands_off_the_cores.21_Hands-on_with_ORPSoCv3"><span class="tocnumber">3.6</span> <span class="toctext">Hands off the cores! Hands-on with ORPSoCv3</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#OpenRISC_2000"><span class="tocnumber">3.7</span> <span class="toctext">OpenRISC 2000</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Update_and_discussion_on_the_OpenRISC_toolchain"><span class="tocnumber">3.8</span> <span class="toctext">Update and discussion on the OpenRISC toolchain</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Bug_squashing_session"><span class="tocnumber">3.9</span> <span class="toctext">Bug squashing session</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#April_14_2013.2C_Teleconference"><span class="tocnumber">4</span> <span class="toctext">April 14 2013, Teleconference</span></a>
+<ul>
+<li class="toclevel-2 tocsection-26"><a href="#Audience_2"><span class="tocnumber">4.1</span> <span class="toctext">Audience</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Date_.26_Time_2"><span class="tocnumber">4.2</span> <span class="toctext">Date &amp; Time</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Recording"><span class="tocnumber">4.3</span> <span class="toctext">Recording</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="#October_13-14_2012.2C_Stockholm"><span class="tocnumber">5</span> <span class="toctext">October 13-14 2012, Stockholm</span></a>
+<ul>
+<li class="toclevel-2 tocsection-30"><a href="#Audience_3"><span class="tocnumber">5.1</span> <span class="toctext">Audience</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#Date_.26_Time_3"><span class="tocnumber">5.2</span> <span class="toctext">Date &amp; Time</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#Venue_2"><span class="tocnumber">5.3</span> <span class="toctext">Venue</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#Schedule_2"><span class="tocnumber">5.4</span> <span class="toctext">Schedule</span></a>
+<ul>
+<li class="toclevel-3 tocsection-34"><a href="#Saturday"><span class="tocnumber">5.4.1</span> <span class="toctext">Saturday</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#Sunday"><span class="tocnumber">5.4.2</span> <span class="toctext">Sunday</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-36"><a href="#Register_Intent"><span class="tocnumber">5.5</span> <span class="toctext">Register Intent</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="#Presentation_Proposals_2"><span class="tocnumber">5.6</span> <span class="toctext">Presentation Proposals</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="#Sponsors_2"><span class="tocnumber">5.7</span> <span class="toctext">Sponsors</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="#Contact_2"><span class="tocnumber">5.8</span> <span class="toctext">Contact</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="ORCONF_2014"> ORCONF 2014 </span></h2>
+<div class="center"><div class="floatnone"><a href="/or1k/File:Orconf2014-resized.png" class="image"><img alt="Orconf2014-resized.png" src="/wiki1/images/thumb/3/37/Orconf2014-resized.png/500px-Orconf2014-resized.png" width="500" height="101" /></a></div></div>
+<p>See <a href="http://openrisc.io/orconf/2014/" class="external text" rel="nofollow">the official conference page for all details of the conference</a>.
+</p><p>The third annual project meeting will be held in <b>Munich, Germany</b> over the weekend of <b>Saturday, October 11</b> and <b>Sunday, October 12</b> 2014.
+</p>
+<div class="floatright"><a href="/or1k/File:Munich-skyline.jpg" class="image"><img alt="Munich-skyline.jpg" src="/wiki1/images/thumb/5/59/Munich-skyline.jpg/350px-Munich-skyline.jpg" width="350" height="236" /></a></div>
+<p>More information on this event will be made available here and on the <a href="/or1k/OR1K:Community_Portal#Mailing_lists" title="OR1K:Community Portal" class="mw-redirect">OpenRISC mailing lists</a> over the next couple of months.
+</p>
+<h3> <span class="mw-headline" id="Presentation_Proposals"> Presentation Proposals </span></h3>
+<p>We are now accepting presentation proposals.
+</p><p>We'd welcome presentations from anyone who is involved in the open source hardware design sphere. The OpenRISC project's concerns are many and varied, from <b>computer architecture</b> and <b>RTL implementations</b>, to open source <b>EDA tools</b> and <b>flows</b>, to <b>tool chains</b>, <b>debuggers</b> and <b>software</b> from <b>bare metal RTOS</b> to <b>Linux</b> user space, so we'd like to reflect this in the presentations. Your project, of course, need not be related to OpenRISC, specifically.
+</p><p>Presentation formats are flexible, let us know what you'd prefer and we'll be sure to accommodate you.
+</p><p>Please send proposals to either:
+</p>
+<ol><li> <a href="mailto:openrisc@lists.openrisc.net;openrisc@lists.opencores.org?Subject=ORCONF2014%20Presentation%20Proposal" class="external text" rel="nofollow">OpenRISC mailinglist(s)</a>
+</li><li> <a href="mailto:julius@orconf.org;olof@orconf.org?Subject=ORCONF2014%20Presentation%20Proposal" class="external text" rel="nofollow">the event organisers directly</a>. 
+</li></ol>
+<p>For questions and comments, contact us the emails above or via the <a href="/or1k/OR1K:Community_Portal#IRC" title="OR1K:Community Portal" class="mw-redirect">IRC channel, #openrisc on irc.freenode.net</a>.
+</p>
+<h3> <span class="mw-headline" id="Conference_Format"> Conference Format </span></h3>
+<p>The conference will likely run from about midday on Saturday to early afternoon on Sunday. This will allow people to travel Saturday morning and Sunday afternoon.
+</p><p>The conference will primarily consist of presentations, with perhaps a workshop allowing people to get their hands dirty with OpenRISC. We're also open to <a href="http://en.wikipedia.org/wiki/Birds_of_a_feather_(computing)" class="external text" rel="nofollow">BoF</a> sessions.
+</p>
+<h2> <span class="mw-headline" id="ORCONF_2013"> ORCONF 2013 </span></h2>
+<p>The second annual OpenRISC project conference - ORCONF 2013. 
+</p><p>See the <a href="/or1k/OpenRISC_Project_Meeting#Schedule" title="OpenRISC Project Meeting">schedule section</a> for details of the weekend.
+</p>
+<h3> <span class="mw-headline" id="Registration"> Registration </span></h3>
+<p>Registration is free and allows us to know who will be attending for scheduling and catering purposes.
+</p><p><b>Registration for the event is now open via Eventbrite:</b> <a href="http://orconf2013.eventbrite.co.uk/" class="external text" rel="nofollow">Click here to register for ORCONF</a>
+</p><p>Please let us know any timing constraints on your attendance when registering. (<tt>set_multicycle_path -start 1hr -from {i:you} -to {i:orconf}</tt>)
+</p>
+<h3> <span class="mw-headline" id="Audience"> Audience </span></h3>
+<p>This meeting will be accessible for anyone with a background in embedded systems at any level, whether acquainted with the project or not.
+</p>
+<h3> <span class="mw-headline" id="Date_.26_Time"> Date &amp; Time </span></h3>
+<p>The event will run from 2pm on <b>Saturday, October 5</b> to early afternoon on <b>Sunday, October 6</b>.
+</p><p>Lunch will be available from 12:30 on Saturday. The sessions will run until the evening, and be followed by dinner in a local pub. Sessions will resume Sunday morning and conclude after lunch in the early afternoon.
+</p><p>This arrangement should allow people to travel on Saturday morning and return home Sunday evening.
+</p>
+<h3> <span class="mw-headline" id="Venue"> Venue </span></h3>
+<div class="floatright"><a href="/or1k/File:University_of_Cambridge_Computer_Laboratory.jpg" class="image"><img alt="University of Cambridge Computer Laboratory.jpg" src="/wiki1/images/thumb/a/a1/University_of_Cambridge_Computer_Laboratory.jpg/400px-University_of_Cambridge_Computer_Laboratory.jpg" width="400" height="149" /></a></div>
+<p>This year's conference will be held at the <a href="http://www.cl.cam.ac.uk/" class="external text" rel="nofollow">University of Cambridge Computer Laboratory</a> in <b>Cambridge, England</b>. A <i>big</i> thank you to David Greaves and the Computer Labs for hosting us.
+</p><p>The address is:
+</p><p><b>Room FW11</b>, Cambridge University Computer Laboratory,
+15 JJ Thomson Avenue,
+CB3 0FD Cambridge,
+United Kingdom 
+</p>
+<h4> <span class="mw-headline" id="Accommodation"> Accommodation </span></h4>
+<p>Some recommendations for places to stay are:
+</p>
+<ul><li> <a href="http://www.travelodge.co.uk/hotels/577/Cambridge-Newmarket-Road-hotel" class="external text" rel="nofollow">Travelodge Newmarket Road</a> - they are quoting 50GBP for Friday night and 86GBP for Saturday night. It is close enough to town to walk, but is a 45-minute walk to the conference venue. Taxis between the train station and conference venue would be the best bet (if several are staying here they could be shared).
+</li><li> <a href="http://www.kayak.co.uk/#/hotels/Arundel-House-Hotel,Cambridge,CAM,United-Kingdom-c17146-h80251/2013-10-04/2013-10-06" class="external text" rel="nofollow">Arundel House</a> - this is a well located hotel, and are quoting 77GBP per night when booked on Kayak.co.uk. The conference venue is a 25-minute walk from here.
+</li></ul>
+<h4> <span class="mw-headline" id="Travel"> Travel </span></h4>
+<p>Cambridge is well connected in the UK by train, and internationally via all of London's airports. However, <b>London Stansted</b> airport is the closest, and is only a 30-minute train ride from the center of Cambridge.
+</p><p>The Cambridge University Computer Laboratory website has a good section on<a href="http://www.cl.cam.ac.uk/directions/" class="external text" rel="nofollow">how to get there</a>.
+</p>
+<h3> <span class="mw-headline" id="Cost"> Cost </span></h3>
+<p>It is expected the conference will be free to attend, thanks to our wonderful <a href="#Sponsors">sponsors</a>.
+</p>
+<h3> <span class="mw-headline" id="Schedule"> Schedule </span></h3>
+<p>A playlist with all videos from ORCONF 2013 can be found on <a href="http://www.youtube.com/playlist?list=PLOGTP9W1DX5VpHSd9F9kVQl5hsDVA45I9" class="external text" rel="nofollow">YouTube</a>
+</p><p>Saturday:
+</p>
+<table width="100%" class="wikitable">
+
+<tr>
+<th> Time </th>
+<th> Presentation </th>
+<th> Video </th>
+<th> Slides, etc.
+</th></tr>
+<tr>
+<td> 1:45pm </td>
+<td>  A SystemC model of a multicore OpenRISC with power annotation (David Greaves). </td>
+<td> <a href="http://youtu.be/uW9tAiL_oSc" class="external text" rel="nofollow">Video</a> </td>
+<td>
+</td></tr>
+<tr>
+<td> 2:30pm </td>
+<td> <a href="http://optimsoc.org" class="external text" rel="nofollow">OpTiMSoC</a> - an OpenRISC-based Manycore System-on-Chip (Stefan Wallentowitz). </td>
+<td> <a href="http://youtu.be/gEfEFahvAQ" class="external text" rel="nofollow">Video</a> </td>
+<td>
+</td></tr>
+<tr>
+<td> 3:15pm </td>
+<td> <a href="http://www.cl.cam.ac.uk/research/security/ctsrd/beri.html" class="external text" rel="nofollow">BERI</a>: A Bluespec Extensible RISC Implementation. The development of a full-featured 64-bit MIPS processor for hardware-software co-design targeting rapid and robust extensibility (Jon Woodruff). </td>
+<td> <a href="http://youtu.be/8_enfBQXuO0" class="external text" rel="nofollow">Video</a> </td>
+<td>
+</td></tr>
+<tr>
+<td> 4:15pm </td>
+<td>  Hands off the cores! Hands-on with<a href="https://github.com/openrisc/orpsoc" class="external text" rel="nofollow">ORPSoCv3</a> - A walkthrough to get started with using ORPSoCv3 (Olof Kindgren and others). </td>
+<td> <a href="http://youtu.be/W3-fUkrdR1M" class="external text" rel="nofollow">Video</a> </td>
+<td>
+</td></tr>
+<tr>
+<td> 5:00pm </td>
+<td>  <a href="/or1k/ORCONF2013_Workshop_ORPSoC_On_DE0_Nano" title="ORCONF2013 Workshop ORPSoC On DE0 Nano">ORPSoC on the DE0-nano</a>. Based on the workshop first given at [chiphack.org ChipHack], but upgraded for ORPSoCv3. DE0-nano's will be provided, but feel free to bring your own (Julius Baxter to lead). </td>
+<td>  </td>
+<td>
+</td></tr></table>
+<p>Sunday:
+</p>
+<table width="100%" class="wikitable">
+
+<tr>
+<th> Time </th>
+<th> Presentation </th>
+<th> Video </th>
+<th> Slides, etc.
+</th></tr>
+<tr>
+<td> 9:00am </td>
+<td> <a href="https://github.com/openrisc/mor1kx" class="external text" rel="nofollow">mor1kx</a> progress report and demo (Stefan Kristiansson and Julius Baxter). </td>
+<td> <a href="http://youtu.be/8CwbNGKrjl" class="external text" rel="nofollow">Video</a> </td>
+<td>
+</td></tr>
+<tr>
+<td> 9:45am </td>
+<td>  Defining a Domain Specific Language for the Configuration of SoPCs Based on the OpenRISC Platform (Martin Schulze). </td>
+<td> <a href="http://youtu.be/oLmDYf-S6pc" class="external text" rel="nofollow">Video</a></td>
+<td>
+</td></tr>
+<tr>
+<td> 10:15am </td>
+<td>  OpenRISC for space applications and EurySpace SoC (Guillaume Rembert) </td>
+<td> <a href="http://youtu.be/tsuB32vTj_o" class="external text" rel="nofollow">Video</a> </td>
+<td>
+</td></tr>
+<tr>
+<td> 10:30am </td>
+<td>  OpenOCD and GDB for OpenRISC (Franck Jullien)  </td>
+<td> <a href="http://youtu.be/zcDVcXE5-sE" class="external text" rel="nofollow">Video</a> </td>
+<td>
+</td></tr>
+<tr>
+<td> 10:45am </td>
+<td>  Modifying the OR1200 for ETH Z&#252;rich (Davide Rossi) </td>
+<td> <a href="http://youtu.be/PJLZx3PnRvE" class="external text" rel="nofollow">Video</a> </td>
+<td>
+</td></tr>
+<tr>
+<td> 11:30am </td>
+<td>  OpenRISC 2000. A collaborative session to firm up the architecture specification (Jeremy Bennett to chair). </td>
+<td> <a href="http://youtu.be/1rQlAmlEwRg" class="external text" rel="nofollow">Video</a> </td>
+<td> <a href="http://opencores.org/or2k/OR2K_ORCONF2013_Discussion" class="external text" rel="nofollow">Notes</a>
+</td></tr>
+<tr>
+<td> 12:15pm </td>
+<td>  Update and discussion on the OpenRISC toolchain, including "do we need ABIv2" (Stefan Kristiansson to lead). </td>
+<td> <a href="http://youtu.be/o8DReLrNn_k" class="external text" rel="nofollow">Video</a> </td>
+<td>
+</td></tr>
+<tr>
+<td> 1:00pm </td>
+<td>  A Couple of Things at Lightning Speed (Julius Baxter) </td>
+<td> <a href="http://youtu.be/XWDJy_EPLgs" class="external text" rel="nofollow">Video</a> </td>
+<td>
+</td></tr>
+<tr>
+<td> 1:00pm </td>
+<td>  Verilator Update (Jeremy Bennett) </td>
+<td> <a href="http://youtu.be/yOk8DcK4-f0" class="external text" rel="nofollow">Video</a> </td>
+<td>
+</td></tr></table>
+<h3> <span class="mw-headline" id="Sponsors"> Sponsors </span></h3>
+<p><a href="http://www.embecosm.com" title="Embecosm"><img alt="Embecosm" src="/wiki1/images/a/a1/Embecosm_logo_new.png" width="158" height="65" /></a>
+</p><p>Embecosm is a UK based consultancy providing open source compiler development and silicon modeling. More information at<a href="http://www.embecosm.com" class="external text" rel="nofollow">www.embecosm.com</a>.
+</p>
+<h3> <span class="mw-headline" id="Contact"> Contact </span></h3>
+<p>Please contact juliusbaxter@gmail.com or post to the <a href="/or1k/OR1K:Community_Portal#Mailing_lists" title="OR1K:Community Portal" class="mw-redirect">OpenRISC mailing lists</a> for further information or presentation proposals.
+</p><p>The organisers are also easily contactable via IRC in <a href="/or1k/OR1K:Community_Portal#IRC" title="OR1K:Community Portal" class="mw-redirect">#openrisc on irc.freenode.net</a>
+</p>
+<h2> <span class="mw-headline" id="Talk_and_workshop_abstracts"> Talk and workshop abstracts </span></h2>
+<h3> <span class="mw-headline" id="A_SystemC_model_of_a_multicore_OpenRISC_with_power_annotation"> A SystemC model of a multicore OpenRISC with power annotation </span></h3>
+<p>David Greaves, Cambridge University Computer Laboratory
+</p><p>David has developed a SystemC model of a multicore OpenRISC design, which has been used for teaching at the University for some years. This model is unusual in having annotations for power usage, so it can give estimates of power consumption as well as system performance when run.
+</p>
+<h3> <span class="mw-headline" id="Defining_a_Domain_Specific_Language_for_the_Configuration_of_SoPCs_Based_on_the_OpenRISC_Platform"> Defining a Domain Specific Language for the Configuration of SoPCs Based on the OpenRISC Platform </span></h3>
+<p>Martin Schulze
+</p><p>After some words about my motivation I will give a demo of the current state of the project, the eclipse editor and a simple solution to the question how to integrate into ORPSoCv2 (yes, it's v2 for now).
+</p>
+<h3> <span class="mw-headline" id="OpTiMSoC_-_an_OpenRISC-based_Manycore_System-on-Chip"> OpTiMSoC - an OpenRISC-based Manycore System-on-Chip </span></h3>
+<p>Stefan Wallentowitz, Technical University of Munich
+</p>
+<h3> <span class="mw-headline" id="ORPSoC_on_the_DE0-nano"> ORPSoC on the DE0-nano </span></h3>
+<p>Julius Baxter
+</p><p>This is a workshop first given by Julius Baxter at[chiphack.org ChipHack], showing how to bring up ORPSoC on the DE0-nano. A number of DE0-nano's will be available, but feel free to bring your own.
+</p><p>Partipants are encouraged to <a href="/or1k/ORCONF2013_Workshop_ORPSoC_On_DE0_Nano" title="ORCONF2013 Workshop ORPSoC On DE0 Nano">read the workshop requirements</a> and perform the tool installation prior to arriving ORCONF. Please contact Julius Baxter via IRC, the mailing lists or directly (see email below) if you experience problems with your preparation.
+</p>
+<h3> <span class="mw-headline" id="mor1kx_progress_report_and_demo"> mor1kx progress report and demo </span></h3>
+<p>Stefan Kristiansson and Julius Baxter
+</p>
+<h3> <span class="mw-headline" id="Hands_off_the_cores.21_Hands-on_with_ORPSoCv3"> Hands off the cores! Hands-on with ORPSoCv3 </span></h3>
+<p>Olof Kindgren and others
+</p><p>A walkthrough to get started with using ORPSoCv3. This will precede the workshop.
+</p>
+<h3> <span class="mw-headline" id="OpenRISC_2000"> OpenRISC 2000 </span></h3>
+<p>Jeremy Bennett
+</p><p>This has been bouncing around for a couple of years, and it would be good to start to get some more concrete direction. Implementing OpenRISC (in silicon and in simulation) is a popular undergraduate project, and defining OR2K now might give a chance for someone to implement it during the coming academic year.
+</p>
+<h3> <span class="mw-headline" id="Update_and_discussion_on_the_OpenRISC_toolchain"> Update and discussion on the OpenRISC toolchain </span></h3>
+<p>Stefan Kristiansson
+</p><p>This year has been a lot quieter on the toolchain side than last year, but there are a couple of things of interest that could be discussed. At least one thing I have in mind is our ABI. There have been a couple of occurrences of projects that abuse the C standard for varargs, hurting us "small, different guys".
+</p><p>There are a couple of other things in our ABI that aren't all perfect, so maybe some venting of those issues and whether we need an "ABI v2.0" would be something we should consider.
+</p>
+<h3> <span class="mw-headline" id="Bug_squashing_session"> Bug squashing session </span></h3>
+<p>We did this last year as the final session after lunch on Sunday. People joined in for as long as they could until their flights/trains left. It's a good chance to clear up Bugzilla once each year.
+</p>
+<h2> <span class="mw-headline" id="April_14_2013.2C_Teleconference"> April 14 2013, Teleconference </span></h2>
+<h3> <span class="mw-headline" id="Audience_2"> Audience </span></h3>
+<p>Everyone is welcome to participate or just listen in. It will be recorded and made available for listening after the event.
+</p>
+<h3> <span class="mw-headline" id="Date_.26_Time_2"> Date &amp; Time </span></h3>
+<p>Sunday April 14, 2013, at 7PM BST (18:00 UTC).
+</p>
+<h3> <span class="mw-headline" id="Recording"> Recording </span></h3>
+<p>The teleconference took place via a Google Hangout. A recording was made and is available <a href="http://www.youtube.com/watch?v=wqjyEe1fSNM" class="external text" rel="nofollow">here</a>.
+</p>
+<h2> <span class="mw-headline" id="October_13-14_2012.2C_Stockholm"> October 13-14 2012, Stockholm </span></h2>
+<div class="thumb tleft"><div class="thumbinner" style="width:802px;"><a href="/or1k/File:IMG_1009.JPG" class="image"><img alt="" src="/wiki1/images/thumb/1/16/IMG_1009.JPG/800px-IMG_1009.JPG" width="800" height="600" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/or1k/File:IMG_1009.JPG" class="internal" title="Enlarge"><img src="/wiki1/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>Participants at the OpenRISC conference Stockholm 2012</div></div></div>
+<p><br style="clear: both" />
+</p><p>Attendees in the photo from left to right:
+</p>
+<dl><dd>Johan Rilegård (ORSoC AB), Olof Kindgren (ORSoC AB), Stefan Kristiansson, Stephen Battazzo (ÅAC Microtec), Michael Gielda (Antmicro), Patrik Ekström (Real Time Embedded), Magnus Norgren (ÅAC Microtec), Yann Vernier (ORSoC AB), Piotr Skrzypek (Antmicro), Sven-Åke Andersson (Real Time Embedded), Franck Jullien, Michael Unnebäck (ORSoC AB), Julius Baxter, Peter Gielda (Antmicro), Jeremy Bennett (Embecosm), Magnus Mokvist (Real Time Embedded), Simon Cook (Embecosm).
+</dd></dl>
+<p>More photos of the talks on <a href="http://www.flickr.com/photos/embecosm/sets/72157631773557553/" class="external text" rel="nofollow">Flickr</a>.
+</p>
+<h3> <span class="mw-headline" id="Audience_3"> Audience </span></h3>
+<p>It is intended that the meeting would be useful for both developers and users of the platform to attend.
+</p>
+<h3> <span class="mw-headline" id="Date_.26_Time_3"> Date &amp; Time </span></h3>
+<p>The event will run over <b>Saturday, October 13</b> and <b>Sunday, October 14</b>.
+</p><p>The venue will be open from 11:00 on Saturday, with a light lunch available from 11:30 and presentations starting at 12:00.
+</p>
+<h3> <span class="mw-headline" id="Venue_2"> Venue </span></h3>
+<p>Realtime Embedded, Sveavagen 64, Stockholm, Sweden
+</p><p>Further details can be found here: <a href="http://www.rte.se/sv/kontakt" class="external free" rel="nofollow">http://www.rte.se/sv/kontakt</a>
+</p><p>Some drinks and snacks will be provided at the venue by the <a href="#Sponsors">sponsors</a> on the day.
+</p>
+<h3> <span class="mw-headline" id="Schedule_2"> Schedule </span></h3>
+<p>It is planned that the event will be run over Saturday and Sunday, with the bulk of the presentations on the Saturday.
+</p>
+<h4> <span class="mw-headline" id="Saturday"> Saturday </span></h4>
+<p>The day will formally begin at about midday, with a light lunch being provided from 11:30AM to encourage people to come along a little early.
+</p><p>There will be a brief welcome and introduction of the sponsors before we begin presentations.
+</p><p>Below is the running order of the day, estimated durations and times sessions are expected to start. There is slack in the schedule to allow for questions following presentations, and breaks.
+</p><p>For those that like their nostalgia in large doses can find a YouTube playlist of all videos at <a href="http://www.youtube.com/playlist?list=PLOGTP9W1DX5VrmtFbeYczr28_k7fRBbhF" class="external free" rel="nofollow">http://www.youtube.com/playlist?list=PLOGTP9W1DX5VrmtFbeYczr28_k7fRBbhF</a>
+</p>
+<table style="border-collapse: separate; border-spacing: 0; border-width: 1px; border-style: solid; border-color: #000; padding: 0">
+
+<tr>
+<th style="width: 5%; border-style: solid; border-width: 0 0 1px 0"> Time
+</th>
+<th style="border-style: solid; border-width: 0 0 1px 0"> Length
+</th>
+<th style="border-style: solid; border-width: 0 0 1px 0"> Presentation
+</th>
+<th style="border-style: solid; border-width: 0 0 1px 0"> Who
+</th>
+<th style="border-style: solid; border-width: 0 0 1px 0"> Slides, Videos
+</th></tr>
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0"> 12:00
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0"> 30 min
+</td>
+<td style="border-style: solid; border-width: 0"> Welcome, introduction
+</td>
+<td style="border-style: solid; border-width: 0"> hosts, <a href="/or1k/OpenRISC_Project_Meeting#Sponsors" title="OpenRISC Project Meeting">sponsors</a>
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="http://youtu.be/pbZNxo6o4lY" class="external text" rel="nofollow">Video</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-02-introduction2.ogg" class="external text" rel="nofollow">Audio</a>
+</td></tr>
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0">
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0">
+</td>
+<td style="border-style: solid; border-width: 0">
+</td>
+<td style="border-style: solid; border-width: 0"> All attendees introducing themselves
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="http://youtu.be/gLkYrH7n4L4" class="external text" rel="nofollow">Video</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-01-introduction.ogg" class="external text" rel="nofollow">Audio</a>
+</td></tr>
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0"> 12:30
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0"> 20 min
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="/or1k/Talk:OpenRISC_Project_Meeting#OpenRISC_development_boards_and_modules" title="Talk:OpenRISC Project Meeting">OpenCores &amp; OpenRISC boards</a>
+</td>
+<td style="border-style: solid; border-width: 0"> Michael Unneback
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="http://youtu.be/pbZNxo6o4lY" class="external text" rel="nofollow">Video</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-03-devboards.ogg" class="external text" rel="nofollow">Audio</a>
+</td></tr>
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0"> 13:00
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0"> 30 min
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="/or1k/Talk:OpenRISC_Project_Meeting#OpenRISC_for_Newbies" title="Talk:OpenRISC Project Meeting">OpenRISC for newbies</a>
+</td>
+<td style="border-style: solid; border-width: 0"> Sven-Åke Andersson
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="http://youtu.be/6iT_oR5wRSg" class="external text" rel="nofollow">Video</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-04-openriscfornewbies.ogg" class="external text" rel="nofollow">Audio</a> <a href="https://www.dropbox.com/s/oqjdjrspkwnke7e/OpenRISC%20for%20Newbies.pdf" class="external text" rel="nofollow">Slides</a>
+</td></tr>
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0"> 13:40
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0"> 40 min
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="/or1k/Talk:OpenRISC_Project_Meeting#eCos_for_OpenRISC" title="Talk:OpenRISC Project Meeting">eCos for OpenRISC</a>
+</td>
+<td style="border-style: solid; border-width: 0"> Michael Gielda, Piotr Skrzypek
+</td>
+<td style="border-style: solid; border-width: 0"> Video, Audio unfortunately unavailable <a href="https://dl.dropbox.com/u/4774576/openrisc/AM--openRISC--13.10.2012.pdf" class="external text" rel="nofollow">Slides</a>
+</td></tr>
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0"> 14:30
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0"> 40 min
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="/or1k/Talk:OpenRISC_Project_Meeting#ORPSoCv3" title="Talk:OpenRISC Project Meeting">ORPSoCv3</a>
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="/or1k/User:Olof" title="User:Olof">Olof Kindgren</a>
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="http://youtu.be/vYJjIoV0G3U" class="external text" rel="nofollow">Video</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-05-orpsocv3.ogg" class="external text" rel="nofollow">Audio</a>
+</td></tr>
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0"> 15:20
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0"> 40 min
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="/or1k/Talk:OpenRISC_Project_Meeting#mor1kx_core_presentation" title="Talk:OpenRISC Project Meeting">The new mor1kx CPU core</a>
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="/or1k/User:Julius" title="User:Julius">Julius Baxter</a>,
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="http://youtu.be/Q0LHzMbkZDk" class="external text" rel="nofollow">Video</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-06-mor1kx-pt1.ogg" class="external text" rel="nofollow">Audio</a> <a href="https://www.dropbox.com/s/vtwn4kx18kkexa8/presentation.pdf" class="external text" rel="nofollow">Slides</a>
+</td></tr>
+<tr>
+<td style="border-style: solid; border-width: 0">
+</td>
+<td style="border-style: solid; border-width: 0">
+</td>
+<td style="border-style: solid; border-width: 0">
+</td>
+<td style="border-style: solid; border-width: 0"> Stefan Kristiansson
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="http://youtu.be/tUWSPKTtCRg" class="external text" rel="nofollow">Video</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-07-mor1kx-pt2.ogg" class="external text" rel="nofollow">Audio</a>
+</td></tr>
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0"> 16:40
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0"> 50 min
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="/or1k/Talk:OpenRISC_Project_Meeting#LLVM_for_OpenRISC" title="Talk:OpenRISC Project Meeting">LLVM for OpenRISC</a>
+</td>
+<td style="border-style: solid; border-width: 0"> Stefan Kristiansson, Simon Cook
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="http://youtu.be/KTz1OkPnewY" class="external text" rel="nofollow">Video</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-08-llvm.ogg" class="external text" rel="nofollow">Audio</a> <a href="https://www.dropbox.com/s/p6y03eobyl12p85/llvm.pdf" class="external text" rel="nofollow">Slides (Stefan)</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-simon-llvmas.pdf" class="external text" rel="nofollow">Slides (Simon)</a>
+</td></tr>
+
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0">
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0">
+</td>
+<td style="border-style: solid; border-width: 0"> TechEdSat
+</td>
+<td style="border-style: solid; border-width: 0">
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="http://youtu.be/MDxoD1eeRUw" class="external text" rel="nofollow">Video</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-09-techedsat.ogg" class="external text" rel="nofollow">Audio</a>
+</td></tr>
+
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0">
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0">
+</td>
+<td style="border-style: solid; border-width: 0"> Parallella
+</td>
+<td style="border-style: solid; border-width: 0"> Jeremy Bennett
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="http://youtu.be/RAHDHrPozOU" class="external text" rel="nofollow">Video</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-10-parallella.ogg" class="external text" rel="nofollow">Audio</a>
+</td></tr>
+
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0"> 18:00
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0"> 90 min
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="/or1k/Talk:OpenRISC_Project_Meeting#Open_source_processes_for_OpenRISC" title="Talk:OpenRISC Project Meeting">Open source processes for OpenRISC</a><br />(<a href="/or1k/OpenRISC_Project_Meeting_Discussion" title="OpenRISC Project Meeting Discussion">Discussion Notes</a>)
+</td>
+<td style="border-style: solid; border-width: 0"> Chair: <a href="/or1k/User:Jeremybennett" title="User:Jeremybennett">Jeremy Bennett</a>
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="http://youtu.be/2fnZhePF_vY" class="external text" rel="nofollow">Video</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-11-opensourceprocesses.ogg" class="external text" rel="nofollow">Audio</a>
+</td></tr>
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0"> 19:45
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0">
+</td>
+<td style="border-style: solid; border-width: 0"> Leave for dinner
+</td>
+<td style="border-style: solid; border-width: 0">
+</td></tr></table>
+<h4> <span class="mw-headline" id="Sunday"> Sunday </span></h4>
+<table style="border-collapse: separate; border-spacing: 0; border-width: 1px; border-style: solid; border-color: #000; padding: 0">
+
+<tr>
+<th style="width: 5%; border-style: solid; border-width: 0 0 1px 0"> Time
+</th>
+<th style="border-style: solid; border-width: 0 0 1px 0"> Length
+</th>
+<th style="border-style: solid; border-width: 0 0 1px 0"> Presentation
+</th>
+<th style="border-style: solid; border-width: 0 0 1px 0"> Who
+</th>
+<th style="border-style: solid; border-width: 0 0 1px 0"> Slides, Videos
+</th></tr>
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0"> 11:00
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0"> 40 min
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="/or1k/Talk:OpenRISC_Project_Meeting#Dynamic_linking_with_OpenRISC_Linux_toolchain" title="Talk:OpenRISC Project Meeting">Dynamic linking with OpenRISC toolchain</a>
+</td>
+<td style="border-style: solid; border-width: 0"> Stefan Kristiansson
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="http://youtu.be/j0fAyL4Xo2k" class="external text" rel="nofollow">Video</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-12-dynamiclinking.ogg" class="external text" rel="nofollow">Audio</a> <a href="https://www.dropbox.com/s/lc1nkwzt3xe47u7/dynamic.pdf" class="external text" rel="nofollow">Slides</a>
+</td></tr>
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0"> 12:00
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0"> 60 min
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="/or1k/Talk:OpenRISC_Project_Meeting#OR1K_architectural_revision_discussion" title="Talk:OpenRISC Project Meeting">OR1K architectural revision discussion</a>
+</td>
+<td style="border-style: solid; border-width: 0"> Chair: <a href="/or1k/User:Julius" title="User:Julius">Julius Baxter</a>
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="http://youtu.be/34qCF8zssDw" class="external text" rel="nofollow">Video</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-13-or1karchitecture.ogg" class="external text" rel="nofollow">Audio</a>
+</td></tr>
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0"> 13:30
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0"> 30 min
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="/or1k/Talk:OpenRISC_Project_Meeting#OR2K_architectural_discussion" title="Talk:OpenRISC Project Meeting">OR2K discussion</a>
+</td>
+<td style="border-style: solid; border-width: 0"> Chair: <a href="/or1k/User:Julius" title="User:Julius">Julius Baxter</a>
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="http://youtu.be/gMobPnpbHpw" class="external text" rel="nofollow">Video</a> <a href="https://dl.dropbox.com/u/4774576/openrisc/orconf2012-14-or2k.ogg" class="external text" rel="nofollow">Audio</a>
+</td></tr>
+<tr>
+<td style="text-align: center; border-style: solid; border-width: 0 0 0 0"> 14:00
+</td>
+<td style="text-align: center; border-style: solid; border-width: 0">
+</td>
+<td style="border-style: solid; border-width: 0"> <a href="/or1k/Talk:OpenRISC_Project_Meeting#Bug_squashing_session" title="Talk:OpenRISC Project Meeting">Bug squashing session</a>
+</td>
+<td style="border-style: solid; border-width: 0"> Everyone
+</td></tr></table>
+<h3> <span class="mw-headline" id="Register_Intent"> Register Intent </span></h3>
+<p>Please fill in the details on the following link to indicate whether you're likely to come along.
+</p><p><a href="https://docs.google.com/a/orsoc.se/spreadsheet/viewform?formkey=dC1rQW45emhGZHY0NU1YME9oMVhEcWc6MQ" class="external text" rel="nofollow">Please register intent to attend here.</a>
+</p>
+<h3> <span class="mw-headline" id="Presentation_Proposals_2"> Presentation Proposals </span></h3>
+<p>No more long presentations can be fit in for the day, however <b>if you'd like to do a <a href="http://en.wikipedia.org/wiki/Lightning_talk" class="external text" rel="nofollow">lightning talk</a> we'd really like that</b> and we'll find a way to fit you in, so please submit your topic as per below! (Or just come along on the day and we'll see what we can do.)
+</p><p>Please submit presentation proposals on the discussion page for this wiki article.
+</p><p><a href="/or1k/Talk:OpenRISC_Project_Meeting" title="Talk:OpenRISC Project Meeting">Submit presentation proposals here</a>.
+</p><p>Alternatively please post them to the <a href="/or1k/OR1K:Community_Portal#Mailing_lists" title="OR1K:Community Portal" class="mw-redirect">OpenRISC mailing lists</a>.
+</p>
+<h3> <span class="mw-headline" id="Sponsors_2"> Sponsors </span></h3>
+<p><a href="http://www.rte.se" title="Realtime Embedded"><img alt="Realtime Embedded" src="/wiki1/images/5/52/Rtelogo.png" width="223" height="52" /></a>
+</p><p><a href="http://www.rte.se" class="external text" rel="nofollow">Realtime Embedded</a> are the primary sponsor of the event, kindly providing a venue and refreshments.
+</p><p><br />
+<a href="http://www.orsoc.se" title="ORSoC"><img alt="ORSoC" src="/wiki1/images/7/78/Orsoclogo.jpg" width="165" height="52" /></a>
+</p><p><a href="http://www.orsoc.se" class="external text" rel="nofollow">ORSoC</a> are the owners and operators of OpenCores and are kindly providing lunch for the event.
+</p>
+<h3> <span class="mw-headline" id="Contact_2"> Contact </span></h3>
+<p>Please contact juliusbaxter@gmail.com or post to the <a href="/or1k/OR1K:Community_Portal#Mailing_lists" title="OR1K:Community Portal" class="mw-redirect">OpenRISC mailing lists</a> for further information or presentation proposals. 
+</p><p><a href="http://freenode.net/using_the_network.shtml" class="external text" rel="nofollow">IRC</a> is also a good way to get in touch, try in <b>#opencores</b> or <b>#openrisc</b> on <b>irc.freenode.net</b>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 156/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:81-0!*!0!!en!2!edit=0 and timestamp 20161009123822 -->
+<div class="printfooter">
+Retrieved from "<a href="http://opencores.org/or1k/OpenRISC_Project_Meetings_Archive">http://opencores.org/or1k/OpenRISC_Project_Meetings_Archive</a>"</div>
+            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
+                        <div class="visualClear"></div>
+        </div>
+        
+                
+        <div class="visualClear"><p></p></div>
+        
+        <div id="footer">
+            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 11 September 2015, at 14:34.<li id="lastmod"></li>This page has been accessed 6,574 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
+<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "OpenRISC_Project_Meetings_Archive", "wgTitle": "OpenRISC Project Meetings Archive", "wgAction": "view", "wgArticleId": 81, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1392, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+	mediaWiki.loader.go();
+}
+</script>
+
+<script>if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
+}
+</script><!-- Served in 2.689 secs. -->            
+        </div>
+        
+        
+        </div>
+	<div style="clear:both;margin-left:200px;">
+            <!-- 728x90 -->
+            <script type="text/javascript">
+            GA_googleFillSlot("728x90");
+            </script>
+	</div>
+    </div>
+    <div class="bot">
+	&copy; copyright 1999-2016
+OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
+    </div>
+</div>
+
+<!-- Google search -->
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+<!-- /Google search -->
+
+</body>
+</html>

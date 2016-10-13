@@ -1,0 +1,645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head>
+            
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="generator" content="MediaWiki 1.17.0" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
+<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
+        <!--[if lt IE 7]>
+        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
+		<meta http-equiv="imagetoolbar" content="no" />
+        <![endif]-->
+        
+        <script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "ORCONF2013_Workshop_ORPSoC_On_DE0_Nano", "wgTitle": "ORCONF2013 Workshop ORPSoC On DE0 Nano", "wgAction": "view", "wgArticleId": 86, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1390, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>        
+        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
+		
+        <!-- Head Scripts -->
+                
+        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
+                
+                
+		        
+		        
+		        
+            <title>ORCONF2013 Workshop ORPSoC On DE0 Nano - OR1K :: OpenCores</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
+    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
+    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
+    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+    <script type="text/javascript">
+    GS_googleAddAdSenseService("ca-pub-0097483751598630");
+    GS_googleEnableAllServices();
+    </script>
+    <script type="text/javascript">
+    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
+    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
+    </script>
+    <script type="text/javascript">
+    GA_googleFetchAds();
+    </script>
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
+    <![endif]-->
+    <!--[if (IE 7)|(IE 8)]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <script type="text/javascript">
+        
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2763846-2']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+    </script>
+    
+</head>
+<body>
+<div class="main">
+    <div class="top">
+        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
+    </div>
+    <div class="line">
+	<div></div>
+	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
+    </div>
+    <div class="mid" id="dm">
+        <div class="mainmenu" id="dml">
+	            
+        <div class="menu menu-login">
+                Username:                                <form action="../login" method="post">
+                    <input class="design" name="user" type="text" />
+                    <br />
+                    Password:
+                    <br />
+                    <input class="design" name="pass" type="password" />
+                    <br />
+                    <input class="design" name="remember" type="checkbox" />Remember me
+                    <br />
+                    <input type="hidden" name="redirect" value="or1k/" />
+                    <input class="design" title="Login" type="submit" value="Login" />
+                </form>
+                <form action="../register" method="post">
+                    <input class="design" title="Register" type="submit" value="Register" />
+                </form>
+                        </div>
+        
+                
+        
+        <div class="menu" id="p-navigation">
+            <h2>Navigation</h2>
+		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
+        
+                
+        <div class="menu">
+            <h2><label for="searchInput">Search</label></h2>
+                <form action="/wiki1/index.php" id="searchform">
+                    <div>
+                        <input type='hidden' name="title" value="Special:Search"/>
+                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
+                        
+                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
+                        
+                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+                                                
+                    </div>
+                </form>
+        </div>
+        
+                
+        <div class="menu menu-tools">
+            <h2>Toolbox</h2>
+                <ul>
+                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/ORCONF2013_Workshop_ORPSoC_On_DE0_Nano" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/ORCONF2013_Workshop_ORPSoC_On_DE0_Nano" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=ORCONF2013_Workshop_ORPSoC_On_DE0_Nano&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=ORCONF2013_Workshop_ORPSoC_On_DE0_Nano&amp;oldid=1390" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
+        </div>
+        
+        
+        </div>
+        <div class="content" id="dmc">
+	    
+<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
+    
+    <div style="float: left; width: 720px; height: 60px;">
+        <!-- 720x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("720x60");
+        </script>
+    </div>
+        <div style="float: left; width: 300px; height: 60px;">
+        <!-- 300x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("300x60");
+        </script>
+    </div>
+    
+</div>
+	                        
+        <a name="top" id="top"></a>
+        
+                
+        <div id="oc-actions">
+            <p id="ca-nstab-main" class="selected"><a href="/or1k/ORCONF2013_Workshop_ORPSoC_On_DE0_Nano" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:ORCONF2013_Workshop_ORPSoC_On_DE0_Nano&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=ORCONF2013_Workshop_ORPSoC_On_DE0_Nano&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=ORCONF2013_Workshop_ORPSoC_On_DE0_Nano&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
+        
+        <h1 id="firstHeading" class="firstHeading">
+            ORCONF2013 Workshop ORPSoC On DE0 Nano        </h1>
+        
+        <div id="bodyContent">
+            <h3 id="siteSub">From OR1K</h3>
+            <div id="contentSub"></div>
+                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
+            <table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Requirements"><span class="tocnumber">2</span> <span class="toctext">Requirements</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Tool_installation"><span class="tocnumber">3</span> <span class="toctext">Tool installation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Repository_control_software"><span class="tocnumber">3.1</span> <span class="toctext">Repository control software</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#OpenRISC_GNU_tool_chain"><span class="tocnumber">3.2</span> <span class="toctext">OpenRISC GNU tool chain</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Building_from_source"><span class="tocnumber">3.2.1</span> <span class="toctext">Building from source</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Pre-compiled"><span class="tocnumber">3.2.2</span> <span class="toctext">Pre-compiled</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Add_to_PATH"><span class="tocnumber">3.2.3</span> <span class="toctext">Add to PATH</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#Altera_Quartus"><span class="tocnumber">3.3</span> <span class="toctext">Altera Quartus</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Add_to_PATH_2"><span class="tocnumber">3.3.1</span> <span class="toctext">Add to PATH</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-11"><a href="#OpenOCD"><span class="tocnumber">3.4</span> <span class="toctext">OpenOCD</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#Troubleshooting"><span class="tocnumber">3.4.1</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-4 tocsection-13"><a href="#Missing_packages_required_for_bootstrap"><span class="tocnumber">3.4.1.1</span> <span class="toctext">Missing packages required for bootstrap</span></a></li>
+<li class="toclevel-4 tocsection-14"><a href="#Missing_packages_during_configure"><span class="tocnumber">3.4.1.2</span> <span class="toctext">Missing packages during configure</span></a></li>
+<li class="toclevel-4 tocsection-15"><a href="#TCL_error_message_during_configure"><span class="tocnumber">3.4.1.3</span> <span class="toctext">TCL error message during configure</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#ORPSoC"><span class="tocnumber">3.5</span> <span class="toctext">ORPSoC</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#ORPSoC_build_system"><span class="tocnumber">3.5.1</span> <span class="toctext">ORPSoC build system</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#ORPSoC_cores"><span class="tocnumber">3.5.2</span> <span class="toctext">ORPSoC cores</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Demo_bare_metal_software_for_ORPSoC"><span class="tocnumber">3.5.3</span> <span class="toctext">Demo bare metal software for ORPSoC</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#Building_ORPSoC_for_the_DE0_nano"><span class="tocnumber">4</span> <span class="toctext">Building ORPSoC for the DE0 nano</span></a>
+<ul>
+<li class="toclevel-2 tocsection-21"><a href="#Create_build_area"><span class="tocnumber">4.1</span> <span class="toctext">Create build area</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Build_FPGA_image"><span class="tocnumber">4.2</span> <span class="toctext">Build FPGA image</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-23"><a href="#Running_ORPSoC_on_DE0_Nano"><span class="tocnumber">5</span> <span class="toctext">Running ORPSoC on DE0 Nano</span></a>
+<ul>
+<li class="toclevel-2 tocsection-24"><a href="#Programming_the_FPGA"><span class="tocnumber">5.1</span> <span class="toctext">Programming the FPGA</span></a>
+<ul>
+<li class="toclevel-3 tocsection-25"><a href="#Troubleshooting_2"><span class="tocnumber">5.1.1</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-4 tocsection-26"><a href="#Error_.28213019.29:_Can.27t_scan_JTAG_chain._Error_code_89."><span class="tocnumber">5.1.1.1</span> <span class="toctext">Error (213019): Can't scan JTAG chain. Error code 89.</span></a></li>
+<li class="toclevel-4 tocsection-27"><a href="#Error_.28213019.29:_Can.27t_scan_JTAG_chain._Error_code_36."><span class="tocnumber">5.1.1.2</span> <span class="toctext">Error (213019): Can't scan JTAG chain. Error code 36.</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-28"><a href="#Attach_the_debug_proxy"><span class="tocnumber">5.2</span> <span class="toctext">Attach the debug proxy</span></a>
+<ul>
+<li class="toclevel-3 tocsection-29"><a href="#Troubleshooting_3"><span class="tocnumber">5.2.1</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-4 tocsection-30"><a href="#Error:_JTAG_tap:_or1200.cpu_expected_1_of_1:_0x020b30dd"><span class="tocnumber">5.2.1.1</span> <span class="toctext">Error: JTAG tap: or1200.cpu  expected 1 of 1: 0x020b30dd</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-31"><a href="#Physically_attach_the_UART"><span class="tocnumber">5.3</span> <span class="toctext">Physically attach the UART</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#Open_a_UART_terminal"><span class="tocnumber">5.4</span> <span class="toctext">Open a UART terminal</span></a>
+<ul>
+<li class="toclevel-3 tocsection-33"><a href="#Troubleshooting_4"><span class="tocnumber">5.4.1</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-4 tocsection-34"><a href="#Permissions_problems"><span class="tocnumber">5.4.1.1</span> <span class="toctext">Permissions problems</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-35"><a href="#Compiling_demo_bare_metal_software"><span class="tocnumber">5.5</span> <span class="toctext">Compiling demo bare metal software</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#Download_and_run_OpenRISC_software_on_SoC"><span class="tocnumber">5.6</span> <span class="toctext">Download and run OpenRISC software on SoC</span></a>
+<ul>
+<li class="toclevel-3 tocsection-37"><a href="#Telnet"><span class="tocnumber">5.6.1</span> <span class="toctext">Telnet</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="#Run_Linux"><span class="tocnumber">5.6.2</span> <span class="toctext">Run Linux</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Introduction"> Introduction </span></h1>
+<p>This page contains the guide for the workshop being held during <a href="/or1k/ORCONF#ORCONF_2013" title="ORCONF" class="mw-redirect">ORCONF 2013</a>.
+</p><p>It will go through setting up the tools to build an ORPSoC system for the <a href="http://www.terasic.com.tw/cgi-bin/page/archive.pl?No=593" class="external text" rel="nofollow">Terasic DE0 Nano</a> board, and get code running on that system.
+</p>
+<h1> <span class="mw-headline" id="Requirements"> Requirements </span></h1>
+<p>This workshop will need to be run on a machine which has
+</p>
+<ul><li> a relatively recent Linux distribution (up to 2-3 years old?)
+</li><li> around 10GB of disk space free for the development tools
+</li><li> an internet connection
+</li></ul>
+<p>On that system the following will be required
+</p>
+<ul><li> repository control software git and subversion
+</li><li> an OpenRISC software tool chain for compiling code
+<ul><li> if building from source this will require a number of software development packages installed on your system
+</li></ul>
+</li><li> the Altera Quartus EDA software for compiling RTL for the FPGA
+</li><li> the OpenOCD debug proxy
+</li><li> Python 2.7 (or above)
+</li></ul>
+<h1> <span class="mw-headline" id="Tool_installation"> Tool installation </span></h1>
+<h2> <span class="mw-headline" id="Repository_control_software"> Repository control software </span></h2>
+<p>Both git and subversion should be easily installed via your distribution's package management system. These will be needed to download the source for the tools which are compiled.
+</p>
+<h2> <span class="mw-headline" id="OpenRISC_GNU_tool_chain"> OpenRISC GNU tool chain </span></h2>
+<p>The OpenRISC software tool chain consists of all the tools require to compile and manipulate software for the platform. Specifically, the tool chain which is considered the development version will be used to compile code to run on the "bare metal" system. That is, with no underlying operating system.
+</p><p>There are two options for obtaining the OpenRISC tool chain. One is to download a set of pre-compiled binaries for your platform, or compiling from source.
+</p>
+<h3> <span class="mw-headline" id="Building_from_source"> Building from source </span></h3>
+<p>See the <a href="/or1k/OpenRISC_GNU_tool_chain#Newlib_toolchain_.28or1k-elf.29" title="OpenRISC GNU tool chain">instructions on building the "newlib" tool chain from source</a> on the GNU tool chain page on this wiki.
+</p><p><b>Note</b>: be sure to ensure your system has the <a href="/or1k/OpenRISC_GNU_tool_chain#Prerequisites" title="OpenRISC GNU tool chain">appropriate prerequisites installed</a> to compile a GNU tool chain.
+</p>
+<h3> <span class="mw-headline" id="Pre-compiled"> Pre-compiled </span></h3>
+<p>Some pre-compiled tool chains are available (thanks to Stefan Kristiansson!) on the <a href="/or1k/OpenRISC_GNU_tool_chain#Prebuilt_versions" title="OpenRISC GNU tool chain">GNU tool chain page</a>, too.
+</p><p>Extract these somewhere like <tt>/opt</tt>.
+</p>
+<h3> <span class="mw-headline" id="Add_to_PATH"> Add to PATH </span></h3>
+<p>Be sure to add the tool chain's <tt>/&lt;installation_dir&gt;/bin</tt> directory to your $PATH variable in your <tt>.bashrc</tt> file or similar after installation.
+</p>
+<h2> <span class="mw-headline" id="Altera_Quartus"> Altera Quartus </span></h2>
+<p>This is the software which compiles RTL and ultimately generates an FPGA programming file.
+</p><p>Unfortunately this software is closed source, extremely large, and requires registration to download. However, it is required.
+</p><p>It's possible that <a href="http://download.altera.com/akdlm/software/acdsinst/13.0sp1/232/ib_tar/Quartus-web-13.0.1.232-linux.tar" class="external text" rel="nofollow">this link</a> will download the installer directly, without requiring you to go to the Altera website. 
+</p><p>Otherwise, visit the <a href="http://www.altera.com/products/software/quartus-ii/web-edition/qts-we-index.html" class="external text" rel="nofollow">Quartus II Web Edition page</a> and click on the "Download Software Web Edition - Free" button. Register and then download the installer.
+</p><p><b>It is 4.5GB in size and will obviously take a while to download</b>. 
+</p><p>Once it is downloaded, extract it and run the <tt>setup.sh</tt> file in there.
+</p><p>They mention that "<i>64-bit operating systems must install 32-bit compatibility libraries before installing the Quartus II software</i>". Presumably this is the <tt>ia32-libs</tt> package on Ubuntu, or similar.
+</p><p><b>Note:</b> Make sure you select to include the <b>Cyclone IV E</b> device families during installation.
+</p><p>Altera provide <a href="http://www.altera.com/download/faq/dnl-v130-download-installation-faq.html" class="external text" rel="nofollow">this installation FAQ</a> and <a href="http://dl.altera.com/static/quick_start_guide/quick_start_guide_13.0_en.pdf" class="external text" rel="nofollow">this quick start guide in PDF</a>.
+</p>
+<h3> <span class="mw-headline" id="Add_to_PATH_2"> Add to PATH </span></h3>
+<p>Be sure to add the <tt>/&lt;quartus_install_path&gt;/quartus/bin</tt> directory <b>to the end</b> your $PATH variable in your <tt>.bashrc</tt> file or similar after installation. Failing to add this to the end of your $PATH variable will cause issues when running <a href="#OpenOCD">#OpenOCD</a>.
+</p>
+<h2> <span class="mw-headline" id="OpenOCD"> OpenOCD </span></h2>
+<p>This is a debug proxy program and will initially talk to the system on the FPGA before we attach a software debugger.
+</p><p>Download the source with
+</p>
+<pre>git clone <a href="git://repo.or.cz/openocd.git" class="external free" rel="nofollow">git://repo.or.cz/openocd.git</a>
+</pre>
+<p>Once cloned, the source in the repository must be <i>bootstrapped</i> before it is configured <b>the first time only</b>. Do this with
+</p>
+<pre>./bootstrap
+</pre>
+<p>Now configure and build
+</p>
+<pre>./configure --enable-ftdi --enable-usb_blaster_libftdi --enable-maintainer-mode
+make
+</pre>
+<p>You may also choose to install it with <tt>make install</tt>.
+</p>
+<h3> <span class="mw-headline" id="Troubleshooting"> Troubleshooting </span></h3>
+<h4> <span class="mw-headline" id="Missing_packages_required_for_bootstrap"> Missing packages required for <tt>bootstrap</tt> </span></h4>
+<p>Your system will require  
+</p>
+<ul><li> autoconf
+</li><li> pkg-config
+</li><li> automake
+</li><li> libtool
+</li></ul>
+<h4> <span class="mw-headline" id="Missing_packages_during_configure"> Missing packages during configure </span></h4>
+<p>Install
+</p>
+<ul><li> libusb-1.0-0-dev
+</li><li> libtclcl1-dev
+</li><li> libftdi-dev
+</li></ul>
+<h4> <span class="mw-headline" id="TCL_error_message_during_configure"> TCL error message during configure </span></h4>
+<p>If you have already installed the Altera Quartus suite and its <tt>quartus/bin</tt> directory is in your $PATH then remove it while you configure and build OpenOCD.
+</p>
+<h2> <span class="mw-headline" id="ORPSoC"> ORPSoC </span></h2>
+<p>ORPSoC is the system-on-chip build infrastructure which will be used for this workshop.
+</p><p>It is made up of 2 parts - one is the build scripts (<tt>orpsoc</tt>) and one is the systems and IP cores (<tt>orpsoc-cores</tt>).
+</p><p>See the <a href="/or1k/ORPSoC" title="ORPSoC">ORPSoC</a> page here on the OpenCores wiki for further details.
+</p>
+<h3> <span class="mw-headline" id="ORPSoC_build_system"> ORPSoC build system </span></h3>
+<p>For this workshop, we will be using the <tt>orpsoc-3.1</tt> release of the scripts. You can download them here: <a href="ftp://ocuser:ocuser@openrisc.opencores.org/orpsoc/orpsoc-3.1.tar.gz" class="external text" rel="nofollow">orpsoc-3.1.tar.gz</a> or with
+</p>
+<pre>wget <a href="ftp://ocuser:ocuser@openrisc.opencores.org/orpsoc/orpsoc-3.1.tar.gz" class="external free" rel="nofollow">ftp://ocuser:ocuser@openrisc.opencores.org/orpsoc/orpsoc-3.1.tar.gz</a>
+</pre>
+<p>Once downloaded extract this archive somewhere sensible with
+</p>
+<pre>tar xzf orpsoc-3.1.tar.gz
+</pre>
+<p>You may then simply add the <tt>/path/to/orpsoc-3.1/bin</tt> directory onto your PATH variable, or you can install it with
+</p>
+<pre>./configure
+make
+make install
+</pre>
+<h3> <span class="mw-headline" id="ORPSoC_cores"> ORPSoC cores </span></h3>
+<p>This must be cloned from the github repository. It is easiest if this resides alongside the <tt>orpsoc-3.1</tt> directory.
+</p>
+<pre>git clone <a href="https://github.com/openrisc/orpsoc-cores.git" class="external free" rel="nofollow">https://github.com/openrisc/orpsoc-cores.git</a>
+</pre>
+<p>The code we will actually build is slightly different from the upstream version. You'll need to add a remote repository containing this modified version.
+</p>
+<pre>cd orpsoc-cores
+git remote add orconf2013 <a href="https://github.com/juliusbaxter/orpsoc-cores.git" class="external free" rel="nofollow">https://github.com/juliusbaxter/orpsoc-cores.git</a> 
+git remote update
+git checkout orconf2013/master
+</pre>
+<h3> <span class="mw-headline" id="Demo_bare_metal_software_for_ORPSoC"> Demo bare metal software for ORPSoC </span></h3>
+<p>Software is not handled by ORPSoC, yet. Some basic bare metal software, which will build against our <a href="/or1k/Newlib" title="Newlib">newlib-based</a> tool chain.
+</p><p>Clone this repository alongside the others:
+</p>
+<pre>git clone <a href="https://github.com/juliusbaxter/orconf2013.git" class="external free" rel="nofollow">https://github.com/juliusbaxter/orconf2013.git</a>
+</pre>
+<h1> <span class="mw-headline" id="Building_ORPSoC_for_the_DE0_nano"> Building ORPSoC for the DE0 nano </span></h1>
+<h2> <span class="mw-headline" id="Create_build_area"> Create build area </span></h2>
+<p>ORPSoC requires a separate directory be created as its work area. Create this directory, something like <tt>orpsoc-build</tt> along side the <tt>orpsoc-cores</tt> and <tt>orpsoc</tt> checkouts.
+</p>
+<pre>mkdir orpsoc-build
+cd orpsoc-build
+</pre>
+<p>The build directory needs a config file, which simply tells the scripts where the <tt>cores</tt> and <tt>systems</tt> are.
+</p><p>Create a file which tells <tt>orpsoc</tt> where these directories are. The following should be sufficient if your <tt>orpsoc-build</tt> directory is alongside the <tt>orpsoc-cores</tt> directory. So in your <tt>orpsoc-build</tt> directory create a file called <b><tt>orpsoc.conf</tt></b> with the following contents:
+</p>
+<pre>[main] 
+cores_root   = ../orpsoc-cores/cores
+systems_root = ../orpsoc-cores/systems
+</pre>
+<p>We are now ready to build
+</p>
+<h2> <span class="mw-headline" id="Build_FPGA_image"> Build FPGA image </span></h2>
+<p>The image is simply built by running
+</p>
+<pre>orpsoc build de0_nano
+</pre>
+<p>This will handle the downloading (yes, you will need internet connectivity) of all the source, generation of parts of the system and scripts and launching of FPGA tools.
+</p><p>If your environment has not been set up correctly, this step will likely error out.
+</p><p>Once it is complete, you will end up with an image, <tt>build/de0_nano/bld-quartus/de0_nano.sof</tt> which you can program on the DE0 nano. You are then ready to program your FPGA board.
+</p><p>If you are having problems building the image, or suspect yours isn't correct, you can download a known-good one here: <a href="https://www.dropbox.com/s/s7djpgtgbxmdhyi/de0_nano_orconf2013.sof" class="external text" rel="nofollow">de0_nano_orconf2013.sof</a>
+</p>
+<h1> <span class="mw-headline" id="Running_ORPSoC_on_DE0_Nano"> Running ORPSoC on DE0 Nano </span></h1>
+<h2> <span class="mw-headline" id="Programming_the_FPGA"> Programming the FPGA </span></h2>
+<p>ORPSoC doesn't handle this automatically (yet...) but it's simple enough to do on the command line. 
+</p><p>Plug your board into your PC via the provided USB cable and a blue LED should light up, indicating it's powered.
+</p><p>We will use the <tt>quartus_pgm</tt> tool to do this with:
+</p>
+<pre>quartus_pgm --mode=jtag -o p\;build/de0_nano/bld-quartus/de0_nano.sof
+</pre>
+<p>If this worked you'll see a message like:
+</p>
+<pre>Info (209017): Device 1 contains JTAG ID code 0x020F30DD
+Info (209007): Configuration succeeded -- 1 device(s) configured
+Info (209011): Successfully performed operation(s)
+</pre>
+<p>You are now ready to connect to the SoC with a debug proxy
+</p><p>If not, see the troubleshooting section.
+</p>
+<h3> <span class="mw-headline" id="Troubleshooting_2"> Troubleshooting </span></h3>
+<h4> <span class="mw-headline" id="Error_.28213019.29:_Can.27t_scan_JTAG_chain._Error_code_89."> Error (213019): Can't scan JTAG chain. Error code 89. </span></h4>
+<p>If you see this (red) error message, then you have not started the Altera JTAG daemon.
+</p><p>First, kill any other <tt>jtagd</tt> processes which may be running
+</p>
+<pre>sudo killall jtagd
+</pre>
+<p>Now check the Altera one is installed and available
+</p>
+<pre>which jtagd
+</pre>
+<p>One should be available in the <tt>/your/altera/install/dir/<b>quartus/bin</b></tt> directory
+</p><p>If so, now run it with
+</p>
+<pre>sudo `which jtagd`
+</pre>
+<p>And try to program again.
+</p><p>Another solution...
+save below as "/etc/udev/rules.d/51-usbblaster.rules, and reboot!!
+</p>
+<pre># USB-Blaster
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6001", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6002", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6003", MODE="0666"
+# USB-Blaster II
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6010", MODE="0666"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6810", MODE="0666"
+</pre>
+<h4> <span class="mw-headline" id="Error_.28213019.29:_Can.27t_scan_JTAG_chain._Error_code_36."> Error (213019): Can't scan JTAG chain. Error code 36. </span></h4>
+<p>This is caused by the debug proxy, OpenOCD, still being attached to the device while you're attempting to program the board.
+</p><p>Exit OpenOCD before re-running the <tt>quartus_pgm</tt> command.
+</p>
+<h2> <span class="mw-headline" id="Attach_the_debug_proxy"> Attach the debug proxy </span></h2>
+<p>It is time to run OpenOCD, the debug proxy program which will talk to the ORPSoC system now implemented on the FPGA.
+</p><p>It will use the same cable which programs the board, so the DE0 nano must be connected and programmed with the image we generated.
+</p><p>Go to the OpenOCD directory in which everything was compiled and run
+</p>
+<pre>sudo ./src/openocd -s ./tcl -f ./tcl/interface/altera-usb-blaster.cfg -f ./tcl/board/or1k_generic.cfg
+</pre>
+<p>This should attach to the board and not report any errors, looking like:
+</p>
+<pre>Open On-Chip Debugger 0.8.0-dev-00195-g4e79b48 (2013-09-30-21:08)
+Licensed under GNU GPL v2
+For bug reports, read <a href="http://openocd.sourceforge.net/doc/doxygen/bugs.html" class="external free" rel="nofollow">http://openocd.sourceforge.net/doc/doxygen/bugs.html</a>
+Warn&#160;: Adapter driver 'usb_blaster' did not declare which transports it allows; assuming legacy JTAG-only
+Info&#160;: only one transport option; autoselect 'jtag'
+Info&#160;: vjtag tap selected
+Info&#160;: adv debug unit selected
+Info&#160;: Option 1 is passed to adv debug unit adapter speed: 3000 kHz
+Info&#160;: No lowlevel driver configured, will try them all
+Info&#160;: usb blaster interface using libftdi
+Info&#160;: This adapter doesn't support configurable speed
+Info&#160;: JTAG tap: or1200.cpu tap/device found: 0x020f30dd (mfg: 0x06e, part: 0x20f3, ver: 0x0)
+Info&#160;: adv debug unit is configured with option ADBG_USE_HISPEED
+Halting processor
+Chip is or1200.cpu, Endian: big, type: or1k
+Target ready...
+</pre>
+<p>If so, you are ready to communicate with the SoC and download some software
+</p><p>Otherwise, see the troubleshooting section
+</p>
+<h3> <span class="mw-headline" id="Troubleshooting_3"> Troubleshooting </span></h3>
+<h4> <span class="mw-headline" id="Error:_JTAG_tap:_or1200.cpu_expected_1_of_1:_0x020b30dd"> Error: JTAG tap: or1200.cpu  expected 1 of 1: 0x020b30dd </span></h4>
+<p>The default OpenRISC target config file in OpenOCD expects to talk to a different JTAG TAP than is on the DE0 nano. We must change one line in a file.
+</p><p>If you haven't already, exit OpenOCD with ctrl+c.
+</p><p>Open the following file from the OpenOCD tree in a text editor
+</p>
+<pre>tcl/board/or1k_generic.cfg
+</pre>
+<p>Change the following line (second line of the file)
+</p>
+<pre>set FPGATAPID 0x020b30dd
+</pre>
+<p>to
+</p>
+<pre>set FPGATAPID 0x020<b>f</b>30dd
+</pre>
+<p>Basically, set the <b>b</b> to a <b>f</b> in the FPGATAPID value.
+</p><p>Save and close the file, and re-run OpenOCD with the same command as before.
+</p>
+<h2> <span class="mw-headline" id="Physically_attach_the_UART"> Physically attach the UART  </span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="/or1k/File:De0-nano-embecosm-uart.png" class="image"><img alt="" src="/wiki1/images/thumb/e/ec/De0-nano-embecosm-uart.png/180px-De0-nano-embecosm-uart.png" width="180" height="135" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/or1k/File:De0-nano-embecosm-uart.png" class="internal" title="Enlarge"><img src="/wiki1/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>UART attached to DE0 Nano‎</div></div></div>
+<p><a href="http://www.embecosm.com" class="external text" rel="nofollow">Embecosm</a> have graciously provided some <a href="http://www.embecosm.com/resources/hardware/#EHW1" class="external text" rel="nofollow">USB UART adapters</a> which can be attached to the DE0 nano.
+</p><p>These should be attached so that the <tt>GND</tt> pin is on pin 12 of header JP2.
+</p><p>A pinout for the DE0 nano can be found <a href="http://semilleroadt.upbbga.edu.co/Archivos_Generales/DE0-Nano%20pinout.pdf" class="external text" rel="nofollow">here</a>.
+</p><p><br />
+</p>
+<h2> <span class="mw-headline" id="Open_a_UART_terminal"> Open a UART terminal </span></h2>
+<p>This will open a terminal attached to the UART device.
+</p><p>There are several terminal programs we could use to attach to the UART but we will use <tt>screen</tt> here. The essential information, however, is that it's the default (?) UART protocol (8-bits data, 1 stop bit, no parity) at 115200 baud.
+</p><p>It is assumed there is only 1 USB-UART attached, and is mounted as <tt>/dev/ttyUSB0</tt>, so alter the following instructions if it appears somewhere else on your machine.
+</p><p>Attach with
+</p>
+<pre>screen /dev/ttyUSB0 115200
+</pre>
+<p>If this didn't work, check the troubleshooting section
+</p>
+<h3> <span class="mw-headline" id="Troubleshooting_4"> Troubleshooting </span></h3>
+<h4> <span class="mw-headline" id="Permissions_problems"> Permissions problems </span></h4>
+<p>Unless you have a rule to allow these USB-UART devices to be read/write by the user you will need to change the permissions on it. Do this with
+</p>
+<pre>sudo chmod a+rwx /dev/ttyUSB0
+</pre>
+<h2> <span class="mw-headline" id="Compiling_demo_bare_metal_software"> Compiling demo bare metal software </span></h2>
+<p>Make sure you have <a href="#Demo_bare_metal_software_for_ORPSoC">downloaded the demo bare metal software</a>.
+</p><p>This software is all very simple bare metal examples of using the OR1K timers, flashing the LEDs and performing UART I/O.
+</p><p>Go into any of the directories under <tt>orconf2013/sw/</tt> and build with a simple <tt>make</tt>. For example:
+</p>
+<pre>cd orconf2013/sw/timer
+make
+</pre>
+<p>The result executables are named the same as the directory, and can be downloaded to the board.
+</p><p>If you are having issues compiling software, try this precompiled version of the <tt>timerled</tt> program, download it here: <a href="https://www.dropbox.com/s/8em2rzuzvn136pd/timerled" class="external text" rel="nofollow">timerled</a> (OR1K ELF file).
+</p>
+<h2> <span class="mw-headline" id="Download_and_run_OpenRISC_software_on_SoC"> Download and run OpenRISC software on SoC </span></h2>
+<p>Once the <a href="#Attach_the_debug_proxy">debug proxy is attached</a> it can be used to download and execute code on the board in a couple of ways.
+</p>
+<h3> <span class="mw-headline" id="Telnet"> Telnet </span></h3>
+<p>OpenOCD runs a telnet server which can be used to issue commands to halt, download and image and set the processor running.
+</p><p>It runs a telnet server on port <b>4444</b>. Connect to it in a terminal with
+</p>
+<pre>telnet localhost 4444
+</pre>
+<p>Once connected, the list of commands the proxy supports may be listed with <tt>help</tt>.
+</p><p><a href="#Compiling_demo_bare_metal_software">Compile some software</a> to download on the board and get the full path to this file.
+</p><p>To download and run a program, the following line may be used (replace the path here with the appropriate executable path).
+</p>
+<pre>halt; load_image /&lt;path to your&gt;/orconf2013/sw/timer/timer; reg npc 0x100; resume
+</pre>
+<p>It may be required to reset the board once the software has been downloaded this can be done with
+</p>
+<pre>reset
+</pre>
+<p>This will usually halt the processor, and it can be set running again with
+</p>
+<pre>resume
+</pre>
+<p>The <tt>timerled</tt> software will output to the UART, and be interactive.
+</p>
+<h3> <span class="mw-headline" id="Run_Linux"> Run Linux </span></h3>
+<p>Of course, we wouldn't hold a workshop without booting our Linux system&#160;:)
+</p><p>Download a pre-compiled Linux kernel with BusyBox here:
+</p><p><a href="https://www.dropbox.com/s/bi5vx8kmqnjdldx/vmlinux-de0_nano" class="external text" rel="nofollow">vmlinux-de0_nano</a>
+</p><p>Load it with the following method via <a href="#Telnet">telnet</a>:
+</p>
+<pre>halt; load_image /work/orpsoc-build/vmlinux-de0_nano; reset
+</pre>
+<p>Once booted, the image contains a <a href="http://www.eembc.org/coremark/" class="external text" rel="nofollow"><tt>coremark</tt></a> executable in the root directory which can be run.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 150/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:86-0!*!0!!en!2!edit=0 and timestamp 20161009035058 -->
+<div class="printfooter">
+Retrieved from "<a href="http://opencores.org/or1k/ORCONF2013_Workshop_ORPSoC_On_DE0_Nano">http://opencores.org/or1k/ORCONF2013_Workshop_ORPSoC_On_DE0_Nano</a>"</div>
+            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
+                        <div class="visualClear"></div>
+        </div>
+        
+                
+        <div class="visualClear"><p></p></div>
+        
+        <div id="footer">
+            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 26 August 2015, at 17:54.<li id="lastmod"></li>This page has been accessed 27,607 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
+<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "ORCONF2013_Workshop_ORPSoC_On_DE0_Nano", "wgTitle": "ORCONF2013 Workshop ORPSoC On DE0 Nano", "wgAction": "view", "wgArticleId": 86, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1390, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+	mediaWiki.loader.go();
+}
+</script>
+
+<script>if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
+}
+</script><!-- Served in 1.918 secs. -->            
+        </div>
+        
+        
+        </div>
+	<div style="clear:both;margin-left:200px;">
+            <!-- 728x90 -->
+            <script type="text/javascript">
+            GA_googleFillSlot("728x90");
+            </script>
+	</div>
+    </div>
+    <div class="bot">
+	&copy; copyright 1999-2016
+OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
+    </div>
+</div>
+
+<!-- Google search -->
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+<!-- /Google search -->
+
+</body>
+</html>

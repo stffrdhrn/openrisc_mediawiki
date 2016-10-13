@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head>
+            
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="generator" content="MediaWiki 1.17.0" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
+<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
+<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
+        <!--[if lt IE 7]>
+        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
+		<meta http-equiv="imagetoolbar" content="no" />
+        <![endif]-->
+        
+        <script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "ORPSoC_Board_Software_Debugging", "wgTitle": "ORPSoC Board Software Debugging", "wgAction": "view", "wgArticleId": 43, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1308, "wgCategories": ["Works in Progress"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>        
+        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
+		
+        <!-- Head Scripts -->
+                
+        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
+                
+                
+		        
+		        
+		        
+            <title>ORPSoC Board Software Debugging - OR1K :: OpenCores</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
+    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
+    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
+    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
+    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+    <script type="text/javascript">
+    GS_googleAddAdSenseService("ca-pub-0097483751598630");
+    GS_googleEnableAllServices();
+    </script>
+    <script type="text/javascript">
+    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
+    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
+    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
+    </script>
+    <script type="text/javascript">
+    GA_googleFetchAds();
+    </script>
+    <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
+    <![endif]-->
+    <!--[if (IE 7)|(IE 8)]>
+    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <script type="text/javascript">
+        
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2763846-2']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+    </script>
+    
+</head>
+<body>
+<div class="main">
+    <div class="top">
+        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
+    </div>
+    <div class="line">
+	<div></div>
+	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
+    </div>
+    <div class="mid" id="dm">
+        <div class="mainmenu" id="dml">
+	            
+        <div class="menu menu-login">
+                Username:                                <form action="../login" method="post">
+                    <input class="design" name="user" type="text" />
+                    <br />
+                    Password:
+                    <br />
+                    <input class="design" name="pass" type="password" />
+                    <br />
+                    <input class="design" name="remember" type="checkbox" />Remember me
+                    <br />
+                    <input type="hidden" name="redirect" value="or1k/" />
+                    <input class="design" title="Login" type="submit" value="Login" />
+                </form>
+                <form action="../register" method="post">
+                    <input class="design" title="Register" type="submit" value="Register" />
+                </form>
+                        </div>
+        
+                
+        
+        <div class="menu" id="p-navigation">
+            <h2>Navigation</h2>
+		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
+        
+                
+        <div class="menu">
+            <h2><label for="searchInput">Search</label></h2>
+                <form action="/wiki1/index.php" id="searchform">
+                    <div>
+                        <input type='hidden' name="title" value="Special:Search"/>
+                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
+                        
+                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
+                        
+                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
+                                                
+                    </div>
+                </form>
+        </div>
+        
+                
+        <div class="menu menu-tools">
+            <h2>Toolbox</h2>
+                <ul>
+                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/ORPSoC_Board_Software_Debugging" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/ORPSoC_Board_Software_Debugging" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=ORPSoC_Board_Software_Debugging&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=ORPSoC_Board_Software_Debugging&amp;oldid=1308" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
+        </div>
+        
+        
+        </div>
+        <div class="content" id="dmc">
+	    
+<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
+    
+    <div style="float: left; width: 720px; height: 60px;">
+        <!-- 720x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("720x60");
+        </script>
+    </div>
+        <div style="float: left; width: 300px; height: 60px;">
+        <!-- 300x60 -->
+        <script type='text/javascript'>
+        GA_googleFillSlot("300x60");
+        </script>
+    </div>
+    
+</div>
+	                        
+        <a name="top" id="top"></a>
+        
+                
+        <div id="oc-actions">
+            <p id="ca-nstab-main" class="selected"><a href="/or1k/ORPSoC_Board_Software_Debugging" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:ORPSoC_Board_Software_Debugging&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=ORPSoC_Board_Software_Debugging&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=ORPSoC_Board_Software_Debugging&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
+        
+        <h1 id="firstHeading" class="firstHeading">
+            ORPSoC Board Software Debugging        </h1>
+        
+        <div id="bodyContent">
+            <h3 id="siteSub">From OR1K</h3>
+            <div id="contentSub"></div>
+                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
+            <table style="border: 1px solid #aaaaff; background-color: #eeeeff; width: 80%; margin: 0 auto 1em auto; padding: .2em; text-align: left">
+<tr>
+<td>
+</td>
+<td> <b>This article is currently undergoing a major expansion or revamping by the author who placed this notice here.</b> However, you are free to help in the construction of this page by improving it. Please review the <a href="http://opencores.org/wiki1/index.php?title=ORPSoC_Board_Software_Debugging&amp;action=history" class="external text" rel="nofollow">edit history</a> if you would like to contact the user who put up this notice. If this article has not been edited by that user in a while, please remove this template.
+</td></tr></table>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Introduction"><span class="tocnumber">2</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Debug_system_overview"><span class="tocnumber">3</span> <span class="toctext">Debug system overview</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Debugger_physical_connection"><span class="tocnumber">4</span> <span class="toctext">Debugger physical connection</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Debug_proxy_connection"><span class="tocnumber">5</span> <span class="toctext">Debug proxy connection</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#GDB"><span class="tocnumber">6</span> <span class="toctext">GDB</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Overview"> Overview </span></h2>
+<p>This page aims to provide practical information on debugging software running on an ORPSoC implementation on hardware.
+</p>
+<h2> <span class="mw-headline" id="Introduction"> Introduction </span></h2>
+<p>There are a number of steps for getting a build of ORPSoC running software. There are typically
+</p>
+<ul><li> Check and test physical connection of the debugger to the board
+</li><li> Attach GDB to the debug proxy program
+</li><li> Load and execute small programs to test the functionality of
+<ul><li> UART
+</li><li> Memory
+</li></ul>
+</li><li> Load and execute something more substantial and cool
+<ul><li> Benchmark program
+</li><li> O/S kernel
+</li></ul>
+</li></ul>
+<p>Once the system is known to be working, the next step might be to load a bootloader into non-volatile memory to avoid having to connect the debugger to load software, but that is outside if the scope of this page. We will deal with the steps just outlined.
+</p>
+<h2> <span class="mw-headline" id="Debug_system_overview"> Debug system overview </span></h2>
+<p>Each ORPSoC board build will provide a way of controlling the system from a PC. The debug interface in the system will be controlled via JTAG, and a USB-JTAG connector cable is typically used to implement the JTAG control from the PC.
+</p><p>This requires that the JTAG pins connected to the debug interface (usually made available via pins on the board) are connected to the USB-JTAG cable, hereafter called the <i>debug cable</i>.
+</p><p>Once a physical connection is made, software on the PC is run to connect to the ORPSoC system and make it available for GDB to attach to. This software is known as a <i>debug proxy</i>. The <i>debug proxy</i> needs to understand the debug interface module in ORPSoC and how it is controlled, so typically it interacts with low-level drivers to generate the JTAG transactions to the system over the <i>debug cable</i>. The software also needs to understand how transactions are performed through the debug interface module to the processor and the rest of the system. Finally it will provide the ability for GDB to connect to it and perform more elaborate debugging operations.
+</p>
+<h2> <span class="mw-headline" id="Debugger_physical_connection"> Debugger physical connection </span></h2>
+<p>Each board build will typically expose the debug interface's JTAG pins allowing a debug cable to be attached. Typically this is just 4 pins for communication and 2 for power/ground.
+</p><p>It is not uncommon for debug cables to also allow a UART to be attached and relayed back to the PC, which is usually just 2 more pins for communication and another 2 to power drivers, resulting in up to 10 pins for a complete debug interface.
+</p><p>To test that these things are all attached correctly the debug proxy is run which should attempt to make contact with the system. If the initialisation process of the proxy software fails it usually indicates an issue with the physical connection or the configuration of the design on the FPGA.
+</p>
+<h2> <span class="mw-headline" id="Debug_proxy_connection"> Debug proxy connection </span></h2>
+<p>The proxy software typically is debug interface-specific and provides support for only a limited range of debug cables.
+</p><p>At present in ORPSoC builds, the <a href="http://opencores.org/project,dbg_interface" class="external text" rel="nofollow">SoC Debug Interface</a> (also known as the <i>Mohor Debug Interface</i> after the author to avoid confusion with other debug interfaces) is used.
+</p><p>The proxy software used at present is <a href="/wiki1/index.php?title=Or_debug_proxy&amp;action=edit&amp;redlink=1" class="new" title="Or debug proxy (page does not exist)">or_debug_proxy</a> which is capable of interacting with the Mohor debug interface via an <a href="http://opencores.org/shop,item,3" class="external text" rel="nofollow">ORSoC USB-JTAG debug cable</a>. (Work is underway to add support for the Mohor debug interface and the OpenRISC architecture in <a href="http://openocd.berlios.de/web/" class="external text" rel="nofollow">OpenOCD</a> which should allow the use of any debug cable - see details on the <a href="/or1k/OpenOCD" title="OpenOCD">OpenOCD</a> page on this wiki.)
+</p><p>The proxy software will first attempt to check what it is connected to by reading out the ID of the JTAG TAP in the design. If this fails this could be due to one or many reasons. Starting from the PC to the board:
+</p>
+<ul><li> The debug cable is not plugged into the PC
+</li><li> The debug cable device does not have the correct drivers or permissions in the operating system
+</li><li> The connections to the board from the debug cable are incorrect (signals and/or power)
+<ul><li> Check integrity of flyleads
+</li><li> Voltage on power pins is not correct
+</li></ul>
+</li><li> The board is not powered
+</li><li> The design is not loaded on the FPGA
+</li><li> The design might need a reset after being loaded onto the FPGA
+</li><li> Incorrect design is on the FPGA
+</li><li> Incorrect pin assignments for the JTAG pins into the FPGA design
+</li><li> Entire design or just JTAG TAP and/or debug interface are being held in reset
+</li><li> Debug module was not included in the design
+</li></ul>
+<p>Attempting to make first contact with the FPGA design for the first time is usually a time-consuming process. There is a lot to check in the path from the PC to the design. However, once the debug proxy connects and can communicate with the processor it will for GDB to connect and issue further debugging commands..
+</p>
+<h2> <span class="mw-headline" id="GDB"> GDB </span></h2>
+<p>GDB usez the <i>remote serial protocol</i> (RSP) to communicate with the proxy.
+</p><p>TODO - further information here.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 33/1000000
+Post-expand include size: 764/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:43-0!*!0!!en!*!edit=0 and timestamp 20161008185700 -->
+<div class="printfooter">
+Retrieved from "<a href="http://opencores.org/or1k/ORPSoC_Board_Software_Debugging">http://opencores.org/or1k/ORPSoC_Board_Software_Debugging</a>"</div>
+            <div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/or1k/Special:Categories" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/wiki1/index.php?title=Category:Works_in_Progress&amp;action=edit&amp;redlink=1" class="new" title="Category:Works in Progress (page does not exist)">Works in Progress</a></span></div></div>            <!-- end content -->
+                        <div class="visualClear"></div>
+        </div>
+        
+                
+        <div class="visualClear"><p></p></div>
+        
+        <div id="footer">
+            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 24 January 2015, at 15:41.<li id="lastmod"></li>This page has been accessed 6,489 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
+<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "ORPSoC_Board_Software_Debugging", "wgTitle": "ORPSoC Board Software Debugging", "wgAction": "view", "wgArticleId": 43, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1308, "wgCategories": ["Works in Progress"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script>
+<script>if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+	mediaWiki.loader.go();
+}
+</script>
+
+<script>if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
+}
+</script><!-- Served in 1.961 secs. -->            
+        </div>
+        
+        
+        </div>
+	<div style="clear:both;margin-left:200px;">
+            <!-- 728x90 -->
+            <script type="text/javascript">
+            GA_googleFillSlot("728x90");
+            </script>
+	</div>
+    </div>
+    <div class="bot">
+	&copy; copyright 1999-2016
+OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
+    </div>
+</div>
+
+<!-- Google search -->
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+<!-- /Google search -->
+
+</body>
+</html>
