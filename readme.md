@@ -9,6 +9,8 @@ be extracted using http://opencores.org/or1k/Special:Export, but I didnt think
 its needed
 
 # Backup steps
+
+```bash
  # Backup the all pages special page
  curl http://opencores.org/or1k/Special:AllPages  -o opencores-allpages
  
@@ -17,3 +19,4 @@ its needed
  
  # for each page download and save the page from opencores
  cat opencores-pages.txt | while read page; do curl http://opencores.org/or1k/$page -o $page.raw ; done
+```
