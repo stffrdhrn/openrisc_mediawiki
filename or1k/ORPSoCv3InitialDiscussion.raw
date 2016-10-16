@@ -1,462 +1,219 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-<head>
-            
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="generator" content="MediaWiki 1.17.0" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
-<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
-<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
-<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
-<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
-<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
-        <!--[if lt IE 7]>
-        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
-		<meta http-equiv="imagetoolbar" content="no" />
-        <![endif]-->
-        
-        <script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "ORPSoCv3InitialDiscussion", "wgTitle": "ORPSoCv3InitialDiscussion", "wgAction": "view", "wgArticleId": 40, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1309, "wgCategories": ["Obsolete"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>        
-        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
-		
-        <!-- Head Scripts -->
-                
-        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
-                
-                
-		        
-		        
-		        
-            <title>ORPSoCv3InitialDiscussion - OR1K :: OpenCores</title>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
-    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
-        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
-    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
-    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
-    <script type="text/javascript">
-    GS_googleAddAdSenseService("ca-pub-0097483751598630");
-    GS_googleEnableAllServices();
-    </script>
-    <script type="text/javascript">
-    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
-    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
-    </script>
-    <script type="text/javascript">
-    GA_googleFetchAds();
-    </script>
-    <!--[if IE 6]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
-    <![endif]-->
-    <!--[if (IE 7)|(IE 8)]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
-    <![endif]-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <script type="text/javascript">
-        
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-2763846-2']);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        
-    </script>
-    
-</head>
-<body>
-<div class="main">
-    <div class="top">
-        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
-    </div>
-    <div class="line">
-	<div></div>
-	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
-    </div>
-    <div class="mid" id="dm">
-        <div class="mainmenu" id="dml">
-	            
-        <div class="menu menu-login">
-                Username:                                <form action="../login" method="post">
-                    <input class="design" name="user" type="text" />
-                    <br />
-                    Password:
-                    <br />
-                    <input class="design" name="pass" type="password" />
-                    <br />
-                    <input class="design" name="remember" type="checkbox" />Remember me
-                    <br />
-                    <input type="hidden" name="redirect" value="or1k/" />
-                    <input class="design" title="Login" type="submit" value="Login" />
-                </form>
-                <form action="../register" method="post">
-                    <input class="design" title="Register" type="submit" value="Register" />
-                </form>
-                        </div>
-        
-                
-        
-        <div class="menu" id="p-navigation">
-            <h2>Navigation</h2>
-		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
-        
-                
-        <div class="menu">
-            <h2><label for="searchInput">Search</label></h2>
-                <form action="/wiki1/index.php" id="searchform">
-                    <div>
-                        <input type='hidden' name="title" value="Special:Search"/>
-                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
-                        
-                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
-                        
-                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
-                                                
-                    </div>
-                </form>
-        </div>
-        
-                
-        <div class="menu menu-tools">
-            <h2>Toolbox</h2>
-                <ul>
-                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/ORPSoCv3InitialDiscussion" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/ORPSoCv3InitialDiscussion" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=ORPSoCv3InitialDiscussion&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=ORPSoCv3InitialDiscussion&amp;oldid=1309" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
-        </div>
-        
-        
-        </div>
-        <div class="content" id="dmc">
-	    
-<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
-    
-    <div style="float: left; width: 720px; height: 60px;">
-        <!-- 720x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("720x60");
-        </script>
-    </div>
-        <div style="float: left; width: 300px; height: 60px;">
-        <!-- 300x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("300x60");
-        </script>
-    </div>
-    
-</div>
-	                        
-        <a name="top" id="top"></a>
-        
-                
-        <div id="oc-actions">
-            <p id="ca-nstab-main" class="selected"><a href="/or1k/ORPSoCv3InitialDiscussion" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:ORPSoCv3InitialDiscussion&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=ORPSoCv3InitialDiscussion&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=ORPSoCv3InitialDiscussion&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
-        
-        <h1 id="firstHeading" class="firstHeading">
-            ORPSoCv3InitialDiscussion        </h1>
-        
-        <div id="bodyContent">
-            <h3 id="siteSub">From OR1K</h3>
-            <div id="contentSub"></div>
-                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
-            <table style="border: 3px solid #ff0000; background-color: #eeeeff; width: 80%; margin: 0 auto 1em auto; padding: .2em; text-align: left">
-<tr>
-<td>
-</td>
-<td> <b>This page is marked as obsolete.</b> The information here is no longer valid. Please review the <a href="http://opencores.org/wiki1/index.php?title=ORPSoCv3InitialDiscussion&amp;action=history" class="external text" rel="nofollow">edit history</a> if you would like to contact the user who put up this notice.
-</td></tr></table>
-<p>Why ORPSoCv3? Because <a href="/or1k/User:Julius" title="User:Julius">Julius</a> would hate the name&#160;;)
-</p><p>ORPSoC is the reference platform for OpenRISC development. It has many users and can be extended to lots of FPGA boards. There are however many users that prefer minSOC as it is considered to be easier to get started with.
-</p><p>Here's a proposal for improving things in ORPSoC land
-</p>
-<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Create_a_separate_project"><span class="tocnumber">1</span> <span class="toctext">Create a separate project</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Modules"><span class="tocnumber">2</span> <span class="toctext">Modules</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Configuration"><span class="tocnumber">3</span> <span class="toctext">Configuration</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Software_integration"><span class="tocnumber">4</span> <span class="toctext">Software integration</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Name_and_version"><span class="tocnumber">5</span> <span class="toctext">Name and version</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Hardware"><span class="tocnumber">6</span> <span class="toctext">Hardware</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Project_structure"><span class="tocnumber">7</span> <span class="toctext">Project structure</span></a>
-<ul>
-<li class="toclevel-2 tocsection-8"><a href="#Alternate_set_up"><span class="tocnumber">7.1</span> <span class="toctext">Alternate set up</span></a>
-<ul>
-<li class="toclevel-3 tocsection-9"><a href="#Software_-_still_unsure"><span class="tocnumber">7.1.1</span> <span class="toctext">Software - still unsure</span></a></li>
-<li class="toclevel-3 tocsection-10"><a href="#Testing_and_development_facilities"><span class="tocnumber">7.1.2</span> <span class="toctext">Testing and development facilities</span></a></li>
-<li class="toclevel-3 tocsection-11"><a href="#Structure"><span class="tocnumber">7.1.3</span> <span class="toctext">Structure</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-12"><a href="#Use_an_IP-Xact_enabled_tool_flow"><span class="tocnumber">8</span> <span class="toctext">Use an IP-Xact enabled tool flow</span></a>
-<ul>
-<li class="toclevel-2 tocsection-13"><a href="#Open_source_IP-XACT_tools"><span class="tocnumber">8.1</span> <span class="toctext">Open source IP-XACT tools</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-14"><a href="#Socgen_Design_Environment"><span class="tocnumber">9</span> <span class="toctext">Socgen Design Environment</span></a></li>
-</ul>
-</td></tr></table>
-<h2> <span class="mw-headline" id="Create_a_separate_project"> Create a separate project </span></h2>
-<p>ORPSoC pulls together lots of different OpenCores projects. It should be a separate project in its own right, like <a href="/or1k/OR1K:MinSoC" title="OR1K:MinSoC">OR1K:MinSoC</a>, not part of OpenRISC (which should just be about the processor). <a href="/or1k/User:Jeremybennett" title="User:Jeremybennett">Jeremybennett</a> 19:13, 18 August 2011 (CEST)
-</p>
-<ul><li>Agreed. I was initially tasked with developing ORPSoC(v2.0) mainly as a testbench for the OR1200, however the board build thing grew out of it, and now I think it's got enough momentum and interest for it to be deemed worthy for its own project. <a href="/or1k/User:Julius" title="User:Julius">Julius</a> 00:09, 25 August 2011 (CEST)
-</li><li> There is now an <b>experimental</b> ORPSoCv3 repo on git.opencores.org. This will not replace ORPSoCv2 for some time, but can serve as a playground for the infrastructure. I have also created a separate <a href="http://opencores.org/project,orpsoc" class="external text" rel="nofollow">ORPSoC project</a> to increase the visibility of ORPSoCv2. Currently it will only point to the existing ORPSoCv2 information <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 14:06, 31 August 2011 (CEST)
-</li></ul>
-<p>There is a case for pulling the tool chains and operating systems out into separate projects to make the whole thing more manageable. <a href="/or1k/User:Jeremybennett" title="User:Jeremybennett">Jeremybennett</a> 11:02, 23 August 2011 (CEST)
-</p>
-<ul><li> This isn't really an issue for ORPSoC, but I think this makes sense. <a href="/or1k/User:Julius" title="User:Julius">Julius</a> 00:10, 25 August 2011 (CEST)
-</li></ul>
-<p><br />
+{{obsolete}}
+
+Why ORPSoCv3? Because [[User:julius|Julius]] would hate the name ;)
+
+ORPSoC is the reference platform for OpenRISC development. It has many users and can be extended to lots of FPGA boards. There are however many users that prefer minSOC as it is considered to be easier to get started with.
+
+Here's a proposal for improving things in ORPSoC land
+
+== Create a separate project ==
+
+ORPSoC pulls together lots of different OpenCores projects. It should be a separate project in its own right, like [[OR1K:MinSoC]], not part of OpenRISC (which should just be about the processor). [[User:Jeremybennett|Jeremybennett]] 19:13, 18 August 2011 (CEST)
+*Agreed. I was initially tasked with developing ORPSoC(v2.0) mainly as a testbench for the OR1200, however the board build thing grew out of it, and now I think it's got enough momentum and interest for it to be deemed worthy for its own project. [[User:Julius|Julius]] 00:09, 25 August 2011 (CEST)
+* There is now an '''experimental''' ORPSoCv3 repo on git.opencores.org. This will not replace ORPSoCv2 for some time, but can serve as a playground for the infrastructure. I have also created a separate [http://opencores.org/project,orpsoc ORPSoC project] to increase the visibility of ORPSoCv2. Currently it will only point to the existing ORPSoCv2 information [[User:Olof|Olof]] 14:06, 31 August 2011 (CEST)
+There is a case for pulling the tool chains and operating systems out into separate projects to make the whole thing more manageable. [[User:Jeremybennett|Jeremybennett]] 11:02, 23 August 2011 (CEST)
+* This isn't really an issue for ORPSoC, but I think this makes sense. [[User:Julius|Julius]] 00:10, 25 August 2011 (CEST)
+
+
 We do want to split this into as many different projects as possible. Do not embed the or1200 (or any other) component into this project. We download that from the repository along with all the rest. We are trying to do three separate things here and everybody is getting them mixed up.
 We are creating a component called orpsocv3 and putting it in a project that is also called orpsocv3. On top of that it also serves as the design
 environment where all the scripts are run. The project that we are calling orpsocv3 is not a component. It is a library that contains the orpsocv3 component. It also contains application software which we must treat like is a different type of component. We should call the library project or1k_socs so then we can put in orpsocv2 as well. We could even put the minsoc component in as well and build it in this design environment. The design environment that we are building could be reused by any opencores project. That should go into its own separate project. If you want to build something do this:
-</p>
-<ul><li> check out the design environment project. Run a script that installs any system tools and configures your system
-</li></ul>
-<ul><li> run a download script for or1k_socs:oprsocv3. It will download this component as well as all other modules needed to build it
-</li></ul>
-<ul><li> run make all. this will build the code and run all the tools
-</li></ul>
-<p>Don't put anything in here that is usable by other projects. Put them in a separate project <a href="/wiki1/index.php?title=User:Jt_eaton&amp;action=edit&amp;redlink=1" class="new" title="User:Jt eaton (page does not exist)">jt_eaton</a> 18:25, 3 September 2011 (CEST)
-</p><p>MinSoC would be happy to provide the installation solution it has been using in its trunk version. Check <a href="http://www.minsoc.com/installation" class="external text" rel="nofollow">this</a> for details. <a href="/wiki1/index.php?title=User:Rfajardo&amp;action=edit&amp;redlink=1" class="new" title="User:Rfajardo (page does not exist)">rfajardo</a> 11 October 2011
-</p>
-<h2> <span class="mw-headline" id="Modules"> Modules </span></h2>
-<ul><li> Use the <code>modules</code> directory for external cores. These could be managed with svn externals, git submodules, or symlinks if it's not desirable to just dump the cores there. <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 19:19, 18 August 2011 (CEST)
-<ul><li> This is a good approach, resulting in not having multiple copies of a core sitting around in various repositories which can be confusing and difficult to manage. <a href="/or1k/User:Julius" title="User:Julius">Julius</a> 14:45, 20 August 2011 (CEST)
-<ul><li> The problem of managing the source of an IP which requires modification to work with a board build in ORPSoC should be solved external to the ORPSoC project. It should be acceptable that modules can be pulled in (via a scripted system) from arbitrary repositories, not necessarily along side where ORPSoC is hosted. <a href="/or1k/User:Julius" title="User:Julius">Julius</a> 14:45, 20 August 2011 (CEST)
-<ul><li> Examples of modifications that a core might require are the addition of a Makefile supporting the rules outlined below, renaming of top-level modules and their ports to comply with the standard naming styles used in ORPSoC, addition of technology-specific support to assist synthesis, replacement of `defines with parameters to enable multiple instances which differ. <a href="/or1k/User:Julius" title="User:Julius">Julius</a> 14:45, 20 August 2011 (CEST)
-</li></ul>
-</li><li> This also allows different versions of a core to be used as required in different board builds. <a href="/or1k/User:Julius" title="User:Julius">Julius</a> 14:45, 20 August 2011 (CEST)
-<ul><li> ORPSoC-specific changes to cores could be kept as patches in ORPSoC, that are applied by the Makefile when each module/core is downloaded. <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 20:01, 28 August 2011 (CEST)
-<ul><li> Those patches could be handled by git which would have the benefits: 1) The patches are automatically numbered 2) Commit messages are included in the patches 3) It makes it easy to 'hack' on the local core and keep track of changes. --<a href="/wiki1/index.php?title=User:Stekern&amp;action=edit&amp;redlink=1" class="new" title="User:Stekern (page does not exist)">Stekern</a> 04:42, 2 September 2011 (CEST)
-</li></ul>
-</li></ul>
-</li></ul>
-</li></ul>
-</li><li> there are some components that are in such bad shape that you will never be able to patch them to the point that they are usable. If you do then
-</li></ul>
-<p>any changes made to the source will crash oprsocv3 until we can repatch. The beauty of opensource is that you can fork their project, fix it and let the community decide if your version is better than the original. We can offer a path to take any  component into any target board without a lot
+
+* check out the design environment project. Run a script that installs any system tools and configures your system
+
+* run a download script for or1k_socs:oprsocv3. It will download this component as well as all other modules needed to build it
+
+* run make all. this will build the code and run all the tools
+
+Don't put anything in here that is usable by other projects. Put them in a separate project [[User:jt_eaton|jt_eaton]] 18:25, 3 September 2011 (CEST)
+
+MinSoC would be happy to provide the installation solution it has been using in its trunk version. Check [http://www.minsoc.com/installation this] for details. [[User:rfajardo|rfajardo]] 11 October 2011
+
+== Modules ==
+* Use the <code>modules</code> directory for external cores. These could be managed with svn externals, git submodules, or symlinks if it's not desirable to just dump the cores there. [[User:Olof|Olof]] 19:19, 18 August 2011 (CEST)
+** This is a good approach, resulting in not having multiple copies of a core sitting around in various repositories which can be confusing and difficult to manage. [[User:Julius|Julius]] 14:45, 20 August 2011 (CEST)
+*** The problem of managing the source of an IP which requires modification to work with a board build in ORPSoC should be solved external to the ORPSoC project. It should be acceptable that modules can be pulled in (via a scripted system) from arbitrary repositories, not necessarily along side where ORPSoC is hosted. [[User:Julius|Julius]] 14:45, 20 August 2011 (CEST)
+**** Examples of modifications that a core might require are the addition of a Makefile supporting the rules outlined below, renaming of top-level modules and their ports to comply with the standard naming styles used in ORPSoC, addition of technology-specific support to assist synthesis, replacement of `defines with parameters to enable multiple instances which differ. [[User:Julius|Julius]] 14:45, 20 August 2011 (CEST)
+*** This also allows different versions of a core to be used as required in different board builds. [[User:Julius|Julius]] 14:45, 20 August 2011 (CEST)
+**** ORPSoC-specific changes to cores could be kept as patches in ORPSoC, that are applied by the Makefile when each module/core is downloaded. [[User:Olof|Olof]] 20:01, 28 August 2011 (CEST)
+***** Those patches could be handled by git which would have the benefits: 1) The patches are automatically numbered 2) Commit messages are included in the patches 3) It makes it easy to 'hack' on the local core and keep track of changes. --[[User:Stekern|Stekern]] 04:42, 2 September 2011 (CEST)
+* there are some components that are in such bad shape that you will never be able to patch them to the point that they are usable. If you do then
+any changes made to the source will crash oprsocv3 until we can repatch. The beauty of opensource is that you can fork their project, fix it and let the community decide if your version is better than the original. We can offer a path to take any  component into any target board without a lot
 of pain and effort. or1200 has some structural problems that if we cannot change the source then we might want to create a fork.[[jt_eaton|jt_eaton 07.08 4 September 2011 (CEST)
-</p>
-<ul><li> Add a top level Makefile that contains the following rules <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 19:19, 18 August 2011 (CEST)
-<ul><li> list-rtl-files&#160;: Returns a list of the modules' and it's submodules' rtl-files. Used in top level Makefile to create project files for synthesis and simulation. I made a <a href="http://dl.dropbox.com/u/902237/recmake.tar.gz" class="external text" rel="nofollow">proof-of-concept sketch</a> of how something like this could work <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 23:07, 24 August 2011 (CEST)
-<ul><li> The Makefile should run the actual synthesis and simulations tools as well. Or better call other makefiles associated with synthesis, simulation, linter, FV, tools. This allows for easy maintenance and extension of the supported tools. <a href="/wiki1/index.php?title=User:Rherveille&amp;action=edit&amp;redlink=1" class="new" title="User:Rherveille (page does not exist)">Rherveille</a> 12:10, 24 August 2011 (CEST)
-<ul><li> Agreed. Please add any Makefile rules that makes sense to have. Most rules would probably make sense to have recursive, so that they can be run on a stand-alone module as well as a module being part of ORPSoC <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 20:01, 28 August 2011 (CEST)
-</li></ul>
-</li></ul>
-</li><li> list-include-dirs&#160;: Returns a list of the modules' and it's submodules' directories containing include files. Used in top level Makefile to create project files for synthesis and simulation
-</li><li> get-modules&#160;: Download the required submodules to the modules dir. Not sure how this should be done. Requires knowledge of each submodules' repo or download location, but this could maybe be solved with a simple ebuild-like systems. I guess the three main cases are SVN, GIT and tar balls <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 23:07, 24 August 2011 (CEST)
-</li></ul>
-</li></ul>
-<ul><li> Create a project based on a custom (our standard) list of files and directories. The Makefile system should able to create project files for synthesis and simulation out of it. This has been created for MinSoC, you can find it under minsoc/prj, details are described <a href="http://www.minsoc.com/trunk:project_definition" class="external text" rel="nofollow">here</a>. We could port it to OrpSoC3 if we can agree on a way to do it. <a href="/wiki1/index.php?title=User:Rfajardo&amp;action=edit&amp;redlink=1" class="new" title="User:Rfajardo (page does not exist)">rfajardo</a> 11 October 2011
-</li></ul>
-<h2> <span class="mw-headline" id="Configuration"> Configuration </span></h2>
-<p>Kbuild has been proposed here. Pros/cons?
-</p><p>For ORPSoC v3 there willl be standardized <a href="/or1k/Makefile_rules" title="Makefile rules">Makefile rules</a>
-</p><p>For hardware configuration we should aim to replace defines and defparams with parameters <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 21:00, 19 August 2011 (CEST)
-</p><p>Yes definitely; parameters only. Defines can be used for special cases, but none should be used in the actual RTL files.--<a href="/wiki1/index.php?title=User:Rherveille&amp;action=edit&amp;redlink=1" class="new" title="User:Rherveille (page does not exist)">Rherveille</a> 18:29, 24 August 2011 (CEST)
-</p><p><br />
-</p>
-<h2> <span class="mw-headline" id="Software_integration"> Software integration </span></h2>
-<p>People might want to build software running on their ORPSoC. Is this feasible?
-</p>
-<ul><li> Definitely - we might want to integrate more with newlib - it was my ambition move all of the software to be based on newlib, rather than the little bare metal libraries I've put together in ORPSoC. I think this should be pursued for the next iteration of this project. <a href="/or1k/User:Julius" title="User:Julius">Julius</a> 00:13, 25 August 2011 (CEST)
-</li></ul>
-<h2> <span class="mw-headline" id="Name_and_version"> Name and version </span></h2>
-<p>Actually, ORPSoCv3 makes sense, but I'd prefer to see it called just ORPSoC and have version numbers (my flavor of the month) for the project when we tag it beginning at 3.0.0. We could then refer to the previous versions as 1 (the original, long gone) and 2 (the one being worked on at the moment, expect to see this in use until 3.0 gets up.)  <a href="/or1k/User:Julius" title="User:Julius">Julius</a> 14:17, 20 August 2011 (CEST)
-</p>
-<dl><dd> I agree. <a href="/or1k/User:Jeremybennett" title="User:Jeremybennett">Jeremybennett</a> 10:55, 23 August 2011 (CEST)
-</dd></dl>
-<h2> <span class="mw-headline" id="Hardware"> Hardware </span></h2>
-<p>All critical features requests and bugs in ORPSoCv2 should be addressed before adding features (and more bugs) in ORPSoCv3.
-</p>
-<ul><li> Fair enough. <a href="http://bugzilla.opencores.org/show_bug.cgi?id=59" class="external text" rel="nofollow">These</a> <a href="http://bugzilla.opencores.org/show_bug.cgi?id=56" class="external text" rel="nofollow">two</a> was what I could find in Bugzilla. We might need to scrape the old and new bug system to see if there are more <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 23:24, 22 August 2011 (CEST)
-</li></ul>
-<dl><dd><dl><dd> I scraped the old bug tracker and put anything even vaguely still alive in Bugzilla. <a href="/or1k/User:Jeremybennett" title="User:Jeremybennett">Jeremybennett</a> 10:55, 23 August 2011 (CEST)
-</dd></dl>
-</dd></dl>
-<h2> <span class="mw-headline" id="Project_structure"> Project structure </span></h2>
-<p>The current ORPSoC structure follows the recommended OpenCores structures, but has grown out of it because of the board ports and multiple modules. 
+
+* Add a top level Makefile that contains the following rules [[User:Olof|Olof]] 19:19, 18 August 2011 (CEST)
+** list-rtl-files : Returns a list of the modules' and it's submodules' rtl-files. Used in top level Makefile to create project files for synthesis and simulation. I made a [http://dl.dropbox.com/u/902237/recmake.tar.gz proof-of-concept sketch] of how something like this could work [[User:Olof|Olof]] 23:07, 24 August 2011 (CEST)
+*** The Makefile should run the actual synthesis and simulations tools as well. Or better call other makefiles associated with synthesis, simulation, linter, FV, tools. This allows for easy maintenance and extension of the supported tools. [[User:Rherveille|Rherveille]] 12:10, 24 August 2011 (CEST)
+**** Agreed. Please add any Makefile rules that makes sense to have. Most rules would probably make sense to have recursive, so that they can be run on a stand-alone module as well as a module being part of ORPSoC [[User:Olof|Olof]] 20:01, 28 August 2011 (CEST)
+** list-include-dirs : Returns a list of the modules' and it's submodules' directories containing include files. Used in top level Makefile to create project files for synthesis and simulation
+** get-modules : Download the required submodules to the modules dir. Not sure how this should be done. Requires knowledge of each submodules' repo or download location, but this could maybe be solved with a simple ebuild-like systems. I guess the three main cases are SVN, GIT and tar balls [[User:Olof|Olof]] 23:07, 24 August 2011 (CEST)
+
+* Create a project based on a custom (our standard) list of files and directories. The Makefile system should able to create project files for synthesis and simulation out of it. This has been created for MinSoC, you can find it under minsoc/prj, details are described [http://www.minsoc.com/trunk:project_definition here]. We could port it to OrpSoC3 if we can agree on a way to do it. [[User:rfajardo|rfajardo]] 11 October 2011
+
+== Configuration ==
+Kbuild has been proposed here. Pros/cons?
+
+For ORPSoC v3 there willl be standardized [[Makefile rules]]
+
+For hardware configuration we should aim to replace defines and defparams with parameters [[User:Olof|Olof]] 21:00, 19 August 2011 (CEST)
+
+Yes definitely; parameters only. Defines can be used for special cases, but none should be used in the actual RTL files.--[[User:Rherveille|Rherveille]] 18:29, 24 August 2011 (CEST)
+
+
+== Software integration ==
+People might want to build software running on their ORPSoC. Is this feasible?
+* Definitely - we might want to integrate more with newlib - it was my ambition move all of the software to be based on newlib, rather than the little bare metal libraries I've put together in ORPSoC. I think this should be pursued for the next iteration of this project. [[User:Julius|Julius]] 00:13, 25 August 2011 (CEST)
+
+== Name and version ==
+Actually, ORPSoCv3 makes sense, but I'd prefer to see it called just ORPSoC and have version numbers (my flavor of the month) for the project when we tag it beginning at 3.0.0. We could then refer to the previous versions as 1 (the original, long gone) and 2 (the one being worked on at the moment, expect to see this in use until 3.0 gets up.)  [[User:Julius|Julius]] 14:17, 20 August 2011 (CEST)
+: I agree. [[User:Jeremybennett|Jeremybennett]] 10:55, 23 August 2011 (CEST)
+
+== Hardware ==
+All critical features requests and bugs in ORPSoCv2 should be addressed before adding features (and more bugs) in ORPSoCv3.
+* Fair enough. [http://bugzilla.opencores.org/show_bug.cgi?id=59 These] [http://bugzilla.opencores.org/show_bug.cgi?id=56 two] was what I could find in Bugzilla. We might need to scrape the old and new bug system to see if there are more [[User:Olof|Olof]] 23:24, 22 August 2011 (CEST)
+:: I scraped the old bug tracker and put anything even vaguely still alive in Bugzilla. [[User:Jeremybennett|Jeremybennett]] 10:55, 23 August 2011 (CEST)
+
+== Project structure ==
+The current ORPSoC structure follows the recommended OpenCores structures, but has grown out of it because of the board ports and multiple modules. 
 For ORPSoCv3, it would be preferred to side-step the OpenCores structure where it makes sense for ORPSoC itself, while benefiting from the fact that most cores have a similar structure.
-</p>
-<dl><dd> The following issues has been identified with the ORPSoCv2 structure and should be rectified in ORPSoCv3
-</dd></dl>
-<ul><li> Too many levels of hierarchy
-</li><li> Temporary build files spread out through the project tree
-</li><li> Common workflow requires changing directories often
-</li></ul>
-<p>The proposed structure addresses this by assigning a common build-directory, moving Makefiles to the top-level and flattens out some of the directory trees <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 19:49, 30 August 2011 (CEST)
-</p><p><br />
+: The following issues has been identified with the ORPSoCv2 structure and should be rectified in ORPSoCv3
+* Too many levels of hierarchy
+* Temporary build files spread out through the project tree
+* Common workflow requires changing directories often
+
+The proposed structure addresses this by assigning a common build-directory, moving Makefiles to the top-level and flattens out some of the directory trees [[User:Olof|Olof]] 19:49, 30 August 2011 (CEST)
+
+
 Either your formatting is munged or the rtl code is under the doc directory.  I would like to see where all the different variants will store their results. For example if you have 3 different software apps then you will need three different simulations and bitfiles. If you can configure the 
-or1200 for I-cache,dcache and debugger then you could be dealing with up to 24 combinations. The full test suite has to be able to run all supported configurations and save the results <a href="/wiki1/index.php?title=User:Jt_eaton&amp;action=edit&amp;redlink=1" class="new" title="User:Jt eaton (page does not exist)">User:jt_eaton</a> 30 August 2011
-</p>
-<ul><li> Formatting is corrected. Haven't thought of the issue with several results. One idea might be to send a parameter to the Makefile that assigns a namespace or subdirectory for the different simulation results/bitfiles. Any other ideas? <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 22:25, 1 September 2011 (CEST)
-</li></ul>
-<p>Simulation suites can be very easy to parallelize and farm out to multiple cores as long as you don't do anything that prevents 2 sims from running at the same time. If all your sims run in the same directory and you have any filename that is shared then you will have problems. I create a separate subdirectory for each sim to completely isolate them from each other. This directory contains the test sequence initial statement that directs all the reads/writes and testing. There is also a dumpfile fragment and a gtkwave .sav file. That way each sim can control its dump file and how it is displayed. I have other system files that control the testbench creation and configuration for each sim <a href="/wiki1/index.php?title=User:Jt_eaton&amp;action=edit&amp;redlink=1" class="new" title="User:Jt eaton (page does not exist)">jt_eaton</a> 1:19 2 September 2011 (CEST) 
-</p>
-<ul><li> <b>orpsoc</b>
-<ul><li>bench
-<ul><li>sysc
-</li><li>verilog
-</li></ul>
-</li><li>boards
-<ul><li>actel-ordb1a3pe1500
-</li><li>altera-de0_nano
-</li><li>xilinx-atlys
-</li><li>xilinx-ml501
-<ul><li>data
-<ul><li>constraints.ucf
-</li><li>coregen
-</li></ul>
-</li><li>rtl
-<ul><li>verilog
-<ul><li>clk_gen
-</li><li>mem_ctrl
-</li></ul>
-</li></ul>
-</li><li>orpsoc_top.v
-</li></ul>
-</li></ul>
-</li><li>build
-<ul><li>ise
-</li><li>modelsim
-</li><li>ncsim
-</li><li>synplify
-</li><li>xst
-</li></ul>
-</li><li>cores
-<ul><li>ac97
-</li><li>ethmac
-</li><li>or1200
-</li><li>spi
-</li><li>usb
-</li></ul>
-</li><li>doc
-</li><li>rtl
-<ul><li>verilog
-<ul><li>arbiter
-</li><li>bootrom
-</li></ul>
-</li></ul>
-</li><li>scripts
-</li><li>sim
-<ul><li>isim
-</li><li>modelsim
-</li><li>ncsim
-</li></ul>
-</li><li>sw
-<ul><li>apps
-</li><li>tests
-</li><li>utils
-</li></ul>
-</li><li>Makefile
-</li></ul>
-</li></ul>
-<h3> <span class="mw-headline" id="Alternate_set_up"> Alternate set up </span></h3>
-<p><a href="/or1k/User:Julius" title="User:Julius">Julius</a> 23:06, 1 September 2011 (CEST)
-</p><p>I think we should make all modules drop into each board build and not be available "globally" across ORPSoC.
-</p><p>This is probably a discussion for elsewhere, but I think the testbench and maybe model files for each core should be housed with each module in each build. I would prefer to see the core that we're pulling in provide the testbench modules and models to test against.
-</p><p>As much as possible, scripts should be kept globally.
-</p><p>A set of common models (eg. memory) and utility cores/functions (eg. UART decoders) for testbenches and the like should be provided. If any design module becomes so common that every build is using it, it could live in the common/rtl path.
-</p><p>If any design module is usable for any other projects then it should not be inside of orpsoc, it should be in its own library project. We know that every wishbone peripheral will need a wishbone master BFM. So create a opencores project for testbench modules and put it there. Putting a copy of or1200 inside of orpsoc was a bad idea because nobody knew which one is the true source. The same is true for all modules. You need a module that everyone else needs? Put it in the versatile_library project and let everyone use that as a source. Don't make copies. <a href="/wiki1/index.php?title=User:Jt_eaton&amp;action=edit&amp;redlink=1" class="new" title="User:Jt eaton (page does not exist)">jt_eaton</a> 05:23, 2 September 2011 (CEST)
-</p>
-<dl><dd><ul><li> OK, for utility blocks that have clear use elsewhere housing them in a utility library project might work. But if we're going to sub-project every little thing in ORPSoC I think we need to watch out for it becoming very annoying to handle. To make a commit of any significant work done on ORPSoC you're going to have to break up and commit your work to several different projects and hope it all goes into the projects at roughly the same time so things don't become out of sync. I'm for more consolidation of the sundry components in ORPSoC than not. <a href="/or1k/User:Julius" title="User:Julius">Julius</a> 15:48, 4 September 2011 (CEST)
-</li></ul>
-</dd></dl>
-<dl><dd><ul><li> Yes, it is very important that we create a modular design. If you have a function that is spread out over a series of modules then you must keep all of those modules inside the same project. This means dividing the design on well defined boundaries and putting major functions all within one module. But you can handle a significant change over several projects by using versioning. If I wanted to change orpsocv3 from wishbone to amba then I would not touch any of the original files. I would make a separate version of each wishbone module that would not affect any of the original versions logic. After all modules have been versioned and tested I would perform one switch at the top level that replaces all the old versions with the new ones. If anyone wants the old system then it remains untouched or they can switch and grab the new one. If the new system is a permanent replacement then we can blow away the old logic after the new one is stable. But most of the time we will simply keep both versions available. <a href="/wiki1/index.php?title=User:Jt_eaton&amp;action=edit&amp;redlink=1" class="new" title="User:Jt eaton (page does not exist)">jt_eaton</a> 19:30 4 September 2011 (CEST)
-</li></ul>
-</dd></dl>
-<h4> <span class="mw-headline" id="Software_-_still_unsure"> Software - still unsure </span></h4>
-<p>I would be happy to have a sw/ path at the base of the project if there was an easy way to allow each build to customise the libraries to its needs (which drivers to build and link essentially), like we do now in ORPSoC.
+or1200 for I-cache,dcache and debugger then you could be dealing with up to 24 combinations. The full test suite has to be able to run all supported configurations and save the results [[User:jt_eaton]] 30 August 2011
+* Formatting is corrected. Haven't thought of the issue with several results. One idea might be to send a parameter to the Makefile that assigns a namespace or subdirectory for the different simulation results/bitfiles. Any other ideas? [[User:Olof|Olof]] 22:25, 1 September 2011 (CEST)
+
+Simulation suites can be very easy to parallelize and farm out to multiple cores as long as you don't do anything that prevents 2 sims from running at the same time. If all your sims run in the same directory and you have any filename that is shared then you will have problems. I create a separate subdirectory for each sim to completely isolate them from each other. This directory contains the test sequence initial statement that directs all the reads/writes and testing. There is also a dumpfile fragment and a gtkwave .sav file. That way each sim can control its dump file and how it is displayed. I have other system files that control the testbench creation and configuration for each sim [[User:jt_eaton|jt_eaton]] 1:19 2 September 2011 (CEST) 
+
+* '''orpsoc'''
+**bench
+***sysc
+***verilog
+**boards
+***actel-ordb1a3pe1500
+***altera-de0_nano
+***xilinx-atlys
+***xilinx-ml501
+****data
+*****constraints.ucf
+*****coregen
+****rtl
+*****verilog
+******clk_gen
+******mem_ctrl
+****orpsoc_top.v
+**build
+***ise
+***modelsim
+***ncsim
+***synplify
+***xst
+**cores
+***ac97
+***ethmac
+***or1200
+***spi
+***usb
+**doc
+**rtl
+***verilog
+****arbiter
+****bootrom
+**scripts
+**sim
+***isim
+***modelsim
+***ncsim
+**sw
+***apps
+***tests
+***utils
+**Makefile
+
+=== Alternate set up ===
+[[User:Julius|Julius]] 23:06, 1 September 2011 (CEST)
+
+I think we should make all modules drop into each board build and not be available "globally" across ORPSoC.
+
+This is probably a discussion for elsewhere, but I think the testbench and maybe model files for each core should be housed with each module in each build. I would prefer to see the core that we're pulling in provide the testbench modules and models to test against.
+
+As much as possible, scripts should be kept globally.
+
+A set of common models (eg. memory) and utility cores/functions (eg. UART decoders) for testbenches and the like should be provided. If any design module becomes so common that every build is using it, it could live in the common/rtl path.
+
+If any design module is usable for any other projects then it should not be inside of orpsoc, it should be in its own library project. We know that every wishbone peripheral will need a wishbone master BFM. So create a opencores project for testbench modules and put it there. Putting a copy of or1200 inside of orpsoc was a bad idea because nobody knew which one is the true source. The same is true for all modules. You need a module that everyone else needs? Put it in the versatile_library project and let everyone use that as a source. Don't make copies. [[User:jt_eaton|jt_eaton]] 05:23, 2 September 2011 (CEST)
+:* OK, for utility blocks that have clear use elsewhere housing them in a utility library project might work. But if we're going to sub-project every little thing in ORPSoC I think we need to watch out for it becoming very annoying to handle. To make a commit of any significant work done on ORPSoC you're going to have to break up and commit your work to several different projects and hope it all goes into the projects at roughly the same time so things don't become out of sync. I'm for more consolidation of the sundry components in ORPSoC than not. [[User:Julius|Julius]] 15:48, 4 September 2011 (CEST)
+
+:* Yes, it is very important that we create a modular design. If you have a function that is spread out over a series of modules then you must keep all of those modules inside the same project. This means dividing the design on well defined boundaries and putting major functions all within one module. But you can handle a significant change over several projects by using versioning. If I wanted to change orpsocv3 from wishbone to amba then I would not touch any of the original files. I would make a separate version of each wishbone module that would not affect any of the original versions logic. After all modules have been versioned and tested I would perform one switch at the top level that replaces all the old versions with the new ones. If anyone wants the old system then it remains untouched or they can switch and grab the new one. If the new system is a permanent replacement then we can blow away the old logic after the new one is stable. But most of the time we will simply keep both versions available. [[User:jt_eaton|jt_eaton]] 19:30 4 September 2011 (CEST)
+==== Software - still unsure ====
+I would be happy to have a sw/ path at the base of the project if there was an easy way to allow each build to customise the libraries to its needs (which drivers to build and link essentially), like we do now in ORPSoC.
 Ideally I would prefer to see a move to a model where the core/module we pull in provides bare-metal drivers that the processor can use. Perhaps common test functions for a "service" (spi,uart,i2c,ethernet,memory) live in the root sw/ and contain calls to the drivers and functions provided by the core.
-</p><p>Agreed. A transactor and a bare-metal driver would be great to have for each core. It could be worth a try to have these as patches to begin with. Basic infrastructure for patching of pulled-in cores is already implemented <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 14:13, 2 September 2011 (CEST)
-</p>
-<h4> <span class="mw-headline" id="Testing_and_development_facilities"> Testing and development facilities </span></h4>
-<p>Sorry to dump all of my ideas in this space, but I think what would be <i>really</i> cool is to have two types of testing capabilities. One where the processor simply triggers a bit of behavioural verilog in the testbench which then tests a core in the usual "standalone" testbench fashion, and one where the processor is largely doing the testing of the core from the CPU side. A mixture of both could also be achieved. But basically, the first type, where the core triggers some behavioural block to do its thing would be very handy to have, and to be able to manage the source of. Basically I would like to get to a position where the <i>proper</i> development of a block can occur in a build in ORPSoC and then allow you to transition into the control of the block by the CPU. That core, however, would still be testable by taking the testbench and triggering the 'go' condition of the test by some other means. 
-</p><p>Absolutely. ORPSoC should assist in the development process of a new core. Having behavioural models of the surrounding blocks is how things should be done. Now we just have to find someone to write them. Just having a proper wishbone transactor would get us far. <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 14:13, 2 September 2011 (CEST)
-</p>
-<h4> <span class="mw-headline" id="Structure"> Structure </span></h4>
-<p>So, something like:
-</p><p><b>orpsoc</b>
-</p>
-<ul><li> builds
-<ul><li> generic-or1200-reference
-</li><li> generic-or1200-fancyfeaturedemo
-</li><li> generic-otheror1k-reference
-</li><li> xilinx-ml501
-</li><li> xilinx-atlys
-</li><li> actel-ordb1a3pe1500
-</li><li> <b>technology</b>-<b>buildnamename</b>
-<ul><li> <b>Makefile</b> <i>- a main build makefile for pulling in modules and setting up anything else required</i>
-</li><li> modules
-</li><li> simulation
-<ul><li> run
-</li><li> scripts
-<ul><li> <i>just some simple scripts, mainly pulling in other fragments</i>
-</li></ul>
-</li></ul>
-</li><li> synthesis
-<ul><li> run
-</li><li> scripts
-</li></ul>
-</li></ul>
-</li></ul>
-</li><li> common
-<ul><li> models
-<ul><li> verilog
-</li><li> vhdl
-</li><li> systemc
-</li></ul>
-</li><li> bench
-<ul><li> verilog
-</li><li> vhdl
-</li><li> systemc
-</li></ul>
-</li><li> rtl <i>(possibly)</i>
-</li></ul>
-</li><li> scripts
-<ul><li> make
-</li><li> bash
-</li><li> perl
-</li></ul>
-</li></ul>
-<p>Comments on <a href="/or1k/User:Julius" title="User:Julius">Julius</a>' alternative structure <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 14:13, 2 September 2011 (CEST)
-</p>
-<ul><li> builds/vendor-cpu-some-other-string&#160;: I believe that most of the time, you would build ORPSoC for only one board, and definitely with or1200 as the target CPU. Therefore, I feel it only makes things more complex and adds another hierarchy level to have a naming scheme for the builds. I would prefer that we just have syn, par and sim (and probably a few more) directories in the build path. If a user wants to put the files somewhere else, this can be overridden with a Makefile variable, e.g, <tt>make netlist BUILD_DIR=generic-or1200-fancyfeature-demo</tt>
-</li></ul>
-<dl><dd><ul><li> Well, I for one have started my own implementation and that's where my primary interests in this project are - playing with CPU design. I would hope the structure of ORPSoC supports that. See my comments below about support for multiple build configurations.
-</li></ul>
-</dd></dl>
-<ul><li> The case for making cores available globally is that many cores such as spi, ethmac, or1200 (I see or1200 as just another core, although it has some special attributes) and uart are used by both the generic ORPSoC environment and most of the board builds. Having separate copies in the tree doesn't make sense
-</li></ul>
-<dl><dd><ul><li> Actually, I now think no cores should be available globally - each build should pull in everything it needs to create the SoC simulation and build environment. Hopefully all we'll need locally is the top-level RTL, board-specific RTL (clkgen etc.) and the custom pin placement scripts and any other board-specific stuff. I reckon this really minimises the complexity of the scripting system we'll need and reduces confusion about exactly which source we're relying on (because it's all living within your little build ecosystem.) <a href="/or1k/User:Julius" title="User:Julius">Julius</a> 15:48, 4 September 2011 (CEST)
-<ul><li> For example, think of a couple of board builds that you're playing with, but your customising a particular core slightly differently for each. Not only will it be easier to track for development, but the changes are then neatly separated when you want to go submit patches for each build's changes.
-</li><li> Also, think of the case where one build doesn't work with the HEAD revision of a core but relies on an an older revision. It will then make it easier to jump between builds to test and check things without having to re-do your global checkouts
-</li><li> Additionally, it'll be easier to handle as a maintainer. I'm usually hacking on a couple of board builds at a time and find it pretty annoying to, for example, have to revert back to a different version of the ethmac to quickly build and check something for another board. I reckon the overhead of checking and testing patches or entire builds will be less with this method, too.
-</li><li> However, these might just be things a maintainer wants, and I'm not sure we should be optimising the project for that. But I'm not sure I like the idea of single build being supported at a time. I think it's easy to add support for multiple builds to be ready to go all the time without having to unwind your setup for another build.
-</li></ul>
-</li></ul>
-</dd></dl>
-<h2> <span class="mw-headline" id="Use_an_IP-Xact_enabled_tool_flow"> Use an IP-Xact enabled tool flow </span></h2>
-<p>Orpsocv3 would be a great opportunity for opencores to stop playing catch up
+
+Agreed. A transactor and a bare-metal driver would be great to have for each core. It could be worth a try to have these as patches to begin with. Basic infrastructure for patching of pulled-in cores is already implemented [[User:Olof|Olof]] 14:13, 2 September 2011 (CEST)
+
+==== Testing and development facilities ====
+Sorry to dump all of my ideas in this space, but I think what would be ''really'' cool is to have two types of testing capabilities. One where the processor simply triggers a bit of behavioural verilog in the testbench which then tests a core in the usual "standalone" testbench fashion, and one where the processor is largely doing the testing of the core from the CPU side. A mixture of both could also be achieved. But basically, the first type, where the core triggers some behavioural block to do its thing would be very handy to have, and to be able to manage the source of. Basically I would like to get to a position where the ''proper'' development of a block can occur in a build in ORPSoC and then allow you to transition into the control of the block by the CPU. That core, however, would still be testable by taking the testbench and triggering the 'go' condition of the test by some other means. 
+
+Absolutely. ORPSoC should assist in the development process of a new core. Having behavioural models of the surrounding blocks is how things should be done. Now we just have to find someone to write them. Just having a proper wishbone transactor would get us far. [[User:Olof|Olof]] 14:13, 2 September 2011 (CEST)
+==== Structure ====
+
+So, something like:
+
+'''orpsoc'''
+* builds
+** generic-or1200-reference
+** generic-or1200-fancyfeaturedemo
+** generic-otheror1k-reference
+** xilinx-ml501
+** xilinx-atlys
+** actel-ordb1a3pe1500
+** '''technology'''-'''buildnamename'''
+*** '''Makefile''' ''- a main build makefile for pulling in modules and setting up anything else required''
+*** modules
+*** simulation
+**** run
+**** scripts
+***** ''just some simple scripts, mainly pulling in other fragments''
+*** synthesis
+**** run
+**** scripts
+* common
+** models
+*** verilog
+*** vhdl
+*** systemc
+** bench
+*** verilog
+*** vhdl
+*** systemc
+** rtl ''(possibly)''
+* scripts
+** make
+** bash
+** perl
+
+Comments on [[User:Julius|Julius]]' alternative structure [[User:Olof|Olof]] 14:13, 2 September 2011 (CEST)
+* builds/vendor-cpu-some-other-string : I believe that most of the time, you would build ORPSoC for only one board, and definitely with or1200 as the target CPU. Therefore, I feel it only makes things more complex and adds another hierarchy level to have a naming scheme for the builds. I would prefer that we just have syn, par and sim (and probably a few more) directories in the build path. If a user wants to put the files somewhere else, this can be overridden with a Makefile variable, e.g, <tt>make netlist BUILD_DIR=generic-or1200-fancyfeature-demo</tt>
+:* Well, I for one have started my own implementation and that's where my primary interests in this project are - playing with CPU design. I would hope the structure of ORPSoC supports that. See my comments below about support for multiple build configurations.
+* The case for making cores available globally is that many cores such as spi, ethmac, or1200 (I see or1200 as just another core, although it has some special attributes) and uart are used by both the generic ORPSoC environment and most of the board builds. Having separate copies in the tree doesn't make sense
+:* Actually, I now think no cores should be available globally - each build should pull in everything it needs to create the SoC simulation and build environment. Hopefully all we'll need locally is the top-level RTL, board-specific RTL (clkgen etc.) and the custom pin placement scripts and any other board-specific stuff. I reckon this really minimises the complexity of the scripting system we'll need and reduces confusion about exactly which source we're relying on (because it's all living within your little build ecosystem.) [[User:Julius|Julius]] 15:48, 4 September 2011 (CEST)
+:** For example, think of a couple of board builds that you're playing with, but your customising a particular core slightly differently for each. Not only will it be easier to track for development, but the changes are then neatly separated when you want to go submit patches for each build's changes.
+:** Also, think of the case where one build doesn't work with the HEAD revision of a core but relies on an an older revision. It will then make it easier to jump between builds to test and check things without having to re-do your global checkouts
+:** Additionally, it'll be easier to handle as a maintainer. I'm usually hacking on a couple of board builds at a time and find it pretty annoying to, for example, have to revert back to a different version of the ethmac to quickly build and check something for another board. I reckon the overhead of checking and testing patches or entire builds will be less with this method, too.
+:** However, these might just be things a maintainer wants, and I'm not sure we should be optimising the project for that. But I'm not sure I like the idea of single build being supported at a time. I think it's easy to add support for multiple builds to be ready to go all the time without having to unwind your setup for another build.
+
+== Use an IP-Xact enabled tool flow ==
+
+Orpsocv3 would be a great opportunity for opencores to stop playing catch up
 and start showing a leadership roll in ip packaging and reuse by building a
 complete soc design using an Ip-Xact enabled tool flow.
-</p><p>Ip-xact (IEEE 1685) was released in 2009 and has the potential to solve many of
+
+Ip-xact (IEEE 1685) was released in 2009 and has the potential to solve many of
 our design for reuse problems but its adoption by the industry has been slow.
 A big part of the problem is that a standard should simply document what everyone
 is already doing but in the case of design for reuse there really aren't a lot
@@ -465,282 +222,209 @@ on a update to the standard that would add in some of the vendor extensions that
 tool providers have needed to make the standard workable. This is a time when we could
 use orpsocv3 as a demo project for ip-xact and feedback any problems or issues back to
 the ip-xact working group. I follow that groups monthly teleconferences.
-</p><p><br />
+
+
 Ip-xact defines an electronic data sheet in the form of an xml file that describes a
 piece of ip. Every file contains an identifier known as a VLNV. That consists of the
 vendor name (in our case it opencores.org) , library name. component name and version.
-</p><p>The file also lists all parameters with default values, All ports with sizes and directions
+  
+The file also lists all parameters with default values, All ports with sizes and directions
 and all design "views". A view is a improvement over the traditional way that we have done
 designs. We currently do "superset" designs where we create one delivierable that is sent
 to all tool flows. Anything that any tool needs is added to the design and if this causes
 problems for other tools (IE: Non synthesizable code) then we use translate off pragmas
 or `ifndef SYNTHESIS to hide it from the other tools.
-</p><p>With ip-xact you create a view for each of your tool flows and each view builds its own 
+
+With ip-xact you create a view for each of your tool flows and each view builds its own 
 deliverable with exactly what it needs and nothing more. The ip-xact file will define
 a views for sim and syn and each will have their own output file.
-</p><p><br />
+
+
 To get started we need to understand the difference between a library and a component. 
 A component is building block that we will configure and add into our design. Every component
 must have an ip-xact file, Rtl code , Documentation and a test suite.
-</p><p>A library is a box that holds components. Usually there is a common theme that all the components
+
+A library is a box that holds components. Usually there is a common theme that all the components
 share. Or1200, minsoc and orpsocv2 are all components. openrisc is a library because it contains
 several components.
-</p><p>opencores.org is currently using a flat database full of components mixed in with libraries.
+
+opencores.org is currently using a flat database full of components mixed in with libraries.
 We should add some more libraries to help us better manage all the ip. For example we should
 create a library named wishbone that would either contain wishbone components or svn remote
 mount them. That will give us the library name for the ip-xact files.
-</p><p>Also you should never create a wishbone component. If you want an i2c_controller on a wishbone
+
+Also you should never create a wishbone component. If you want an i2c_controller on a wishbone
 bus then you first create and i2c_controller in a logic library and then create a wishbone 
 component that uses ip-xact to instantiate that i2c_controller. That way any bus de jour could
 easily reuse the same i2c logic.
-</p><p>Currently I am building an ip-xact toolset in the socgen project that could be used to build 
+
+Currently I am building an ip-xact toolset in the socgen project that could be used to build 
 all of the rtl code for a soc such as opsocv3. I recently added the ability to support busDefinitions
 (really powerfull stuff) and soon will begin to add support for memory maps. With memory maps each 
 ip-xact file contains a register map with all the bitfields. If you add two wishbone i2c_controllers
 into oprsocv3 and rerun the build_hw script then they will appear in the .h file.
-</p><p>I would be happy to create and maintain all of the ip-xact files needed to build orpsocv3 and set up
+
+I would be happy to create and maintain all of the ip-xact files needed to build orpsocv3 and set up
 the design so that you could build the rtl using the socgen toolset.
-</p><p>John Eaton
-</p>
-<dl><dd> John - it's a good idea, but there is (I believe) a dearth of open source IP-XACT tooling. In fact there is a shortage of good IP-XACT tooling all round as far as I can see. The only half-decent stuff was from Beach who went bust a couple of years ago. So we'll need another project to write some open source IP-XACT tools. If only there were more hours in the day.
-</dd><dd> Another thing is that IP-XACT only gives part of the solution. It helps you define the interfaces (you'll need the latest version to define temporal aspects). However it doesn't define internal state or function of IP blocks, which are the two other things you required.
-</dd><dd> Finally. I'm not sure what the legal position would be around using IP-XACT in an open source context. The SPIRIT consortium (which owns IP-XACT) is a membership body, with some fairly demanding requirements on members. <a href="/or1k/User:Jeremybennett" title="User:Jeremybennett">Jeremybennett</a> 11:01, 23 August 2011 (CEST)
-</dd></dl>
-<dl><dd> IP-XACT sounds like a great initiative, but if what Jeremy says is true, then it seems we would have some trouble implementing support. I think we should concentrate on structuring all our modules instead, so that when or if we are ready to join IP-XACT, there will at least be less ad-hoc structures. This includes bundling up things in libraries and general code cleanup. We might even be interested in inserting parts of the XML description in some cores <a href="/or1k/User:Olof" title="User:Olof">Olof</a> 23:25, 24 August 2011 (CEST)
-</dd></dl>
-<dl><dd> The spirit consortium no longer exists. They have merged with accellera and that  body now supports the standard. It is a IEEE standard (1685-2009) and the accellera website links to a free downloadable copy. They are trying to jump start its usage within the industry. There certainly is a dearth of open source IP-XACT software. That is one of my goals for the socgen project is to create a set of scripts that can use the IP-XACT descriptors to build the rtl code and other deliverables. I would like to use oprsocv3 for a pilot run to test these scripts in a complex design environment . This would mean adding a IP-XACT file to every ip component and running a build script to generate the final rtl. For a project like this one we could also have all the generated rtl checked into the repository so that anybody who didn't  want to run the build_hw script could use the preexisting copy but you could also regenerate the same files from the ip-xact files as well. My philosophy is that design for reuse follows the 80/20 rule. You can do 20% of a design for reuse effort and that will give you 80% of the benefit. If you are a commercial IP house then you still have to put forth the remaining 80% before you can sell the product but this group doesn't have to go that far. Opencores does have guidelines for having a build hardware process that runs all the code through a verilog preprocessor. That is included in mysocgen tool set. I could add that as a process step for any opencores project.   John Eaton
-</dd></dl>
-<dl><dd> Jeremy, Beach sold all their assets to Duolog over in Dublin. Their products are still around. John Eaton
-</dd></dl>
-<dl><dd> I have a parser and API to correctly access registers based on an IP-XACT memory map description. I will consider releasing that as open source in the beginning of the year. I am also very interested on your current work on that John. I also verified the current IP-XACT tools on the market specifically for the memory map and register access. The tools would work but are not open source. <a href="/wiki1/index.php?title=User:Rfajardo&amp;action=edit&amp;redlink=1" class="new" title="User:Rfajardo (page does not exist)">rfajardo</a>
-</dd></dl>
-<ul><li> IdesignSpec
-</li><li> Duolog: Bitwise
-</li><li> Magillem: Register View
-</li><li> PDTi: SpectaReg
-</li><li> Semifore: CSRCompiler
-</li><li> GenSys: Registers
-</li></ul>
-<h3> <span class="mw-headline" id="Open_source_IP-XACT_tools"> Open source IP-XACT tools </span></h3>
-<p>Kactus2: <a href="http://funbase.cs.tut.fi" class="external free" rel="nofollow">http://funbase.cs.tut.fi</a>
-</p><p><br />
-</p>
-<h2> <span class="mw-headline" id="Socgen_Design_Environment"> Socgen Design Environment  </span></h2>
-<p>I would like for this group to consider adopting the socgen project structure for the 
+
+John Eaton
+
+: John - it's a good idea, but there is (I believe) a dearth of open source IP-XACT tooling. In fact there is a shortage of good IP-XACT tooling all round as far as I can see. The only half-decent stuff was from Beach who went bust a couple of years ago. So we'll need another project to write some open source IP-XACT tools. If only there were more hours in the day.
+: Another thing is that IP-XACT only gives part of the solution. It helps you define the interfaces (you'll need the latest version to define temporal aspects). However it doesn't define internal state or function of IP blocks, which are the two other things you required.
+: Finally. I'm not sure what the legal position would be around using IP-XACT in an open source context. The SPIRIT consortium (which owns IP-XACT) is a membership body, with some fairly demanding requirements on members. [[User:Jeremybennett|Jeremybennett]] 11:01, 23 August 2011 (CEST)
+
+: IP-XACT sounds like a great initiative, but if what Jeremy says is true, then it seems we would have some trouble implementing support. I think we should concentrate on structuring all our modules instead, so that when or if we are ready to join IP-XACT, there will at least be less ad-hoc structures. This includes bundling up things in libraries and general code cleanup. We might even be interested in inserting parts of the XML description in some cores [[User:Olof|Olof]] 23:25, 24 August 2011 (CEST)
+
+: The spirit consortium no longer exists. They have merged with accellera and that  body now supports the standard. It is a IEEE standard (1685-2009) and the accellera website links to a free downloadable copy. They are trying to jump start its usage within the industry. There certainly is a dearth of open source IP-XACT software. That is one of my goals for the socgen project is to create a set of scripts that can use the IP-XACT descriptors to build the rtl code and other deliverables. I would like to use oprsocv3 for a pilot run to test these scripts in a complex design environment . This would mean adding a IP-XACT file to every ip component and running a build script to generate the final rtl. For a project like this one we could also have all the generated rtl checked into the repository so that anybody who didn't  want to run the build_hw script could use the preexisting copy but you could also regenerate the same files from the ip-xact files as well. My philosophy is that design for reuse follows the 80/20 rule. You can do 20% of a design for reuse effort and that will give you 80% of the benefit. If you are a commercial IP house then you still have to put forth the remaining 80% before you can sell the product but this group doesn't have to go that far. Opencores does have guidelines for having a build hardware process that runs all the code through a verilog preprocessor. That is included in mysocgen tool set. I could add that as a process step for any opencores project.   John Eaton
+
+: Jeremy, Beach sold all their assets to Duolog over in Dublin. Their products are still around. John Eaton
+
+: I have a parser and API to correctly access registers based on an IP-XACT memory map description. I will consider releasing that as open source in the beginning of the year. I am also very interested on your current work on that John. I also verified the current IP-XACT tools on the market specifically for the memory map and register access. The tools would work but are not open source. [[User:rfajardo|rfajardo]]
+* IdesignSpec
+* Duolog: Bitwise
+* Magillem: Register View
+* PDTi: SpectaReg
+* Semifore: CSRCompiler
+* GenSys: Registers
+
+=== Open source IP-XACT tools ===
+
+Kactus2: http://funbase.cs.tut.fi
+
+
+== Socgen Design Environment  ==
+
+I would like for this group to consider adopting the socgen project structure for the 
 oprsocv3 project. I started the socgen project so I could develop a FOSS toolset that
 any asic/fpga designer could use to build complex designs and synthesize them for multiple
 targets. I started off using the opencores recommended project structure but have since
 refined it to fix some structural flaws. It was designed to solve the problems the very problems
 that any  system_on_chip design faces.
-</p><p>Socgen defines three separate structures: Component,Library and Design Environment that
+
+Socgen defines three separate structures: Component,Library and Design Environment that
 all work together.
-</p><p><br />
+ 
+
 Component Structure
-</p><p><br />
-</p>
-<ul><li> <b>component</b>
-<ul><li>doc
-<ul><li>src
-</li><li>png
-</li><li>eps
-</li><li>gif
-</li><li>drawing  (socgen currently uses gEDA for schematics)
-</li></ul>
-</li><li>rtl
-<ul><li>xml
-<ul><li><b>component.xml</b>
-</li><li><b>component_version.xml</b>
-</li><li>. . .
-</li></ul>
-</li><li>verilog
-</li><li>vhdl
-</li><li>sysc
-</li><li>fsm
-</li><li>gen
-<ul><li>sim
-<ul><li><b>component.v</b>
-</li><li><b>component_version.v</b>
-</li><li>. . .
-</li></ul>
-</li><li>syn
-<ul><li><b>component.v</b>
-</li><li><b>component_version.v</b>
-</li><li>. . .
-</li></ul>
-</li></ul>
-</li></ul>
-</li><li>bin
-</li><li>sim
-<ul><li>xml
-<ul><li><b>component_tb.xml</b>
-</li><li><b>component_version_tb.xml</b>
-</li><li>. . .
-</li></ul>
-</li><li>lint  (socgen currently uses verilator for linting)
-<ul><li><b>component</b>
-</li><li><b>component_version</b>
-</li><li>. . .
-</li></ul>
-</li><li>cov   (socgen currently uses covered for coverage)
-<ul><li><b>component</b>
-</li><li><b>component_version</b>
-</li><li>. . .
-</li></ul>
-</li><li>run    (socgen currently uses icarus for simulation)
-<ul><li>config_test1
-</li><li>version_config2_test1
-<ul><li>test_define
-</li><li>dmp_define
-</li><li>gwave.sav
-</li><li>. . .
-</li></ul>
-</li></ul>
-</li></ul>
-</li><li>syn
-<ul><li><b>component</b>_config
-<ul><li>family    (xilinx,altera,actel etc, socgen currently uses ise for synthesys)
-</li></ul>
-</li><li><b>component_version</b>_config
-</li><li>. . .
-</li></ul>
-</li></ul>
-</li></ul>
-<p><br />
-</p><p>Library Structure
-</p>
-<ul><li><b>library</b>
-<ul><li>doc
-</li><li>ip
-<ul><li>component1
-</li><li>component2
-</li><li>. . .
-</li></ul>
-</li><li>sw
-<ul><li>prog1
-</li><li>prog2
-</li><li>. . .
-</li></ul>
-</li><li>bin
-</li></ul>
-</li></ul>
-<p><br />
-</p><p><br />
-</p><p><br />
-</p><p>Design Environment Structure
-</p>
-<ul><li><b>design</b>
-<ul><li>Makefile
-</li><li>tools
-<ul><li>install
-</li><li>sys
-</li><li>bin
-</li></ul>
-</li><li>projects
-<ul><li>library1
-</li><li>library2
-</li><li>. . .
-</li></ul>
-</li><li>work
-</li></ul>
-</li></ul>
-<p><br />
+
+
+* '''component'''
+**doc
+***src
+***png
+***eps
+***gif
+***drawing  (socgen currently uses gEDA for schematics)
+**rtl
+***xml
+****'''component.xml'''
+****'''component_version.xml'''
+****. . .
+***verilog
+***vhdl
+***sysc
+***fsm
+***gen
+****sim
+*****'''component.v'''
+*****'''component_version.v'''
+*****. . .
+****syn
+*****'''component.v'''
+*****'''component_version.v'''
+*****. . .
+**bin
+**sim
+***xml
+****'''component_tb.xml'''
+****'''component_version_tb.xml'''
+****. . .
+***lint  (socgen currently uses verilator for linting)
+****'''component'''
+****'''component_version'''
+****. . .
+***cov   (socgen currently uses covered for coverage)
+****'''component'''
+****'''component_version'''
+****. . .
+***run    (socgen currently uses icarus for simulation)
+****config_test1
+****version_config2_test1
+*****test_define
+*****dmp_define
+*****gwave.sav
+*****. . .
+**syn
+***'''component'''_config
+****family    (xilinx,altera,actel etc, socgen currently uses ise for synthesys)
+***'''component_version'''_config
+***. . .
+
+
+
+Library Structure
+
+*'''library'''
+**doc
+**ip
+***component1
+***component2
+***. . .
+**sw
+***prog1
+***prog2
+***. . .
+**bin
+
+
+
+
+
+
+
+Design Environment Structure
+
+*'''design'''
+**Makefile
+**tools
+***install
+***sys
+***bin
+**projects
+***library1
+***library2
+***. . .
+**work
+
+
 The biggest problem with the opencores structure is that it does not support different versions of a component. If you want to do a multicore or1200 where each core has
 a different cache configuration then you will have problems. The socgen structure allows for unlimited versioning. It also supports unlimited configurations. Any soc design
 in a fpga can easy see a host of different configurations where the only change is the name of the embedded romcode. You can also expect to take any design onto every fpga
 board that is available. Each one needs its own simulation suite and synthesys area. 
-</p><p>Socgen supports ip-xact. The rtl and testbenches are all built from ip-xact scripts. You do not see any place for simulation models because a model is simply a component that is
+
+Socgen supports ip-xact. The rtl and testbenches are all built from ip-xact scripts. You do not see any place for simulation models because a model is simply a component that is
 in its own library and ip-xact takes care of finding it in the design environment and building the testbench. You do not see any place for boards because boards are simply components that live in their own library and ip-xact takes care of finding them and adding them into the design. You want some common modules? Put them in a library and anyone can use them.
-</p><p><br />
+
+
 Socgen supports views. Most designs currently do a superset design where you create one deliverable for all tools. So if tool X needs something in the rtl then it must go into the design and you then have to figure out how to exclude it for the other tools that can't have it in the design. With views I can create a different deliverable for simulation, synthesys or any tool that contains exactly what the tool needs and nothing else.
-</p><p>Socgen is a long way from completion but its current state is quite capable of supporting the needs of orpsocv3. If you do follow my guidelines then you can use my current scripts and you will be able to benefit as I continue to add functionality. I need the feedback from a project as complex as oprsocv3 to find the bugs and figure out what I am missing.
-</p><p>I am willing to do the database work but I do need your help to make this happen.
-</p><p><a href="/wiki1/index.php?title=User:Jt_eaton&amp;action=edit&amp;redlink=1" class="new" title="User:Jt eaton (page does not exist)">jt_eaton</a> 05:46, 06 September 2011 (CEST)
-</p>
-<dl><dd><ul><li> <i> I've split my comments up so responses can go to each. Please indent and bullet point in a similar fashion</i> <a href="/or1k/User:Julius" title="User:Julius">Julius</a>
-</li><li> That is a <b>lot</b> of hierarchy! <a href="/or1k/User:Julius" title="User:Julius">Julius</a> 01:08, 8 September 2011 (CEST)
-<ul><li> We have a lot of files. That means we must either go wide or go deep or mix file types.Mixing file types in a directory is always messy and users do not like having to drill down several levels in order to run scripts. I deal with that by running all scripts from the top level of the DE using makefiles. I have several top level scripts that link down to execute all lower level scripts. Going wide and having a lot of 1st level subdirectories is also bad. You only want to show the user the minimum number of entries that the need to do their job. In my top level you only see a tools directory and a projects directory. You download all of your repositories into the projects directory. After running the make workspace script you will also see the build area called "work". Work is a symbolic linked tree back to projects except that you can store generated files there and they are not added into the repository.
-</li></ul>
-</li></ul>
-</dd></dl>
-<dl><dd><ul><li><ul><li>Under each project you can have a ip directory for cores, a sw directory for programs and any docs or tools needed in that project. The cores under any project are all the same and anyone can use any other core or app program if it is anywhere in the DE.<a href="/wiki1/index.php?title=User:Jt_eaton&amp;action=edit&amp;redlink=1" class="new" title="User:Jt eaton (page does not exist)">jt_eaton</a> 02:18, 09 September 2011 (CEST)
-</li></ul>
-</li></ul>
-</dd></dl>
-<p><br />   
-</p>
-<dl><dd><ul><li> I believe most of this is not relevant for ORPSoC, but rather more of a suggestion for project structure of IP in general. Probably you have brought it up here because there isn't a proper forum for it at present. Perhaps you could make more noise about it and push for a new recommended project structure here at OpenCores to more easily facilitate SoC design. <a href="/or1k/User:Julius" title="User:Julius">Julius</a> 01:08, 8 September 2011 (CEST)
-</li></ul>
-</dd></dl>
-<dl><dd><ul><li><ul><li> I have discussed this before on the forums and frankly it something that most designers don't want anything to do with. The typical design method in the industry has been to put together a team that handcrafts the code and tweaks all the features in and the bugs out. That is what everyone knows how to do. The problem is that our devices have grown to the point where we can't tweak things fast enough to meet schedule. It does take a bit more time the first time you build a reusable database but it saves time from then on. All of our socs all need to do the same things. Why don't we spend the time to make a common toolset that anyone can use.<a href="/wiki1/index.php?title=User:Jt_eaton&amp;action=edit&amp;redlink=1" class="new" title="User:Jt eaton (page does not exist)">jt_eaton</a> 02:28, 09 September 2011 (CEST)
-</li></ul>
-</li></ul>
-</dd></dl>
-<p><br />
-</p>
-<dl><dd><ul><li> I do think it looks good, however ORPSoC is about bringing together components to show off how OpenRISC implementations can be used, as a reference, and we're asking for suggestions about how best to go about that project. It's very easy to get onto suggestions for how to structure the peripheral components to make the primary goal easier, but I think most thought has to go into how we're going to deal with what's there, while acknowledging it's not ideal and doing something about it when we can. We have to be aware of overreach and ultimately getting nothing done because the task is too big for the few of us who actually spend our time on it. If all the IP was already structured this way, then sure, it might work, but right now it isn't and I just want to build SoCs, put them on my FPGA board and play with them with reasonable levels of reuse and expandability and as little barrier to entry as possible. There's always going to be a trade off between re-arranging everything <i>just</i> right and actually getting something done. <a href="/or1k/User:Julius" title="User:Julius">Julius</a> 01:08, 8 September 2011 (CEST)
-</li><li> I think what is <b>not</b> a goal of this project is to re-organise every IP we want to bring into a build. If someone wants to push for a restructure of OpenCores projects, that's fine, but that's not within the remit of ORPSoC.<a href="/or1k/User:Julius" title="User:Julius">Julius</a> 01:08, 8 September 2011 (CEST)
-</li></ul>
-</dd></dl>
 
-<!-- 
-NewPP limit report
-Preprocessor node count: 65/1000000
-Post-expand include size: 530/2097152 bytes
-Template argument size: 0/2097152 bytes
-Expensive parser function count: 0/100
--->
+Socgen is a long way from completion but its current state is quite capable of supporting the needs of orpsocv3. If you do follow my guidelines then you can use my current scripts and you will be able to benefit as I continue to add functionality. I need the feedback from a project as complex as oprsocv3 to find the bugs and figure out what I am missing.
 
-<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:40-0!*!0!!en!*!edit=0 and timestamp 20161009123732 -->
-<div class="printfooter">
-Retrieved from "<a href="http://opencores.org/or1k/ORPSoCv3InitialDiscussion">http://opencores.org/or1k/ORPSoCv3InitialDiscussion</a>"</div>
-            <div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/or1k/Special:Categories" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/wiki1/index.php?title=Category:Obsolete&amp;action=edit&amp;redlink=1" class="new" title="Category:Obsolete (page does not exist)">Obsolete</a></span></div></div>            <!-- end content -->
-                        <div class="visualClear"></div>
-        </div>
-        
-                
-        <div class="visualClear"><p></p></div>
-        
-        <div id="footer">
-            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 24 January 2015, at 15:47.<li id="lastmod"></li>This page has been accessed 11,992 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
-<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "ORPSoCv3InitialDiscussion", "wgTitle": "ORPSoCv3InitialDiscussion", "wgAction": "view", "wgArticleId": 40, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1309, "wgCategories": ["Obsolete"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
-	mediaWiki.loader.go();
-}
-</script>
+I am willing to do the database work but I do need your help to make this happen.
 
-<script>if ( window.mediaWiki ) {
-	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
-	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
-}
-</script><!-- Served in 2.649 secs. -->            
-        </div>
-        
-        
-        </div>
-	<div style="clear:both;margin-left:200px;">
-            <!-- 728x90 -->
-            <script type="text/javascript">
-            GA_googleFillSlot("728x90");
-            </script>
-	</div>
-    </div>
-    <div class="bot">
-	&copy; copyright 1999-2016
-OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
-    </div>
-</div>
+[[User:jt_eaton|jt_eaton]] 05:46, 06 September 2011 (CEST)
+:* '' I've split my comments up so responses can go to each. Please indent and bullet point in a similar fashion'' [[User:Julius|Julius]]
+:* That is a '''lot''' of hierarchy! [[User:Julius|Julius]] 01:08, 8 September 2011 (CEST)
+:** We have a lot of files. That means we must either go wide or go deep or mix file types.Mixing file types in a directory is always messy and users do not like having to drill down several levels in order to run scripts. I deal with that by running all scripts from the top level of the DE using makefiles. I have several top level scripts that link down to execute all lower level scripts. Going wide and having a lot of 1st level subdirectories is also bad. You only want to show the user the minimum number of entries that the need to do their job. In my top level you only see a tools directory and a projects directory. You download all of your repositories into the projects directory. After running the make workspace script you will also see the build area called "work". Work is a symbolic linked tree back to projects except that you can store generated files there and they are not added into the repository.
 
-<!-- Google search -->
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-<!-- /Google search -->
+:**Under each project you can have a ip directory for cores, a sw directory for programs and any docs or tools needed in that project. The cores under any project are all the same and anyone can use any other core or app program if it is anywhere in the DE.[[User:jt_eaton|jt_eaton]] 02:18, 09 September 2011 (CEST)
 
-</body>
-</html>
+   
+:* I believe most of this is not relevant for ORPSoC, but rather more of a suggestion for project structure of IP in general. Probably you have brought it up here because there isn't a proper forum for it at present. Perhaps you could make more noise about it and push for a new recommended project structure here at OpenCores to more easily facilitate SoC design. [[User:Julius|Julius]] 01:08, 8 September 2011 (CEST)
+
+:** I have discussed this before on the forums and frankly it something that most designers don't want anything to do with. The typical design method in the industry has been to put together a team that handcrafts the code and tweaks all the features in and the bugs out. That is what everyone knows how to do. The problem is that our devices have grown to the point where we can't tweak things fast enough to meet schedule. It does take a bit more time the first time you build a reusable database but it saves time from then on. All of our socs all need to do the same things. Why don't we spend the time to make a common toolset that anyone can use.[[User:jt_eaton|jt_eaton]] 02:28, 09 September 2011 (CEST)
+
+
+
+:* I do think it looks good, however ORPSoC is about bringing together components to show off how OpenRISC implementations can be used, as a reference, and we're asking for suggestions about how best to go about that project. It's very easy to get onto suggestions for how to structure the peripheral components to make the primary goal easier, but I think most thought has to go into how we're going to deal with what's there, while acknowledging it's not ideal and doing something about it when we can. We have to be aware of overreach and ultimately getting nothing done because the task is too big for the few of us who actually spend our time on it. If all the IP was already structured this way, then sure, it might work, but right now it isn't and I just want to build SoCs, put them on my FPGA board and play with them with reasonable levels of reuse and expandability and as little barrier to entry as possible. There's always going to be a trade off between re-arranging everything ''just'' right and actually getting something done. [[User:Julius|Julius]] 01:08, 8 September 2011 (CEST)
+:* I think what is '''not''' a goal of this project is to re-organise every IP we want to bring into a build. If someone wants to push for a restructure of OpenCores projects, that's fine, but that's not within the remit of ORPSoC.[[User:Julius|Julius]] 01:08, 8 September 2011 (CEST)

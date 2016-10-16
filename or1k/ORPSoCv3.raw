@@ -1,469 +1,156 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-<head>
-            
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="generator" content="MediaWiki 1.17.0" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
-<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
-<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
-<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
-<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
-<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
-        <!--[if lt IE 7]>
-        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
-		<meta http-equiv="imagetoolbar" content="no" />
-        <![endif]-->
-        
-        <script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "ORPSoCv3", "wgTitle": "ORPSoCv3", "wgAction": "view", "wgArticleId": 56, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1166, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>        
-        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
-		
-        <!-- Head Scripts -->
-                
-        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
-                
-                
-		        
-		        
-		        
-            <title>ORPSoCv3 - OR1K :: OpenCores</title>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
-    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
-        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
-    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
-    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
-    <script type="text/javascript">
-    GS_googleAddAdSenseService("ca-pub-0097483751598630");
-    GS_googleEnableAllServices();
-    </script>
-    <script type="text/javascript">
-    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
-    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
-    </script>
-    <script type="text/javascript">
-    GA_googleFetchAds();
-    </script>
-    <!--[if IE 6]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
-    <![endif]-->
-    <!--[if (IE 7)|(IE 8)]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
-    <![endif]-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <script type="text/javascript">
-        
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-2763846-2']);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        
-    </script>
-    
-</head>
-<body>
-<div class="main">
-    <div class="top">
-        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
-    </div>
-    <div class="line">
-	<div></div>
-	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
-    </div>
-    <div class="mid" id="dm">
-        <div class="mainmenu" id="dml">
-	            
-        <div class="menu menu-login">
-                Username:                                <form action="../login" method="post">
-                    <input class="design" name="user" type="text" />
-                    <br />
-                    Password:
-                    <br />
-                    <input class="design" name="pass" type="password" />
-                    <br />
-                    <input class="design" name="remember" type="checkbox" />Remember me
-                    <br />
-                    <input type="hidden" name="redirect" value="or1k/" />
-                    <input class="design" title="Login" type="submit" value="Login" />
-                </form>
-                <form action="../register" method="post">
-                    <input class="design" title="Register" type="submit" value="Register" />
-                </form>
-                        </div>
-        
-                
-        
-        <div class="menu" id="p-navigation">
-            <h2>Navigation</h2>
-		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
-        
-                
-        <div class="menu">
-            <h2><label for="searchInput">Search</label></h2>
-                <form action="/wiki1/index.php" id="searchform">
-                    <div>
-                        <input type='hidden' name="title" value="Special:Search"/>
-                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
-                        
-                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
-                        
-                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
-                                                
-                    </div>
-                </form>
-        </div>
-        
-                
-        <div class="menu menu-tools">
-            <h2>Toolbox</h2>
-                <ul>
-                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/ORPSoCv3" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/ORPSoCv3" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=ORPSoCv3&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=ORPSoCv3&amp;oldid=1166" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
-        </div>
-        
-        
-        </div>
-        <div class="content" id="dmc">
-	    
-<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
-    
-    <div style="float: left; width: 720px; height: 60px;">
-        <!-- 720x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("720x60");
-        </script>
-    </div>
-        <div style="float: left; width: 300px; height: 60px;">
-        <!-- 300x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("300x60");
-        </script>
-    </div>
-    
-</div>
-	                        
-        <a name="top" id="top"></a>
-        
-                
-        <div id="oc-actions">
-            <p id="ca-nstab-main" class="selected"><a href="/or1k/ORPSoCv3" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:ORPSoCv3&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=ORPSoCv3&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=ORPSoCv3&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
-        
-        <h1 id="firstHeading" class="firstHeading">
-            ORPSoCv3        </h1>
-        
-        <div id="bodyContent">
-            <h3 id="siteSub">From OR1K</h3>
-            <div id="contentSub"></div>
-                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
-            <p><b>Most of the information on this page is now out of date. The latest details on ORPSoCv3 can be found on the main <a href="/or1k/ORPSoC" title="ORPSoC">ORPSoC</a> page. This page will get a clean up at some point.</b>
-</p>
-<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Rationale"><span class="tocnumber">2</span> <span class="toctext">Rationale</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#Implementation"><span class="tocnumber">3</span> <span class="toctext">Implementation</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Workflow"><span class="tocnumber">4</span> <span class="toctext">Workflow</span></a>
-<ul>
-<li class="toclevel-2 tocsection-5"><a href="#Quick_start._Build_a_ready-made_FPGA_image"><span class="tocnumber">4.1</span> <span class="toctext">Quick start. Build a ready-made FPGA image</span></a></li>
-<li class="toclevel-2 tocsection-6"><a href="#Quick_start._Simulation"><span class="tocnumber">4.2</span> <span class="toctext">Quick start. Simulation</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#Adding_a_new_core_to_a_board_build"><span class="tocnumber">4.3</span> <span class="toctext">Adding a new core to a board build</span></a></li>
-<li class="toclevel-2 tocsection-8"><a href="#Building_a_bare-metal_program_with_ORPSoC_drivers"><span class="tocnumber">4.4</span> <span class="toctext">Building a bare-metal program with ORPSoC drivers</span></a></li>
-<li class="toclevel-2 tocsection-9"><a href="#Overriding_a_central_core_with_a_local_version"><span class="tocnumber">4.5</span> <span class="toctext">Overriding a central core with a local version</span></a></li>
-<li class="toclevel-2 tocsection-10"><a href="#Adding_support_for_a_new_core_in_ORPSoC"><span class="tocnumber">4.6</span> <span class="toctext">Adding support for a new core in ORPSoC</span></a></li>
-<li class="toclevel-2 tocsection-11"><a href="#Creating_and_updating_patches"><span class="tocnumber">4.7</span> <span class="toctext">Creating and updating patches</span></a></li>
-<li class="toclevel-2 tocsection-12"><a href="#Porting_an_ORPSoCv2_board_port_to_ORPSoCv3"><span class="tocnumber">4.8</span> <span class="toctext">Porting an ORPSoCv2 board port to ORPSoCv3</span></a></li>
-<li class="toclevel-2 tocsection-13"><a href="#Other"><span class="tocnumber">4.9</span> <span class="toctext">Other</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-14"><a href="#Status"><span class="tocnumber">5</span> <span class="toctext">Status</span></a>
-<ul>
-<li class="toclevel-2 tocsection-15"><a href="#Currently_supported"><span class="tocnumber">5.1</span> <span class="toctext">Currently supported</span></a>
-<ul>
-<li class="toclevel-3 tocsection-16"><a href="#Simulation"><span class="tocnumber">5.1.1</span> <span class="toctext">Simulation</span></a></li>
-<li class="toclevel-3 tocsection-17"><a href="#Synthesis"><span class="tocnumber">5.1.2</span> <span class="toctext">Synthesis</span></a></li>
-<li class="toclevel-3 tocsection-18"><a href="#Place_and_route"><span class="tocnumber">5.1.3</span> <span class="toctext">Place and route</span></a></li>
-<li class="toclevel-3 tocsection-19"><a href="#Boards"><span class="tocnumber">5.1.4</span> <span class="toctext">Boards</span></a></li>
-</ul>
-</li>
-<li class="toclevel-2 tocsection-20"><a href="#Work_items"><span class="tocnumber">5.2</span> <span class="toctext">Work items</span></a>
-<ul>
-<li class="toclevel-3 tocsection-21"><a href="#Software_support"><span class="tocnumber">5.2.1</span> <span class="toctext">Software support</span></a></li>
-<li class="toclevel-3 tocsection-22"><a href="#Test_bench"><span class="tocnumber">5.2.2</span> <span class="toctext">Test bench</span></a></li>
-<li class="toclevel-3 tocsection-23"><a href="#Infrastructure"><span class="tocnumber">5.2.3</span> <span class="toctext">Infrastructure</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-24"><a href="#Open_issues"><span class="tocnumber">6</span> <span class="toctext">Open issues</span></a></li>
-<li class="toclevel-1 tocsection-25"><a href="#Discussion"><span class="tocnumber">7</span> <span class="toctext">Discussion</span></a></li>
-</ul>
-</td></tr></table>
-<h1> <span class="mw-headline" id="Introduction"> Introduction </span></h1>
-<p>ORPSoC is the <b>O</b>penRISC <b>R</b>eference <b>P</b>latform <b>S</b>ystem-<b>o</b>n-<b>C</b>hip. It is intended to be a development and verification environment for IP cores and SoC designs. It is a collaboratively developed project. 
-</p><p>As a development platform it should provide a modular, easy to use environment to perform RTL development with push-button simulation and synthesis flows. A basic software build environment is also present to support OpenRISC development in simulation and on target. The project should be easy enough for users, both new and experienced, to get started with OpenRISC designs and develop quickly and collaborate easily.
-</p>
-<h1> <span class="mw-headline" id="Rationale">Rationale</span></h1>
-<p>The following problems with current ORPSoC have been identified. The next version will try to rectify these issues
-</p>
-<ul><li> Current version of ORPSoC require local copies of all cores which duplicates a lot of code and creates undocumented deviations from the upstream versions.
-</li></ul>
-<ul><li> Each board port contain files that could be centralized for easier maintenance.
-</li></ul>
-<ul><li> ORPSoC contain some basic C library functions that are also available in newlib. This also creates additional problems with incompatibility between software built with liborpsoc and newlib.
-</li></ul>
-<ul><li> The reference build, which is really a non-technology-specific board build, is treated as a special board build which complicates the hierarchy
-</li></ul>
-<ul><li> It's easy to get lost in the tree and there is no way to go from setup to simulation to implementation without moving around in the ORPSoC tree
-</li></ul>
-<ul><li> It's hard to know what is expected to provide when a new board port is added
-</li></ul>
-<ul><li> ORPSoC is hidden in the or1k tree, which makes it harder to find.
-</li></ul>
-<h1> <span class="mw-headline" id="Implementation">Implementation</span></h1>
-<p>See the documentation which comes with the project. <a href="https://github.com/openrisc/orpsoc" class="external text" rel="nofollow">See the project's page on github.</a>
-</p>
-<h1> <span class="mw-headline" id="Workflow">Workflow</span></h1>
-<h2> <span class="mw-headline" id="Quick_start._Build_a_ready-made_FPGA_image">Quick start. Build a ready-made FPGA image</span></h2>
-<p>From the project root
-<code><br />make config_&lt;board_name&gt;
-<br />make loadmodule</code>
+'''Most of the information on this page is now out of date. The latest details on ORPSoCv3 can be found on the main [[ORPSoC]] page. This page will get a clean up at some point.'''
+
+= Introduction =
+
+ORPSoC is the '''O'''penRISC '''R'''eference '''P'''latform '''S'''ystem-'''o'''n-'''C'''hip. It is intended to be a development and verification environment for IP cores and SoC designs. It is a collaboratively developed project. 
+
+As a development platform it should provide a modular, easy to use environment to perform RTL development with push-button simulation and synthesis flows. A basic software build environment is also present to support OpenRISC development in simulation and on target. The project should be easy enough for users, both new and experienced, to get started with OpenRISC designs and develop quickly and collaborate easily.
+
+=Rationale=
+The following problems with current ORPSoC have been identified. The next version will try to rectify these issues
+
+* Current version of ORPSoC require local copies of all cores which duplicates a lot of code and creates undocumented deviations from the upstream versions.
+
+* Each board port contain files that could be centralized for easier maintenance.
+
+* ORPSoC contain some basic C library functions that are also available in newlib. This also creates additional problems with incompatibility between software built with liborpsoc and newlib.
+
+* The reference build, which is really a non-technology-specific board build, is treated as a special board build which complicates the hierarchy
+
+* It's easy to get lost in the tree and there is no way to go from setup to simulation to implementation without moving around in the ORPSoC tree
+
+* It's hard to know what is expected to provide when a new board port is added
+
+* ORPSoC is hidden in the or1k tree, which makes it harder to find.
+
+=Implementation=
+
+See the documentation which comes with the project. [https://github.com/openrisc/orpsoc See the project's page on github.]
+
+=Workflow=
+
+==Quick start. Build a ready-made FPGA image==
+From the project root
+<code><br>make config_<board_name>
+<br>make loadmodule</code>
 The above code will select the configuration file for the selected board and save it in config/board.conf. It will then use the default synthesis and PAR tools to build a FPGA image
-</p>
-<h2> <span class="mw-headline" id="Quick_start._Simulation">Quick start. Simulation</span></h2>
-<p>From the project root
-<code><br />make config_&lt;board_name&gt;
-<br />make rtl-tests</code>
+
+==Quick start. Simulation==
+From the project root
+<code><br>make config_<board_name>
+<br>make rtl-tests</code>
 The above code will select the configuration file for the selected board and save it in config/board.conf. It will then use the default simulation tool to run through all the RTL tests
-</p>
-<h2> <span class="mw-headline" id="Adding_a_new_core_to_a_board_build">Adding a new core to a board build</span></h2>
-<p>TBD
-</p>
-<h2> <span class="mw-headline" id="Building_a_bare-metal_program_with_ORPSoC_drivers">Building a bare-metal program with ORPSoC drivers</span></h2>
-<p>TBD
-</p>
-<h2> <span class="mw-headline" id="Overriding_a_central_core_with_a_local_version">Overriding a central core with a local version</span></h2>
-<p>TBD
-</p>
-<h2> <span class="mw-headline" id="Adding_support_for_a_new_core_in_ORPSoC">Adding support for a new core in ORPSoC</span></h2>
-<p>TBD
-</p>
-<h2> <span class="mw-headline" id="Creating_and_updating_patches">Creating and updating patches</span></h2>
-<p>Quilt is needed for patching of the cores. This describes how to add an ORPSoC-specific patch to a core
-Go to <code>&lt;core root&gt;</code>
+
+==Adding a new core to a board build==
+TBD
+
+==Building a bare-metal program with ORPSoC drivers==
+TBD
+==Overriding a central core with a local version==
+TBD
+==Adding support for a new core in ORPSoC==
+TBD
+==Creating and updating patches==
+Quilt is needed for patching of the cores. This describes how to add an ORPSoC-specific patch to a core
+Go to <code><core root></code>
 If there are any previous patches, make sure they are all applied before you start
-<code><br />quilt push -a<br /></code>
-Decide a name for the patch and a number that follows the naming scheme. In ORPSoC this is &lt;nnnn&gt;-&lt;name-of-patch&gt;.diff, where nnnn is a four-digit number that follows the latest available patch. Create the patch with:
-<code><br />quilt new &lt;nnnn&gt;-&lt;name-of-patch&gt;.diff (e.g. quilt new 0003-remove-defines.diff)<br /></code>
-</p><p>The state of all files that are to be changed must be recorded by quilt before-hand so that the original state is known.
+<code><br>quilt push -a<br></code>
+Decide a name for the patch and a number that follows the naming scheme. In ORPSoC this is <nnnn>-<name-of-patch>.diff, where nnnn is a four-digit number that follows the latest available patch. Create the patch with:
+<code><br>quilt new <nnnn>-<name-of-patch>.diff (e.g. quilt new 0003-remove-defines.diff)<br></code>
+
+The state of all files that are to be changed must be recorded by quilt before-hand so that the original state is known.
 There are two ways to make changes to files
-</p><p>1. Use quilt edit &lt;filename&gt; This will make quilt automatically record the original state, and add the changes to the patch
-</p><p>2. Use quilt add &lt;filename&gt; before the file is added. This will make quilt record the original state, and any editor can now be used
-</p><p>When the editing is done, the patch can be reviewed with <code>quilt diff</code>
-</p><p>To actually create the patch, <code>quilt refresh</code>. A new patch can now be created with <code>quilt new &lt;nnnn+1&gt;-&lt;name-of-next-patch&gt;.diff</code>
-</p>
-<h2> <span class="mw-headline" id="Porting_an_ORPSoCv2_board_port_to_ORPSoCv3">Porting an ORPSoCv2 board port to ORPSoCv3</span></h2>
-<p>TBD
-</p>
-<h2> <span class="mw-headline" id="Other">Other</span></h2>
-<ul><li> ORPSoC will be living in a separate repository. This will increase visibility and also make it easier to use other CPU implementations.
-</li></ul>
-<h1> <span class="mw-headline" id="Status">Status</span></h1>
-<h2> <span class="mw-headline" id="Currently_supported">Currently supported</span></h2>
-<h3> <span class="mw-headline" id="Simulation">Simulation</span></h3>
-<table border="1" cellspacing="0" cellpadding="2">
-<tr>
-<th> Tool
-</th>
-<th> Supported
-</th></tr>
-<tr>
-<td>Icarus    </td>
-<td> In progress
-</td></tr>
-<tr>
-<td>Isim      </td>
-<td> In progress
-</td></tr>
-<tr>
-<td>Modelsim  </td>
-<td> No
-</td></tr>
-<tr>
-<td>Verilator </td>
-<td> No
-</td></tr></table>
-<h3> <span class="mw-headline" id="Synthesis">Synthesis</span></h3>
-<table border="1" cellspacing="0" cellpadding="2">
-<tr>
-<th> Tool
-</th>
-<th> Supported
-</th></tr>
-<tr>
-<td>CoreGen  </td>
-<td> Yes
-</td></tr>
-<tr>
-<td>Quartus  </td>
-<td> No
-</td></tr>
-<tr>
-<td>Synplify </td>
-<td> No
-</td></tr>
-<tr>
-<td>XST      </td>
-<td> Yes
-</td></tr></table>
-<h3> <span class="mw-headline" id="Place_and_route">Place and route</span></h3>
-<table border="1" cellspacing="0" cellpadding="2">
-<tr>
-<th> Tool
-</th>
-<th> Supported
-</th></tr>
-<tr>
-<td>ISE            </td>
-<td> Yes
-</td></tr>
-<tr>
-<td>Quartus        </td>
-<td> No
-</td></tr>
-<tr>
-<td>Actel Designer </td>
-<td> No
-</td></tr></table>
-<h3> <span class="mw-headline" id="Boards">Boards</span></h3>
-<table border="1" cellspacing="0" cellpadding="2">
-<tr>
-<th> Board
-</th>
-<th> Simulation
-</th>
-<th> Synthesis
-</th>
-<th> Place and route
-</th></tr>
-<tr>
-<td>Digilent Atlys    </td>
-<td> In progress </td>
-<td> XST </td>
-<td> ISE
-</td></tr>
-<tr>
-<td>generic  </td>
-<td> Icarus      </td>
-<td> No  </td>
-<td> No
-</td></tr>
-<tr>
-<td>ORSoC ordb2a   </td>
-<td> No          </td>
-<td> No  </td>
-<td> No
-</td></tr></table>
-<h2> <span class="mw-headline" id="Work_items">Work items</span></h2>
-<h3> <span class="mw-headline" id="Software_support">Software support</span></h3>
-<ul><li> Set up software structure
-</li><li> Move drivers to core roots
-</li><li> Adapt simulation scripts from ORPSoCv2
-</li><li> Merge board and sim tests and add #ifdefs where needed
-</li></ul>
-<h3> <span class="mw-headline" id="Test_bench">Test bench</span></h3>
-<ul><li> Clean up define files
-</li></ul>
-<h3> <span class="mw-headline" id="Infrastructure">Infrastructure</span></h3>
-<ul><li> Add isim scripts to simulate Xilinx builds
-</li><li> Adapt Altera and Actel build scripts from ORPSoCv2
-</li></ul>
-<h1> <span class="mw-headline" id="Open_issues">Open issues</span></h1>
-<ul><li> Investigate if quilt or git be used for managing patches
-</li><li> Rename loadmodule target to something more sensible. (programmingfile, fpgaimage..?)
-</li><li> What can be done to ease additions or removals of cores in the top-level? IP-Xact is under consideration for generation of arbiters and top-level file
-</li><li> boards is not a good name, as there can be several configurations for a physical board, or a design may be purely for verification purposes only and thus not intended to end up on a board. systems, designs or configurations have been proposed
-</li></ul>
-<h1> <span class="mw-headline" id="Discussion">Discussion</span></h1>
-<p>The original discussion can be found here <a href="/or1k/ORPSoCv3InitialDiscussion" title="ORPSoCv3InitialDiscussion">ORPSoCv3InitialDiscussion</a>
-</p>
-<!-- 
-NewPP limit report
-Preprocessor node count: 99/1000000
-Post-expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Expensive parser function count: 0/100
--->
 
-<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:56-0!*!0!!en!*!edit=0 and timestamp 20161009062611 -->
-<div class="printfooter">
-Retrieved from "<a href="http://opencores.org/or1k/ORPSoCv3">http://opencores.org/or1k/ORPSoCv3</a>"</div>
-            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
-                        <div class="visualClear"></div>
-        </div>
-        
-                
-        <div class="visualClear"><p></p></div>
-        
-        <div id="footer">
-            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 16 January 2014, at 13:01.<li id="lastmod"></li>This page has been accessed 13,845 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
-<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "ORPSoCv3", "wgTitle": "ORPSoCv3", "wgAction": "view", "wgArticleId": 56, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1166, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
-	mediaWiki.loader.go();
-}
-</script>
+1. Use quilt edit <filename> This will make quilt automatically record the original state, and add the changes to the patch
 
-<script>if ( window.mediaWiki ) {
-	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
-	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
-}
-</script><!-- Served in 1.640 secs. -->            
-        </div>
-        
-        
-        </div>
-	<div style="clear:both;margin-left:200px;">
-            <!-- 728x90 -->
-            <script type="text/javascript">
-            GA_googleFillSlot("728x90");
-            </script>
-	</div>
-    </div>
-    <div class="bot">
-	&copy; copyright 1999-2016
-OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
-    </div>
-</div>
+2. Use quilt add <filename> before the file is added. This will make quilt record the original state, and any editor can now be used
 
-<!-- Google search -->
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-<!-- /Google search -->
+When the editing is done, the patch can be reviewed with <code>quilt diff</code>
 
-</body>
-</html>
+To actually create the patch, <code>quilt refresh</code>. A new patch can now be created with <code>quilt new <nnnn+1>-<name-of-next-patch>.diff</code>
+
+==Porting an ORPSoCv2 board port to ORPSoCv3==
+TBD
+
+==Other==
+
+* ORPSoC will be living in a separate repository. This will increase visibility and also make it easier to use other CPU implementations.
+
+=Status=
+==Currently supported==
+
+===Simulation===
+{| border="1" cellspacing="0" cellpadding="2"
+! Tool
+! Supported
+|-
+|Icarus    || In progress
+|-
+|Isim      || In progress
+|-
+|Modelsim  || No
+|-
+|Verilator || No
+|}
+
+===Synthesis===
+{| border="1" cellspacing="0" cellpadding="2"
+! Tool
+! Supported
+|-
+|CoreGen  || Yes
+|-
+|Quartus  || No
+|-
+|Synplify || No
+|-
+|XST      || Yes
+|}
+
+===Place and route===
+{| border="1" cellspacing="0" cellpadding="2"
+! Tool
+! Supported
+|-
+|ISE            || Yes
+|-
+|Quartus        || No
+|-
+|Actel Designer || No
+|}
+
+===Boards===
+{| border="1" cellspacing="0" cellpadding="2"
+! Board
+! Simulation
+! Synthesis
+! Place and route
+|-
+|Digilent Atlys    || In progress || XST || ISE
+|-
+|generic  || Icarus      || No  || No
+|-
+|ORSoC ordb2a   || No          || No  || No
+|}
+
+==Work items==
+===Software support===
+* Set up software structure
+* Move drivers to core roots
+* Adapt simulation scripts from ORPSoCv2
+* Merge board and sim tests and add #ifdefs where needed
+===Test bench===
+* Clean up define files
+===Infrastructure===
+* Add isim scripts to simulate Xilinx builds
+* Adapt Altera and Actel build scripts from ORPSoCv2
+
+=Open issues=
+* Investigate if quilt or git be used for managing patches
+* Rename loadmodule target to something more sensible. (programmingfile, fpgaimage..?)
+* What can be done to ease additions or removals of cores in the top-level? IP-Xact is under consideration for generation of arbiters and top-level file
+* boards is not a good name, as there can be several configurations for a physical board, or a design may be purely for verification purposes only and thus not intended to end up on a board. systems, designs or configurations have been proposed
+
+=Discussion=
+
+The original discussion can be found here [[ORPSoCv3InitialDiscussion]]

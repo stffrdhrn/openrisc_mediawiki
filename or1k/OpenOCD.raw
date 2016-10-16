@@ -1,372 +1,123 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-<head>
-            
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="generator" content="MediaWiki 1.17.0" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
-<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
-<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
-<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
-<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
-<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
-        <!--[if lt IE 7]>
-        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
-		<meta http-equiv="imagetoolbar" content="no" />
-        <![endif]-->
-        
-        <script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "OpenOCD", "wgTitle": "OpenOCD", "wgAction": "view", "wgArticleId": 33, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1248, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>        
-        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
-		
-        <!-- Head Scripts -->
-                
-        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
-                
-                
-		        
-		        
-		        
-            <title>OpenOCD - OR1K :: OpenCores</title>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
-    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
-        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
-    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
-    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
-    <script type="text/javascript">
-    GS_googleAddAdSenseService("ca-pub-0097483751598630");
-    GS_googleEnableAllServices();
-    </script>
-    <script type="text/javascript">
-    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
-    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
-    </script>
-    <script type="text/javascript">
-    GA_googleFetchAds();
-    </script>
-    <!--[if IE 6]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
-    <![endif]-->
-    <!--[if (IE 7)|(IE 8)]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
-    <![endif]-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <script type="text/javascript">
-        
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-2763846-2']);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        
-    </script>
-    
-</head>
-<body>
-<div class="main">
-    <div class="top">
-        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
-    </div>
-    <div class="line">
-	<div></div>
-	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
-    </div>
-    <div class="mid" id="dm">
-        <div class="mainmenu" id="dml">
-	            
-        <div class="menu menu-login">
-                Username:                                <form action="../login" method="post">
-                    <input class="design" name="user" type="text" />
-                    <br />
-                    Password:
-                    <br />
-                    <input class="design" name="pass" type="password" />
-                    <br />
-                    <input class="design" name="remember" type="checkbox" />Remember me
-                    <br />
-                    <input type="hidden" name="redirect" value="or1k/" />
-                    <input class="design" title="Login" type="submit" value="Login" />
-                </form>
-                <form action="../register" method="post">
-                    <input class="design" title="Register" type="submit" value="Register" />
-                </form>
-                        </div>
-        
-                
-        
-        <div class="menu" id="p-navigation">
-            <h2>Navigation</h2>
-		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
-        
-                
-        <div class="menu">
-            <h2><label for="searchInput">Search</label></h2>
-                <form action="/wiki1/index.php" id="searchform">
-                    <div>
-                        <input type='hidden' name="title" value="Special:Search"/>
-                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
-                        
-                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
-                        
-                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
-                                                
-                    </div>
-                </form>
-        </div>
-        
-                
-        <div class="menu menu-tools">
-            <h2>Toolbox</h2>
-                <ul>
-                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/OpenOCD" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/OpenOCD" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=OpenOCD&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=OpenOCD&amp;oldid=1248" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
-        </div>
-        
-        
-        </div>
-        <div class="content" id="dmc">
-	    
-<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
-    
-    <div style="float: left; width: 720px; height: 60px;">
-        <!-- 720x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("720x60");
-        </script>
-    </div>
-        <div style="float: left; width: 300px; height: 60px;">
-        <!-- 300x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("300x60");
-        </script>
-    </div>
-    
-</div>
-	                        
-        <a name="top" id="top"></a>
-        
-                
-        <div id="oc-actions">
-            <p id="ca-nstab-main" class="selected"><a href="/or1k/OpenOCD" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:OpenOCD&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=OpenOCD&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=OpenOCD&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
-        
-        <h1 id="firstHeading" class="firstHeading">
-            OpenOCD        </h1>
-        
-        <div id="bodyContent">
-            <h3 id="siteSub">From OR1K</h3>
-            <div id="contentSub"></div>
-                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
-            <table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#About"><span class="tocnumber">1</span> <span class="toctext">About</span></a>
-<ul>
-<li class="toclevel-2 tocsection-2"><a href="#Features"><span class="tocnumber">1.1</span> <span class="toctext">Features</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-3"><a href="#Downloading"><span class="tocnumber">2</span> <span class="toctext">Downloading</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#Hardware_requirements"><span class="tocnumber">3</span> <span class="toctext">Hardware requirements</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Building"><span class="tocnumber">4</span> <span class="toctext">Building</span></a>
-<ul>
-<li class="toclevel-2 tocsection-6"><a href="#Bootstrap"><span class="tocnumber">4.1</span> <span class="toctext">Bootstrap</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#Configure_and_compile"><span class="tocnumber">4.2</span> <span class="toctext">Configure and compile</span></a>
-<ul>
-<li class="toclevel-3 tocsection-8"><a href="#adv_debug_sys"><span class="tocnumber">4.2.1</span> <span class="toctext">adv_debug_sys</span></a></li>
-<li class="toclevel-3 tocsection-9"><a href="#Mohor_debug_unit"><span class="tocnumber">4.2.2</span> <span class="toctext">Mohor debug unit</span></a></li>
-<li class="toclevel-3 tocsection-10"><a href="#FTDI_driver"><span class="tocnumber">4.2.3</span> <span class="toctext">FTDI driver</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-11"><a href="#Running"><span class="tocnumber">5</span> <span class="toctext">Running</span></a>
-<ul>
-<li class="toclevel-2 tocsection-12"><a href="#Setup"><span class="tocnumber">5.1</span> <span class="toctext">Setup</span></a></li>
-<li class="toclevel-2 tocsection-13"><a href="#Connecting_to_the_board"><span class="tocnumber">5.2</span> <span class="toctext">Connecting to the board</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-14"><a href="#Issues"><span class="tocnumber">6</span> <span class="toctext">Issues</span></a></li>
-</ul>
-</td></tr></table>
-<h1> <span class="mw-headline" id="About"> About </span></h1>
-<p>OpenOCD is a program that we can use to talk to our debug interface on our hardware via JTAG, over a variety of cables, in a realtively flexible manner. We can script up things in TCL to control the system, or we can run a GDB RSP server and do things from GDB.
-</p><p>This page contains information about the OpenRISC 1000 architecture port.
-</p>
-<h2> <span class="mw-headline" id="Features"> Features </span></h2>
-<p>The proxy supports designs using either the<a href="http://opencores.org/project,dbg_interface" class="external text" rel="nofollow">SoC Debug (Mohor) Interface</a> or <a href="http://opencores.org/project,adv_debug_sys" class="external text" rel="nofollow">adv_debug_sys</a> to do the following:
-</p>
-<ul><li> Memory access for program download, data inspection
-</li><li> CPU register read and write
-</li><li> CPU stall control
-</li><li> CPU single stepping
-</li><li> CPU software breakpoints
-</li><li> All of the above via GDB
-</li></ul>
-<p>Support for other debug interface hardware can be added relatively easily.
-</p>
-<h1> <span class="mw-headline" id="Downloading"> Downloading </span></h1>
-<p>The OpenOCD code with basic OpenRISC 1000 support is found on the github openrisc organization.
-</p>
-<pre>git clone <a href="git://github.com/openrisc/openOCD.git" class="external free" rel="nofollow">git://github.com/openrisc/openOCD.git</a>
-</pre>
-<h1> <span class="mw-headline" id="Hardware_requirements"> Hardware requirements </span></h1>
-<p>For the basic requirements of compiling and running OpenOCD see its <a href="http://openocd.berlios.de/doc/html/index.html" class="external text" rel="nofollow">User Guide</a>.
-</p><p>The required hardware depends on whether the FPGA's integrated JTAG TAP is being used. For the <i>Mohor</i> debug interface, a <a href="http://openocd.berlios.de/doc/html/Debug-Adapter-Hardware.html" class="external text" rel="nofollow">OpenOCD-supported debug cable</a> will be required to interface with the FPGA design.
-</p><p>The <i>Mohor</i> support in OpenOCD has been tested with the <a href="http://opencores.org/shop,item,3" class="external text" rel="nofollow">ORSoC USB debug cable</a> against an <a href="/or1k/ORPSoC" title="ORPSoC">ORPSoC</a> system, but there's no reason why any other <a href="http://openocd.berlios.de/doc/html/Debug-Adapter-Hardware.html" class="external text" rel="nofollow">OpenOCD-supported cable</a> wouldn't work.
-</p><p>The <i>adv_debug_sys</i> is capable of using the in-built JTAG TAP circuits in the FPGA, and thus doesn't necessarily require additional hardware. However, it can also be configured to use a separate TAP.
-</p><p>You must understand the design you're debugging to know which is right for you.
-</p>
-<h1> <span class="mw-headline" id="Building"> Building </span></h1>
-<h2> <span class="mw-headline" id="Bootstrap"> Bootstrap </span></h2>
-<p>The source from the git repository needs to be setup <b>once</b>, and once only, before it can be configured. This is done with a provided bootstrap script, run as just:
-</p>
-<pre>./bootstrap
-</pre>
-<p><b>Note</b>: It may prompt you to install a few tools such as <b>libtool</b> and <b>autoconf</b>. Install these if they are not on your system. eg. on a Ubuntu system:
-</p>
-<pre>sudo apt-get install libtool autoconf
-</pre>
-<h2> <span class="mw-headline" id="Configure_and_compile"> Configure and compile </span></h2>
-<p>Make a build directory in <tt>openocd</tt> directory and configure depending on which debug interface you have in your FPGA.
-</p>
-<pre>mkdir build
-cd build
-</pre>
-<h3> <span class="mw-headline" id="adv_debug_sys"> adv_debug_sys </span></h3>
-<p>The following configures OpenOCD to work with the <i>adv_debug_sys</i> on an Altera FPGA. (This is as per instructions on <a href="http://www.elec4fun.fr/2011-03-30-10-16-30/2012-08-22-20-50-31/or1k-on-de1-openocd" class="external text" rel="nofollow">elec4fun.fr</a>):
-</p>
-<pre>../configure --enable-usb_blaster_libftdi --enable-adv_debug_sys --enable-altera_vjtag --enable-maintainer-mode
-</pre>
-<h3> <span class="mw-headline" id="Mohor_debug_unit"> Mohor debug unit </span></h3>
-<p>The following configures the proxy to be built to interface with the Mohor unit over an FTDI-based cable (such as the <a href="http://opencores.org/shop,item,3" class="external text" rel="nofollow">ORSoC USB debug cable</a>):
-</p>
-<pre>../configure --enable-ft2232_libftdi --enable-maintainer-mode
-make
-</pre>
-<h3> <span class="mw-headline" id="FTDI_driver"> FTDI driver </span></h3>
-<p><b>Note</b>: You may be required to install the FTDI driver (if running make and it cannot find the <tt>ftdi.h</tt>, then this is the problem). Under Ubuntu this is done with:
-</p>
-<pre>sudo apt-get install libftdi-dev
-</pre>
-<h1> <span class="mw-headline" id="Running"> Running </span></h1>
-<p>The following is an example of using the <i>Mohor</i> debug unit.
-</p><p>See <a href="http://www.elec4fun.fr/2011-03-30-10-16-30/2012-08-22-20-50-31/or1k-on-de1-openocd" class="external text" rel="nofollow">this guide</a> for details on running OpenOCD against the <i>adv_debug_sys</i>.
-</p>
-<h2> <span class="mw-headline" id="Setup"> Setup </span></h2>
-<p>OpenOCD uses TCL script fragments to configure different parts of the debug <i>chain</i> (transport, interface, protocol, hardware). The following TCL source was used during development to bring the system up. Place it in a file in the build directory (bld-openocd - presumably where you are running the following commands from.) Assume it's called or1k-dev.tcl for now:
-</p>
-<pre>source [find ../tcl/target/or1k.cfg]
+= About =
 
-proc or1k_test_init {} {
-    
-    
-}
+OpenOCD is a program that we can use to talk to our debug interface on our hardware via JTAG, over a variety of cables, in a realtively flexible manner. We can script up things in TCL to control the system, or we can run a GDB RSP server and do things from GDB.
 
-gdb_port 50001
+This page contains information about the OpenRISC 1000 architecture port.
 
-init
-#echo "Halting processor"
-halt
+== Features ==
 
-foreach name [target names] {
-    set y [$name cget -endian]
-    set z [$name cget -type]
-    puts [format "Chip is&#160;%s, Endian:&#160;%s, type:&#160;%s" \
-                  $name $y $z]
-}
-</pre>
-<p>This tells OpenOCD to use the OpenRISC 1000 target configuration information which should be included with the project's source.
-</p>
-<h2> <span class="mw-headline" id="Connecting_to_the_board"> Connecting to the board </span></h2>
-<p>Using something like the following to a) tell OpenOCD which cable to use to connect, and b) which TCL command file to then run some commands from. From the build directory run:
-</p>
-<pre>sudo ./src/openocd -f ../tcl/interface/orsoc-jtag.cfg -f or1k-dev.tcl 
-</pre>
-<p>OpenOCD should establish communication with the target and stall it and wait for GDB to connect.
-</p><p>Add the switch <i>--debug 3</i> to the command line to see lots of debug output.
-</p><p>Note - I had to run with <i>sudo</i> but that's because my permissions weren't set correctly on the USB debug cable. This is not a good thing to do, and it's advisable that correct permissions on the USB debug cable are set to allow users to access it.
-</p>
-<h1> <span class="mw-headline" id="Issues"> Issues </span></h1>
-<ul><li> Lack of usage documentation. OpenOCD is quite powerful and at the moment we're using it solely as a GDB proxy.
-</li></ul>
-<ul><li> Resetting the target is not done properly yet in the <i>mohor</i> port.
-</li></ul>
+The proxy supports designs using either the[http://opencores.org/project,dbg_interface SoC Debug (Mohor) Interface] or [http://opencores.org/project,adv_debug_sys adv_debug_sys] to do the following:
+* Memory access for program download, data inspection
+* CPU register read and write
+* CPU stall control
+* CPU single stepping
+* CPU software breakpoints
+* All of the above via GDB
 
-<!-- 
-NewPP limit report
-Preprocessor node count: 54/1000000
-Post-expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Expensive parser function count: 0/100
--->
+Support for other debug interface hardware can be added relatively easily.
 
-<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:33-0!*!0!!en!*!edit=0 and timestamp 20161009123745 -->
-<div class="printfooter">
-Retrieved from "<a href="http://opencores.org/or1k/OpenOCD">http://opencores.org/or1k/OpenOCD</a>"</div>
-            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
-                        <div class="visualClear"></div>
-        </div>
-        
-                
-        <div class="visualClear"><p></p></div>
-        
-        <div id="footer">
-            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 13 May 2014, at 07:47.<li id="lastmod"></li>This page has been accessed 9,023 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
-<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "OpenOCD", "wgTitle": "OpenOCD", "wgAction": "view", "wgArticleId": 33, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1248, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
-	mediaWiki.loader.go();
-}
-</script>
+= Downloading =
 
-<script>if ( window.mediaWiki ) {
-	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
-	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
-}
-</script><!-- Served in 2.286 secs. -->            
-        </div>
-        
-        
-        </div>
-	<div style="clear:both;margin-left:200px;">
-            <!-- 728x90 -->
-            <script type="text/javascript">
-            GA_googleFillSlot("728x90");
-            </script>
-	</div>
-    </div>
-    <div class="bot">
-	&copy; copyright 1999-2016
-OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
-    </div>
-</div>
+The OpenOCD code with basic OpenRISC 1000 support is found on the github openrisc organization.
 
-<!-- Google search -->
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-<!-- /Google search -->
+ git clone git://github.com/openrisc/openOCD.git
 
-</body>
-</html>
+= Hardware requirements =
+
+For the basic requirements of compiling and running OpenOCD see its [http://openocd.berlios.de/doc/html/index.html User Guide].
+
+The required hardware depends on whether the FPGA's integrated JTAG TAP is being used. For the ''Mohor'' debug interface, a [http://openocd.berlios.de/doc/html/Debug-Adapter-Hardware.html OpenOCD-supported debug cable] will be required to interface with the FPGA design.
+
+The ''Mohor'' support in OpenOCD has been tested with the [http://opencores.org/shop,item,3 ORSoC USB debug cable] against an [[ORPSoC]] system, but there's no reason why any other [http://openocd.berlios.de/doc/html/Debug-Adapter-Hardware.html OpenOCD-supported cable] wouldn't work.
+
+The ''adv_debug_sys'' is capable of using the in-built JTAG TAP circuits in the FPGA, and thus doesn't necessarily require additional hardware. However, it can also be configured to use a separate TAP.
+
+You must understand the design you're debugging to know which is right for you.
+
+= Building =
+
+== Bootstrap ==
+
+The source from the git repository needs to be setup '''once''', and once only, before it can be configured. This is done with a provided bootstrap script, run as just:
+
+ ./bootstrap
+
+'''Note''': It may prompt you to install a few tools such as '''libtool''' and '''autoconf'''. Install these if they are not on your system. eg. on a Ubuntu system:
+
+ sudo apt-get install libtool autoconf
+
+== Configure and compile ==
+
+Make a build directory in <tt>openocd</tt> directory and configure depending on which debug interface you have in your FPGA.
+ 
+ mkdir build
+ cd build
+
+=== adv_debug_sys ===
+
+The following configures OpenOCD to work with the ''adv_debug_sys'' on an Altera FPGA. (This is as per instructions on [http://www.elec4fun.fr/2011-03-30-10-16-30/2012-08-22-20-50-31/or1k-on-de1-openocd elec4fun.fr]):
+
+ ../configure --enable-usb_blaster_libftdi --enable-adv_debug_sys --enable-altera_vjtag --enable-maintainer-mode
+
+=== Mohor debug unit ===
+
+The following configures the proxy to be built to interface with the Mohor unit over an FTDI-based cable (such as the [http://opencores.org/shop,item,3 ORSoC USB debug cable]):
+
+ ../configure --enable-ft2232_libftdi --enable-maintainer-mode
+ make
+
+=== FTDI driver ===
+
+'''Note''': You may be required to install the FTDI driver (if running make and it cannot find the <tt>ftdi.h</tt>, then this is the problem). Under Ubuntu this is done with:
+
+ sudo apt-get install libftdi-dev
+
+= Running =
+
+The following is an example of using the ''Mohor'' debug unit.
+
+See [http://www.elec4fun.fr/2011-03-30-10-16-30/2012-08-22-20-50-31/or1k-on-de1-openocd this guide] for details on running OpenOCD against the ''adv_debug_sys''.
+
+== Setup ==
+
+OpenOCD uses TCL script fragments to configure different parts of the debug ''chain'' (transport, interface, protocol, hardware). The following TCL source was used during development to bring the system up. Place it in a file in the build directory (bld-openocd - presumably where you are running the following commands from.) Assume it's called or1k-dev.tcl for now:
+
+ source [find ../tcl/target/or1k.cfg]
+ 
+ proc or1k_test_init {} {
+     
+     
+ }
+ 
+ gdb_port 50001
+ 
+ init
+ #echo "Halting processor"
+ halt
+ 
+ foreach name [target names] {
+     set y [$name cget -endian]
+     set z [$name cget -type]
+     puts [format "Chip is %s, Endian: %s, type: %s" \
+                   $name $y $z]
+ }
+
+This tells OpenOCD to use the OpenRISC 1000 target configuration information which should be included with the project's source.
+
+== Connecting to the board ==
+
+Using something like the following to a) tell OpenOCD which cable to use to connect, and b) which TCL command file to then run some commands from. From the build directory run:
+
+ sudo ./src/openocd -f ../tcl/interface/orsoc-jtag.cfg -f or1k-dev.tcl 
+
+OpenOCD should establish communication with the target and stall it and wait for GDB to connect.
+
+Add the switch ''--debug 3'' to the command line to see lots of debug output.
+
+Note - I had to run with ''sudo'' but that's because my permissions weren't set correctly on the USB debug cable. This is not a good thing to do, and it's advisable that correct permissions on the USB debug cable are set to allow users to access it.
+
+= Issues = 
+
+* Lack of usage documentation. OpenOCD is quite powerful and at the moment we're using it solely as a GDB proxy.
+
+* Resetting the target is not done properly yet in the ''mohor'' port.

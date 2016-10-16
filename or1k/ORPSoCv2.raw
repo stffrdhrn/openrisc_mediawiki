@@ -1,419 +1,190 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-<head>
-            
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="generator" content="MediaWiki 1.17.0" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
-<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
-<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
-<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
-<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
-<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
-        <!--[if lt IE 7]>
-        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
-		<meta http-equiv="imagetoolbar" content="no" />
-        <![endif]-->
-        
-        <script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "ORPSoCv2", "wgTitle": "ORPSoCv2", "wgAction": "view", "wgArticleId": 85, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1073, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>        
-        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
-		
-        <!-- Head Scripts -->
-                
-        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
-                
-                
-		        
-		        
-		        
-            <title>ORPSoCv2 - OR1K :: OpenCores</title>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
-    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
-        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
-    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
-    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
-    <script type="text/javascript">
-    GS_googleAddAdSenseService("ca-pub-0097483751598630");
-    GS_googleEnableAllServices();
-    </script>
-    <script type="text/javascript">
-    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
-    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
-    </script>
-    <script type="text/javascript">
-    GA_googleFetchAds();
-    </script>
-    <!--[if IE 6]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
-    <![endif]-->
-    <!--[if (IE 7)|(IE 8)]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
-    <![endif]-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <script type="text/javascript">
-        
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-2763846-2']);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        
-    </script>
-    
-</head>
-<body>
-<div class="main">
-    <div class="top">
-        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
-    </div>
-    <div class="line">
-	<div></div>
-	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
-    </div>
-    <div class="mid" id="dm">
-        <div class="mainmenu" id="dml">
-	            
-        <div class="menu menu-login">
-                Username:                                <form action="../login" method="post">
-                    <input class="design" name="user" type="text" />
-                    <br />
-                    Password:
-                    <br />
-                    <input class="design" name="pass" type="password" />
-                    <br />
-                    <input class="design" name="remember" type="checkbox" />Remember me
-                    <br />
-                    <input type="hidden" name="redirect" value="or1k/" />
-                    <input class="design" title="Login" type="submit" value="Login" />
-                </form>
-                <form action="../register" method="post">
-                    <input class="design" title="Register" type="submit" value="Register" />
-                </form>
-                        </div>
-        
-                
-        
-        <div class="menu" id="p-navigation">
-            <h2>Navigation</h2>
-		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
-        
-                
-        <div class="menu">
-            <h2><label for="searchInput">Search</label></h2>
-                <form action="/wiki1/index.php" id="searchform">
-                    <div>
-                        <input type='hidden' name="title" value="Special:Search"/>
-                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
-                        
-                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
-                        
-                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
-                                                
-                    </div>
-                </form>
-        </div>
-        
-                
-        <div class="menu menu-tools">
-            <h2>Toolbox</h2>
-                <ul>
-                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/ORPSoCv2" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/ORPSoCv2" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=ORPSoCv2&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=ORPSoCv2&amp;oldid=1073" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
-        </div>
-        
-        
-        </div>
-        <div class="content" id="dmc">
-	    
-<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
-    
-    <div style="float: left; width: 720px; height: 60px;">
-        <!-- 720x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("720x60");
-        </script>
-    </div>
-        <div style="float: left; width: 300px; height: 60px;">
-        <!-- 300x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("300x60");
-        </script>
-    </div>
-    
-</div>
-	                        
-        <a name="top" id="top"></a>
-        
-                
-        <div id="oc-actions">
-            <p id="ca-nstab-main" class="selected"><a href="/or1k/ORPSoCv2" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:ORPSoCv2&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=ORPSoCv2&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=ORPSoCv2&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
-        
-        <h1 id="firstHeading" class="firstHeading">
-            ORPSoCv2        </h1>
-        
-        <div id="bodyContent">
-            <h3 id="siteSub">From OR1K</h3>
-            <div id="contentSub"></div>
-                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
-            <p><b>This version of ORPSoC is no longer actively developed by the core OpenRISC community. Details of the latest version can be found on the <a href="/or1k/ORPSoC" title="ORPSoC">ORPSoC</a> page.</b>
-</p>
-<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Download_ORPSoC"><span class="tocnumber">2</span> <span class="toctext">Download ORPSoC</span></a>
-<ul>
-<li class="toclevel-2 tocsection-3"><a href="#Pre-built_FPGA_Images"><span class="tocnumber">2.1</span> <span class="toctext">Pre-built FPGA Images</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-4"><a href="#Documentation"><span class="tocnumber">3</span> <span class="toctext">Documentation</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Supported_Boards"><span class="tocnumber">4</span> <span class="toctext">Supported Boards</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Installing_required_tools"><span class="tocnumber">5</span> <span class="toctext">Installing required tools</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Event-driven_simulators"><span class="tocnumber">6</span> <span class="toctext">Event-driven simulators</span></a>
-<ul>
-<li class="toclevel-2 tocsection-8"><a href="#Icarus_Verilog"><span class="tocnumber">6.1</span> <span class="toctext">Icarus Verilog</span></a></li>
-<li class="toclevel-2 tocsection-9"><a href="#Cycle-accurate_simulator"><span class="tocnumber">6.2</span> <span class="toctext">Cycle-accurate simulator</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-10"><a href="#Usage_Guides"><span class="tocnumber">7</span> <span class="toctext">Usage Guides</span></a></li>
-<li class="toclevel-1 tocsection-11"><a href="#Documentation_Utilities"><span class="tocnumber">8</span> <span class="toctext">Documentation Utilities</span></a></li>
-<li class="toclevel-1 tocsection-12"><a href="#Contributing"><span class="tocnumber">9</span> <span class="toctext">Contributing</span></a></li>
-<li class="toclevel-1 tocsection-13"><a href="#To_Do"><span class="tocnumber">10</span> <span class="toctext">To Do</span></a></li>
-</ul>
-</td></tr></table>
-<h2> <span class="mw-headline" id="Introduction"> Introduction </span></h2>
-<p>ORPSoC is the OpenRISC Reference Platform System-on-Chip. This project implements a platform for OpenRISC development. It provides a reference SoC, primarily for the testing and development of OpenRISC processors, and a set of pre-built SoCs for various FPGA boards.
-</p><p>The project's structure makes it simple to develop (and contribute) an OpenRISC-based design for implementation on hardware.
-</p>
-<h2> <span class="mw-headline" id="Download_ORPSoC"> Download ORPSoC </span></h2>
-<p>The RTL source, test software and scripts can be downloaded from the OpenRISC project subversion (svn) repository. The sources can be checked out with the following command:
-</p>
-<pre>svn co http://opencores.org/ocsvn/openrisc/openrisc/trunk/orpsocv2
-</pre>
-<h3> <span class="mw-headline" id="Pre-built_FPGA_Images"> Pre-built FPGA Images </span></h3>
-<p>Pre-built images for certain boards are available from the <a href="/or1k/FPGA_Development_Boards" title="FPGA Development Boards">FPGA development boards</a> pages.
-</p>
-<h2> <span class="mw-headline" id="Documentation"> Documentation </span></h2>
-<p>The main set of documentation is now in texinfo format and included with the project source.
-</p><p>To generate a PDF of the documentation, change into the doc/ path of the project and run the following:
-</p>
-<pre>./configure
-make pdf
-</pre>
-<p>The texinfo and TeX processing tools are required to generate the documentation in PDF.
-See the <a href="#Documentation_Utilities">section below</a> for installation information.
-</p>
-<h2> <span class="mw-headline" id="Supported_Boards"> Supported Boards </span></h2>
-<p>There are board-specific builds of ORPSoC which should contain RTL and scripts enabling push-button synthesis and generation of programming files.
-</p><p>See the <a href="/or1k/FPGA_Development_Boards" title="FPGA Development Boards">FPGA development boards</a> page for information on supported boards.
-</p><p>If you succeed in porting ORPSoC to other hardware, we would greatly appreciate if the build were contributed for inclusion in ORPSoC.
-</p>
-<h2> <span class="mw-headline" id="Installing_required_tools"> Installing required tools </span></h2>
-<p>There is a choice of three models to run the test software on. These are the architectural simulator, cycle-accurate and event-driven simulation models. Below are the instructions to install each of them. You need only install the tools for the model you wish to run. The GNU toolchain port is mandatory.
-</p><p><br />
-<b>OpenRISC GNU toolchain port installation</b>
+'''This version of ORPSoC is no longer actively developed by the core OpenRISC community. Details of the latest version can be found on the [[ORPSoC]] page.'''
+
+== Introduction ==
+
+ORPSoC is the OpenRISC Reference Platform System-on-Chip. This project implements a platform for OpenRISC development. It provides a reference SoC, primarily for the testing and development of OpenRISC processors, and a set of pre-built SoCs for various FPGA boards.
+
+The project's structure makes it simple to develop (and contribute) an OpenRISC-based design for implementation on hardware.
+
+== Download ORPSoC ==
+The RTL source, test software and scripts can be downloaded from the OpenRISC project subversion (svn) repository. The sources can be checked out with the following command:
+
+ <nowiki>svn co http://opencores.org/ocsvn/openrisc/openrisc/trunk/orpsocv2</nowiki>
+
+=== Pre-built FPGA Images ===
+Pre-built images for certain boards are available from the [[FPGA Development Boards|FPGA development boards]] pages.
+
+== Documentation ==
+The main set of documentation is now in texinfo format and included with the project source.
+
+To generate a PDF of the documentation, change into the doc/ path of the project and run the following:
+
+ ./configure
+ make pdf
+
+The texinfo and TeX processing tools are required to generate the documentation in PDF.
+See the [[#Documentation_Utilities |section below]] for installation information.
+
+== Supported Boards ==
+There are board-specific builds of ORPSoC which should contain RTL and scripts enabling push-button synthesis and generation of programming files.
+
+See the [[FPGA Development Boards|FPGA development boards]] page for information on supported boards.
+
+If you succeed in porting ORPSoC to other hardware, we would greatly appreciate if the build were contributed for inclusion in ORPSoC.
+
+== Installing required tools ==
+There is a choice of three models to run the test software on. These are the architectural simulator, cycle-accurate and event-driven simulation models. Below are the instructions to install each of them. You need only install the tools for the model you wish to run. The GNU toolchain port is mandatory.
+
+
+'''OpenRISC GNU toolchain port installation'''
 Ensure the OpenRISC GNU toolchain port is installed on your system.
-</p><p>Please install the latest release candidate of the version 1.0 toolchain. Follow the guide on the <a href="/or1k/OpenRISC_GNU_tool_chain" title="OpenRISC GNU tool chain">GNU toolchain page</a>.
-</p><p><br />
-<b>Architectural Simulator (or1ksim)</b>
-The tests included with ORPSoC's reference design can be run on the OpenRISC architectural simulator, or1ksim. See the <a href="/or1k/Or1ksim" title="Or1ksim">or1ksim</a> page for details on installation.
-</p>
-<h2> <span class="mw-headline" id="Event-driven_simulators"> Event-driven simulators </span></h2>
-<p>For the reference build of ORPSoC that is non-board targeted, Icarus Verilog is required. Board targets require Modelsim.
-</p>
-<h3> <span class="mw-headline" id="Icarus_Verilog"> Icarus Verilog </span></h3>
-<p><a href="http://iverilog.icarus.com/" class="external text" rel="nofollow">Icarus Verilog</a> is an open-source Verilog simulation tool. Their wiki has an extensive installation guide, but on most modern *nix distributions, such as Ubuntu or Debian, it can be easily installed by the system's package manager (apt, yum, emerge, etc.). The package is typically just called verilog. For instance, with apt under Ubuntu the installation command is:
-</p>
-<pre>sudo apt-get install verilog
-</pre>
-<p>However, if it is not available via the package manager on on your platform please see the Icarus Verilog project's installation guide.
-</p>
-<h3> <span class="mw-headline" id="Cycle-accurate_simulator"> Cycle-accurate simulator </span></h3>
-<p>This simulator is a cycle accurate C++ model generated from the Verilog HDL by <a href="http://www.veripool.org/" class="external text" rel="nofollow">Verilator</a>. A System C wrapper is placed on the model so other System C modules can be used with it. The scripts require Verilator, its supporting tools, and the System C libaries, be installed to generate this model.
+
+Please install the latest release candidate of the version 1.0 toolchain. Follow the guide on the [[OpenRISC GNU tool chain|GNU toolchain page]].
+
+
+'''Architectural Simulator (or1ksim)'''
+The tests included with ORPSoC's reference design can be run on the OpenRISC architectural simulator, or1ksim. See the [[or1ksim]] page for details on installation.
+
+== Event-driven simulators ==
+For the reference build of ORPSoC that is non-board targeted, Icarus Verilog is required. Board targets require Modelsim.
+
+=== Icarus Verilog ===
+[http://iverilog.icarus.com/ Icarus Verilog] is an open-source Verilog simulation tool. Their wiki has an extensive installation guide, but on most modern *nix distributions, such as Ubuntu or Debian, it can be easily installed by the system's package manager (apt, yum, emerge, etc.). The package is typically just called verilog. For instance, with apt under Ubuntu the installation command is:
+
+ <nowiki>sudo apt-get install verilog</nowiki>
+
+However, if it is not available via the package manager on on your platform please see the Icarus Verilog project's installation guide.
+
+=== Cycle-accurate simulator ===
+This simulator is a cycle accurate C++ model generated from the Verilog HDL by [http://www.veripool.org/ Verilator]. A System C wrapper is placed on the model so other System C modules can be used with it. The scripts require Verilator, its supporting tools, and the System C libaries, be installed to generate this model.
 Cycle-accurate model generation with Verilator
-</p><p>The tool which generates the C++ model is Verilator. It is a free and open source tool, developed and maintained by Wilson Snyder et al. at Veripool.org. The generated C++ uses the SystemC simulation kernel and libraries. It is compiled with your system's C++ compiler to create a standalone simulation executable.
-</p><p><br />
-<b>Installation of Verilator and supporting libraries</b>
-</p><p>Following are the SystemC library installation instructions. Next is instructions on installing the two supporting Perl libraries used by Verilator; Verilog-Perl and System-Perl. Lastly, Verilator itself is installed. The following instructions are expanded upon those contained at Veripool's Verilator page.
-</p><p><br />
-<b>Installing the SystemC library</b>
-</p><p>The SystemC library can be obtained from the <a href="http://www.accellera.org/downloads/standards/systemc" class="external text" rel="nofollow">Accellera Systems Initiative </a> (formerly Open SystemC Initiative, OSCI) website. The download page contains the link to download the core SystemC language and examples archive. Annoyingly, registration is required before downloading.
-</p><p>Once the package is downloaded and extracted, follow the provided README for full compilation and installation instructions.
+
+The tool which generates the C++ model is Verilator. It is a free and open source tool, developed and maintained by Wilson Snyder et al. at Veripool.org. The generated C++ uses the SystemC simulation kernel and libraries. It is compiled with your system's C++ compiler to create a standalone simulation executable.
+
+
+'''Installation of Verilator and supporting libraries'''
+
+Following are the SystemC library installation instructions. Next is instructions on installing the two supporting Perl libraries used by Verilator; Verilog-Perl and System-Perl. Lastly, Verilator itself is installed. The following instructions are expanded upon those contained at Veripool's Verilator page.
+
+
+'''Installing the SystemC library'''
+
+The SystemC library can be obtained from the [http://www.accellera.org/downloads/standards/systemc Accellera Systems Initiative ] (formerly Open SystemC Initiative, OSCI) website. The download page contains the link to download the core SystemC language and examples archive. Annoyingly, registration is required before downloading.
+
+Once the package is downloaded and extracted, follow the provided README for full compilation and installation instructions.
 A quick installation instruction list for most Linux platforms is provided below, starting in the systemc-x.x.x directory:
-</p>
-<pre>mkdir objdir; cd objdir
-export CXX=g++
-../configure
-# Note that this configures the current location as the permanent location of the systemc library
-make
-make install
-# Optionally....
-make check
-</pre>
-<p>Add export SYSTEMC=/path/to/systemc-x.x.x to ~/.bashrc
-</p><p><br />
-<b>Installing Verilog-Perl</b>
-</p><p>Download the latest release of Verilog-Perl by visiting its <a href="http://search.cpan.org/search?module=Verilog::Language" class="external text" rel="nofollow">CPAN</a> site.
-</p><p>Currently the latest release (3.400) can be downloaded from <a href="http://search.cpan.org/CPAN/authors/id/W/WS/WSNYDER/Verilog-Perl-3.400.tar.gz" class="external text" rel="nofollow">here</a>.
+
+ mkdir objdir; cd objdir
+ export CXX=g++
+ ../configure
+ # Note that this configures the current location as the permanent location of the systemc library
+ make
+ make install
+ # Optionally....
+ make check
+
+Add export SYSTEMC=/path/to/systemc-x.x.x to ~/.bashrc
+
+
+'''Installing Verilog-Perl'''
+
+Download the latest release of Verilog-Perl by visiting its [http://search.cpan.org/search?module=Verilog::Language CPAN] site.
+
+Currently the latest release (3.400) can be downloaded from [http://search.cpan.org/CPAN/authors/id/W/WS/WSNYDER/Verilog-Perl-3.400.tar.gz here].
 Extract it and follow the instructions in the include README file.
-</p><p>A quick installation instruction list for most Linux platforms is provided:
-</p>
-<pre>perl Makefile.PL
-make
-make test (optional)
-sudo make install
-</pre>
-<p><b>Installing System-Perl</b>
-</p><p>Download the latest release of Verilog-Perl by visiting its <a href="http://search.cpan.org/search?module=Verilog::Language" class="external text" rel="nofollow">CPAN</a> site.
-</p><p>Currently the latest release (1.341) can be downloaded from <a href="http://search.cpan.org/CPAN/authors/id/W/WS/WSNYDER/SystemPerl-1.341.tar.gz" class="external text" rel="nofollow">here</a>.
-</p><p>Extract it and follow the instructions in the included README file. A quick installation instruction list for most Linux platforms is provided:
-</p>
-<pre>perl Makefile.PL
-make
-make test (optional)
-sudo make install
-</pre>
-<p>Export the SYSTEMPERL environment variable in your shell startup script to point to the directory of this kit (the directory you ran <tt>make</tt> in). Eg for bash add something like <tt>export SYSTEMPERL=/path/to/SystemPerl-1.341</tt> to your ~/.bashrc file.
-</p><p><br />
-<b>Installing Verilator</b>
-</p><p>It is recommended Verilator is built and installed from source as follows:
-</p>
-<pre>git clone http://git.veripool.org/git/verilator
-cd verilator
-autoconf
-./configure
-make
-sudo make install
-</pre>
-<p>Add export <tt>VERILATOR_ROOT=/path/to/verilator_kit</tt> to ~/.bashrc (where /path/to/verilator_kit is the directory you typed <tt>make</tt> in).
-</p><p>The SystemC model toolchain should now be ready to compile ORPSoC.
-</p>
-<h2> <span class="mw-headline" id="Usage_Guides"> Usage Guides </span></h2>
-<p>The following are links to guides for performing various tasks with ORPSoC. Please feel free to add your own and extend what is already available.
-</p><p><a href="/or1k/ORPSoC_RTL_simulation_debugging" title="ORPSoC RTL simulation debugging"> ORPSoC RTL simulation debugging</a>
-</p><p><a href="/or1k/ORPSoC_Board_Software_Debugging" title="ORPSoC Board Software Debugging"> ORPSoC software debugging on the board</a>
-</p>
-<h2> <span class="mw-headline" id="Documentation_Utilities"> Documentation Utilities </span></h2>
-<p>The following tools are required to compile the documentation source in the project's doc/ path, generating a PDF.
-</p><p><b>Texinfo</b>
-</p><p>The documentation is provided in texinfo source format. To compile it, the texinfo tools are required.
-</p><p>Under Ubuntu, use the following command to install the required packages:
-</p>
-<pre>sudo apt-get install texinfo
-</pre>
-<p>Under CentOS, Fedora and Red Hat use the following:
-</p>
-<pre>sudo yum install texinfo texinfo-tex
-</pre>
-<p><br />
-<b>TeX</b>
-<a href="http://www.tug.org/begin.html" class="external text" rel="nofollow">TeX</a> is a typesetting system. To generate a PDF from the texinfo documentation, some TeX processing software is required.
-</p><p>Under Ubuntu, use the following command to install the required packages:
-</p>
-<pre>sudo apt-get install texlive
-</pre>
-<p>Under CentOS, Fedora and Red Hat use the following:
-</p>
-<pre>sudo yum install texlive texlive-latex 
-</pre>
-<p><br />
-<b>Performing the tests</b>
-</p><p>See the documentation in the project for running simulations of the system.
-</p>
-<h2> <span class="mw-headline" id="Contributing"> Contributing </span></h2>
-<p>We ask contributors to get in touch with the developers via the <a href="/or1k/OR1K:Community_Portal#Mailing_lists" title="OR1K:Community Portal" class="mw-redirect">mailing lists</a>, <a href="/or1k/OR1K:Community_Portal#IRC" title="OR1K:Community Portal" class="mw-redirect">IRC</a>, or the <a href="http://opencores.org/forum,OpenRISC" class="external text" rel="nofollow">forums</a> in that order.
-</p>
-<h2> <span class="mw-headline" id="To_Do"> To Do </span></h2>
-<p><b>Note:</b> As <a href="/or1k/ORPSoCv3" title="ORPSoCv3">ORPSoCv3</a> is now mature enough to use, it is recommend that work is done on it instead of ORPSoCv2.
-</p>
-<dl><dd><ul><li>Add ability to run or1ksim's test suite against reference design
-</li><li>Update tool install information - add it to project's texinfo docs
-</li><li>Add or1ksim configuration file for each board port
-</li><li>Add generic technology board port with some extra peripherals (ethernet, i2c, etc.) for demonstration purposes
-</li><li>Add section to documentation outlining basics of adding a new board port
-</li><li>More board ports
-</li><li>Complete peripheral support for existing board ports
-</li><li>Further OR1K software tests
-</li></ul>
-</dd></dl>
 
-<!-- 
-NewPP limit report
-Preprocessor node count: 78/1000000
-Post-expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Expensive parser function count: 0/100
--->
+A quick installation instruction list for most Linux platforms is provided:
 
-<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:85-0!*!0!!en!*!edit=0 and timestamp 20161009002617 -->
-<div class="printfooter">
-Retrieved from "<a href="http://opencores.org/or1k/ORPSoCv2">http://opencores.org/or1k/ORPSoCv2</a>"</div>
-            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
-                        <div class="visualClear"></div>
-        </div>
-        
-                
-        <div class="visualClear"><p></p></div>
-        
-        <div id="footer">
-            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 29 September 2013, at 12:33.<li id="lastmod"></li>This page has been accessed 5,484 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
-<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "ORPSoCv2", "wgTitle": "ORPSoCv2", "wgAction": "view", "wgArticleId": 85, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1073, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
-	mediaWiki.loader.go();
-}
-</script>
+ perl Makefile.PL
+ make
+ make test (optional)
+ sudo make install
 
-<script>if ( window.mediaWiki ) {
-	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
-	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
-}
-</script><!-- Served in 1.988 secs. -->            
-        </div>
-        
-        
-        </div>
-	<div style="clear:both;margin-left:200px;">
-            <!-- 728x90 -->
-            <script type="text/javascript">
-            GA_googleFillSlot("728x90");
-            </script>
-	</div>
-    </div>
-    <div class="bot">
-	&copy; copyright 1999-2016
-OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
-    </div>
-</div>
+'''Installing System-Perl'''
 
-<!-- Google search -->
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-<!-- /Google search -->
+Download the latest release of Verilog-Perl by visiting its [http://search.cpan.org/search?module=Verilog::Language CPAN] site.
 
-</body>
-</html>
+Currently the latest release (1.341) can be downloaded from [http://search.cpan.org/CPAN/authors/id/W/WS/WSNYDER/SystemPerl-1.341.tar.gz here].
+
+Extract it and follow the instructions in the included README file. A quick installation instruction list for most Linux platforms is provided:
+
+ perl Makefile.PL
+ make
+ make test (optional)
+ sudo make install
+
+Export the SYSTEMPERL environment variable in your shell startup script to point to the directory of this kit (the directory you ran <tt>make</tt> in). Eg for bash add something like <tt>export SYSTEMPERL=/path/to/SystemPerl-1.341</tt> to your ~/.bashrc file.
+
+
+'''Installing Verilator'''
+
+It is recommended Verilator is built and installed from source as follows:
+
+ <nowiki>git clone http://git.veripool.org/git/verilator</nowiki>
+ cd verilator
+ autoconf
+ ./configure
+ make
+ sudo make install
+
+Add export <tt>VERILATOR_ROOT=/path/to/verilator_kit</tt> to ~/.bashrc (where /path/to/verilator_kit is the directory you typed <tt>make</tt> in).
+
+The SystemC model toolchain should now be ready to compile ORPSoC.
+
+== Usage Guides ==
+
+The following are links to guides for performing various tasks with ORPSoC. Please feel free to add your own and extend what is already available.
+
+[[ORPSoC_RTL_simulation_debugging | ORPSoC RTL simulation debugging]]
+
+[[ORPSoC_Board_Software_Debugging | ORPSoC software debugging on the board]]
+
+== Documentation Utilities ==
+
+The following tools are required to compile the documentation source in the project's doc/ path, generating a PDF.
+
+'''Texinfo'''
+
+The documentation is provided in texinfo source format. To compile it, the texinfo tools are required.
+
+Under Ubuntu, use the following command to install the required packages:
+
+ sudo apt-get install texinfo
+
+Under CentOS, Fedora and Red Hat use the following:
+
+ sudo yum install texinfo texinfo-tex
+
+
+'''TeX'''
+[http://www.tug.org/begin.html TeX] is a typesetting system. To generate a PDF from the texinfo documentation, some TeX processing software is required.
+
+Under Ubuntu, use the following command to install the required packages:
+
+ sudo apt-get install texlive
+
+Under CentOS, Fedora and Red Hat use the following:
+
+ sudo yum install texlive texlive-latex 
+
+
+'''Performing the tests'''
+
+See the documentation in the project for running simulations of the system.
+
+== Contributing ==
+
+We ask contributors to get in touch with the developers via the [[OR1K:Community_Portal#Mailing_lists|mailing lists]], [[OR1K:Community_Portal#IRC|IRC]], or the [http://opencores.org/forum,OpenRISC forums] in that order.
+
+== To Do ==
+
+'''Note:''' As [[ORPSoCv3]] is now mature enough to use, it is recommend that work is done on it instead of ORPSoCv2.
+
+:*Add ability to run or1ksim's test suite against reference design
+:*Update tool install information - add it to project's texinfo docs
+:*Add or1ksim configuration file for each board port
+:*Add generic technology board port with some extra peripherals (ethernet, i2c, etc.) for demonstration purposes
+:*Add section to documentation outlining basics of adding a new board port
+:*More board ports
+:*Complete peripheral support for existing board ports
+:*Further OR1K software tests

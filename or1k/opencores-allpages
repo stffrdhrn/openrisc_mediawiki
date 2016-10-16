@@ -8,7 +8,7 @@
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
 <link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
-<link rel="alternate" type="application/atom+xml" title="&quot;Special:RecentChanges&quot; Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
+<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
 <link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
 <!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
 <!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
@@ -21,7 +21,7 @@
         <![endif]-->
         
         <script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "Special", "wgCanonicalSpecialPageName": "Recentchanges", "wgNamespaceNumber": -1, "wgPageName": "Special:RecentChanges", "wgTitle": "RecentChanges", "wgAction": "raw", "wgArticleId": 0, "wgIsArticle": false, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 0, "wgCategories": [], "wgBreakFrames": true, "wgRestrictionCreate": []});
+	mediaWiki.config.set({"wgCanonicalNamespace": "Special", "wgCanonicalSpecialPageName": "Allpages", "wgNamespaceNumber": -1, "wgPageName": "Special:AllPages", "wgTitle": "AllPages", "wgAction": "view", "wgArticleId": 0, "wgIsArticle": false, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 0, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionCreate": []});
 }
 </script>        
         <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
@@ -34,7 +34,7 @@
 		        
 		        
 		        
-            <title>Recent changes - OR1K :: OpenCores</title>
+            <title>All pages - OR1K :: OpenCores</title>
     <link rel="stylesheet" type="text/css" href="//opencores.org/cdn/compiled.css" />
     <link rel="icon" type="image/png" href="//opencores.org/cdn/img/favicon.png" />
     <link rel="shortcut icon" type="image/png" href="//opencores.org/cdn/img/favicon.png" />
@@ -138,7 +138,7 @@
         <div class="menu menu-tools">
             <h2>Toolbox</h2>
                 <ul>
-                    <li id="feedlinks"><a id="feed-atom" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" rel="alternate" type="application/atom+xml" class="feedlink" title="Atom feed for this page">Atom</a>&nbsp;</li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>                </ul>
+                    <li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>                </ul>
         </div>
         
         
@@ -166,23 +166,28 @@
         
                 
         <div id="oc-actions">
-            <p id="ca-nstab-special" class="selected"><a href="/or1k/Special:RecentChanges?action=raw" title="This is a special page, you cannot edit the page itself">Special page</a></p>        </div>
+            <p id="ca-nstab-special" class="selected"><a href="/or1k/Special:AllPages" title="This is a special page, you cannot edit the page itself">Special page</a></p>        </div>
         
         <h1 id="firstHeading" class="firstHeading">
-            Recent changes        </h1>
+            All pages        </h1>
         
         <div id="bodyContent">
             <h3 id="siteSub">From OR1K</h3>
             <div id="contentSub"></div>
                                     <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
-            <p>Track the most recent changes to the wiki on this page.
-</p><fieldset class="rcoptions">
-<legend>Recent changes options</legend>
-Show last <a href="/wiki1/index.php?title=Special:RecentChanges&amp;limit=50" title="Special:RecentChanges"><strong>50</strong></a> | <a href="/wiki1/index.php?title=Special:RecentChanges&amp;limit=100" title="Special:RecentChanges">100</a> | <a href="/wiki1/index.php?title=Special:RecentChanges&amp;limit=250" title="Special:RecentChanges">250</a> | <a href="/wiki1/index.php?title=Special:RecentChanges&amp;limit=500" title="Special:RecentChanges">500</a> changes in last <a href="/wiki1/index.php?title=Special:RecentChanges&amp;days=1" title="Special:RecentChanges">1</a> | <a href="/wiki1/index.php?title=Special:RecentChanges&amp;days=3" title="Special:RecentChanges">3</a> | <a href="/wiki1/index.php?title=Special:RecentChanges&amp;days=7" title="Special:RecentChanges"><strong>7</strong></a> | <a href="/wiki1/index.php?title=Special:RecentChanges&amp;days=14" title="Special:RecentChanges">14</a> | <a href="/wiki1/index.php?title=Special:RecentChanges&amp;days=30" title="Special:RecentChanges">30</a> days<br /><a href="/wiki1/index.php?title=Special:RecentChanges&amp;hideminor=1" title="Special:RecentChanges">Hide</a> minor edits | <a href="/wiki1/index.php?title=Special:RecentChanges&amp;hidebots=0" title="Special:RecentChanges">Show</a> bots | <a href="/wiki1/index.php?title=Special:RecentChanges&amp;hideanons=1" title="Special:RecentChanges">Hide</a> anonymous users | <a href="/wiki1/index.php?title=Special:RecentChanges&amp;hideliu=1" title="Special:RecentChanges">Hide</a> logged-in users | <a href="/wiki1/index.php?title=Special:RecentChanges&amp;hidemyself=1" title="Special:RecentChanges">Hide</a> my edits<br />Show new changes starting from <a href="/wiki1/index.php?title=Special:RecentChanges&amp;from=20161016030509" title="Special:RecentChanges">03:05, 16 October 2016</a>
-<hr />
-<form action="/wiki1/index.php"><table class="mw-recentchanges-table"><tr><td class="mw-label"><label for="namespace">Namespace:</label></td><td class="mw-input"><select id="namespace" name="namespace" class="namespaceselector">
-<option value="" selected="selected">all</option>
-<option value="0">(Main)</option>
+            <table class="mw-allpages-table-form"><tr>
+							<td><div class="namespaceoptions"><form method="get" action="/wiki1/index.php"><input type="hidden" value="Special:AllPages" name="title" /><fieldset><legend>All pages</legend><table id="nsselect" class="allpages"><tr>
+	<td class='mw-label'><label for="nsfrom">Display pages starting at:</label>	</td>
+	<td class='mw-input'><input name="from" size="30" value="" id="nsfrom" />	</td>
+</tr>
+<tr>
+	<td class='mw-label'><label for="nsto">Display pages ending at:</label>	</td>
+			<td class='mw-input'><input name="to" size="30" value="" id="nsto" />		</td>
+</tr>
+<tr>
+	<td class='mw-label'><label for="namespace">Namespace:</label>	</td>
+			<td class='mw-input'><select id="namespace" name="namespace" class="namespaceselector">
+<option value="0" selected="selected">(Main)</option>
 <option value="1">Talk</option>
 <option value="2">User</option>
 <option value="3">User talk</option>
@@ -198,10 +203,27 @@ Show last <a href="/wiki1/index.php?title=Special:RecentChanges&amp;limit=50" ti
 <option value="13">Help talk</option>
 <option value="14">Category</option>
 <option value="15">Category talk</option>
-</select> <input name="invert" type="checkbox" value="1" id="nsinvert" />&#160;<label for="nsinvert">Invert selection</label> <input type="submit" value="Go" /></td></tr></table><input type="hidden" value="Special:RecentChanges" name="title" /></form>
-</fieldset>
-<div class="printfooter">
-Retrieved from "<a href="http://opencores.org/or1k/Special:RecentChanges">http://opencores.org/or1k/Special:RecentChanges</a>"</div>
+</select> <input type="submit" value="Go" />	</td>
+</tr></table></fieldset></form></div></td>
+							<td class="mw-allpages-nav"><a href="/or1k/Special:AllPages" title="Special:AllPages">All pages</a></td></tr></table><table class="mw-allpages-table-chunk"><tr><td style="width:33%"><a href="/or1k/Architecture_Specification" title="Architecture Specification">Architecture Specification</a></td><td style="width:33%"><a href="/or1k/Architecture_Specification_1.0_Changes_Summary" title="Architecture Specification 1.0 Changes Summary">Architecture Specification 1.0 Changes Summary</a></td><td style="width:33%"><a href="/or1k/Architecture_Specification_1.0_proposals" title="Architecture Specification 1.0 proposals">Architecture Specification 1.0 proposals</a></td></tr>
+<tr><td style="width:33%"><a href="/or1k/Contributor_Guidelines" title="Contributor Guidelines">Contributor Guidelines</a></td><td style="width:33%"><a href="/or1k/Debugging_physical_targets_(FPGA/ASIC)" title="Debugging physical targets (FPGA/ASIC)">Debugging physical targets (FPGA/ASIC)</a></td><td style="width:33%"><a href="/or1k/ECos" title="ECos">ECos</a></td></tr>
+<tr><td style="width:33%"><a href="/or1k/EDA" title="EDA">EDA</a></td><td style="width:33%"><a href="/or1k/FAQ" title="FAQ">FAQ</a></td><td style="width:33%"><a href="/or1k/FPGA_Development_Boards" title="FPGA Development Boards">FPGA Development Boards</a></td></tr>
+<tr><td style="width:33%"><a href="/or1k/FSCONS2011" title="FSCONS2011">FSCONS2011</a></td><td style="width:33%"><a href="/or1k/FreeRTOS" title="FreeRTOS">FreeRTOS</a></td><td style="width:33%"><a href="/or1k/LLVM" title="LLVM">LLVM</a></td></tr>
+<tr><td style="width:33%"><a href="/or1k/Linux" title="Linux">Linux</a></td><td style="width:33%"><a href="/or1k/Main_Page" title="Main Page">Main Page</a></td><td style="width:33%"><a href="/or1k/Makefile_rules" title="Makefile rules">Makefile rules</a></td></tr>
+<tr><td style="width:33%"><a href="/or1k/Newlib" title="Newlib">Newlib</a></td><td style="width:33%"><a href="/or1k/Newlib_tool_chain_test_results" title="Newlib tool chain test results">Newlib tool chain test results</a></td><td style="width:33%"><a href="/or1k/News" title="News">News</a></td></tr>
+<tr><td style="width:33%"><a href="/or1k/OR1200_OpenRISC_Processor" title="OR1200 OpenRISC Processor">OR1200 OpenRISC Processor</a></td><td style="width:33%"><a href="/or1k/OR1200_Roadmap" title="OR1200 Roadmap">OR1200 Roadmap</a></td><td style="width:33%"><a href="/or1k/OR1K_CPU_Cores" title="OR1K CPU Cores">OR1K CPU Cores</a></td></tr>
+<tr><td style="width:33%"><div class="allpagesredirect"><a href="/or1k/ORCONF" title="ORCONF">ORCONF</a></div></td><td style="width:33%"><a href="/or1k/ORCONF2013_Workshop_ORPSoC_On_DE0_Nano" title="ORCONF2013 Workshop ORPSoC On DE0 Nano">ORCONF2013 Workshop ORPSoC On DE0 Nano</a></td><td style="width:33%"><a href="/or1k/ORPSoC" title="ORPSoC">ORPSoC</a></td></tr>
+<tr><td style="width:33%"><a href="/or1k/ORPSoC_Board_Software_Debugging" title="ORPSoC Board Software Debugging">ORPSoC Board Software Debugging</a></td><td style="width:33%"><a href="/or1k/ORPSoC_RTL_simulation_debugging" title="ORPSoC RTL simulation debugging">ORPSoC RTL simulation debugging</a></td><td style="width:33%"><a href="/or1k/ORPSoCv2" title="ORPSoCv2">ORPSoCv2</a></td></tr>
+<tr><td style="width:33%"><a href="/or1k/ORPSoCv3" title="ORPSoCv3">ORPSoCv3</a></td><td style="width:33%"><a href="/or1k/ORPSoCv3InitialDiscussion" title="ORPSoCv3InitialDiscussion">ORPSoCv3InitialDiscussion</a></td><td style="width:33%"><a href="/or1k/OSHUG" title="OSHUG">OSHUG</a></td></tr>
+<tr><td style="width:33%"><a href="/or1k/OpenOCD" title="OpenOCD">OpenOCD</a></td><td style="width:33%"><a href="/or1k/OpenRISC_GNU_tool_chain" title="OpenRISC GNU tool chain">OpenRISC GNU tool chain</a></td><td style="width:33%"><a href="/or1k/OpenRISC_GNU_tool_chain_troubleshooting" title="OpenRISC GNU tool chain troubleshooting">OpenRISC GNU tool chain troubleshooting</a></td></tr>
+<tr><td style="width:33%"><a href="/or1k/OpenRISC_PIC" title="OpenRISC PIC">OpenRISC PIC</a></td><td style="width:33%"><a href="/or1k/OpenRISC_Project_Meeting" title="OpenRISC Project Meeting">OpenRISC Project Meeting</a></td><td style="width:33%"><a href="/or1k/OpenRISC_Project_Meeting_Discussion" title="OpenRISC Project Meeting Discussion">OpenRISC Project Meeting Discussion</a></td></tr>
+<tr><td style="width:33%"><a href="/or1k/OpenRISC_Project_Meetings_Archive" title="OpenRISC Project Meetings Archive">OpenRISC Project Meetings Archive</a></td><td style="width:33%"><a href="/or1k/Operand_representation" title="Operand representation">Operand representation</a></td><td style="width:33%"><a href="/or1k/Operating_Systems" title="Operating Systems">Operating Systems</a></td></tr>
+<tr><td style="width:33%"><a href="/or1k/Or1ksim" title="Or1ksim">Or1ksim</a></td><td style="width:33%"><a href="/or1k/Or32Toolchain" title="Or32Toolchain">Or32Toolchain</a></td><td style="width:33%"><a href="/or1k/Ordb2a-ep4ce22" title="Ordb2a-ep4ce22">Ordb2a-ep4ce22</a></td></tr>
+<tr><td style="width:33%"><a href="/or1k/Project_Maintainers" title="Project Maintainers">Project Maintainers</a></td><td style="width:33%"><a href="/or1k/Test_result_category" title="Test result category">Test result category</a></td><td style="width:33%"><div class="allpagesredirect"><a href="/or1k/Toolchain" title="Toolchain">Toolchain</a></div></td></tr>
+<tr><td style="width:33%"><a href="/or1k/U-Boot" title="U-Boot">U-Boot</a></td><td style="width:33%"><div class="allpagesredirect"><a href="/or1k/U-boot" title="U-boot">U-boot</a></div></td><td style="width:33%"><a href="/or1k/UClibc_tool_chain_test_results" title="UClibc tool chain test results">UClibc tool chain test results</a></td></tr>
+<tr><td style="width:33%"><a href="/or1k/Ubuntu_VirtualBox-image_updates_and_information" title="Ubuntu VirtualBox-image updates and information">Ubuntu VirtualBox-image updates and information</a></td><td style="width:33%"><a href="/or1k/Ubuntu_VirtualBox_image_updates" title="Ubuntu VirtualBox image updates">Ubuntu VirtualBox image updates</a></td><td style="width:33%"><a href="/or1k/VM_image" title="VM image">VM image</a></td></tr>
+</table><div class="printfooter">
+Retrieved from "<a href="http://opencores.org/or1k/Special:AllPages">http://opencores.org/or1k/Special:AllPages</a>"</div>
             <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
                         <div class="visualClear"></div>
         </div>
@@ -213,7 +235,7 @@ Retrieved from "<a href="http://opencores.org/or1k/Special:RecentChanges">http:/
             <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
 <script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
 <script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "Special", "wgCanonicalSpecialPageName": "Recentchanges", "wgNamespaceNumber": -1, "wgPageName": "Special:RecentChanges", "wgTitle": "RecentChanges", "wgAction": "raw", "wgArticleId": 0, "wgIsArticle": false, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 0, "wgCategories": [], "wgBreakFrames": true, "wgRestrictionCreate": []});
+	mediaWiki.config.set({"wgCanonicalNamespace": "Special", "wgCanonicalSpecialPageName": "Allpages", "wgNamespaceNumber": -1, "wgPageName": "Special:AllPages", "wgTitle": "AllPages", "wgAction": "view", "wgArticleId": 0, "wgIsArticle": false, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 0, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionCreate": []});
 }
 </script>
 <script>if ( window.mediaWiki ) {
@@ -226,7 +248,7 @@ Retrieved from "<a href="http://opencores.org/or1k/Special:RecentChanges">http:/
 	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
 	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
 }
-</script><!-- Served in 0.157 secs. -->            
+</script><!-- Served in 0.121 secs. -->            
         </div>
         
         

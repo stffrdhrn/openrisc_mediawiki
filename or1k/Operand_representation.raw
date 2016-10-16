@@ -1,481 +1,200 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-<head>
-            
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="generator" content="MediaWiki 1.17.0" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
-<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
-<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
-<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
-<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
-<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
-        <!--[if lt IE 7]>
-        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
-		<meta http-equiv="imagetoolbar" content="no" />
-        <![endif]-->
-        
-        <script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Operand_representation", "wgTitle": "Operand representation", "wgAction": "view", "wgArticleId": 79, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 975, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>        
-        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
-		
-        <!-- Head Scripts -->
-                
-        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
-                
-                
-		        
-		        
-		        
-            <title>Operand representation - OR1K :: OpenCores</title>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
-    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
-        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
-    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
-    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
-    <script type="text/javascript">
-    GS_googleAddAdSenseService("ca-pub-0097483751598630");
-    GS_googleEnableAllServices();
-    </script>
-    <script type="text/javascript">
-    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
-    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
-    </script>
-    <script type="text/javascript">
-    GA_googleFetchAds();
-    </script>
-    <!--[if IE 6]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
-    <![endif]-->
-    <!--[if (IE 7)|(IE 8)]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
-    <![endif]-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <script type="text/javascript">
-        
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-2763846-2']);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        
-    </script>
-    
-</head>
-<body>
-<div class="main">
-    <div class="top">
-        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
-    </div>
-    <div class="line">
-	<div></div>
-	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
-    </div>
-    <div class="mid" id="dm">
-        <div class="mainmenu" id="dml">
-	            
-        <div class="menu menu-login">
-                Username:                                <form action="../login" method="post">
-                    <input class="design" name="user" type="text" />
-                    <br />
-                    Password:
-                    <br />
-                    <input class="design" name="pass" type="password" />
-                    <br />
-                    <input class="design" name="remember" type="checkbox" />Remember me
-                    <br />
-                    <input type="hidden" name="redirect" value="or1k/" />
-                    <input class="design" title="Login" type="submit" value="Login" />
-                </form>
-                <form action="../register" method="post">
-                    <input class="design" title="Register" type="submit" value="Register" />
-                </form>
-                        </div>
-        
-                
-        
-        <div class="menu" id="p-navigation">
-            <h2>Navigation</h2>
-		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
-        
-                
-        <div class="menu">
-            <h2><label for="searchInput">Search</label></h2>
-                <form action="/wiki1/index.php" id="searchform">
-                    <div>
-                        <input type='hidden' name="title" value="Special:Search"/>
-                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
-                        
-                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
-                        
-                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
-                                                
-                    </div>
-                </form>
-        </div>
-        
-                
-        <div class="menu menu-tools">
-            <h2>Toolbox</h2>
-                <ul>
-                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/Operand_representation" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/Operand_representation" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=Operand_representation&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=Operand_representation&amp;oldid=975" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
-        </div>
-        
-        
-        </div>
-        <div class="content" id="dmc">
-	    
-<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
-    
-    <div style="float: left; width: 720px; height: 60px;">
-        <!-- 720x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("720x60");
-        </script>
-    </div>
-        <div style="float: left; width: 300px; height: 60px;">
-        <!-- 300x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("300x60");
-        </script>
-    </div>
-    
-</div>
-	                        
-        <a name="top" id="top"></a>
-        
-                
-        <div id="oc-actions">
-            <p id="ca-nstab-main" class="selected"><a href="/or1k/Operand_representation" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:Operand_representation&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=Operand_representation&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=Operand_representation&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
-        
-        <h1 id="firstHeading" class="firstHeading">
-            Operand representation        </h1>
-        
-        <div id="bodyContent">
-            <h3 id="siteSub">From OR1K</h3>
-            <div id="contentSub"></div>
-                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
-            <table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Operand_representations"><span class="tocnumber">1</span> <span class="toctext">Operand representations</span></a>
-<ul>
-<li class="toclevel-2 tocsection-2"><a href="#Groups"><span class="tocnumber">1.1</span> <span class="toctext">Groups</span></a>
-<ul>
-<li class="toclevel-3 tocsection-3"><a href="#dst_.28reg.29.2C_src1_.28reg.29.2C_src2_.28reg.29"><span class="tocnumber">1.1.1</span> <span class="toctext">dst (reg), src1 (reg), src2 (reg)</span></a>
-<ul>
-<li class="toclevel-4 tocsection-4"><a href="#rD.2CrA.2CrB"><span class="tocnumber">1.1.1.1</span> <span class="toctext">rD,rA,rB</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-5"><a href="#dst_.28reg.29.2C_src1_.28reg.29.2C_src2_.28imm.29"><span class="tocnumber">1.1.2</span> <span class="toctext">dst (reg), src1 (reg), src2 (imm)</span></a>
-<ul>
-<li class="toclevel-4 tocsection-6"><a href="#rD.2CrA.2CI"><span class="tocnumber">1.1.2.1</span> <span class="toctext">rD,rA,I</span></a></li>
-<li class="toclevel-4 tocsection-7"><a href="#rD.2CrA.2CK"><span class="tocnumber">1.1.2.2</span> <span class="toctext">rD,rA,K</span></a></li>
-<li class="toclevel-4 tocsection-8"><a href="#rD.2CrA.2CL"><span class="tocnumber">1.1.2.3</span> <span class="toctext">rD,rA,L</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-9"><a href="#src_.28imm.29"><span class="tocnumber">1.1.3</span> <span class="toctext">src (imm)</span></a>
-<ul>
-<li class="toclevel-4 tocsection-10"><a href="#K"><span class="tocnumber">1.1.3.1</span> <span class="toctext">K</span></a></li>
-<li class="toclevel-4 tocsection-11"><a href="#N"><span class="tocnumber">1.1.3.2</span> <span class="toctext">N</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-12"><a href="#src_.28reg.29"><span class="tocnumber">1.1.4</span> <span class="toctext">src (reg)</span></a>
-<ul>
-<li class="toclevel-4 tocsection-13"><a href="#rB"><span class="tocnumber">1.1.4.1</span> <span class="toctext">rB</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-14"><a href="#dst_.28reg.29.2C_src_.28imm.29"><span class="tocnumber">1.1.5</span> <span class="toctext">dst (reg), src (imm)</span></a>
-<ul>
-<li class="toclevel-4 tocsection-15"><a href="#rD.2CK"><span class="tocnumber">1.1.5.1</span> <span class="toctext">rD,K</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-16"><a href="#dst_.28reg.29"><span class="tocnumber">1.1.6</span> <span class="toctext">dst (reg)</span></a>
-<ul>
-<li class="toclevel-4 tocsection-17"><a href="#rD"><span class="tocnumber">1.1.6.1</span> <span class="toctext">rD</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-18"><a href="#dst_.28reg.29.2C_src_.28addr.29"><span class="tocnumber">1.1.7</span> <span class="toctext">dst (reg), src (addr)</span></a>
-<ul>
-<li class="toclevel-4 tocsection-19"><a href="#rD.2CI.28rA.29"><span class="tocnumber">1.1.7.1</span> <span class="toctext">rD,I(rA)</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-20"><a href="#dst_.28addr.29.2C_src_.28reg.29"><span class="tocnumber">1.1.8</span> <span class="toctext">dst (addr), src (reg)</span></a>
-<ul>
-<li class="toclevel-4 tocsection-21"><a href="#I.28rA.29.2CrB"><span class="tocnumber">1.1.8.1</span> <span class="toctext">I(rA),rB</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-22"><a href="#dst_.28reg.29.2C_src_.28reg.29"><span class="tocnumber">1.1.9</span> <span class="toctext">dst (reg), src (reg)</span></a>
-<ul>
-<li class="toclevel-4 tocsection-23"><a href="#rD.2CrA"><span class="tocnumber">1.1.9.1</span> <span class="toctext">rD,rA</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-24"><a href="#src1_.28reg.29.2C_src2_.28reg.29"><span class="tocnumber">1.1.10</span> <span class="toctext">src1 (reg), src2 (reg)</span></a>
-<ul>
-<li class="toclevel-4 tocsection-25"><a href="#rA.2CrB"><span class="tocnumber">1.1.10.1</span> <span class="toctext">rA,rB</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-26"><a href="#src1_.28reg.29.2C_src2_.28imm.29"><span class="tocnumber">1.1.11</span> <span class="toctext">src1 (reg), src2 (imm)</span></a>
-<ul>
-<li class="toclevel-4 tocsection-27"><a href="#rA.2CI"><span class="tocnumber">1.1.11.1</span> <span class="toctext">rA,I</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-28"><a href="#src1_.28reg.29.2C_src2_.28reg.29.2C_src3_.28imm.29"><span class="tocnumber">1.1.12</span> <span class="toctext">src1 (reg), src2 (reg), src3 (imm)</span></a>
-<ul>
-<li class="toclevel-4 tocsection-29"><a href="#rA.2CrB.2CK"><span class="tocnumber">1.1.12.1</span> <span class="toctext">rA,rB,K</span></a></li>
-</ul>
-</li>
-<li class="toclevel-3 tocsection-30"><a href="#no_operand"><span class="tocnumber">1.1.13</span> <span class="toctext">no operand</span></a></li>
-<li class="toclevel-3 tocsection-31"><a href="#custom_implementation"><span class="tocnumber">1.1.14</span> <span class="toctext">custom implementation</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</td></tr></table>
-<h1> <span class="mw-headline" id="Operand_representations"> Operand representations </span></h1>
-<p>Currently there exist 16 different variations of operand representations for
+= Operand representations =
+
+Currently there exist 16 different variations of operand representations for
 instructions (excluding l.custN instructions) in the OpenRISC 1000 architecture
 specification.
-</p><p>Some of these variations have identical or very similar meaning. For instance
+
+Some of these variations have identical or very similar meaning. For instance
 the variation which has a destination register (rD), source register (rA) and an
 immediate value (I, K or L).
-</p><p>From a consistency stand point it would be nice if all of these instructions
+
+From a consistency stand point it would be nice if all of these instructions
 agreed on using the same letter to represent an immediate value.
-</p><p>For instance why should the opperand representation of l.andi and l.ori differ
+
+For instance why should the opperand representation of l.andi and l.ori differ
 from the opperand representation of l.xori?
-</p>
-<pre>Format: l.andi rD,rA,K
-Format: l.ori rD,rA,K
-</pre>
-<pre>Format: l.xori rD,rA,I
-</pre>
-<p>The goal is to reach a consensus on how to make the operand representations
+
+ Format: l.andi rD,rA,K
+ Format: l.ori rD,rA,K
+
+ Format: l.xori rD,rA,I
+
+The goal is to reach a consensus on how to make the operand representations
 consistent. Which letter should be used for immediate values (I, K, L or N) and
 which register name should be used in the various cases.
-</p><p>Below follows the 16 different variations. They have been grouped into 13
+
+Below follows the 16 different variations. They have been grouped into 13
 general groups which try to encapsulate their behaviour. Feel free to comment
 about this division and revise it if necessary.
-</p>
-<h2> <span class="mw-headline" id="Groups"> Groups </span></h2>
-<h3> <span class="mw-headline" id="dst_.28reg.29.2C_src1_.28reg.29.2C_src2_.28reg.29"> dst (reg), src1 (reg), src2 (reg) </span></h3>
-<h4> <span class="mw-headline" id="rD.2CrA.2CrB"> rD,rA,rB </span></h4>
-<pre>Format: l.add rD,rA,rB
-Format: l.addc rD,rA,rB
-Format: l.and rD,rA,rB
-Format: l.cmov rD,rA,rB
-Format: l.div rD,rA,rB
-Format: l.divu rD,rA,rB
-Format: l.ff1 rD,rA,rB
-Format: l.fl1 rD,rA,rB
-Format: l.mul rD,rA,rB
-Format: l.mulu rD,rA,rB
-Format: l.or rD,rA,rB
-Format: l.ror rD,rA,rB
-Format: l.sll rD,rA,rB
-Format: l.sra rD,rA,rB
-Format: l.srl rD,rA,rB
-Format: l.sub rD,rA,rB
-Format: l.xor rD,rA,rB
-</pre>
-<h3> <span class="mw-headline" id="dst_.28reg.29.2C_src1_.28reg.29.2C_src2_.28imm.29"> dst (reg), src1 (reg), src2 (imm) </span></h3>
-<h4> <span class="mw-headline" id="rD.2CrA.2CI"> rD,rA,I </span></h4>
-<pre>Format: l.addi rD,rA,I
-Format: l.addic rD,rA,I
-Format: l.muli rD,rA,I
-Format: l.xori rD,rA,I
-</pre>
-<h4> <span class="mw-headline" id="rD.2CrA.2CK"> rD,rA,K </span></h4>
-<pre>Format: l.andi rD,rA,K
-Format: l.mfspr rD,rA,K
-Format: l.ori rD,rA,K
-</pre>
-<h4> <span class="mw-headline" id="rD.2CrA.2CL"> rD,rA,L </span></h4>
-<pre>Format: l.rori rD,rA,L
-Format: l.slli rD,rA,L
-Format: l.srai rD,rA,L
-Format: l.srli rD,rA,L
-</pre>
-<h3> <span class="mw-headline" id="src_.28imm.29"> src (imm) </span></h3>
-<h4> <span class="mw-headline" id="K"> K </span></h4>
-<pre>Format: l.nop K
-Format: l.sys K
-Format: l.trap K
-</pre>
-<h4> <span class="mw-headline" id="N"> N </span></h4>
-<pre>Format: l.bf N
-Format: l.bnf N
-Format: l.j N
-Format: l.jal N
-</pre>
-<h3> <span class="mw-headline" id="src_.28reg.29"> src (reg) </span></h3>
-<h4> <span class="mw-headline" id="rB"> rB </span></h4>
-<pre>Format: l.jalr rB
-Format: l.jr rB
-</pre>
-<h3> <span class="mw-headline" id="dst_.28reg.29.2C_src_.28imm.29"> dst (reg), src (imm) </span></h3>
-<h4> <span class="mw-headline" id="rD.2CK"> rD,K </span></h4>
-<pre>Format: l.movhi rD,K
-</pre>
-<h3> <span class="mw-headline" id="dst_.28reg.29"> dst (reg) </span></h3>
-<h4> <span class="mw-headline" id="rD"> rD </span></h4>
-<pre>Format: l.macrc rD
-</pre>
-<h3> <span class="mw-headline" id="dst_.28reg.29.2C_src_.28addr.29"> dst (reg), src (addr) </span></h3>
-<h4> <span class="mw-headline" id="rD.2CI.28rA.29"> rD,I(rA) </span></h4>
-<pre>Format: l.lbs rD,I(rA)
-Format: l.lbz rD,I(rA)
-Format: l.lhs rD,I(rA)
-Format: l.lhz rD,I(rA)
-Format: l.lws rD,I(rA)
-Format: l.lwz rD,I(rA)
-</pre>
-<h3> <span class="mw-headline" id="dst_.28addr.29.2C_src_.28reg.29"> dst (addr), src (reg) </span></h3>
-<h4> <span class="mw-headline" id="I.28rA.29.2CrB"> I(rA),rB </span></h4>
-<pre>Format: l.sb I(rA),rB
-Format: l.sd I(rA),rB
-Format: l.sh I(rA),rB
-Format: l.sw I(rA),rB
-</pre>
-<h3> <span class="mw-headline" id="dst_.28reg.29.2C_src_.28reg.29"> dst (reg), src (reg) </span></h3>
-<h4> <span class="mw-headline" id="rD.2CrA"> rD,rA </span></h4>
-<pre>Format: l.extbs rD,rA
-Format: l.extbz rD,rA
-Format: l.exths rD,rA
-Format: l.exthz rD,rA
-Format: l.extws rD,rA
-Format: l.extwz rD,rA
-</pre>
-<h3> <span class="mw-headline" id="src1_.28reg.29.2C_src2_.28reg.29"> src1 (reg), src2 (reg) </span></h3>
-<h4> <span class="mw-headline" id="rA.2CrB"> rA,rB </span></h4>
-<pre>Format: l.mac rA,rB
-Format: l.macu rA,rB
-Format: l.msb rA,rB
-Format: l.msbu rA,rB
-Format: l.muld rA,rB
-Format: l.muldu rA,rB
-Format: l.sfeq rA,rB
-Format: l.sfges rA,rB
-Format: l.sfgeu rA,rB
-Format: l.sfgts rA,rB
-Format: l.sfgtu rA,rB
-Format: l.sfles rA,rB
-Format: l.sfleu rA,rB
-Format: l.sflts rA,rB
-Format: l.sfltu rA,rB
-Format: l.sfne rA,rB
-</pre>
-<h3> <span class="mw-headline" id="src1_.28reg.29.2C_src2_.28imm.29"> src1 (reg), src2 (imm) </span></h3>
-<h4> <span class="mw-headline" id="rA.2CI"> rA,I </span></h4>
-<pre>Format: l.maci rA,I
-Format: l.sfeqi rA,I
-Format: l.sfgesi rA,I
-Format: l.sfgeui rA,I
-Format: l.sfgtsi rA,I
-Format: l.sfgtui rA,I
-Format: l.sflesi rA,I
-Format: l.sfleui rA,I
-Format: l.sfltsi rA,I
-Format: l.sfltui rA,I
-Format: l.sfnei rA,I
-</pre>
-<h3> <span class="mw-headline" id="src1_.28reg.29.2C_src2_.28reg.29.2C_src3_.28imm.29"> src1 (reg), src2 (reg), src3 (imm) </span></h3>
-<h4> <span class="mw-headline" id="rA.2CrB.2CK"> rA,rB,K </span></h4>
-<pre>Format: l.mtspr rA,rB,K
-</pre>
-<h3> <span class="mw-headline" id="no_operand"> no operand </span></h3>
-<pre>Format: l.csync
-Format: l.msync
-Format: l.psync
-Format: l.rfe
-</pre>
-<h3> <span class="mw-headline" id="custom_implementation"> custom implementation </span></h3>
-<pre>Format: l.cust1
-Format: l.cust2
-Format: l.cust3
-Format: l.cust4
-Format: l.cust5 rD,rA,rB,L,K
-Format: l.cust6
-Format: l.cust7
-Format: l.cust8
-</pre>
-<!-- 
-NewPP limit report
-Preprocessor node count: 122/1000000
-Post-expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Expensive parser function count: 0/100
--->
 
-<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:79-0!*!0!!en!*!edit=0 and timestamp 20161009050511 -->
-<div class="printfooter">
-Retrieved from "<a href="http://opencores.org/or1k/Operand_representation">http://opencores.org/or1k/Operand_representation</a>"</div>
-            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
-                        <div class="visualClear"></div>
-        </div>
-        
-                
-        <div class="visualClear"><p></p></div>
-        
-        <div id="footer">
-            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 30 April 2013, at 09:12.<li id="lastmod"></li>This page has been accessed 1,031 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
-<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Operand_representation", "wgTitle": "Operand representation", "wgAction": "view", "wgArticleId": 79, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 975, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
-	mediaWiki.loader.go();
-}
-</script>
+== Groups ==
 
-<script>if ( window.mediaWiki ) {
-	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
-	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
-}
-</script><!-- Served in 1.747 secs. -->            
-        </div>
-        
-        
-        </div>
-	<div style="clear:both;margin-left:200px;">
-            <!-- 728x90 -->
-            <script type="text/javascript">
-            GA_googleFillSlot("728x90");
-            </script>
-	</div>
-    </div>
-    <div class="bot">
-	&copy; copyright 1999-2016
-OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
-    </div>
-</div>
+=== dst (reg), src1 (reg), src2 (reg) ===
 
-<!-- Google search -->
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-<!-- /Google search -->
+==== rD,rA,rB ====
 
-</body>
-</html>
+ Format: l.add rD,rA,rB
+ Format: l.addc rD,rA,rB
+ Format: l.and rD,rA,rB
+ Format: l.cmov rD,rA,rB
+ Format: l.div rD,rA,rB
+ Format: l.divu rD,rA,rB
+ Format: l.ff1 rD,rA,rB
+ Format: l.fl1 rD,rA,rB
+ Format: l.mul rD,rA,rB
+ Format: l.mulu rD,rA,rB
+ Format: l.or rD,rA,rB
+ Format: l.ror rD,rA,rB
+ Format: l.sll rD,rA,rB
+ Format: l.sra rD,rA,rB
+ Format: l.srl rD,rA,rB
+ Format: l.sub rD,rA,rB
+ Format: l.xor rD,rA,rB
+
+=== dst (reg), src1 (reg), src2 (imm) ===
+
+==== rD,rA,I ====
+
+ Format: l.addi rD,rA,I
+ Format: l.addic rD,rA,I
+ Format: l.muli rD,rA,I
+ Format: l.xori rD,rA,I
+
+==== rD,rA,K ====
+
+ Format: l.andi rD,rA,K
+ Format: l.mfspr rD,rA,K
+ Format: l.ori rD,rA,K
+
+==== rD,rA,L ====
+
+ Format: l.rori rD,rA,L
+ Format: l.slli rD,rA,L
+ Format: l.srai rD,rA,L
+ Format: l.srli rD,rA,L
+
+=== src (imm) ===
+
+==== K ====
+
+ Format: l.nop K
+ Format: l.sys K
+ Format: l.trap K
+
+==== N ====
+
+ Format: l.bf N
+ Format: l.bnf N
+ Format: l.j N
+ Format: l.jal N
+
+=== src (reg) ===
+
+==== rB ====
+
+ Format: l.jalr rB
+ Format: l.jr rB
+
+=== dst (reg), src (imm) ===
+
+==== rD,K ====
+
+ Format: l.movhi rD,K
+
+=== dst (reg) ===
+
+==== rD ====
+
+ Format: l.macrc rD
+
+=== dst (reg), src (addr) ===
+
+==== rD,I(rA) ====
+
+ Format: l.lbs rD,I(rA)
+ Format: l.lbz rD,I(rA)
+ Format: l.lhs rD,I(rA)
+ Format: l.lhz rD,I(rA)
+ Format: l.lws rD,I(rA)
+ Format: l.lwz rD,I(rA)
+
+=== dst (addr), src (reg) ===
+
+==== I(rA),rB ====
+
+ Format: l.sb I(rA),rB
+ Format: l.sd I(rA),rB
+ Format: l.sh I(rA),rB
+ Format: l.sw I(rA),rB
+
+=== dst (reg), src (reg) ===
+
+==== rD,rA ====
+
+ Format: l.extbs rD,rA
+ Format: l.extbz rD,rA
+ Format: l.exths rD,rA
+ Format: l.exthz rD,rA
+ Format: l.extws rD,rA
+ Format: l.extwz rD,rA
+
+=== src1 (reg), src2 (reg) ===
+
+==== rA,rB ====
+
+ Format: l.mac rA,rB
+ Format: l.macu rA,rB
+ Format: l.msb rA,rB
+ Format: l.msbu rA,rB
+ Format: l.muld rA,rB
+ Format: l.muldu rA,rB
+ Format: l.sfeq rA,rB
+ Format: l.sfges rA,rB
+ Format: l.sfgeu rA,rB
+ Format: l.sfgts rA,rB
+ Format: l.sfgtu rA,rB
+ Format: l.sfles rA,rB
+ Format: l.sfleu rA,rB
+ Format: l.sflts rA,rB
+ Format: l.sfltu rA,rB
+ Format: l.sfne rA,rB
+
+=== src1 (reg), src2 (imm) ===
+
+==== rA,I ====
+
+ Format: l.maci rA,I
+ Format: l.sfeqi rA,I
+ Format: l.sfgesi rA,I
+ Format: l.sfgeui rA,I
+ Format: l.sfgtsi rA,I
+ Format: l.sfgtui rA,I
+ Format: l.sflesi rA,I
+ Format: l.sfleui rA,I
+ Format: l.sfltsi rA,I
+ Format: l.sfltui rA,I
+ Format: l.sfnei rA,I
+
+=== src1 (reg), src2 (reg), src3 (imm) ===
+
+==== rA,rB,K ====
+
+ Format: l.mtspr rA,rB,K
+
+=== no operand ===
+
+ Format: l.csync
+ Format: l.msync
+ Format: l.psync
+ Format: l.rfe
+
+=== custom implementation ===
+
+ Format: l.cust1
+ Format: l.cust2
+ Format: l.cust3
+ Format: l.cust4
+ Format: l.cust5 rD,rA,rB,L,K
+ Format: l.cust6
+ Format: l.cust7
+ Format: l.cust8

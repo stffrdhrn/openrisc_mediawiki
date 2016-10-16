@@ -1,395 +1,144 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-<head>
-            
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="generator" content="MediaWiki 1.17.0" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
-<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
-<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
-<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
-<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
-<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
-        <!--[if lt IE 7]>
-        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
-		<meta http-equiv="imagetoolbar" content="no" />
-        <![endif]-->
-        
-        <script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Or32Toolchain", "wgTitle": "Or32Toolchain", "wgAction": "view", "wgArticleId": 95, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1325, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>        
-        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
-		
-        <!-- Head Scripts -->
-                
-        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
-                
-                
-		        
-		        
-		        
-            <title>Or32Toolchain - OR1K :: OpenCores</title>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
-    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
-        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
-    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
-    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
-    <script type="text/javascript">
-    GS_googleAddAdSenseService("ca-pub-0097483751598630");
-    GS_googleEnableAllServices();
-    </script>
-    <script type="text/javascript">
-    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
-    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
-    </script>
-    <script type="text/javascript">
-    GA_googleFetchAds();
-    </script>
-    <!--[if IE 6]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
-    <![endif]-->
-    <!--[if (IE 7)|(IE 8)]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
-    <![endif]-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <script type="text/javascript">
-        
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-2763846-2']);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        
-    </script>
-    
-</head>
-<body>
-<div class="main">
-    <div class="top">
-        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
-    </div>
-    <div class="line">
-	<div></div>
-	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
-    </div>
-    <div class="mid" id="dm">
-        <div class="mainmenu" id="dml">
-	            
-        <div class="menu menu-login">
-                Username:                                <form action="../login" method="post">
-                    <input class="design" name="user" type="text" />
-                    <br />
-                    Password:
-                    <br />
-                    <input class="design" name="pass" type="password" />
-                    <br />
-                    <input class="design" name="remember" type="checkbox" />Remember me
-                    <br />
-                    <input type="hidden" name="redirect" value="or1k/" />
-                    <input class="design" title="Login" type="submit" value="Login" />
-                </form>
-                <form action="../register" method="post">
-                    <input class="design" title="Register" type="submit" value="Register" />
-                </form>
-                        </div>
-        
-                
-        
-        <div class="menu" id="p-navigation">
-            <h2>Navigation</h2>
-		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
-        
-                
-        <div class="menu">
-            <h2><label for="searchInput">Search</label></h2>
-                <form action="/wiki1/index.php" id="searchform">
-                    <div>
-                        <input type='hidden' name="title" value="Special:Search"/>
-                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
-                        
-                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
-                        
-                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
-                                                
-                    </div>
-                </form>
-        </div>
-        
-                
-        <div class="menu menu-tools">
-            <h2>Toolbox</h2>
-                <ul>
-                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/Or32Toolchain" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/Or32Toolchain" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=Or32Toolchain&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=Or32Toolchain&amp;oldid=1325" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
-        </div>
-        
-        
-        </div>
-        <div class="content" id="dmc">
-	    
-<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
-    
-    <div style="float: left; width: 720px; height: 60px;">
-        <!-- 720x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("720x60");
-        </script>
-    </div>
-        <div style="float: left; width: 300px; height: 60px;">
-        <!-- 300x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("300x60");
-        </script>
-    </div>
-    
-</div>
-	                        
-        <a name="top" id="top"></a>
-        
-                
-        <div id="oc-actions">
-            <p id="ca-nstab-main" class="selected"><a href="/or1k/Or32Toolchain" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:Or32Toolchain&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=Or32Toolchain&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=Or32Toolchain&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
-        
-        <h1 id="firstHeading" class="firstHeading">
-            Or32Toolchain        </h1>
-        
-        <div id="bodyContent">
-            <h3 id="siteSub">From OR1K</h3>
-            <div id="contentSub"></div>
-                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
-            <table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Legacy_toolchain"><span class="tocnumber">1</span> <span class="toctext">Legacy toolchain</span></a>
-<ul>
-<li class="toclevel-2 tocsection-2"><a href="#Precompiled_binaries"><span class="tocnumber">1.1</span> <span class="toctext">Precompiled binaries</span></a>
-<ul>
-<li class="toclevel-3 tocsection-3"><a href="#Latest_version"><span class="tocnumber">1.1.1</span> <span class="toctext">Latest version</span></a></li>
-<li class="toclevel-3 tocsection-4"><a href="#1.0rc1"><span class="tocnumber">1.1.2</span> <span class="toctext">1.0rc1</span></a></li>
-</ul>
-</li>
-<li class="toclevel-2 tocsection-5"><a href="#Building_from_source"><span class="tocnumber">1.2</span> <span class="toctext">Building from source</span></a>
-<ul>
-<li class="toclevel-3 tocsection-6"><a href="#Building"><span class="tocnumber">1.2.1</span> <span class="toctext">Building</span></a></li>
-</ul>
-</li>
-<li class="toclevel-2 tocsection-7"><a href="#Binutils"><span class="tocnumber">1.3</span> <span class="toctext">Binutils</span></a></li>
-<li class="toclevel-2 tocsection-8"><a href="#GCC"><span class="tocnumber">1.4</span> <span class="toctext">GCC</span></a></li>
-<li class="toclevel-2 tocsection-9"><a href="#Newlib"><span class="tocnumber">1.5</span> <span class="toctext">Newlib</span></a></li>
-</ul>
-</li>
-</ul>
-</td></tr></table>
-<h2> <span class="mw-headline" id="Legacy_toolchain"> Legacy toolchain </span></h2>
-<p>The OpenRISC toolchain previously used the or32 prefix instead of or1k. If you encounter any tools starting with or32, this is probably part of the legacy toolchain. No further development is being made on the or32 toolchain, and we recommend that you use the or1k toolchain for all new projects. The or32 toolchain is primarily for projects that for different reasons can't or won't upgrade to the or1k toolchain
-</p><p><br />
-</p>
-<h3> <span class="mw-headline" id="Precompiled_binaries"> Precompiled binaries </span></h3>
-<h4> <span class="mw-headline" id="Latest_version"> Latest version </span></h4>
-<p><b>Note</b>: This is not an official release but should still be fine to use.
-</p>
-<ul><li> <a href="ftp://ocuser:ocuser@openrisc.opencores.org/toolchain/openrisc-toolchain-ocsvn-rev789.tar.bz2" class="external text" rel="nofollow">for Ubuntu 32-bit</a> built from SVN rev. 789, also contains <a href="/or1k/Or1ksim" title="Or1ksim">or1ksim</a>
-</li></ul>
-<p>Extract the file under /opt and add the following to your ~/.bashrc (or other shell-appropriate) file.  See the <a href="#1.0rc1">1.0rc1</a> section for more detailed instructions regarding the PATH environment variable.
-</p>
-<pre>export PATH=$PATH:/opt/openrisc/toolchain/bin:/opt/openrisc/or1ksim/bin
-</pre>
-<p>For precompiled versions for other PC architectures see below.
-</p>
-<h4> <span class="mw-headline" id="1.0rc1"> 1.0rc1 </span></h4>
-<p>Pre-compiled binaries are only available for the 1.0rc1 version of the Newlib toolchain. All commands have the prefix or32-elf- (for example or32-elf-gcc). Or1ksim 0.5.1 and newlib 0.18.0 are included.
-</p>
-<ul><li> <a href="ftp://ocuser:ocuser@openrisc.opencores.org/toolchain/or32-elf-1.0rc1-x86.tar.bz2" class="external text" rel="nofollow">for Ubuntu x86/i686 (32-bit)</a>
-</li><li> <a href="ftp://ocuser:ocuser@openrisc.opencores.org/toolchain/or32-elf-1.0rc1-CentOS-x86_64.tar.bz2" class="external text" rel="nofollow">for CentOS-5.5 x86_64 (64-bit)</a>
-</li><li> <a href="ftp://ocuser:ocuser@openrisc.opencores.org/toolchain/or32-elf-1.0rc1-OS_X-10.6.3.tar.bz2" class="external text" rel="nofollow">for OS X 10.6 (Snow Leopard)</a> (<b>Note.</b> no C++ libraries)
-</li></ul>
-<p>The following commands indicate how to install the toolchain from the download archive. The tools are installed to the /opt path and symbolic links are created to more general path names (which helps with switching to more updated versions of the toolchain later.) The shell's PATH environment variable must be updated so that the tools can be located by the system.  Bear in mind that the PATH variable is scanned for matches starting at the beginning and uses the first match it finds.  If your system is not finding the correct tools when compiling, you may need to add the or32 tools to the beginning of the PATH and not the end.  You may choose to install in any other directory to which you have write access.
-</p>
-<pre>cd /opt
-tar xjf <i>path to downloaded archive</i>/<i>archive name</i>
-sudo ln -s or32-elf-1.0rc1 or32-elf
-sudo ln -s or1ksim-0.5.1rc1 or1ksim
-</pre>
-<p>Having installed the software, add the relevant directories to your PATH. 
+== Legacy toolchain ==
+
+The OpenRISC toolchain previously used the or32 prefix instead of or1k. If you encounter any tools starting with or32, this is probably part of the legacy toolchain. No further development is being made on the or32 toolchain, and we recommend that you use the or1k toolchain for all new projects. The or32 toolchain is primarily for projects that for different reasons can't or won't upgrade to the or1k toolchain
+
+
+=== Precompiled binaries ===
+
+==== Latest version ====
+
+'''Note''': This is not an official release but should still be fine to use.
+
+* [ftp://ocuser:ocuser@openrisc.opencores.org/toolchain/openrisc-toolchain-ocsvn-rev789.tar.bz2 for Ubuntu 32-bit] built from SVN rev. 789, also contains [[or1ksim]]
+
+Extract the file under /opt and add the following to your ~/.bashrc (or other shell-appropriate) file.  See the [[#1.0rc1|1.0rc1]] section for more detailed instructions regarding the PATH environment variable.
+
+ export PATH=$PATH:/opt/openrisc/toolchain/bin:/opt/openrisc/or1ksim/bin
+
+For precompiled versions for other PC architectures see below.
+
+==== 1.0rc1 ====
+Pre-compiled binaries are only available for the 1.0rc1 version of the Newlib toolchain. All commands have the prefix or32-elf- (for example or32-elf-gcc). Or1ksim 0.5.1 and newlib 0.18.0 are included.
+* [ftp://ocuser:ocuser@openrisc.opencores.org/toolchain/or32-elf-1.0rc1-x86.tar.bz2 for Ubuntu x86/i686 (32-bit)]
+* [ftp://ocuser:ocuser@openrisc.opencores.org/toolchain/or32-elf-1.0rc1-CentOS-x86_64.tar.bz2 for CentOS-5.5 x86_64 (64-bit)]
+* [ftp://ocuser:ocuser@openrisc.opencores.org/toolchain/or32-elf-1.0rc1-OS_X-10.6.3.tar.bz2 for OS X 10.6 (Snow Leopard)] ('''Note.''' no C++ libraries)
+
+The following commands indicate how to install the toolchain from the download archive. The tools are installed to the /opt path and symbolic links are created to more general path names (which helps with switching to more updated versions of the toolchain later.) The shell's PATH environment variable must be updated so that the tools can be located by the system.  Bear in mind that the PATH variable is scanned for matches starting at the beginning and uses the first match it finds.  If your system is not finding the correct tools when compiling, you may need to add the or32 tools to the beginning of the PATH and not the end.  You may choose to install in any other directory to which you have write access.
+
+ cd /opt
+ tar xjf ''path to downloaded archive''/''archive name''
+ sudo ln -s or32-elf-1.0rc1 or32-elf
+ sudo ln -s or1ksim-0.5.1rc1 or1ksim
+
+Having installed the software, add the relevant directories to your PATH. 
 Under sh or bash use
-</p>
-<pre>export PATH=$PATH:/opt/or32-elf/bin:/opt/or1ksim/bin
-</pre>
-<p>or, to add the tools to the beginning of the PATH
-</p>
-<pre>export PATH=/opt/or32-elf/bin:/opt/or1ksim/bin:$PATH
-</pre>
-<p>Under csh or tcsh use:
-</p>
-<pre>setenv PATH $PATH:/opt/or32-elf/bin:/opt/or1ksim/bin
-</pre>
-<p>or, to add the tools to the beginning of the PATH
-</p>
-<pre>setenv PATH /opt/or32-elf/bin:/opt/or1ksim/bin:$PATH
-</pre>
-<p>These will typically be added to your .profile, .login, .bashrc, or other shell initialization file as appropriate. Note. If the toolchain was installed in a directory other than /opt, substitute that directory's path for /opt.
-</p>
-<h3> <span class="mw-headline" id="Building_from_source"> Building from source </span></h3>
-<p>Source code for the legacy toolchain can be found in [<a href="http://opencores.org/websvn,listing?repname=openrisc&amp;path=%2Fopenrisc%2Ftrunk%2Fgnu-stable%2F#path_openrisc_trunk_gnu-stable_" class="external text" rel="nofollow">OpenCores SVN</a>]
-</p><p><b>Note</b>: There has been a recent reorganization of the SVN repository, to reduce the size of the SVN checkout. Rather than a single directory, there are now tree directories, <b>gnu-stable</b> (for the stable tool chain), <b>gnu-old</b> (for legacy versions) and <b>gnu-dev</b> (for experimental versions).
-</p><p>The source for the stable version of the GNU tools and newlib is available under SVN:
-</p>
-<pre>svn co <a href="http://opencores.org/ocsvn/openrisc/openrisc/trunk/gnu-stable" class="external free" rel="nofollow">http://opencores.org/ocsvn/openrisc/openrisc/trunk/gnu-stable</a> 
-</pre>
-<p><b>Note</b>: There is a known problem with SVN timing out. The checkout will seem OK, but not all files are downloaded and no error message is shown. The solution is to repeatedly run the following command until no more files are downloaded.
-</p>
-<pre>svn update gnu-stable
-</pre>
-<p>The source for uClibc and Linux (needed for the header files for the toolchain) is currently held in a <a href="http://git-scm.com/" class="external text" rel="nofollow">git</a> repository run by <a href="http://southpole.se/" class="external text" rel="nofollow">South Pole</a>. It is best to save the source for these into the gnu-stable path just created when checking out from the OpenCores SVN repository.
-</p>
-<pre>cd gnu-stable
-git clone <a href="git://git.openrisc.net/jonas/uClibc" class="external free" rel="nofollow">git://git.openrisc.net/jonas/uClibc</a>
-git clone <a href="git://git.openrisc.net/jonas/linux" class="external free" rel="nofollow">git://git.openrisc.net/jonas/linux</a>
-</pre>
-<h4> <span class="mw-headline" id="Building"> Building </span></h4>
-<p><b>Warning.</b> Before you get here have you installed all the prerequisites, <i>including Or1ksim</i>. See <a href="#Prerequisites">Prequisites</a> for details.
-</p><p>There are two toolchains that can be compiled using different libraries.
-</p>
-<ul><li> The newlib toolchain, with toolchain executables prefixed by or32-elf- is for compiling applications which will be run on the bare metal, or without an operating system (this includes building the Linux kernel).
-</li><li> The uClibc toolchain, with toolchain exeutables prefixed by or32-linux- is for compiling software intended to run on Linux, as userspace applications.
-</li></ul>
-<p>The script used to build the toolchains is bld-all.sh and it is found in the gnu-src/ path. It will create a unified build environment when compiling the GNU tools (binutils, GCC, GDB.). For a full list of options provided by the build script, run it with the --help option.
-</p>
-<pre>./bld-all.sh --help 
-</pre>
-<p>The following instructions assume the tools are installed in /opt/openrisc, which is a common choice (/opt/or32 is also popular). Substitute your chosen installation directory in the following instructions. It is assumed that <a href="/or1k/Or1ksim" title="Or1ksim">Or1ksim</a> has been installed in /opt/or1ksim.
-</p><p>To build and install both toolchains from scratch:
-</p>
-<pre>./bld-all.sh --force --prefix /opt/openrisc --or1ksim-dir /opt/or1ksim --uclibc-dir uClibc --linux-dir linux 
-</pre>
-<p>To build and install just the newlib toolchain:
-</p>
-<pre>./bld-all.sh --force --prefix /opt/openrisc --or1ksim-dir /opt/or1ksim --no-uclibc --no-or32-linux 
-</pre>
-<p>To build and install just the uClibc toolchain:
-</p>
-<pre>./bld-all.sh --force --prefix /opt/openrisc --or1ksim-dir /opt/or1ksim --uclibc-dir uClibc --linux-dir linux --no-newlib --no-or32-elf 
-</pre>
-<p>Add the new tools to the path. Under sh or bash
-</p>
-<pre>export PATH=$PATH:/opt/openrisc/bin
-</pre>
-<p>or, to add the tools to the beginning of the PATH
-</p>
-<pre>export PATH=/opt/openrisc/bin:$PATH
-</pre>
-<p>Under csh or tcsh
-</p>
-<pre>setenv PATH $PATH:/opt/openrisc/bin
-</pre>
-<p>or, to add the tools to the beginning of the PATH
-</p>
-<pre>setenv PATH /opt/openrisc/bin:$PATH
-</pre>
-<p>These commands will typically be added to your .profile, .login, .bashrc, or other shell initialization file.
-</p><p><b>Note.</b> Some users have reported problems when rebuilding the uClibc toolchain a second time, due to the existing headers on the search path. The solution is to remove the existing implementation from the PATH variable.
-</p><p><br />
-</p>
-<h3> <span class="mw-headline" id="Binutils"> Binutils </span></h3>
-<p>or32 binutils is based on binutils 2.20.1
-</p><p>This version does not support dynamic objects or atomic operations found in the newer version
-</p>
-<h3> <span class="mw-headline" id="GCC"> GCC </span></h3>
-<p>GCC 4.5.1 has been ported to OpenRISC and can be checked out from OpenCores SVN
-</p><p>The key changes since the previous version (4.2.2) are:
-</p>
-<ul><li> Previous versions of OpenRISC GCC prefixed all global symbols (functions and variables) in the compiled code with an underscore ('_'). Historically this was done to avoid namespace clashes. However with ELF output files it really is no longer needed. GDB struggles with mapping the high level names in the compiled code to the values in the object file symbol table, particularly with STABS debug info.
-</li></ul>
-<dl><dd> Most modern compilers leave global names unchanged for ELF targets. With this version of GCC, we have adopted this convention for OpenRISC. However it will mean that code compiled with the old compiler will not be linkable with code from the new compiler (since the naming convention for globals will be different). Assembler modules which link to global names will also need modifying. This should not cause any problem in practice, since there are not large bodies of pre-compiled library code out there, nor substantial bodies of hand-written assembler.
-</dd></dl>
-<ul><li> Previous versions of OpenRISC GCC generated STABS debugging info by default when -g was used. This is now quite an old, inconsistent and limited format. Most modern compilers generate DWARF2 debugging for -g. DWARF2 offers a richer debugging experience, and is the preferred format for GDB. It is what is generated if you use GCC with -ggdb. With this version of GCC, we have made DWARF2 the default debugging format for OpenRISC GCC. This should not cause compatibility problems. STABS debugging output can still be generated by using -gstabs.
-</li><li> C++ is supported, but uses only static linking of libraries (since dynamic linking is not currently supported in binutils).
-</li><li> Function prologues are now much more flexible, being generated by the <i>prologue</i> pattern in the machine definition.
-</li><li> The "red zone" is reduced to 128 bytes, but is now actually used (previously it was defined to be 2K, but not used. It is thus essential that interrupt handlers do not use the first 128 bytes of stack. An option -mredzone=<i>size</i> is available to change this, including setting the red zone to zero (which will reduce performance).
-</li><li> Sibcall optimization is now supported by default.
-</li><li> The frame pointer is omitted for all optimization levels above -O0.
-</li><li> Option -maj is no longer supported.
-</li><li> All regression tests now pass.
-</li><li> The constants <b>OR1K</b>, <b>__or1k__</b> and <b>__OR1K__</b> were not defined in GCC 4.2.2 (they had been in earlier releases). These are now defined.
-</li><li> GCC 3.4.4. for OpenRISC assumed the availability of hardware multiplication, but not hardware division by default (i.e. -mhard-mul, -msoft-div), which was consistent with the default Verilog configuration. GCC 4.2.2 changed this to assume neither hardware multiplication nor hardware division are present (i.e. -msoft-mul, -msoft-div). The current GCC 4.5.1, has restored the default to -mhard-mul, -msoft-div ofr consistency with the default hardware configuration.
-</li></ul>
-<h3> <span class="mw-headline" id="Newlib"> Newlib </span></h3>
 
-<!-- 
-NewPP limit report
-Preprocessor node count: 34/1000000
-Post-expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Expensive parser function count: 0/100
--->
+ export PATH=$PATH:/opt/or32-elf/bin:/opt/or1ksim/bin
 
-<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:95-0!*!0!!en!*!edit=0 and timestamp 20161009012327 -->
-<div class="printfooter">
-Retrieved from "<a href="http://opencores.org/or1k/Or32Toolchain">http://opencores.org/or1k/Or32Toolchain</a>"</div>
-            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
-                        <div class="visualClear"></div>
-        </div>
-        
-                
-        <div class="visualClear"><p></p></div>
-        
-        <div id="footer">
-            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 27 January 2015, at 09:39.<li id="lastmod"></li>This page has been accessed 2,959 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
-<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Or32Toolchain", "wgTitle": "Or32Toolchain", "wgAction": "view", "wgArticleId": 95, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1325, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
-	mediaWiki.loader.go();
-}
-</script>
+or, to add the tools to the beginning of the PATH
 
-<script>if ( window.mediaWiki ) {
-	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
-	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
-}
-</script><!-- Served in 1.583 secs. -->            
-        </div>
-        
-        
-        </div>
-	<div style="clear:both;margin-left:200px;">
-            <!-- 728x90 -->
-            <script type="text/javascript">
-            GA_googleFillSlot("728x90");
-            </script>
-	</div>
-    </div>
-    <div class="bot">
-	&copy; copyright 1999-2016
-OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
-    </div>
-</div>
+ export PATH=/opt/or32-elf/bin:/opt/or1ksim/bin:$PATH
 
-<!-- Google search -->
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-<!-- /Google search -->
+Under csh or tcsh use:
 
-</body>
-</html>
+ setenv PATH $PATH:/opt/or32-elf/bin:/opt/or1ksim/bin
+
+or, to add the tools to the beginning of the PATH
+
+ setenv PATH /opt/or32-elf/bin:/opt/or1ksim/bin:$PATH
+
+These will typically be added to your .profile, .login, .bashrc, or other shell initialization file as appropriate. Note. If the toolchain was installed in a directory other than /opt, substitute that directory's path for /opt.
+
+=== Building from source ===
+
+Source code for the legacy toolchain can be found in [[http://opencores.org/websvn,listing?repname=openrisc&path=%2Fopenrisc%2Ftrunk%2Fgnu-stable%2F#path_openrisc_trunk_gnu-stable_ OpenCores SVN]]
+
+'''Note''': There has been a recent reorganization of the SVN repository, to reduce the size of the SVN checkout. Rather than a single directory, there are now tree directories, '''gnu-stable''' (for the stable tool chain), '''gnu-old''' (for legacy versions) and '''gnu-dev''' (for experimental versions).
+
+The source for the stable version of the GNU tools and newlib is available under SVN:
+
+ svn co http://opencores.org/ocsvn/openrisc/openrisc/trunk/gnu-stable 
+
+'''Note''': There is a known problem with SVN timing out. The checkout will seem OK, but not all files are downloaded and no error message is shown. The solution is to repeatedly run the following command until no more files are downloaded.
+
+ svn update gnu-stable
+
+The source for uClibc and Linux (needed for the header files for the toolchain) is currently held in a [http://git-scm.com/ git] repository run by [http://southpole.se/ South Pole]. It is best to save the source for these into the gnu-stable path just created when checking out from the OpenCores SVN repository.
+
+ cd gnu-stable
+ git clone git://git.openrisc.net/jonas/uClibc
+ git clone git://git.openrisc.net/jonas/linux
+
+==== Building ====
+
+'''Warning.''' Before you get here have you installed all the prerequisites, ''including Or1ksim''. See [[#Prerequisites|Prequisites]] for details.
+
+There are two toolchains that can be compiled using different libraries.
+* The newlib toolchain, with toolchain executables prefixed by or32-elf- is for compiling applications which will be run on the bare metal, or without an operating system (this includes building the Linux kernel).
+* The uClibc toolchain, with toolchain exeutables prefixed by or32-linux- is for compiling software intended to run on Linux, as userspace applications.
+
+The script used to build the toolchains is bld-all.sh and it is found in the gnu-src/ path. It will create a unified build environment when compiling the GNU tools (binutils, GCC, GDB.). For a full list of options provided by the build script, run it with the --help option.
+
+ ./bld-all.sh --help 
+
+The following instructions assume the tools are installed in /opt/openrisc, which is a common choice (/opt/or32 is also popular). Substitute your chosen installation directory in the following instructions. It is assumed that [[Or1ksim]] has been installed in /opt/or1ksim.
+
+To build and install both toolchains from scratch:
+
+ ./bld-all.sh --force --prefix /opt/openrisc --or1ksim-dir /opt/or1ksim --uclibc-dir uClibc --linux-dir linux 
+
+To build and install just the newlib toolchain:
+
+ ./bld-all.sh --force --prefix /opt/openrisc --or1ksim-dir /opt/or1ksim --no-uclibc --no-or32-linux 
+
+To build and install just the uClibc toolchain:
+
+ ./bld-all.sh --force --prefix /opt/openrisc --or1ksim-dir /opt/or1ksim --uclibc-dir uClibc --linux-dir linux --no-newlib --no-or32-elf 
+
+Add the new tools to the path. Under sh or bash
+
+ export PATH=$PATH:/opt/openrisc/bin
+
+or, to add the tools to the beginning of the PATH
+ 
+ export PATH=/opt/openrisc/bin:$PATH
+
+Under csh or tcsh
+
+ setenv PATH $PATH:/opt/openrisc/bin
+
+or, to add the tools to the beginning of the PATH
+
+ setenv PATH /opt/openrisc/bin:$PATH
+
+These commands will typically be added to your .profile, .login, .bashrc, or other shell initialization file.
+
+'''Note.''' Some users have reported problems when rebuilding the uClibc toolchain a second time, due to the existing headers on the search path. The solution is to remove the existing implementation from the PATH variable.
+
+
+
+=== Binutils ===
+
+or32 binutils is based on binutils 2.20.1
+
+This version does not support dynamic objects or atomic operations found in the newer version
+
+=== GCC ===
+
+GCC 4.5.1 has been ported to OpenRISC and can be checked out from OpenCores SVN
+
+The key changes since the previous version (4.2.2) are:
+* Previous versions of OpenRISC GCC prefixed all global symbols (functions and variables) in the compiled code with an underscore ('_'). Historically this was done to avoid namespace clashes. However with ELF output files it really is no longer needed. GDB struggles with mapping the high level names in the compiled code to the values in the object file symbol table, particularly with STABS debug info.
+: Most modern compilers leave global names unchanged for ELF targets. With this version of GCC, we have adopted this convention for OpenRISC. However it will mean that code compiled with the old compiler will not be linkable with code from the new compiler (since the naming convention for globals will be different). Assembler modules which link to global names will also need modifying. This should not cause any problem in practice, since there are not large bodies of pre-compiled library code out there, nor substantial bodies of hand-written assembler.
+* Previous versions of OpenRISC GCC generated STABS debugging info by default when -g was used. This is now quite an old, inconsistent and limited format. Most modern compilers generate DWARF2 debugging for -g. DWARF2 offers a richer debugging experience, and is the preferred format for GDB. It is what is generated if you use GCC with -ggdb. With this version of GCC, we have made DWARF2 the default debugging format for OpenRISC GCC. This should not cause compatibility problems. STABS debugging output can still be generated by using -gstabs.
+* C++ is supported, but uses only static linking of libraries (since dynamic linking is not currently supported in binutils).
+* Function prologues are now much more flexible, being generated by the ''prologue'' pattern in the machine definition.
+* The "red zone" is reduced to 128 bytes, but is now actually used (previously it was defined to be 2K, but not used. It is thus essential that interrupt handlers do not use the first 128 bytes of stack. An option -mredzone=''size'' is available to change this, including setting the red zone to zero (which will reduce performance).
+* Sibcall optimization is now supported by default.
+* The frame pointer is omitted for all optimization levels above -O0.
+* Option -maj is no longer supported.
+* All regression tests now pass.
+* The constants '''OR1K''', '''__or1k__''' and '''__OR1K__''' were not defined in GCC 4.2.2 (they had been in earlier releases). These are now defined.
+* GCC 3.4.4. for OpenRISC assumed the availability of hardware multiplication, but not hardware division by default (i.e. -mhard-mul, -msoft-div), which was consistent with the default Verilog configuration. GCC 4.2.2 changed this to assume neither hardware multiplication nor hardware division are present (i.e. -msoft-mul, -msoft-div). The current GCC 4.5.1, has restored the default to -mhard-mul, -msoft-div ofr consistency with the default hardware configuration.
+
+=== Newlib ===

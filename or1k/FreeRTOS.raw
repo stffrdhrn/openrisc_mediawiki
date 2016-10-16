@@ -1,433 +1,170 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-<head>
-            
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="generator" content="MediaWiki 1.17.0" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
-<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
-<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
-<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
-<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
-<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
-        <!--[if lt IE 7]>
-        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
-		<meta http-equiv="imagetoolbar" content="no" />
-        <![endif]-->
-        
-        <script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "FreeRTOS", "wgTitle": "FreeRTOS", "wgAction": "view", "wgArticleId": 21, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 944, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>        
-        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
-		
-        <!-- Head Scripts -->
-                
-        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
-                
-                
-		        
-		        
-		        
-            <title>FreeRTOS - OR1K :: OpenCores</title>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
-    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
-        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
-    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
-    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
-    <script type="text/javascript">
-    GS_googleAddAdSenseService("ca-pub-0097483751598630");
-    GS_googleEnableAllServices();
-    </script>
-    <script type="text/javascript">
-    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
-    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
-    </script>
-    <script type="text/javascript">
-    GA_googleFetchAds();
-    </script>
-    <!--[if IE 6]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
-    <![endif]-->
-    <!--[if (IE 7)|(IE 8)]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
-    <![endif]-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <script type="text/javascript">
-        
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-2763846-2']);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        
-    </script>
-    
-</head>
-<body>
-<div class="main">
-    <div class="top">
-        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
-    </div>
-    <div class="line">
-	<div></div>
-	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
-    </div>
-    <div class="mid" id="dm">
-        <div class="mainmenu" id="dml">
-	            
-        <div class="menu menu-login">
-                Username:                                <form action="../login" method="post">
-                    <input class="design" name="user" type="text" />
-                    <br />
-                    Password:
-                    <br />
-                    <input class="design" name="pass" type="password" />
-                    <br />
-                    <input class="design" name="remember" type="checkbox" />Remember me
-                    <br />
-                    <input type="hidden" name="redirect" value="or1k/" />
-                    <input class="design" title="Login" type="submit" value="Login" />
-                </form>
-                <form action="../register" method="post">
-                    <input class="design" title="Register" type="submit" value="Register" />
-                </form>
-                        </div>
-        
-                
-        
-        <div class="menu" id="p-navigation">
-            <h2>Navigation</h2>
-		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
-        
-                
-        <div class="menu">
-            <h2><label for="searchInput">Search</label></h2>
-                <form action="/wiki1/index.php" id="searchform">
-                    <div>
-                        <input type='hidden' name="title" value="Special:Search"/>
-                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
-                        
-                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
-                        
-                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
-                                                
-                    </div>
-                </form>
-        </div>
-        
-                
-        <div class="menu menu-tools">
-            <h2>Toolbox</h2>
-                <ul>
-                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/FreeRTOS" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/FreeRTOS" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=FreeRTOS&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=FreeRTOS&amp;oldid=944" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
-        </div>
-        
-        
-        </div>
-        <div class="content" id="dmc">
-	    
-<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
-    
-    <div style="float: left; width: 720px; height: 60px;">
-        <!-- 720x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("720x60");
-        </script>
-    </div>
-        <div style="float: left; width: 300px; height: 60px;">
-        <!-- 300x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("300x60");
-        </script>
-    </div>
-    
-</div>
-	                        
-        <a name="top" id="top"></a>
-        
-                
-        <div id="oc-actions">
-            <p id="ca-nstab-main" class="selected"><a href="/or1k/FreeRTOS" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:FreeRTOS&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=FreeRTOS&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=FreeRTOS&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
-        
-        <h1 id="firstHeading" class="firstHeading">
-            FreeRTOS        </h1>
-        
-        <div id="bodyContent">
-            <h3 id="siteSub">From OR1K</h3>
-            <div id="contentSub"></div>
-                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
-            <p>This page provides information about ports of FreeRTOS to OpenRISC
-</p>
-<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a>
-<ul>
-<li class="toclevel-2 tocsection-2"><a href="#FreeRTOS"><span class="tocnumber">1.1</span> <span class="toctext">FreeRTOS</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-3"><a href="#FreeRTOS_port_for_OpenRISC"><span class="tocnumber">2</span> <span class="toctext">FreeRTOS port for OpenRISC</span></a>
-<ul>
-<li class="toclevel-2 tocsection-4"><a href="#Overall_structure"><span class="tocnumber">2.1</span> <span class="toctext">Overall structure</span></a></li>
-<li class="toclevel-2 tocsection-5"><a href="#Directory_structure"><span class="tocnumber">2.2</span> <span class="toctext">Directory structure</span></a></li>
-<li class="toclevel-2 tocsection-6"><a href="#portable.h"><span class="tocnumber">2.3</span> <span class="toctext">portable.h</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#portmacro.h"><span class="tocnumber">2.4</span> <span class="toctext">portmacro.h</span></a>
-<ul>
-<li class="toclevel-3 tocsection-8"><a href="#Type_definitions"><span class="tocnumber">2.4.1</span> <span class="toctext">Type definitions</span></a></li>
-<li class="toclevel-3 tocsection-9"><a href="#Architecure_specific_definitions"><span class="tocnumber">2.4.2</span> <span class="toctext">Architecure specific definitions</span></a></li>
-</ul>
-</li>
-<li class="toclevel-2 tocsection-10"><a href="#Context_management"><span class="tocnumber">2.5</span> <span class="toctext">Context management</span></a>
-<ul>
-<li class="toclevel-3 tocsection-11"><a href="#Context_save"><span class="tocnumber">2.5.1</span> <span class="toctext">Context save</span></a></li>
-<li class="toclevel-3 tocsection-12"><a href="#Context_restore"><span class="tocnumber">2.5.2</span> <span class="toctext">Context restore</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-13"><a href="#Download_source_code"><span class="tocnumber">3</span> <span class="toctext">Download source code</span></a></li>
-<li class="toclevel-1 tocsection-14"><a href="#Compile_and_running_demo_project"><span class="tocnumber">4</span> <span class="toctext">Compile and running demo project</span></a>
-<ul>
-<li class="toclevel-2 tocsection-15"><a href="#Compile"><span class="tocnumber">4.1</span> <span class="toctext">Compile</span></a></li>
-<li class="toclevel-2 tocsection-16"><a href="#Running"><span class="tocnumber">4.2</span> <span class="toctext">Running</span></a></li>
-<li class="toclevel-2 tocsection-17"><a href="#Debugging"><span class="tocnumber">4.3</span> <span class="toctext">Debugging</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-18"><a href="#Bug_reporting"><span class="tocnumber">5</span> <span class="toctext">Bug reporting</span></a></li>
-<li class="toclevel-1 tocsection-19"><a href="#Future_work"><span class="tocnumber">6</span> <span class="toctext">Future work</span></a></li>
-<li class="toclevel-1 tocsection-20"><a href="#Past_FreeRTOS_ports"><span class="tocnumber">7</span> <span class="toctext">Past FreeRTOS ports</span></a></li>
-</ul>
-</td></tr></table>
-<h2> <span class="mw-headline" id="Introduction"> Introduction </span></h2>
-<h3> <span class="mw-headline" id="FreeRTOS"> FreeRTOS </span></h3>
-<p>FreeRTOS is an open source, royalty free, real-time kernel for embedded systems. It is written in ANSI C and assembly code.  It is distributed under the GPL with an optional exception. The exception permits users' proprietary code to remain closed source while maintaining the kernel itself as open source. 
-</p>
-<ul><li> FreeRTOS is open soruce and free RTOS kernel for embedded systems.
-</li><li> it supports both preemptive and non-preemptive scheduiling policy.
-</li><li> it supports task and coruotines (simple and lightweight task that has very limited stack).
-</li></ul>
-<h2> <span class="mw-headline" id="FreeRTOS_port_for_OpenRISC"> FreeRTOS port for OpenRISC </span></h2>
-<h3> <span class="mw-headline" id="Overall_structure"> Overall structure </span></h3>
-<p>FreeRTOS port for OpenRISC is consist of four parts.
-</p>
-<ul><li> User application: User program code
-</li><li> FreeRTOS kernel: Architecture and board independent kernel code
-</li><li> FreeRTOS OpenRISC port: Architecture dependent kernel code
-</li><li> BSP: Board dependent code
-</li></ul>
-<h3> <span class="mw-headline" id="Directory_structure"> Directory structure </span></h3>
-<p>FreeRTOS kernel code resides in 'FreeRTOSVx.y.z/Source'. All header files related kernel reside in 'FreeRTOSVx.y.z/Source/include'. 'portable.h' ,which is provide portable layer resides in this directory. Architecure dependent files reside in 'FreeRTOSVx.y.z/Source/portable/GCC/OpenRISC'. 
-</p>
-<h3> <span class="mw-headline" id="portable.h"> portable.h </span></h3>
-<p>This file contains portable layer for each architecture. It contains only definition, actual function body implemented in architecture specific directory. In many cases, implementation filename is 'port.c'.
-</p>
-<ul><li> <b>portSTACK_TYPE *pxPortInitialiseStack( portSTACK_TYPE *pxTopOfStack, pdTASK_CODE pxCode, void *pvParameters )</b>&#160;: Setups the initial stack of a new task.
-</li><li> <b>portBASE_TYPE xPortStartScheduler( void )</b>&#160;: Setups the hardware to ready for scheduler, and then sheduler taks control. Generally it set tick timer to correct period and enable interrupt controller. In normal case. this function will never return.
-</li><li> <b>void vPortEndScheduler( void )</b>&#160;: function for end scheduler. disable tick timer interrupt.
-</li><li> <b>Other malloc related functions</b>&#160;: Those functions are for dynamic memory allocation. You can found actual implementation in 'FreeRTOSVx.y.z/Source/portable/MemMang'. Three diffrent implementation are given by default. 
-</li></ul>
-<h3> <span class="mw-headline" id="portmacro.h"> portmacro.h </span></h3>
-<p>This file contains settings for architecture specific definitions. This section describes Hardware Abstraction Layer of OpenRISC port.
-</p>
-<h4> <span class="mw-headline" id="Type_definitions"> Type definitions </span></h4>
-<pre> #define portCHAR        char
- #define portFLOAT       float
- #define portDOUBLE      double
- #define portLONG        long
- #define portSHORT       short
- #define portSTACK_TYPE  unsigned portLONG
- #define portBASE_TYPE   long
- #define portTickType    unsigned portLONG
- #define portMAX_DELAY   (portTickType)0xffffffff
-</pre>
-<p>'portBASE_TYPE' should be most efficient type for architecture. In case of OpenRISC, it is 'long'. 'portTickType' is type for hold the number of tick timer interrupt expired.
-</p>
-<h4> <span class="mw-headline" id="Architecure_specific_definitions"> Architecure specific definitions </span></h4>
-<pre> #define portSTACK_GROWTH                -1
- #define portTICK_RATE_MS                ( (portTickType) 1000 / configTICK_RATE_HZ )
- #define portBYTE_ALIGNMENT              4
- #define portCRITICAL_NESTING_IN_TCB     1
- #define portINSTRUCTION_SIZE            ( ( portSTACK_TYPE ) 4 )
- #define portNO_CRITICAL_SECTION_NESTING ( ( portSTACK_TYPE ) 0 )
- #define portYIELD_FROM_ISR()            vTaskSwitchContext()
- #define portYIELD()		{	\
-     __asm__ __volatile__ ( "l.sw  -4(r1), r11" ); \
-     __asm__ __volatile__ ( "l.addi r11, r0, 0x0FCC" ); \
-     __asm__ __volatile__ ( "l.sys 0x0FCC" ); \
-     __asm__ __volatile__ ( "l.nop       " ); \
- } 
- #define portNOP()        __asm__ __volatile__ ( "l.nop" )
- #define portDISABLE_INTERRUPTS()   vPortDisableInterrupts()
- #define portENABLE_INTERRUPTS()    vPortEnableInterrupts()
-</pre>
-<p>'portSTACK_GROWTH' is specifies direction of stack growth. Upwards is 1. Downwards is -1. In case of OpenRISC, stack grows downwards. 
-</p><p>'portTICK_RATE_MS' specifies period of tick timer in milliseconds.
-</p><p>'port YIELD' will be requested to scheduler for switch to other task  after end of this time slice. It is implemented by system call 0x0FCC.
-</p>
-<pre> #define portENTER_CRITICAL()	{	\
-     __asm__ __volatile__ ( "l.sw  -4(r1), r11" ); \
-     __asm__ __volatile__ ( "l.addi r11, r0, 0x0FCE" ); \
-     __asm__ __volatile__ ( "l.sys 0x0FCE" ); \
-     __asm__ __volatile__ ( "l.nop       " ); \
- } 
- #define portEXIT_CRITICAL()		{	\
-     __asm__ __volatile__ ( "l.sw  -4(r1), r11" ); \
-     __asm__ __volatile__ ( "l.addi r11, r0, 0x0FCF" ); \
-     __asm__ __volatile__ ( "l.sys 0x0FCF" ); \
-     __asm__ __volatile__ ( "l.nop       " ); \
- } 
-</pre>
-<p>These macros are used for manage critical section. These are implemented by system call.
-</p>
-<h3> <span class="mw-headline" id="Context_management"> Context management </span></h3>
-<h4> <span class="mw-headline" id="Context_save"> Context save </span></h4>
-<p>OpenRISC port be saved context by following steps.
-</p>
-<pre> 1. make stack rooms at the stack of current task (EPCR, ESR, R1 ~ R31)
- 2. save R3 ~ R5, these are clobber register
- 3. save ESR, EPCR, R3~R5 are corrupted in this step.
- 4. save R9, R2, R6 ~ R31(except R9)
- 5. save R1(stack pointer register)
- 6. restore R3 ~ R5 by original value
-</pre>
-<h4> <span class="mw-headline" id="Context_restore"> Context restore </span></h4>
-<p>OpenRISC port be restored context by following steps.
-</p>
-<pre> 1. restore R1(stack pointer of next running task)
- 2. restore R9, R2, R6 ~ R31(except R9)
- 3. restore ESR, EPCR, R3 ~ R5 are corrupted in this step
- 4. restore R3 ~ R5
- 5. resume next task by l.rfi
-</pre>
-<h2> <span class="mw-headline" id="Download_source_code"> Download source code </span></h2>
-<p>At present the FreeRTOS port is maintained by Kim Sung Su aka <a href="/wiki1/index.php?title=User:Filepang&amp;action=edit&amp;redlink=1" class="new" title="User:Filepang (page does not exist)">filepang</a>. The source code may be found in SVN here:
-</p>
-<pre> <a href="http://opencores.org/ocsvn/openrisc/openrisc/trunk/rtos/freertos-6.1.1" class="external free" rel="nofollow">http://opencores.org/ocsvn/openrisc/openrisc/trunk/rtos/freertos-6.1.1</a>
-</pre>
-<p>Checkout source code via SVN client like below.
-</p>
-<pre> svn co <a href="http://opencores.org/ocsvn/openrisc/openrisc/trunk/rtos/freertos-6.1.1" class="external free" rel="nofollow">http://opencores.org/ocsvn/openrisc/openrisc/trunk/rtos/freertos-6.1.1</a> FreeRTOSV6.1.1 --username ****
-</pre>
-<h2> <span class="mw-headline" id="Compile_and_running_demo_project"> Compile and running demo project </span></h2>
-<p><b>Note that you will need the latest OpenRISC GNU toolchain port and or1ksim on your linux box.</b>
-</p>
-<h3> <span class="mw-headline" id="Compile"> Compile </span></h3>
-<p>Currently, a demo project was prepared on Or1ksim only. it will be placed in FreeRTOSVx.y.z/Demo/OpenRISC_SIM_GCC. Move to this directory, setup your or32-elf-gcc path in Makefile. Edit CCPATH variable like below.
-</p>
-<pre>CCPATH = /opt/or32-new
-</pre>
-<p>And then, run make script.
-</p>
-<pre> make
-</pre>
-<h3> <span class="mw-headline" id="Running"> Running </span></h3>
-<p>Running FreeRTOS on Or1ksim by following command:
-</p>
-<pre> make sim
-</pre>
-<h3> <span class="mw-headline" id="Debugging"> Debugging </span></h3>
-<p>For debugging FreeRTOS port, invoke Or1ksim and or32-elf-gdb by following command:
-</p>
-<pre> make debug
-</pre>
-<p>After or32-elf-gdb invoke successfully, connect Or1ksim by following gdb command:
-</p>
-<pre> target remote&#160;:9999
- load
- set $pc=0x100
- break main
- continue
-</pre>
-<h2> <span class="mw-headline" id="Bug_reporting"> Bug reporting </span></h2>
-<p>Please report any bugs via <a href="http://bugzilla.opencores.org" class="external text" rel="nofollow">bugzilla</a>.
-</p>
-<h2> <span class="mw-headline" id="Future_work"> Future work </span></h2>
-<ul><li> Porting standard demo task   [done]
-</li><li> Testing under FPGA board
-</li></ul>
-<h2> <span class="mw-headline" id="Past_FreeRTOS_ports"> Past FreeRTOS ports </span></h2>
-<p>Several past attempts of porting FreeRTOS have been made. Here are a few starting points
-</p>
-<ul><li> <a href="http://mattzz.dyndns.org/wiki/bin/view/Projects/PortingFreeRTOStoOpenRISC" class="external free" rel="nofollow">http://mattzz.dyndns.org/wiki/bin/view/Projects/PortingFreeRTOStoOpenRISC</a>
-</li><li> <a href="http://opencores.org/forum,OpenRISC,0,4153" class="external free" rel="nofollow">http://opencores.org/forum,OpenRISC,0,4153</a>
-</li></ul>
+This page provides information about ports of FreeRTOS to OpenRISC
 
-<!-- 
-NewPP limit report
-Preprocessor node count: 79/1000000
-Post-expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Expensive parser function count: 0/100
--->
+== Introduction ==
 
-<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:21-0!*!0!!en!*!edit=0 and timestamp 20161009064723 -->
-<div class="printfooter">
-Retrieved from "<a href="http://opencores.org/or1k/FreeRTOS">http://opencores.org/or1k/FreeRTOS</a>"</div>
-            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
-                        <div class="visualClear"></div>
-        </div>
-        
-                
-        <div class="visualClear"><p></p></div>
-        
-        <div id="footer">
-            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 10 March 2013, at 19:06.<li id="lastmod"></li>This page has been accessed 11,813 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
-<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "FreeRTOS", "wgTitle": "FreeRTOS", "wgAction": "view", "wgArticleId": 21, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 944, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
-	mediaWiki.loader.go();
-}
-</script>
+=== FreeRTOS ===
 
-<script>if ( window.mediaWiki ) {
-	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
-	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
-}
-</script><!-- Served in 1.655 secs. -->            
-        </div>
-        
-        
-        </div>
-	<div style="clear:both;margin-left:200px;">
-            <!-- 728x90 -->
-            <script type="text/javascript">
-            GA_googleFillSlot("728x90");
-            </script>
-	</div>
-    </div>
-    <div class="bot">
-	&copy; copyright 1999-2016
-OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
-    </div>
-</div>
+FreeRTOS is an open source, royalty free, real-time kernel for embedded systems. It is written in ANSI C and assembly code.  It is distributed under the GPL with an optional exception. The exception permits users' proprietary code to remain closed source while maintaining the kernel itself as open source. 
 
-<!-- Google search -->
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-<!-- /Google search -->
+* FreeRTOS is open soruce and free RTOS kernel for embedded systems.
+* it supports both preemptive and non-preemptive scheduiling policy.
+* it supports task and coruotines (simple and lightweight task that has very limited stack).
 
-</body>
-</html>
+== FreeRTOS port for OpenRISC ==
+
+=== Overall structure ===
+
+
+
+FreeRTOS port for OpenRISC is consist of four parts.
+
+* User application: User program code
+* FreeRTOS kernel: Architecture and board independent kernel code
+* FreeRTOS OpenRISC port: Architecture dependent kernel code
+* BSP: Board dependent code
+
+=== Directory structure ===
+
+FreeRTOS kernel code resides in 'FreeRTOSVx.y.z/Source'. All header files related kernel reside in 'FreeRTOSVx.y.z/Source/include'. 'portable.h' ,which is provide portable layer resides in this directory. Architecure dependent files reside in 'FreeRTOSVx.y.z/Source/portable/GCC/OpenRISC'. 
+
+=== portable.h ===
+
+This file contains portable layer for each architecture. It contains only definition, actual function body implemented in architecture specific directory. In many cases, implementation filename is 'port.c'.
+
+* '''portSTACK_TYPE *pxPortInitialiseStack( portSTACK_TYPE *pxTopOfStack, pdTASK_CODE pxCode, void *pvParameters )''' : Setups the initial stack of a new task.
+* '''portBASE_TYPE xPortStartScheduler( void )''' : Setups the hardware to ready for scheduler, and then sheduler taks control. Generally it set tick timer to correct period and enable interrupt controller. In normal case. this function will never return.
+* '''void vPortEndScheduler( void )''' : function for end scheduler. disable tick timer interrupt.
+* '''Other malloc related functions''' : Those functions are for dynamic memory allocation. You can found actual implementation in 'FreeRTOSVx.y.z/Source/portable/MemMang'. Three diffrent implementation are given by default. 
+
+=== portmacro.h ===
+
+This file contains settings for architecture specific definitions. This section describes Hardware Abstraction Layer of OpenRISC port.
+
+==== Type definitions ====
+
+  #define portCHAR        char
+  #define portFLOAT       float
+  #define portDOUBLE      double
+  #define portLONG        long
+  #define portSHORT       short
+  #define portSTACK_TYPE  unsigned portLONG
+  #define portBASE_TYPE   long
+  #define portTickType    unsigned portLONG
+  #define portMAX_DELAY   (portTickType)0xffffffff
+
+'portBASE_TYPE' should be most efficient type for architecture. In case of OpenRISC, it is 'long'. 'portTickType' is type for hold the number of tick timer interrupt expired.
+
+==== Architecure specific definitions ====
+
+  #define portSTACK_GROWTH                -1
+  #define portTICK_RATE_MS                ( (portTickType) 1000 / configTICK_RATE_HZ )
+  #define portBYTE_ALIGNMENT              4
+  #define portCRITICAL_NESTING_IN_TCB     1
+  #define portINSTRUCTION_SIZE            ( ( portSTACK_TYPE ) 4 )
+  #define portNO_CRITICAL_SECTION_NESTING ( ( portSTACK_TYPE ) 0 )
+  #define portYIELD_FROM_ISR()            vTaskSwitchContext()
+  #define portYIELD()		{	\
+      __asm__ __volatile__ ( "l.sw  -4(r1), r11" ); \
+      __asm__ __volatile__ ( "l.addi r11, r0, 0x0FCC" ); \
+      __asm__ __volatile__ ( "l.sys 0x0FCC" ); \
+      __asm__ __volatile__ ( "l.nop       " ); \
+  } 
+  #define portNOP()        __asm__ __volatile__ ( "l.nop" )
+  #define portDISABLE_INTERRUPTS()   vPortDisableInterrupts()
+  #define portENABLE_INTERRUPTS()    vPortEnableInterrupts()
+
+'portSTACK_GROWTH' is specifies direction of stack growth. Upwards is 1. Downwards is -1. In case of OpenRISC, stack grows downwards. 
+
+'portTICK_RATE_MS' specifies period of tick timer in milliseconds.
+
+'port YIELD' will be requested to scheduler for switch to other task  after end of this time slice. It is implemented by system call 0x0FCC.
+
+  #define portENTER_CRITICAL()	{	\
+      __asm__ __volatile__ ( "l.sw  -4(r1), r11" ); \
+      __asm__ __volatile__ ( "l.addi r11, r0, 0x0FCE" ); \
+      __asm__ __volatile__ ( "l.sys 0x0FCE" ); \
+      __asm__ __volatile__ ( "l.nop       " ); \
+  } 
+  #define portEXIT_CRITICAL()		{	\
+      __asm__ __volatile__ ( "l.sw  -4(r1), r11" ); \
+      __asm__ __volatile__ ( "l.addi r11, r0, 0x0FCF" ); \
+      __asm__ __volatile__ ( "l.sys 0x0FCF" ); \
+      __asm__ __volatile__ ( "l.nop       " ); \
+  } 
+
+These macros are used for manage critical section. These are implemented by system call.
+
+=== Context management ===
+
+==== Context save ====
+OpenRISC port be saved context by following steps.
+
+  1. make stack rooms at the stack of current task (EPCR, ESR, R1 ~ R31)
+  2. save R3 ~ R5, these are clobber register
+  3. save ESR, EPCR, R3~R5 are corrupted in this step.
+  4. save R9, R2, R6 ~ R31(except R9)
+  5. save R1(stack pointer register)
+  6. restore R3 ~ R5 by original value
+
+==== Context restore ====
+OpenRISC port be restored context by following steps.
+
+  1. restore R1(stack pointer of next running task)
+  2. restore R9, R2, R6 ~ R31(except R9)
+  3. restore ESR, EPCR, R3 ~ R5 are corrupted in this step
+  4. restore R3 ~ R5
+  5. resume next task by l.rfi
+
+== Download source code ==
+
+At present the FreeRTOS port is maintained by Kim Sung Su aka [[user:filepang|filepang]]. The source code may be found in SVN here:
+
+  http://opencores.org/ocsvn/openrisc/openrisc/trunk/rtos/freertos-6.1.1
+
+Checkout source code via SVN client like below.
+
+  svn co http://opencores.org/ocsvn/openrisc/openrisc/trunk/rtos/freertos-6.1.1 FreeRTOSV6.1.1 --username ****
+
+== Compile and running demo project ==
+'''Note that you will need the latest OpenRISC GNU toolchain port and or1ksim on your linux box.'''
+
+=== Compile ===
+Currently, a demo project was prepared on Or1ksim only. it will be placed in FreeRTOSVx.y.z/Demo/OpenRISC_SIM_GCC. Move to this directory, setup your or32-elf-gcc path in Makefile. Edit CCPATH variable like below.
+
+ CCPATH = /opt/or32-new
+
+And then, run make script.
+
+  make
+
+=== Running ===
+Running FreeRTOS on Or1ksim by following command:
+
+  make sim
+
+=== Debugging ===
+For debugging FreeRTOS port, invoke Or1ksim and or32-elf-gdb by following command:
+
+  make debug
+
+After or32-elf-gdb invoke successfully, connect Or1ksim by following gdb command:
+
+  target remote :9999
+  load
+  set $pc=0x100
+  break main
+  continue
+
+== Bug reporting ==
+Please report any bugs via [http://bugzilla.opencores.org bugzilla].
+
+== Future work ==
+* Porting standard demo task   [done]
+* Testing under FPGA board
+
+== Past FreeRTOS ports ==
+
+Several past attempts of porting FreeRTOS have been made. Here are a few starting points
+
+* http://mattzz.dyndns.org/wiki/bin/view/Projects/PortingFreeRTOStoOpenRISC
+* http://opencores.org/forum,OpenRISC,0,4153

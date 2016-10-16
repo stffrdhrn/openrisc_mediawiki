@@ -1,632 +1,328 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-<head>
-            
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="generator" content="MediaWiki 1.17.0" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
-<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
-<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
-<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
-<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
-<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
-        <!--[if lt IE 7]>
-        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
-		<meta http-equiv="imagetoolbar" content="no" />
-        <![endif]-->
-        
-        <script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Or1ksim", "wgTitle": "Or1ksim", "wgAction": "view", "wgArticleId": 12, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1383, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>        
-        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
-		
-        <!-- Head Scripts -->
-                
-        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
-                
-                
-		        
-		        
-		        
-            <title>Or1ksim - OR1K :: OpenCores</title>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
-    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
-        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
-    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
-    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
-    <script type="text/javascript">
-    GS_googleAddAdSenseService("ca-pub-0097483751598630");
-    GS_googleEnableAllServices();
-    </script>
-    <script type="text/javascript">
-    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
-    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
-    </script>
-    <script type="text/javascript">
-    GA_googleFetchAds();
-    </script>
-    <!--[if IE 6]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
-    <![endif]-->
-    <!--[if (IE 7)|(IE 8)]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
-    <![endif]-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <script type="text/javascript">
-        
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-2763846-2']);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        
-    </script>
-    
-</head>
-<body>
-<div class="main">
-    <div class="top">
-        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
-    </div>
-    <div class="line">
-	<div></div>
-	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
-    </div>
-    <div class="mid" id="dm">
-        <div class="mainmenu" id="dml">
-	            
-        <div class="menu menu-login">
-                Username:                                <form action="../login" method="post">
-                    <input class="design" name="user" type="text" />
-                    <br />
-                    Password:
-                    <br />
-                    <input class="design" name="pass" type="password" />
-                    <br />
-                    <input class="design" name="remember" type="checkbox" />Remember me
-                    <br />
-                    <input type="hidden" name="redirect" value="or1k/" />
-                    <input class="design" title="Login" type="submit" value="Login" />
-                </form>
-                <form action="../register" method="post">
-                    <input class="design" title="Register" type="submit" value="Register" />
-                </form>
-                        </div>
-        
-                
-        
-        <div class="menu" id="p-navigation">
-            <h2>Navigation</h2>
-		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
-        
-                
-        <div class="menu">
-            <h2><label for="searchInput">Search</label></h2>
-                <form action="/wiki1/index.php" id="searchform">
-                    <div>
-                        <input type='hidden' name="title" value="Special:Search"/>
-                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
-                        
-                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
-                        
-                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
-                                                
-                    </div>
-                </form>
-        </div>
-        
-                
-        <div class="menu menu-tools">
-            <h2>Toolbox</h2>
-                <ul>
-                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/Or1ksim" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/Or1ksim" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=Or1ksim&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=Or1ksim&amp;oldid=1383" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
-        </div>
-        
-        
-        </div>
-        <div class="content" id="dmc">
-	    
-<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
-    
-    <div style="float: left; width: 720px; height: 60px;">
-        <!-- 720x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("720x60");
-        </script>
-    </div>
-        <div style="float: left; width: 300px; height: 60px;">
-        <!-- 300x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("300x60");
-        </script>
-    </div>
-    
-</div>
-	                        
-        <a name="top" id="top"></a>
-        
-                
-        <div id="oc-actions">
-            <p id="ca-nstab-main" class="selected"><a href="/or1k/Or1ksim" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:Or1ksim&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=Or1ksim&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=Or1ksim&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
-        
-        <h1 id="firstHeading" class="firstHeading">
-            Or1ksim        </h1>
-        
-        <div id="bodyContent">
-            <h3 id="siteSub">From OR1K</h3>
-            <div id="contentSub"></div>
-                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
-            <p>The aim of this project is to develop and maintain an OpenRISC 1000 architectural simulator which acts as the functional golden reference for HDL implementations.
-</p><p><b>Note.</b> The information on this page is not completely up-to-date
-</p>
-<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a>
-<ul>
-<li class="toclevel-2 tocsection-2"><a href="#Key_features"><span class="tocnumber">1.1</span> <span class="toctext">Key features</span></a></li>
-<li class="toclevel-2 tocsection-3"><a href="#Download"><span class="tocnumber">1.2</span> <span class="toctext">Download</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-4"><a href="#Stable_release"><span class="tocnumber">2</span> <span class="toctext">Stable release</span></a>
-<ul>
-<li class="toclevel-2 tocsection-5"><a href="#New_features"><span class="tocnumber">2.1</span> <span class="toctext">New features</span></a></li>
-<li class="toclevel-2 tocsection-6"><a href="#Deprecated_features"><span class="tocnumber">2.2</span> <span class="toctext">Deprecated features</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#Missing_features"><span class="tocnumber">2.3</span> <span class="toctext">Missing features</span></a></li>
-<li class="toclevel-2 tocsection-8"><a href="#Tested_host_platforms"><span class="tocnumber">2.4</span> <span class="toctext">Tested host platforms</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-9"><a href="#Development_release"><span class="tocnumber">3</span> <span class="toctext">Development release</span></a>
-<ul>
-<li class="toclevel-2 tocsection-10"><a href="#New_features_2"><span class="tocnumber">3.1</span> <span class="toctext">New features</span></a></li>
-<li class="toclevel-2 tocsection-11"><a href="#Features_removed"><span class="tocnumber">3.2</span> <span class="toctext">Features removed</span></a></li>
-<li class="toclevel-2 tocsection-12"><a href="#Features_for_future_addition"><span class="tocnumber">3.3</span> <span class="toctext">Features for future addition</span></a></li>
-<li class="toclevel-2 tocsection-13"><a href="#Features_for_future_removal"><span class="tocnumber">3.4</span> <span class="toctext">Features for future removal</span></a></li>
-<li class="toclevel-2 tocsection-14"><a href="#SystemC_TLM_2.0_interface_for_Or1ksim"><span class="tocnumber">3.5</span> <span class="toctext">SystemC TLM 2.0 interface for Or1ksim</span></a></li>
-<li class="toclevel-2 tocsection-15"><a href="#Multiple_instantiations_of_Ork1sim"><span class="tocnumber">3.6</span> <span class="toctext">Multiple instantiations of Ork1sim</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-16"><a href="#Installation"><span class="tocnumber">4</span> <span class="toctext">Installation</span></a>
-<ul>
-<li class="toclevel-2 tocsection-17"><a href="#Installation_under_Linux.2FCygwin"><span class="tocnumber">4.1</span> <span class="toctext">Installation under Linux/Cygwin</span></a></li>
-<li class="toclevel-2 tocsection-18"><a href="#Installation_on_Mac_OS_X"><span class="tocnumber">4.2</span> <span class="toctext">Installation on Mac OS X</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-19"><a href="#Documentation"><span class="tocnumber">5</span> <span class="toctext">Documentation</span></a></li>
-<li class="toclevel-1 tocsection-20"><a href="#Usage"><span class="tocnumber">6</span> <span class="toctext">Usage</span></a></li>
-<li class="toclevel-1 tocsection-21"><a href="#Discussion_Forum"><span class="tocnumber">7</span> <span class="toctext">Discussion Forum</span></a></li>
-<li class="toclevel-1 tocsection-22"><a href="#Contributing"><span class="tocnumber">8</span> <span class="toctext">Contributing</span></a>
-<ul>
-<li class="toclevel-2 tocsection-23"><a href="#What_is_needed"><span class="tocnumber">8.1</span> <span class="toctext">What is needed</span></a></li>
-<li class="toclevel-2 tocsection-24"><a href="#How_to_submit_a_contribution"><span class="tocnumber">8.2</span> <span class="toctext">How to submit a contribution</span></a>
-<ul>
-<li class="toclevel-3 tocsection-25"><a href="#SVN_HEAD_and_release_branches"><span class="tocnumber">8.2.1</span> <span class="toctext">SVN HEAD and release branches</span></a></li>
-<li class="toclevel-3 tocsection-26"><a href="#Private_branches"><span class="tocnumber">8.2.2</span> <span class="toctext">Private branches</span></a></li>
-<li class="toclevel-3 tocsection-27"><a href="#Obvious_patches"><span class="tocnumber">8.2.3</span> <span class="toctext">Obvious patches</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-28"><a href="#Developers"><span class="tocnumber">9</span> <span class="toctext">Developers</span></a>
-<ul>
-<li class="toclevel-2 tocsection-29"><a href="#Past_Contributors"><span class="tocnumber">9.1</span> <span class="toctext">Past Contributors</span></a></li>
-</ul>
-</li>
-</ul>
-</td></tr></table>
-<h2> <span class="mw-headline" id="Overview"> Overview </span></h2>
-<p>Or1ksim is a generic OpenRISC 1000 architecture simulator capable of emulating OpenRISC based computer systems at the instruction level. It includes models of a range of peripherals, allowing complete systems to be modelled.
-</p>
-<h3> <span class="mw-headline" id="Key_features"> Key features </span></h3>
-<p>Or1ksim provides a range of features:
-</p>
-<ul><li> Free, open source code, which can be used as a standalone simulator, or as a library.
-</li><li> High level, fast, architecture simulation that allows early code analysis and system performance evaluation.
-</li><li> Models of all major OpenCores peripheral and system controller cores and easy addition of new peripheral models.
-</li><li> Easy configuration for different environments (memory configurations and sizes, OR1K processor model, configuration of peripheral devices).
-</li><li> Remote debugging via TCP/IP with the GNU Debugger (GDB) using either the GDB Remote Serial Protocol or through a modeled JTAG interface.
-</li><li> A library interface allowing simple OSCI TLM 2.0 SystemC integration.
-</li></ul>
-<h3> <span class="mw-headline" id="Download"> Download </span></h3>
-<p>Or1ksim maintains a <a href="#Stable_release">Stable release</a>, recommended for general use, and a <a href="#Development_release">Development release</a>, available through SVN.
-</p>
-<h2> <span class="mw-headline" id="Stable_release"> Stable release </span></h2>
-<p>The latest stable version, 0.4.0, was released in June 2010 after 15 months of new development. This release of Or1ksim matches current OpenRISC Reference Plaform SoC definition, including the OpenRISC 1200 version 2 procesor.
-</p><p>A compressed tar image of the Or1ksim 0.4.0 release is available on the <a href="http://opencores.org/openrisc,downloads" class="external text" rel="nofollow">download</a> page.
-</p>
-<h3> <span class="mw-headline" id="New_features"> New features </span></h3>
-<p>The following features are new in this release.
-</p>
-<ul><li> A full DejaGNU base regression test suite with 2,499 tests of the standalone simulator and library.
-</li><li> A library interface modeling the JTAG debug interface. This will enable a GDB interface to the library version of Or1ksim via JTAG.
-</li><li> Single precision floating point instructions (implemented by JungSook Yang).
-</li><li> A configuration option, allowing l.xori to treat its operand as unsigned. Note. Using this option will require changes to the GCC compiler to generate valid code.
-</li></ul>
-<p>The debug interface to the standalone simulator is compatible with GDB 6.8 for OpenRISC 1000 using the GDB Remote Serial Protocol. See the tool chain page for further details.
-</p><p>Or1ksim 0.4.0 introduces a new interface to the library, which models the JTAG interface to the OpenRISC debug unit. This is intended for use with transactional models of the debug interface, and is currently the only way to connect a debugger to the Or1ksim library.
-</p><p><b>Note.</b> When used as a library, only a single instance of Or1ksim may be used, due to widespread use of static and global variables in the code. Remedying this limitation is a long term objective of the project.
-</p>
-<h3> <span class="mw-headline" id="Deprecated_features"> Deprecated features </span></h3>
-<p>For backwards compatibility, the old OpenRISC JTAG interface to GDB continues to be supported. However this interface is now deprecated and will be discontinued in the next release. All new applications should use the GDB Remote Serial Protocol. If a JTAG interface to standalone Or1ksim is required that should be implemented via a GDB RSP server.
-</p>
-<h3> <span class="mw-headline" id="Missing_features"> Missing features </span></h3>
-<p>The following are not yet supported in Or1ksim
-</p>
-<ul><li> 64-bit instructions (ORBIS64)
-</li><li> double precision floating point instructions (ORFPX32/ORFPX64)
-</li><li> vector instructions (ORVDX64)
-</li><li> GDB Remote Serial Protocol interface to the Or1ksim library.
-</li></ul>
-<h3> <span class="mw-headline" id="Tested_host_platforms"> Tested host platforms </span></h3>
-<p>The current stable version has been tested under Fedora 11 Linux and Ubuntu 10.04 Linux.
-</p>
-<h2> <span class="mw-headline" id="Development_release"> Development release </span></h2>
-<p>You may checkout the latest version of Or1ksim from git using:
-</p>
-<pre>git clone git://github.com/openrisc/or1ksim.git
-</pre>
-<h3> <span class="mw-headline" id="New_features_2"> New features </span></h3>
-<p>The latest version, which in time will become release 0.5.2 adds the following features:
-</p>
-<ul><li> Support for GDB 7.2
-</li><li> IEEE 754 (2008) compliant single precision floating point.
-</li><li> A direct GDB Remote Serial Protocol interface to the library version of Or1ksim.
-</li><li> Extended library interface, so Or1ksim can be used as a built-in simulator with GDB.
-</li><li> An improved parser for configuration files, although it currently cannot handle ATA disc specifications.
-</li><li> An up to date commented reference configuration file in the distribution.
-</li></ul>
-<h3> <span class="mw-headline" id="Features_removed"> Features removed </span></h3>
-<p>The following feature is obsolete and dropped as planned.
-</p>
-<ul><li> Support for the OpenRISC JTAG GDB interface (replaced by RSP)
-</li></ul>
-<h3> <span class="mw-headline" id="Features_for_future_addition"> Features for future addition </span></h3>
-<p>The following other features are being considered for inclusion in future releases.
-</p>
-<ul><li> Support for multiple instances (Stefan Wallentowitz).
-</li><li> Adding double precision floating point support. This is only feasible if a 64-bit version is also developed.
-</li><li> Letting memory blocks identify using their "name" field.
-</li><li> Fix the memory controller component and get its tests working in the regression suite.
-</li></ul>
-<h3> <span class="mw-headline" id="Features_for_future_removal"> Features for future removal </span></h3>
-<p>Some features of the current Or1ksim appear incomplete or obsolete. The following features are being considered for removal.
-</p>
-<ul><li> <b>stall</b> and <b>unstall</b> commands in the CLI.
-</li><li> The custom unit compiler.
-</li><li> Dynamic execution (a build option, not completed)
-</li></ul>
-<p>Users are encouraged to suggest other features via the OpenRISC forum or through the <a href="http://bugzilla.opencores.org/" class="external text" rel="nofollow">OpenRISC bug tracker</a>.
-</p>
-<h3> <span class="mw-headline" id="SystemC_TLM_2.0_interface_for_Or1ksim"> SystemC TLM 2.0 interface for Or1ksim </span></h3>
-<p>A demonstration wrapper has been developed by Embecosm to provide an OSCI SystemC TLM 2.0 interface to Or1ksim. This comprises both an <a href="http://www.embecosm.com/download/ean1.html" class="external text" rel="nofollow">application note</a> and <a href="http://www.embecosm.com/download/esp1.html" class="external text" rel="nofollow">reference software</a>.
-</p><p>Robert Guenzel's [chschroeder.gamiro.de/rg/or1ksim_macOS10.4.pdf application note] mentioned above has extensive discussion of the SystemC TLM 2.0 version. He makes some important suggestions for improving performance.
-</p>
-<h3> <span class="mw-headline" id="Multiple_instantiations_of_Ork1sim"> Multiple instantiations of Ork1sim </span></h3>
-<p>Or1ksim can be used as a library as well as a standalone program. However, because the code makes heavy use of global variables, only one instance can ever be present. This is very inconvenient for those wishing to model a multi-core system.
-</p><p>Stefan Wallentowitz has implemented a prototype version of Ork1sim, based on the stable Or1ksim 0.3.0 release, which fixes this problem.
-</p><p>A full description and the source code as a patch for Or1ksim 0.3.0 is currently available from <a href="http://www.wallentowitz.de/or1ksim.html" class="external text" rel="nofollow">www.wallentowitz.de/or1ksim.html</a>.
-</p>
-<h2> <span class="mw-headline" id="Installation"> Installation </span></h2>
-<p>The installation instructions are the same for both stable and development releases. Or1ksim is always built from source - there are no binary distributions.
-</p>
-<h3> <span class="mw-headline" id="Installation_under_Linux.2FCygwin"> Installation under Linux/Cygwin </span></h3>
-<p>First download the sources either from the download page or from SVN and unpack if necessary. The following instructions assume the unpacked source is in directory <b>or1ksim-0.4.0</b>, and the code is to be installed in <b>/opt/or1ksim</b>. Build and install Or1ksim as follows.
-</p>
-<pre>
+The aim of this project is to develop and maintain an OpenRISC 1000 architectural simulator which acts as the functional golden reference for HDL implementations.
+
+'''Note.''' The information on this page is not completely up-to-date
+
+== Overview ==
+
+Or1ksim is a generic OpenRISC 1000 architecture simulator capable of emulating OpenRISC based computer systems at the instruction level. It includes models of a range of peripherals, allowing complete systems to be modelled.
+
+=== Key features ===
+
+Or1ksim provides a range of features:
+* Free, open source code, which can be used as a standalone simulator, or as a library.
+* High level, fast, architecture simulation that allows early code analysis and system performance evaluation.
+* Models of all major OpenCores peripheral and system controller cores and easy addition of new peripheral models.
+* Easy configuration for different environments (memory configurations and sizes, OR1K processor model, configuration of peripheral devices).
+* Remote debugging via TCP/IP with the GNU Debugger (GDB) using either the GDB Remote Serial Protocol or through a modeled JTAG interface.
+* A library interface allowing simple OSCI TLM 2.0 SystemC integration.
+
+=== Download ===
+
+Or1ksim maintains a [[#Stable release|Stable release]], recommended for general use, and a [[#Development release|Development release]], available through SVN.
+
+== Stable release ==
+
+The latest stable version, 0.4.0, was released in June 2010 after 15 months of new development. This release of Or1ksim matches current OpenRISC Reference Plaform SoC definition, including the OpenRISC 1200 version 2 procesor.
+
+A compressed tar image of the Or1ksim 0.4.0 release is available on the [http://opencores.org/openrisc,downloads download] page.
+
+=== New features ===
+
+The following features are new in this release.
+* A full DejaGNU base regression test suite with 2,499 tests of the standalone simulator and library.
+* A library interface modeling the JTAG debug interface. This will enable a GDB interface to the library version of Or1ksim via JTAG.
+* Single precision floating point instructions (implemented by JungSook Yang).
+* A configuration option, allowing l.xori to treat its operand as unsigned. Note. Using this option will require changes to the GCC compiler to generate valid code.
+
+The debug interface to the standalone simulator is compatible with GDB 6.8 for OpenRISC 1000 using the GDB Remote Serial Protocol. See the tool chain page for further details.
+
+Or1ksim 0.4.0 introduces a new interface to the library, which models the JTAG interface to the OpenRISC debug unit. This is intended for use with transactional models of the debug interface, and is currently the only way to connect a debugger to the Or1ksim library.
+
+'''Note.''' When used as a library, only a single instance of Or1ksim may be used, due to widespread use of static and global variables in the code. Remedying this limitation is a long term objective of the project.
+
+=== Deprecated features ===
+
+For backwards compatibility, the old OpenRISC JTAG interface to GDB continues to be supported. However this interface is now deprecated and will be discontinued in the next release. All new applications should use the GDB Remote Serial Protocol. If a JTAG interface to standalone Or1ksim is required that should be implemented via a GDB RSP server.
+
+=== Missing features ===
+
+The following are not yet supported in Or1ksim
+* 64-bit instructions (ORBIS64)
+* double precision floating point instructions (ORFPX32/ORFPX64)
+* vector instructions (ORVDX64)
+* GDB Remote Serial Protocol interface to the Or1ksim library.
+
+=== Tested host platforms ===
+
+The current stable version has been tested under Fedora 11 Linux and Ubuntu 10.04 Linux.
+
+== Development release ==
+
+You may checkout the latest version of Or1ksim from git using:
+
+ <nowiki>git clone git://github.com/openrisc/or1ksim.git</nowiki>
+
+=== New features ===
+
+The latest version, which in time will become release 0.5.2 adds the following features:
+* Support for GDB 7.2
+* IEEE 754 (2008) compliant single precision floating point.
+* A direct GDB Remote Serial Protocol interface to the library version of Or1ksim.
+* Extended library interface, so Or1ksim can be used as a built-in simulator with GDB.
+* An improved parser for configuration files, although it currently cannot handle ATA disc specifications.
+* An up to date commented reference configuration file in the distribution.
+
+=== Features removed ===
+The following feature is obsolete and dropped as planned.
+* Support for the OpenRISC JTAG GDB interface (replaced by RSP)
+
+=== Features for future addition ===
+The following other features are being considered for inclusion in future releases.
+* Support for multiple instances (Stefan Wallentowitz).
+* Adding double precision floating point support. This is only feasible if a 64-bit version is also developed.
+* Letting memory blocks identify using their "name" field.
+* Fix the memory controller component and get its tests working in the regression suite.
+
+=== Features for future removal ===
+Some features of the current Or1ksim appear incomplete or obsolete. The following features are being considered for removal.
+* '''stall''' and '''unstall''' commands in the CLI.
+* The custom unit compiler.
+* Dynamic execution (a build option, not completed)
+
+Users are encouraged to suggest other features via the OpenRISC forum or through the [http://bugzilla.opencores.org/ OpenRISC bug tracker].
+
+=== SystemC TLM 2.0 interface for Or1ksim ===
+
+A demonstration wrapper has been developed by Embecosm to provide an OSCI SystemC TLM 2.0 interface to Or1ksim. This comprises both an [http://www.embecosm.com/download/ean1.html application note] and [http://www.embecosm.com/download/esp1.html reference software].
+
+Robert Guenzel's [chschroeder.gamiro.de/rg/or1ksim_macOS10.4.pdf application note] mentioned above has extensive discussion of the SystemC TLM 2.0 version. He makes some important suggestions for improving performance.
+
+=== Multiple instantiations of Ork1sim ===
+
+Or1ksim can be used as a library as well as a standalone program. However, because the code makes heavy use of global variables, only one instance can ever be present. This is very inconvenient for those wishing to model a multi-core system.
+
+Stefan Wallentowitz has implemented a prototype version of Ork1sim, based on the stable Or1ksim 0.3.0 release, which fixes this problem.
+
+A full description and the source code as a patch for Or1ksim 0.3.0 is currently available from [http://www.wallentowitz.de/or1ksim.html www.wallentowitz.de/or1ksim.html].
+
+== Installation ==
+
+The installation instructions are the same for both stable and development releases. Or1ksim is always built from source - there are no binary distributions.
+
+=== Installation under Linux/Cygwin ===
+
+First download the sources either from the download page or from SVN and unpack if necessary. The following instructions assume the unpacked source is in directory '''or1ksim-0.4.0''', and the code is to be installed in '''/opt/or1ksim'''. Build and install Or1ksim as follows.
+
+ <nowiki>
 mkdir builddir_or1ksim
 cd builddir_or1ksim
 ../or1ksim/configure --target=or1k-elf --prefix=/opt/or1ksim
 make
 make install
 export PATH=/opt/or1ksim/bin:$PATH
+</nowiki>
 
-</pre>
-<p>If DejaGNU and the OpenRISC GNU tool chain are installed, the build can be tested as follows.
-</p>
-<pre>make check
-</pre>
-<p>All tests should past. Any failures should be reported, with as much detail as possible using the <a href="http://bugzilla.opencores.org/" class="external text" rel="nofollow">OpenRISC bug tracker</a>.
-</p><p><b>Note.</b> If you want to compile with optimization disabled which make gdb debugging easier, please configure with following command which instructed by Jeremy Bennett.
-</p><p><br />
-</p>
-<pre>../or1ksim-0.4.0/configure --target=or32-elf --prefix=/opt/or1ksim <b>CFLAGS="-O0 -DINLINE=static -DNO_SOFTFLOAT_UNUSED"</b> 
-</pre>
-<p><br />
+If DejaGNU and the OpenRISC GNU tool chain are installed, the build can be tested as follows.
+
+ make check
+
+All tests should past. Any failures should be reported, with as much detail as possible using the [http://bugzilla.opencores.org/ OpenRISC bug tracker].
+
+'''Note.''' If you want to compile with optimization disabled which make gdb debugging easier, please configure with following command which instructed by Jeremy Bennett.
+
+
+ ../or1ksim-0.4.0/configure --target=or32-elf --prefix=/opt/or1ksim '''CFLAGS="-O0 -DINLINE=static -DNO_SOFTFLOAT_UNUSED"''' 
+
+
 Or1ksim can also be installed using the OpenRISC toolchain installation script (a more automated installation), which is available from the GNU Toolchain page.
-</p><p><b>Note.</b> This script is currently awaiting update to use the latest stable version. At present it will install the previous stable version.
-</p><p>More detailed information on installing Or1ksim (and the rest of the OpenRISC 1000 tool chain) with examples of the simulator in use may be found in <a href="http://www.embecosm.com/download/ean2.html" class="external text" rel="nofollow">Embecosm Application Note EAN2: The OpenCores OpenRISC 1000 Simulator and Tool Chain: Installation Guide</a>.
-</p>
-<h3> <span class="mw-headline" id="Installation_on_Mac_OS_X"> Installation on Mac OS X </span></h3>
-<p>The current stable build, Or1ksim 0.4.0, incorporates patches from Mark Jarvin, so that it should build on Mac OS X (Snow Leopard).
-</p><p>Robert Guenzel has provided an <a href="http://chschroeder.gamiro.de/rg/or1ksim_macOS10.4.pdf" class="external text" rel="nofollow">application note</a> on building the previous stable release, Or1ksim 0.3.0, for Mac OS 10.4: . This may be of interest to Mac users.
-</p>
-<h2> <span class="mw-headline" id="Documentation"> Documentation </span></h2>
-<p>Or1ksim includes a User Guide. This provides information on using and configurating Or1ksim, both as a standalone tool and as a library. It also gives some guidance on the internal structure of Or1ksim. It is available in PDF on the download page.
-</p><p>The documentation can also be generated from the source to give HTML, info, DVI and PostScript.
-</p><p>The code is documented to take advantage of the Doxygen documentation system, which provides automatically generated, structured documentation on the files, functions and data-structures of the entire program, together with their interrelationships.
-</p><p>Documentation would benefit from extending, particularly with tutorial material and with more detail on the internals of the program (see Contributing, below).
-</p>
-<h2> <span class="mw-headline" id="Usage"> Usage </span></h2>
-<p>A summary of the command options can be seen with
-</p>
-<pre>or32-elf-sim --help
-</pre>
-<p>For booting Linux, use the sim.cfg file in the root directory of the Linux distribution with the command
-</p>
-<pre>or32-elf-sim -f arch/openrisc/or1ksim.cfg vmlinux
-</pre>
-<p>More details on Linux for OpenRISC 1000 may be found on the operating systems page.
-</p><p><a href="http://www.embecosm.com/download/ean2.html" class="external text" rel="nofollow">Embecosm Application Note EAN2</a> described in the Installation section above includes examples using Or1ksim. The User Guide for the OpenRISC 1000 port of GDB 6.8 includes details of running Or1ksim with GDB.
-</p><p>To aid in debugging, the immediate field of a NOP can be used to control some simulation parameters. The following table defines the meaning of each NOP field. These are defined in or1ksim/cpu/or1k/spr-defs.h. They are documented in the latest user guide with the distribution.
-</p>
-<table>
-<tr>
-<th align="left">Name
-</th>
-<th> Value
-</th>
-<th> Description
-</th></tr>
-<tr>
-<td>NOP_NOP
-</td>
-<td>0x0000
-</td>
-<td>Normal nop instruction
-</td></tr>
-<tr>
-<td>NOP_EXIT
-</td>
-<td>0x0001
-</td>
-<td>End of simulation
-</td></tr>
-<tr>
-<td>NOP_REPORT
-</td>
-<td>0x0002
-</td>
-<td>Simple report
-</td></tr>
-<tr>
-<td><strike>NOP_PRINTF</strike>
-</td>
-<td><strike>0x0003</strike>
-</td>
-<td><strike>Simprintf instruction</strike> (obsolete)
-</td></tr>
-<tr>
-<td>NOP_PUTC
-</td>
-<td>0x0004
-</td>
-<td>Simputc instruction
-</td></tr>
-<tr>
-<td>NOP_CNT_RESET
-</td>
-<td>0x0005
-</td>
-<td>Reset statistics counters
-</td></tr>
-<tr>
-<td>NOP_GET_TICKS
-</td>
-<td>0x0006
-</td>
-<td>Get # ticks running
-</td></tr>
-<tr>
-<td>NOP_GET_PS
-</td>
-<td>0x0007
-</td>
-<td>picosecs/cycle
-</td></tr>
-<tr>
-<td>NOP_TRACE_ON
-</td>
-<td>0x0008
-</td>
-<td>Turn on tracing
-</td></tr>
-<tr>
-<td>NOP_TRACE_OFF
-</td>
-<td>0x0009
-</td>
-<td>Turn off tracing
-</td></tr>
-<tr>
-<td>NOP_RANDOM
-</td>
-<td>0x000a
-</td>
-<td>Return 4 random bytes
-</td></tr>
-<tr>
-<td>NOP_OR1KSIM
-</td>
-<td>0x000b
-</td>
-<td>Return non-zero if this is Or1ksim
-</td></tr></table>
-<p><b>Note.</b> This list is not definitive. See the User Guide for an up to date list.
-</p>
-<h2> <span class="mw-headline" id="Discussion_Forum"> Discussion Forum </span></h2>
-<p>Or1ksim is discussed within the OpenRISC Forum and on IRC at freenode.net, channel #opencores. All users are encouraged to contribute suggestions and advice.
-</p>
-<h2> <span class="mw-headline" id="Contributing"> Contributing </span></h2>
-<p>We are constantly looking for developers to help in the development of the simulator, though you don't need to be a highly skilled developer to do so. Many (very useful) projects may be performed without any C programming knowledge or without an intricate knowledge of the openrisc architecture.
-</p>
-<h3> <span class="mw-headline" id="What_is_needed"> What is needed </span></h3>
-<p>A few items to get you started.
-</p>
-<ul><li> Extend the documentation. Or1ksim now has a User Guide. However this would benefit from some good tutorial material. This is an excellent task for anyone new to or1ksim. This would involve the following.
-<ul><li> Documenting, in the form of well narrated passages (not point form!), how to get started using Or1ksim, the general pitfalls that someone new to Or1ksim may take and how to avoid them.
-</li><li> Some neat examples of how to use some of the more "cool" peripherals of the sim (esp. how to make use of the Ethernet peripheral).
-</li><li> Documenting the interface that is used to implement the peripherals.
-</li><li> Documenting the more arcane features of the simulator, including the various execution models, branch prediction, super scaler emulation and in general what they are useful for.
-</li></ul>
-</li></ul>
-<dl><dd> If you have any questions about the above, don't hesitate to contact us on the mailing list.
-</dd></dl>
-<ul><li> Improve the testsuite. We now have a proper test suite, based on the old tests and with a set of new tests for the Or1ksim library interface. But it is far from complete.
-<ul><li> A number of the old tests build, but don't run correctly, since they need VAPI to drive their inputs. Fixing this would allow the UART and GPIO tests to be added.
-</li><li> There is an attempt at a comprehensive test of the integer instruction set, but it does not compile correctly. Fixing this would be valuable.
-</li><li> Many of the existing tests of peripherals are crude. In particular, the Ethernet could benefit from a robust set of tests.
-</li></ul>
-</li><li> Test or1ksim on non-Linux platforms (various UNIX and Cygwin platforms). The developers do not have acess to every operating system out there. We would like the simulator to run on as many platforms as possible. Mark Jarvin already provides valuable help by running the code on Mac OS X.
-</li></ul>
-<dl><dd> If you are running on anything other than Linux you would help us a great deal if you could periodically check if the simulator builds (and works) on your prefered platform, reporting any failures to the mailing list.
-</dd></dl>
-<ul><li> Add additional models of OpenCores peripherals and system controllers. Only a small subset of the great number of peripherals available at opencores are currently modeled. Some examples of peripherals to write a model for might have been suggested.
-<ul><li> WishBone Real Time Clock.
-</li><li> IrDA communication core.
-</li><li> USB 2.0 function core.
-</li><li> Most things that connect to the WishBone bus. A good list may be found here.
-</li></ul>
-</li><li> Add a new feature. The section on the <a href="#Development_release">development release</a> above lists several new features. Coders wishing to help are very welcome.
-</li></ul>
-<p>If you have a suggestion that you'd like to see developed, feel free to add it to <a href="http://bugzilla.opencores.org/" class="external text" rel="nofollow">Buzilla</a> or start a discussion on the  <a href="/or1k/OR1K:Community_Portal#Mailing_lists_on_opencores.org" title="OR1K:Community Portal" class="mw-redirect">OpenRISC forum or the developer mailing lists</a>.
-</p>
-<h3> <span class="mw-headline" id="How_to_submit_a_contribution"> How to submit a contribution </span></h3>
-<p>The up to date details may be found in the MAINTAINERS file at the top level of the Or1ksim source tree.
-</p><p>The submission process uses the OpenRISC mailing lists, in preference to the OpenRISC forum. Sing up at <a href="http://lists.opencores.org" class="external free" rel="nofollow">http://lists.opencores.org</a>
-</p><p>Or1ksim is built using <i>autotools</i> (<i>autoconf</i>, <i>automake</i> and <i>libtool</i>). We follow the GNU practice of adding the generated <i>autotools</i> files to the Version Control System.
-</p><p>A number of our developers use older operating systems (e.g. RHEL4), and all <i>autotools</i> scripts should be capable of using the following versions:
-</p>
-<ul><li> autoconf 1.59
-</li><li> automake 1.9.2
-</li><li> libtool 1.5.6
-</li></ul>
-<p>Steps to take before committing to VCS:
-</p>
-<ul><li> (trunk commits only) should pass <b>make distcheck</b>  and regression tests.
-</li></ul>
-<ul><li> ChangeLog <b>must</b> be updated.
-</li></ul>
-<ul><li> Changes must be posted to the <a href="#Mailing_lists">OpenRISC mailing lists</a> (not the forum) and be reviewed and approved by the <a href="/or1k/Project_Maintainers" title="Project Maintainers">project maintainer</a>.
-</li></ul>
-<h4> <span class="mw-headline" id="SVN_HEAD_and_release_branches"> SVN HEAD and release branches </span></h4>
-<p>For changes to SVN HEAD or release branches, this is the process in summary.
-</p>
-<ul><li> submit your patch as a diff against the current SVN HEAD (put the patch inline, not as an attachment, to make it easy for users to read in mail clients).
-</li><li> wait for reviews, modify and repost as necessary.
-</li><li> if approved by a maintainer, the patch will be applied by one of the Or1ksim maintainers (see the MAINTAINERS file).
-</li></ul>
-<p>If you are making regular contributions, please ask to be given SVN write access, by posting to the mailing lists. This will give you the ability to commit changes, and you will be listed in the MAINTAINERS file. You should still follow the same process of submitting to the mailing list, and waiting for reviews and approval.
-</p>
-<h4> <span class="mw-headline" id="Private_branches"> Private branches </span></h4>
-<p>If you wish to make major changes, you should obtain write-after-approval permission as above and create your own branch. List the branch in the MAINTAINERS file, with yourself as owner. You may make any changes you like to this branch, without reference to the mailing lists (although the community would love to hear about your progress).
-</p><p>When the time comes to merge your work into SVN HEAD or a release branch, follow the process for <a href="#SVN_HEAD_and_release_branches">SVN HEAD and release branches</a>.
-</p>
-<h4> <span class="mw-headline" id="Obvious_patches"> Obvious patches </span></h4>
-<p>Obvious patches (for example trivial typos) may be fixed by anyone with write-after-approval permission. Such changes should be posted after the even to both mailing lists.
-</p>
-<h2> <span class="mw-headline" id="Developers"> Developers </span></h2>
-<p>The team currently working on or1ksim:
-</p>
-<ul><li> <a href="/or1k/User:Julius" title="User:Julius">Julius Baxter</a>
-</li><li> <a href="/or1k/User:Jeremybennett" title="User:Jeremybennett">Jeremy Bennett</a>
-</li><li> Ruben Diez
-</li></ul>
-<p>An important input to the current stable release has been Waqas Ahmed's Master's dissertation at the Royal Institute of Technology, Sweden, <i>Implementation and Verification of a CPU Subsystem for Multimode RF Transceivers</i>. His work identified a large number of bugs in Or1ksim, which have been fixed (and tested) in this release. Waqas has kindly made his dissertation available on the <a href="http://opencores.org/openrisc,downloads" class="external text" rel="nofollow">download</a> page.
-</p>
-<h3> <span class="mw-headline" id="Past_Contributors"> Past Contributors </span></h3>
-<p>These are the people who are currently not working on the or1ksim, but have contributed in significant ways in the past:
-</p>
-<ul><li> Waqas Ahmed
-</li><li> Matjaz Breskvar
-</li><li> Jimmy Chen-Min Chen
-</li><li> <a href="/wiki1/index.php?title=User:Markjarvin&amp;action=edit&amp;redlink=1" class="new" title="User:Markjarvin (page does not exist)">Mark Jarvin</a>
-</li><li> Gyorgy Jeney
-</li><li> Damjan Lampret
-</li><li> Marko Mlinar
-</li><li> Johan Rydberg
-</li><li> Simon Srot
-</li><li> Erez Volk
-</li><li> <a href="/wiki1/index.php?title=User:Stefan&amp;action=edit&amp;redlink=1" class="new" title="User:Stefan (page does not exist)">Stefan Wallentowitz</a>
-</li><li> <a href="/wiki1/index.php?title=User:Jungsook&amp;action=edit&amp;redlink=1" class="new" title="User:Jungsook (page does not exist)">JungSook Yang</a>
-</li><li> Chris Ziomkowskig
-</li></ul>
 
-<!-- 
-NewPP limit report
-Preprocessor node count: 133/1000000
-Post-expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Expensive parser function count: 0/100
--->
+'''Note.''' This script is currently awaiting update to use the latest stable version. At present it will install the previous stable version.
 
-<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:12-0!*!0!!en!*!edit=0 and timestamp 20161009082038 -->
-<div class="printfooter">
-Retrieved from "<a href="http://opencores.org/or1k/Or1ksim">http://opencores.org/or1k/Or1ksim</a>"</div>
-            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
-                        <div class="visualClear"></div>
-        </div>
-        
-                
-        <div class="visualClear"><p></p></div>
-        
-        <div id="footer">
-            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 21 March 2015, at 20:26.<li id="lastmod"></li>This page has been accessed 29,864 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
-<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Or1ksim", "wgTitle": "Or1ksim", "wgAction": "view", "wgArticleId": 12, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1383, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
-	mediaWiki.loader.go();
-}
-</script>
+More detailed information on installing Or1ksim (and the rest of the OpenRISC 1000 tool chain) with examples of the simulator in use may be found in [http://www.embecosm.com/download/ean2.html Embecosm Application Note EAN2: The OpenCores OpenRISC 1000 Simulator and Tool Chain: Installation Guide].
 
-<script>if ( window.mediaWiki ) {
-	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
-	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
-}
-</script><!-- Served in 2.169 secs. -->            
-        </div>
-        
-        
-        </div>
-	<div style="clear:both;margin-left:200px;">
-            <!-- 728x90 -->
-            <script type="text/javascript">
-            GA_googleFillSlot("728x90");
-            </script>
-	</div>
-    </div>
-    <div class="bot">
-	&copy; copyright 1999-2016
-OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
-    </div>
-</div>
+=== Installation on Mac OS X ===
 
-<!-- Google search -->
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-<!-- /Google search -->
+The current stable build, Or1ksim 0.4.0, incorporates patches from Mark Jarvin, so that it should build on Mac OS X (Snow Leopard).
 
-</body>
-</html>
+Robert Guenzel has provided an [http://chschroeder.gamiro.de/rg/or1ksim_macOS10.4.pdf application note] on building the previous stable release, Or1ksim 0.3.0, for Mac OS 10.4: . This may be of interest to Mac users.
+
+== Documentation ==
+
+Or1ksim includes a User Guide. This provides information on using and configurating Or1ksim, both as a standalone tool and as a library. It also gives some guidance on the internal structure of Or1ksim. It is available in PDF on the download page.
+
+The documentation can also be generated from the source to give HTML, info, DVI and PostScript.
+
+The code is documented to take advantage of the Doxygen documentation system, which provides automatically generated, structured documentation on the files, functions and data-structures of the entire program, together with their interrelationships.
+
+Documentation would benefit from extending, particularly with tutorial material and with more detail on the internals of the program (see Contributing, below).
+
+== Usage ==
+
+A summary of the command options can be seen with
+
+ or32-elf-sim --help
+
+For booting Linux, use the sim.cfg file in the root directory of the Linux distribution with the command
+
+ or32-elf-sim -f arch/openrisc/or1ksim.cfg vmlinux
+
+More details on Linux for OpenRISC 1000 may be found on the operating systems page.
+
+[http://www.embecosm.com/download/ean2.html Embecosm Application Note EAN2] described in the Installation section above includes examples using Or1ksim. The User Guide for the OpenRISC 1000 port of GDB 6.8 includes details of running Or1ksim with GDB.
+
+To aid in debugging, the immediate field of a NOP can be used to control some simulation parameters. The following table defines the meaning of each NOP field. These are defined in or1ksim/cpu/or1k/spr-defs.h. They are documented in the latest user guide with the distribution.
+
+{|
+! align="left"|Name
+! Value
+! Description
+|-
+|NOP_NOP
+|0x0000
+|Normal nop instruction 
+|-
+|NOP_EXIT
+|0x0001
+|End of simulation
+|-
+|NOP_REPORT
+|0x0002
+|Simple report
+|-
+|<strike>NOP_PRINTF</strike>
+|<strike>0x0003</strike>
+|<strike>Simprintf instruction</strike> (obsolete)
+|-
+|NOP_PUTC
+|0x0004
+|Simputc instruction
+|-
+|NOP_CNT_RESET
+|0x0005
+|Reset statistics counters
+|-
+|NOP_GET_TICKS
+|0x0006
+|Get # ticks running
+|-
+|NOP_GET_PS
+|0x0007
+|picosecs/cycle
+|-
+|NOP_TRACE_ON
+|0x0008
+|Turn on tracing
+|-
+|NOP_TRACE_OFF
+|0x0009
+|Turn off tracing
+|-
+|NOP_RANDOM
+|0x000a
+|Return 4 random bytes
+|-
+|NOP_OR1KSIM
+|0x000b
+|Return non-zero if this is Or1ksim
+|}
+
+'''Note.''' This list is not definitive. See the User Guide for an up to date list.
+
+== Discussion Forum ==
+
+Or1ksim is discussed within the OpenRISC Forum and on IRC at freenode.net, channel #opencores. All users are encouraged to contribute suggestions and advice.
+
+== Contributing ==
+
+We are constantly looking for developers to help in the development of the simulator, though you don't need to be a highly skilled developer to do so. Many (very useful) projects may be performed without any C programming knowledge or without an intricate knowledge of the openrisc architecture.
+
+=== What is needed ===
+
+A few items to get you started.
+
+* Extend the documentation. Or1ksim now has a User Guide. However this would benefit from some good tutorial material. This is an excellent task for anyone new to or1ksim. This would involve the following.
+** Documenting, in the form of well narrated passages (not point form!), how to get started using Or1ksim, the general pitfalls that someone new to Or1ksim may take and how to avoid them.
+** Some neat examples of how to use some of the more "cool" peripherals of the sim (esp. how to make use of the Ethernet peripheral).
+** Documenting the interface that is used to implement the peripherals.
+** Documenting the more arcane features of the simulator, including the various execution models, branch prediction, super scaler emulation and in general what they are useful for.
+: If you have any questions about the above, don't hesitate to contact us on the mailing list.
+* Improve the testsuite. We now have a proper test suite, based on the old tests and with a set of new tests for the Or1ksim library interface. But it is far from complete.
+** A number of the old tests build, but don't run correctly, since they need VAPI to drive their inputs. Fixing this would allow the UART and GPIO tests to be added.
+** There is an attempt at a comprehensive test of the integer instruction set, but it does not compile correctly. Fixing this would be valuable.
+** Many of the existing tests of peripherals are crude. In particular, the Ethernet could benefit from a robust set of tests.
+* Test or1ksim on non-Linux platforms (various UNIX and Cygwin platforms). The developers do not have acess to every operating system out there. We would like the simulator to run on as many platforms as possible. Mark Jarvin already provides valuable help by running the code on Mac OS X.
+: If you are running on anything other than Linux you would help us a great deal if you could periodically check if the simulator builds (and works) on your prefered platform, reporting any failures to the mailing list.
+* Add additional models of OpenCores peripherals and system controllers. Only a small subset of the great number of peripherals available at opencores are currently modeled. Some examples of peripherals to write a model for might have been suggested.
+** WishBone Real Time Clock.
+** IrDA communication core.
+** USB 2.0 function core.
+** Most things that connect to the WishBone bus. A good list may be found here.
+* Add a new feature. The section on the [[#Development release|development release]] above lists several new features. Coders wishing to help are very welcome.
+
+If you have a suggestion that you'd like to see developed, feel free to add it to [http://bugzilla.opencores.org/ Buzilla] or start a discussion on the  [[OR1K:Community_Portal#Mailing_lists_on_opencores.org|OpenRISC forum or the developer mailing lists]].
+
+=== How to submit a contribution ===
+
+The up to date details may be found in the MAINTAINERS file at the top level of the Or1ksim source tree.
+
+The submission process uses the OpenRISC mailing lists, in preference to the OpenRISC forum. Sing up at http://lists.opencores.org
+
+Or1ksim is built using ''autotools'' (''autoconf'', ''automake'' and ''libtool''). We follow the GNU practice of adding the generated ''autotools'' files to the Version Control System.
+
+A number of our developers use older operating systems (e.g. RHEL4), and all ''autotools'' scripts should be capable of using the following versions:
+* autoconf 1.59
+* automake 1.9.2
+* libtool 1.5.6
+
+Steps to take before committing to VCS:
+
+* (trunk commits only) should pass '''make distcheck'''  and regression tests.
+
+* ChangeLog '''must''' be updated.
+
+* Changes must be posted to the [[#Mailing_lists|OpenRISC mailing lists]] (not the forum) and be reviewed and approved by the [[Project Maintainers|project maintainer]].
+
+==== SVN HEAD and release branches ====
+
+For changes to SVN HEAD or release branches, this is the process in summary.
+* submit your patch as a diff against the current SVN HEAD (put the patch inline, not as an attachment, to make it easy for users to read in mail clients).
+* wait for reviews, modify and repost as necessary.
+* if approved by a maintainer, the patch will be applied by one of the Or1ksim maintainers (see the MAINTAINERS file).
+
+If you are making regular contributions, please ask to be given SVN write access, by posting to the mailing lists. This will give you the ability to commit changes, and you will be listed in the MAINTAINERS file. You should still follow the same process of submitting to the mailing list, and waiting for reviews and approval.
+
+==== Private branches ====
+
+If you wish to make major changes, you should obtain write-after-approval permission as above and create your own branch. List the branch in the MAINTAINERS file, with yourself as owner. You may make any changes you like to this branch, without reference to the mailing lists (although the community would love to hear about your progress).
+
+When the time comes to merge your work into SVN HEAD or a release branch, follow the process for [[#SVN HEAD and release branches|SVN HEAD and release branches]].
+
+==== Obvious patches ====
+
+Obvious patches (for example trivial typos) may be fixed by anyone with write-after-approval permission. Such changes should be posted after the even to both mailing lists.
+
+== Developers ==
+
+The team currently working on or1ksim:
+* [[User:Julius|Julius Baxter]]
+* [[User:Jeremybennett|Jeremy Bennett]]
+* Ruben Diez
+
+An important input to the current stable release has been Waqas Ahmed's Master's dissertation at the Royal Institute of Technology, Sweden, ''Implementation and Verification of a CPU Subsystem for Multimode RF Transceivers''. His work identified a large number of bugs in Or1ksim, which have been fixed (and tested) in this release. Waqas has kindly made his dissertation available on the [http://opencores.org/openrisc,downloads download] page.
+
+=== Past Contributors ===
+
+These are the people who are currently not working on the or1ksim, but have contributed in significant ways in the past:
+* Waqas Ahmed
+* Matjaz Breskvar
+* Jimmy Chen-Min Chen
+* [[User:Markjarvin|Mark Jarvin]]
+* Gyorgy Jeney
+* Damjan Lampret
+* Marko Mlinar
+* Johan Rydberg
+* Simon Srot
+* Erez Volk
+* [[User:Stefan|Stefan Wallentowitz]]
+* [[User:Jungsook|JungSook Yang]]
+* Chris Ziomkowskig

@@ -1,333 +1,88 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-<head>
-            
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="generator" content="MediaWiki 1.17.0" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
-<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
-<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
-<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
-<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
-<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
-        <!--[if lt IE 7]>
-        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
-		<meta http-equiv="imagetoolbar" content="no" />
-        <![endif]-->
-        
-        <script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Linux", "wgTitle": "Linux", "wgAction": "view", "wgArticleId": 2, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1400, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>        
-        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
-		
-        <!-- Head Scripts -->
-                
-        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
-                
-                
-		        
-		        
-		        
-            <title>Linux - OR1K :: OpenCores</title>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
-    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
-        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
-    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
-    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
-    <script type="text/javascript">
-    GS_googleAddAdSenseService("ca-pub-0097483751598630");
-    GS_googleEnableAllServices();
-    </script>
-    <script type="text/javascript">
-    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
-    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
-    </script>
-    <script type="text/javascript">
-    GA_googleFetchAds();
-    </script>
-    <!--[if IE 6]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
-    <![endif]-->
-    <!--[if (IE 7)|(IE 8)]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
-    <![endif]-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <script type="text/javascript">
-        
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-2763846-2']);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        
-    </script>
-    
-</head>
-<body>
-<div class="main">
-    <div class="top">
-        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
-    </div>
-    <div class="line">
-	<div></div>
-	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
-    </div>
-    <div class="mid" id="dm">
-        <div class="mainmenu" id="dml">
-	            
-        <div class="menu menu-login">
-                Username:                                <form action="../login" method="post">
-                    <input class="design" name="user" type="text" />
-                    <br />
-                    Password:
-                    <br />
-                    <input class="design" name="pass" type="password" />
-                    <br />
-                    <input class="design" name="remember" type="checkbox" />Remember me
-                    <br />
-                    <input type="hidden" name="redirect" value="or1k/" />
-                    <input class="design" title="Login" type="submit" value="Login" />
-                </form>
-                <form action="../register" method="post">
-                    <input class="design" title="Register" type="submit" value="Register" />
-                </form>
-                        </div>
-        
-                
-        
-        <div class="menu" id="p-navigation">
-            <h2>Navigation</h2>
-		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
-        
-                
-        <div class="menu">
-            <h2><label for="searchInput">Search</label></h2>
-                <form action="/wiki1/index.php" id="searchform">
-                    <div>
-                        <input type='hidden' name="title" value="Special:Search"/>
-                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
-                        
-                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
-                        
-                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
-                                                
-                    </div>
-                </form>
-        </div>
-        
-                
-        <div class="menu menu-tools">
-            <h2>Toolbox</h2>
-                <ul>
-                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/Linux" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/Linux" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=Linux&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=Linux&amp;oldid=1400" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
-        </div>
-        
-        
-        </div>
-        <div class="content" id="dmc">
-	    
-<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
-    
-    <div style="float: left; width: 720px; height: 60px;">
-        <!-- 720x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("720x60");
-        </script>
-    </div>
-        <div style="float: left; width: 300px; height: 60px;">
-        <!-- 300x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("300x60");
-        </script>
-    </div>
-    
-</div>
-	                        
-        <a name="top" id="top"></a>
-        
-                
-        <div id="oc-actions">
-            <p id="ca-nstab-main" class="selected"><a href="/or1k/Linux" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:Linux&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=Linux&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=Linux&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
-        
-        <h1 id="firstHeading" class="firstHeading">
-            Linux        </h1>
-        
-        <div id="bodyContent">
-            <h3 id="siteSub">From OR1K</h3>
-            <div id="contentSub"></div>
-                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
-            <table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Status"><span class="tocnumber">2</span> <span class="toctext">Status</span></a>
-<ul>
-<li class="toclevel-2 tocsection-3"><a href="#Supported_Boards"><span class="tocnumber">2.1</span> <span class="toctext">Supported Boards</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-4"><a href="#Initial_preparations"><span class="tocnumber">3</span> <span class="toctext">Initial preparations</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#Build"><span class="tocnumber">4</span> <span class="toctext">Build</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#Run_on_or1ksim"><span class="tocnumber">5</span> <span class="toctext">Run on or1ksim</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Run_on_FPGA_target"><span class="tocnumber">6</span> <span class="toctext">Run on FPGA target</span></a></li>
-<li class="toclevel-1 tocsection-8"><a href="#Adapt_to_a_new_board"><span class="tocnumber">7</span> <span class="toctext">Adapt to a new board</span></a></li>
-<li class="toclevel-1 tocsection-9"><a href="#Make_changes_to_built-in_filesystem"><span class="tocnumber">8</span> <span class="toctext">Make changes to built-in filesystem</span></a></li>
-</ul>
-</td></tr></table>
-<h2> <span class="mw-headline" id="Introduction"> Introduction </span></h2>
-<p>This section of the project contains information on using the <a href="http://www.kernel.org/" class="external text" rel="nofollow">Linux kernel</a> port for the OpenRISC 1000 family.
-</p><p>Information about Linux on OpenRISC as well as updated toolchains can be found at <a href="http://openrisc.net" class="external free" rel="nofollow">http://openrisc.net</a>
-</p><p>Features are: 
-</p>
-<pre>•Free, open source code with no royalty
-•UNIX class operating system
-•Upstream
-•gdbserver for OpenRISC 
-•Process protection through use of the Memory Management Unit
-•Multitasking, preemptive scheduling
-•Interprocess communication and synchronization
-•TCP/IP networking and numerous other network protocols
-•File systems NFS, ext2, MS-DOS, FAT16/32 and others
-•PS2 Keyboard
-</pre>
-<h2> <span class="mw-headline" id="Status"> Status </span></h2>
-<p>OpenRISC is officially supported in the Linux kernel since version 3.1 and can be downloaded from <a href="https://www.kernel.org" class="external free" rel="nofollow">https://www.kernel.org</a>. We do however recommend that you use one of the kernels from <a href="https://github.com/openrisc/linux/" class="external free" rel="nofollow">https://github.com/openrisc/linux/</a> as they contain some convenient features such as a built-in initramfs and extra board configurations for OpenRISC not found in the upstream kernel. 
-</p><p>A gdbserver is now available in SVN for use when debugging applications under Or1ksim Linux. gdbserver acts as a GDB remote serial protocol server for a Linux application, allowing the program to be debugged remotely using GDB.
-</p>
-<h3> <span class="mw-headline" id="Supported_Boards">Supported Boards</span></h3>
-<p>Only DE0 Nano and a configuration for or1ksim are officially supported in the kernel sources. See below for how to add support for additional boards. Device trees and configuration files for other boards can be found in the <a href="https://github.com/openrisc/orpsoc-cores" class="external text" rel="nofollow">orpsoc-cores</a> collection (e.g. <a href="https://github.com/openrisc/orpsoc-cores/blob/master/systems/neek/data/sw/neek.dts" class="external free" rel="nofollow">https://github.com/openrisc/orpsoc-cores/blob/master/systems/neek/data/sw/neek.dts</a>)
-</p>
-<h2> <span class="mw-headline" id="Initial_preparations"> Initial preparations </span></h2>
-<p>To obtain a copy of the kernel tree source with OpenRISC support, ensure git is installed and run
-</p>
-<pre> git clone <a href="https://github.com/openrisc/linux" class="external free" rel="nofollow">https://github.com/openrisc/linux</a>
-</pre>
-<p>The environment variables `ARCH` and `CROSS_COMPILE` must be set prior to running any `make` command. The `CROSS_COMPILE` command can be set to any toolchain capable of building an OpenRISC Linux kernel (e.g. or1k-linux-musl-)
-</p>
-<pre>export ARCH=openrisc
-export CROSS_COMPILE=or1k-elf-
-</pre>
-<p>Setup a generic default configuration for OpenRISC targets. This will likely generate a bunch of questions for options that are not set in the default configuration file. Choose values that seem appropriate for these options.
-</p>
-<pre>make defconfig
-</pre>
-<p>Optionally select other options you want to enable or disable
-</p>
-<pre>make menuconfig
-</pre>
-<p><br />
-<a href="/or1k/File:Linux30_menuconf_doc.jpg" class="image" title="linux-3.0 menuconf Photo"><img alt="linux-3.0 menuconf Photo" src="/wiki1/images/thumb/d/dc/Linux30_menuconf_doc.jpg/350px-Linux30_menuconf_doc.jpg" width="350" height="245" /></a>
-</p>
-<h2> <span class="mw-headline" id="Build"> Build </span></h2>
-<pre>make
-</pre>
-<p>After `make` is complete, there will be a file called `vmlinux` in the kernel root directory. This is the built Linux Kernel in the form of an `ELF` file that can be run in or1ksim, or uploaded to a running OpenRISC Instance with OpenOCD or GDB, or be converted to a `bin` file that can be programmed to a Flash memory
-</p>
-<h2> <span class="mw-headline" id="Run_on_or1ksim"> Run on or1ksim </span></h2>
-<p>The following commands will run a kernel on the OpenRISC architectural simulator. This is a good way to test if your kernel will boot up before you try it on hardware
-</p>
-<pre>or1k-elf-sim -f arch/openrisc/or1ksim.cfg vmlinux
-</pre>
-<p><br />
-<a href="/or1k/File:Linux30_xterm.png" class="image" title="linux-3.0 xterm Photo"><img alt="linux-3.0 xterm Photo" src="/wiki1/images/thumb/6/6a/Linux30_xterm.png/400px-Linux30_xterm.png" width="400" height="250" /></a>
-</p><p>By default, or1ksim configured to use TCP port 10084 for standard input/output once the kernel has booted. This means that output to terminal where or1ksim was launched will stop after printing out "Configuring loopback device". At this point, you should launch a new terminal and connect with e.g. "telnet localhost 10084" to interact with the system
-</p>
-<h2> <span class="mw-headline" id="Run_on_FPGA_target"> Run on FPGA target </span></h2>
-<p>Start a serial console that is connected to the UART on the OpenRISC system. There are many different serial consoles and physical UART connections to choose from. Below is a common example using <code>screen</code> and an USB-to-UART adapter
-</p>
-<pre>screen /dev/ttyUSB0 115200
-</pre>
-<p>Start OpenOCD in a new terminal window with the correct OpenOCD configuration files. Detailed instructions for how to build and set up OpenOCD can be found here <a href="/or1k/Debugging_physical_targets_(FPGA/ASIC)" title="Debugging physical targets (FPGA/ASIC)">Debugging physical targets (FPGA/ASIC)</a>. Below is an example for how to connect to an OpenRISC system using the Altera Virtual JTAG TAP and Advanced Debug Interface
-</p>
-<pre>openocd -f tcl/interface/altera-usb-blaster.cfg -f tcl/board/or1k_generic.cfg
-</pre>
-<p>Start a third terminal and connect to the running OpenOCD proxy. More advanced usage with GDB is described in <a href="/or1k/Debugging_physical_targets_(FPGA/ASIC)" title="Debugging physical targets (FPGA/ASIC)">Debugging physical targets (FPGA/ASIC)</a>. Adjust the path to vmlinux if necessary. The default path is relative to the directory from where OpenOCD was started
-</p>
-<pre>telnet localhost 4444
-halt; load_image vmlinux; reg npc 0x100; reset
-</pre>
-<p>The Linux kernel should now be seen booting up in the serial console. After it has booted up, press enter to start using Linux
-</p><p><a href="/or1k/File:Linux_30_work.png" class="image" title="linux-3.0 ML501 Photo"><img alt="linux-3.0 ML501 Photo" src="/wiki1/images/thumb/2/2e/Linux_30_work.png/400px-Linux_30_work.png" width="400" height="250" /></a>
-</p><p>If you wish to debug applications running under Linux, you should use <a href="/or1k/OpenRISC_GNU_tool_chain#Building_gdbserver" title="OpenRISC GNU tool chain">gdbserver</a> instead.
-</p>
-<h2> <span class="mw-headline" id="Adapt_to_a_new_board"> Adapt to a new board </span></h2>
-<h2> <span class="mw-headline" id="Make_changes_to_built-in_filesystem"> Make changes to built-in filesystem </span></h2>
+== Introduction ==
 
-<!-- 
-NewPP limit report
-Preprocessor node count: 34/1000000
-Post-expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Expensive parser function count: 0/100
--->
+This section of the project contains information on using the [http://www.kernel.org/ Linux kernel] port for the OpenRISC 1000 family.
 
-<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:2-0!*!0!!en!2!edit=0 and timestamp 20161008235338 -->
-<div class="printfooter">
-Retrieved from "<a href="http://opencores.org/or1k/Linux">http://opencores.org/or1k/Linux</a>"</div>
-            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
-                        <div class="visualClear"></div>
-        </div>
-        
-                
-        <div class="visualClear"><p></p></div>
-        
-        <div id="footer">
-            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 15 March 2016, at 20:32.<li id="lastmod"></li>This page has been accessed 19,776 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
-<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Linux", "wgTitle": "Linux", "wgAction": "view", "wgArticleId": 2, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 1400, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
-	mediaWiki.loader.go();
-}
-</script>
+Information about Linux on OpenRISC as well as updated toolchains can be found at http://openrisc.net
 
-<script>if ( window.mediaWiki ) {
-	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
-	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
-}
-</script><!-- Served in 1.560 secs. -->            
-        </div>
-        
-        
-        </div>
-	<div style="clear:both;margin-left:200px;">
-            <!-- 728x90 -->
-            <script type="text/javascript">
-            GA_googleFillSlot("728x90");
-            </script>
-	</div>
-    </div>
-    <div class="bot">
-	&copy; copyright 1999-2016
-OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
-    </div>
-</div>
+Features are: 
+ •Free, open source code with no royalty
+ •UNIX class operating system
+ •Upstream
+ •gdbserver for OpenRISC 
+ •Process protection through use of the Memory Management Unit
+ •Multitasking, preemptive scheduling
+ •Interprocess communication and synchronization
+ •TCP/IP networking and numerous other network protocols
+ •File systems NFS, ext2, MS-DOS, FAT16/32 and others
+ •PS2 Keyboard
 
-<!-- Google search -->
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-<!-- /Google search -->
+== Status ==
+ 
+OpenRISC is officially supported in the Linux kernel since version 3.1 and can be downloaded from https://www.kernel.org. We do however recommend that you use one of the kernels from https://github.com/openrisc/linux/ as they contain some convenient features such as a built-in initramfs and extra board configurations for OpenRISC not found in the upstream kernel. 
 
-</body>
-</html>
+A gdbserver is now available in SVN for use when debugging applications under Or1ksim Linux. gdbserver acts as a GDB remote serial protocol server for a Linux application, allowing the program to be debugged remotely using GDB.
+
+===Supported Boards===
+ 
+Only DE0 Nano and a configuration for or1ksim are officially supported in the kernel sources. See below for how to add support for additional boards. Device trees and configuration files for other boards can be found in the [https://github.com/openrisc/orpsoc-cores orpsoc-cores] collection (e.g. https://github.com/openrisc/orpsoc-cores/blob/master/systems/neek/data/sw/neek.dts)
+
+== Initial preparations ==
+
+To obtain a copy of the kernel tree source with OpenRISC support, ensure git is installed and run
+ 
+  git clone https://github.com/openrisc/linux
+
+The environment variables `ARCH` and `CROSS_COMPILE` must be set prior to running any `make` command. The `CROSS_COMPILE` command can be set to any toolchain capable of building an OpenRISC Linux kernel (e.g. or1k-linux-musl-)
+ export ARCH=openrisc
+ export CROSS_COMPILE=or1k-elf-
+
+Setup a generic default configuration for OpenRISC targets. This will likely generate a bunch of questions for options that are not set in the default configuration file. Choose values that seem appropriate for these options.
+ make defconfig
+
+Optionally select other options you want to enable or disable
+ make menuconfig
+
+
+[[File:linux30_menuconf_doc.jpg|350px|linux-3.0 menuconf Photo]]
+
+== Build ==
+
+ make
+
+After `make` is complete, there will be a file called `vmlinux` in the kernel root directory. This is the built Linux Kernel in the form of an `ELF` file that can be run in or1ksim, or uploaded to a running OpenRISC Instance with OpenOCD or GDB, or be converted to a `bin` file that can be programmed to a Flash memory
+
+== Run on or1ksim ==
+
+The following commands will run a kernel on the OpenRISC architectural simulator. This is a good way to test if your kernel will boot up before you try it on hardware
+
+ or1k-elf-sim -f arch/openrisc/or1ksim.cfg vmlinux
+
+
+[[File:linux30_xterm.png|400px|linux-3.0 xterm Photo]]
+
+By default, or1ksim configured to use TCP port 10084 for standard input/output once the kernel has booted. This means that output to terminal where or1ksim was launched will stop after printing out "Configuring loopback device". At this point, you should launch a new terminal and connect with e.g. "telnet localhost 10084" to interact with the system
+
+== Run on FPGA target ==
+
+Start a serial console that is connected to the UART on the OpenRISC system. There are many different serial consoles and physical UART connections to choose from. Below is a common example using <code>screen</code> and an USB-to-UART adapter
+
+ screen /dev/ttyUSB0 115200
+
+Start OpenOCD in a new terminal window with the correct OpenOCD configuration files. Detailed instructions for how to build and set up OpenOCD can be found here [[Debugging physical targets (FPGA/ASIC)]]. Below is an example for how to connect to an OpenRISC system using the Altera Virtual JTAG TAP and Advanced Debug Interface
+
+ openocd -f tcl/interface/altera-usb-blaster.cfg -f tcl/board/or1k_generic.cfg
+
+Start a third terminal and connect to the running OpenOCD proxy. More advanced usage with GDB is described in [[Debugging physical targets (FPGA/ASIC)]]. Adjust the path to vmlinux if necessary. The default path is relative to the directory from where OpenOCD was started
+
+ telnet localhost 4444
+ halt; load_image vmlinux; reg npc 0x100; reset
+
+The Linux kernel should now be seen booting up in the serial console. After it has booted up, press enter to start using Linux
+
+[[File:linux_30_work.png|400px|linux-3.0 ML501 Photo]]
+
+If you wish to debug applications running under Linux, you should use [[OpenRISC GNU tool chain#Building_gdbserver|gdbserver]] instead.
+
+== Adapt to a new board ==
+
+== Make changes to built-in filesystem ==

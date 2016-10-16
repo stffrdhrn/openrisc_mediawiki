@@ -1,258 +1,48 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-<head>
-            
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="generator" content="MediaWiki 1.17.0" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
-<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
-<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
-<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
-<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
-<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
-        <!--[if lt IE 7]>
-        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
-		<meta http-equiv="imagetoolbar" content="no" />
-        <![endif]-->
-        
-        <script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "UClibc_tool_chain_test_results", "wgTitle": "UClibc tool chain test results", "wgAction": "view", "wgArticleId": 18, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 865, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>        
-        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
-		
-        <!-- Head Scripts -->
-                
-        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
-                
-                
-		        
-		        
-		        
-            <title>UClibc tool chain test results - OR1K :: OpenCores</title>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
-    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
-        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
-    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
-    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
-    <script type="text/javascript">
-    GS_googleAddAdSenseService("ca-pub-0097483751598630");
-    GS_googleEnableAllServices();
-    </script>
-    <script type="text/javascript">
-    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
-    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
-    </script>
-    <script type="text/javascript">
-    GA_googleFetchAds();
-    </script>
-    <!--[if IE 6]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
-    <![endif]-->
-    <!--[if (IE 7)|(IE 8)]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
-    <![endif]-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <script type="text/javascript">
-        
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-2763846-2']);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        
-    </script>
-    
-</head>
-<body>
-<div class="main">
-    <div class="top">
-        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
-    </div>
-    <div class="line">
-	<div></div>
-	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
-    </div>
-    <div class="mid" id="dm">
-        <div class="mainmenu" id="dml">
-	            
-        <div class="menu menu-login">
-                Username:                                <form action="../login" method="post">
-                    <input class="design" name="user" type="text" />
-                    <br />
-                    Password:
-                    <br />
-                    <input class="design" name="pass" type="password" />
-                    <br />
-                    <input class="design" name="remember" type="checkbox" />Remember me
-                    <br />
-                    <input type="hidden" name="redirect" value="or1k/" />
-                    <input class="design" title="Login" type="submit" value="Login" />
-                </form>
-                <form action="../register" method="post">
-                    <input class="design" title="Register" type="submit" value="Register" />
-                </form>
-                        </div>
-        
-                
-        
-        <div class="menu" id="p-navigation">
-            <h2>Navigation</h2>
-		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
-        
-                
-        <div class="menu">
-            <h2><label for="searchInput">Search</label></h2>
-                <form action="/wiki1/index.php" id="searchform">
-                    <div>
-                        <input type='hidden' name="title" value="Special:Search"/>
-                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
-                        
-                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
-                        
-                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
-                                                
-                    </div>
-                </form>
-        </div>
-        
-                
-        <div class="menu menu-tools">
-            <h2>Toolbox</h2>
-                <ul>
-                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/UClibc_tool_chain_test_results" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/UClibc_tool_chain_test_results" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=UClibc_tool_chain_test_results&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=UClibc_tool_chain_test_results&amp;oldid=865" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
-        </div>
-        
-        
-        </div>
-        <div class="content" id="dmc">
-	    
-<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
-    
-    <div style="float: left; width: 720px; height: 60px;">
-        <!-- 720x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("720x60");
-        </script>
-    </div>
-        <div style="float: left; width: 300px; height: 60px;">
-        <!-- 300x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("300x60");
-        </script>
-    </div>
-    
-</div>
-	                        
-        <a name="top" id="top"></a>
-        
-                
-        <div id="oc-actions">
-            <p id="ca-nstab-main" class="selected"><a href="/or1k/UClibc_tool_chain_test_results" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:UClibc_tool_chain_test_results&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=UClibc_tool_chain_test_results&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=UClibc_tool_chain_test_results&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
-        
-        <h1 id="firstHeading" class="firstHeading">
-            UClibc tool chain test results        </h1>
-        
-        <div id="bodyContent">
-            <h3 id="siteSub">From OR1K</h3>
-            <div id="contentSub"></div>
-                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
-            <p>These are the latest results from uClibc tool chain testing. Tests have been carried out using Or1ksim running Linux as a target. For performance reasons, the tests have been heavily parallelized (beyond the level in the standard GNU scripts), and the results combined.
-</p><p>Unless otherwise indicated, the tools (and libraries and Linux) are the SVN or git versions on the date shown, and record the number of tests in each <a href="/or1k/Test_result_category" title="Test result category">test result category</a>. For each tool an explanation is provided of any tests with a FAIL, XPASS or UNRESOLVED outcome.
-</p>
-<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#binutils_2.20.1"><span class="tocnumber">1</span> <span class="toctext">binutils 2.20.1</span></a>
-<ul>
-<li class="toclevel-2 tocsection-2"><a href="#General"><span class="tocnumber">1.1</span> <span class="toctext">General</span></a></li>
-<li class="toclevel-2 tocsection-3"><a href="#Linker"><span class="tocnumber">1.2</span> <span class="toctext">Linker</span></a></li>
-<li class="toclevel-2 tocsection-4"><a href="#Assembler"><span class="tocnumber">1.3</span> <span class="toctext">Assembler</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-5"><a href="#GCC_4.5.1"><span class="tocnumber">2</span> <span class="toctext">GCC 4.5.1</span></a>
-<ul>
-<li class="toclevel-2 tocsection-6"><a href="#C_compiler"><span class="tocnumber">2.1</span> <span class="toctext">C compiler</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#C.2B.2B_compiler"><span class="tocnumber">2.2</span> <span class="toctext">C++ compiler</span></a></li>
-<li class="toclevel-2 tocsection-8"><a href="#C.2B.2B_library"><span class="tocnumber">2.3</span> <span class="toctext">C++ library</span></a>
-<ul>
-<li class="toclevel-3 tocsection-9"><a href="#FAIL_tests"><span class="tocnumber">2.3.1</span> <span class="toctext">FAIL tests</span></a></li>
-<li class="toclevel-3 tocsection-10"><a href="#XPASS_tests"><span class="tocnumber">2.3.2</span> <span class="toctext">XPASS tests</span></a></li>
-<li class="toclevel-3 tocsection-11"><a href="#UNRESOLVED_tests"><span class="tocnumber">2.3.3</span> <span class="toctext">UNRESOLVED tests</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-12"><a href="#GDB_7.2"><span class="tocnumber">3</span> <span class="toctext">GDB 7.2</span></a></li>
-<li class="toclevel-1 tocsection-13"><a href="#uClibc_0.9.32"><span class="tocnumber">4</span> <span class="toctext">uClibc 0.9.32</span></a></li>
-<li class="toclevel-1 tocsection-14"><a href="#GCC_4.8.0"><span class="tocnumber">5</span> <span class="toctext">GCC 4.8.0</span></a>
-<ul>
-<li class="toclevel-2 tocsection-15"><a href="#C_compiler_2"><span class="tocnumber">5.1</span> <span class="toctext">C compiler</span></a>
-<ul>
-<li class="toclevel-3 tocsection-16"><a href="#FAIL_tests_2"><span class="tocnumber">5.1.1</span> <span class="toctext">FAIL tests</span></a></li>
-<li class="toclevel-3 tocsection-17"><a href="#XPASS_tests_2"><span class="tocnumber">5.1.2</span> <span class="toctext">XPASS tests</span></a></li>
-<li class="toclevel-3 tocsection-18"><a href="#UNRESOLVED_tests_2"><span class="tocnumber">5.1.3</span> <span class="toctext">UNRESOLVED tests</span></a></li>
-</ul>
-</li>
-<li class="toclevel-2 tocsection-19"><a href="#C.2B.2B_compiler_2"><span class="tocnumber">5.2</span> <span class="toctext">C++ compiler</span></a>
-<ul>
-<li class="toclevel-3 tocsection-20"><a href="#FAIL_tests_3"><span class="tocnumber">5.2.1</span> <span class="toctext">FAIL tests</span></a></li>
-<li class="toclevel-3 tocsection-21"><a href="#UNRESOLVED_tests_3"><span class="tocnumber">5.2.2</span> <span class="toctext">UNRESOLVED tests</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</td></tr></table>
-<h2> <span class="mw-headline" id="binutils_2.20.1"> binutils 2.20.1 </span></h2>
-<h3> <span class="mw-headline" id="General"> General </span></h3>
-<p>Not yet available.
-</p>
-<h3> <span class="mw-headline" id="Linker"> Linker </span></h3>
-<p>Not yet available.
-</p>
-<h3> <span class="mw-headline" id="Assembler"> Assembler </span></h3>
-<p>Not yet available.
-</p>
-<h2> <span class="mw-headline" id="GCC_4.5.1"> GCC 4.5.1 </span></h2>
-<h3> <span class="mw-headline" id="C_compiler"> C compiler </span></h3>
-<pre>
+These are the latest results from uClibc tool chain testing. Tests have been carried out using Or1ksim running Linux as a target. For performance reasons, the tests have been heavily parallelized (beyond the level in the standard GNU scripts), and the results combined.
+
+Unless otherwise indicated, the tools (and libraries and Linux) are the SVN or git versions on the date shown, and record the number of tests in each [[test result category]]. For each tool an explanation is provided of any tests with a FAIL, XPASS or UNRESOLVED outcome.
+
+== binutils 2.20.1 ==
+
+=== General ===
+
+Not yet available.
+
+=== Linker ===
+
+Not yet available.
+
+=== Assembler ===
+
+Not yet available.
+
+== GCC 4.5.1 ==
+
+=== C compiler ===
+
+ <nowiki>
 		=== gcc Summary ===
 
 # of expected passes		53602
 # of expected failures		85
 # of unsupported tests		715
 
-runtest completed at Fri Jun 17 15:09:51 2011
-</pre>
-<h3> <span class="mw-headline" id="C.2B.2B_compiler"> C++ compiler </span></h3>
-<pre>
+runtest completed at Fri Jun 17 15:09:51 2011</nowiki>
+
+=== C++ compiler ===
+
+ <nowiki>
 		=== g++ Summary ===
 
 # of expected passes		21189
 # of expected failures		149
 # of unsupported tests		244
 
-runtest completed at Sun Jun  5 23:47:39 2011
-</pre>
-<h3> <span class="mw-headline" id="C.2B.2B_library"> C++ library </span></h3>
-<pre>
+runtest completed at Sun Jun  5 23:47:39 2011</nowiki>
+
+=== C++ library ===
+
+ <nowiki>
 		=== libstdc++ Summary ===
 
 # of expected passes		5678
@@ -262,45 +52,53 @@ runtest completed at Sun Jun  5 23:47:39 2011
 # of unresolved tests		9
 # of unsupported tests		581
 
-runtest completed at Sun Jun 12 19:58:22 2011
-</pre>
-<h4> <span class="mw-headline" id="FAIL_tests"> FAIL tests </span></h4>
-<dl><dt>ext/rope/pthread7-rope.cc execution test
-</dt><dt>23_containers/list/pthread1.cc execution test
-</dt><dd>Failure due to limitations of the underlying Linux thread support.
-</dd></dl>
-<h4> <span class="mw-headline" id="XPASS_tests"> XPASS tests </span></h4>
-<dl><dt>26_numerics/headers/cmath/c99_classification_macros_c++.cc
-</dt><dd>This appears to be an out of date test, expecting a failure in compilation with uClibc that is no longer the case.
-</dd><dt>27_io/basic_istream/extractors_arithmetic/char/12.cc execution test
-</dt><dd>This appears to be an out of date test, expecting failure in strtofp with uClibc, that is no longer the case.
-</dd></dl>
-<h4> <span class="mw-headline" id="UNRESOLVED_tests"> UNRESOLVED tests </span></h4>
-<dl><dt>tr1/2_general_utilities/shared_ptr/thread/default_weaktoshared.cc execution test
-</dt><dt>tr1/2_general_utilities/shared_ptr/thread/mutex_weaktoshared.cc execution test
-</dt><dt>30_threads/timed_mutex/try_lock_for/3.cc execution test
-</dt><dt>20_util/shared_ptr/thread/default_weaktoshared.cc execution test
-</dt><dt>20_util/shared_ptr/thread/mutex_weaktoshared.cc execution test
-</dt><dt>23_containers/list/pthread5.cc execution test
-</dt><dt>23_containers/map/pthread6.cc execution test
-</dt><dt>27_io/basic_ofstream/pthread2.cc execution test
-</dt><dt>27_io/basic_ostringstream/pthread3.cc execution test
-</dt><dd>Failure due to limitations of the underlying Linux thread support.
-</dd></dl>
-<h2> <span class="mw-headline" id="GDB_7.2"> GDB 7.2 </span></h2>
-<p>Not yet available.
-</p>
-<h2> <span class="mw-headline" id="uClibc_0.9.32"> uClibc 0.9.32 </span></h2>
-<p>Remote testing of the library is not currently supported in uClibc.
-</p>
-<h2> <span class="mw-headline" id="GCC_4.8.0"> GCC 4.8.0 </span></h2>
-<p>Tests have been performed 2012-10-10 against:
-</p><p>github.com/skristiansson/or1k-gcc<br />
-github.com/skristiansson/or1k-src<br />
-github.com/skristiansson/uClibc-or1k<br />
-</p>
-<h3> <span class="mw-headline" id="C_compiler_2"> C compiler </span></h3>
-<pre>
+runtest completed at Sun Jun 12 19:58:22 2011</nowiki>
+
+==== FAIL tests ====
+
+;ext/rope/pthread7-rope.cc execution test
+;23_containers/list/pthread1.cc execution test
+:Failure due to limitations of the underlying Linux thread support.
+
+==== XPASS tests ====
+
+;26_numerics/headers/cmath/c99_classification_macros_c++.cc
+:This appears to be an out of date test, expecting a failure in compilation with uClibc that is no longer the case.
+;27_io/basic_istream/extractors_arithmetic/char/12.cc execution test
+:This appears to be an out of date test, expecting failure in strtofp with uClibc, that is no longer the case.
+
+==== UNRESOLVED tests ====
+
+;tr1/2_general_utilities/shared_ptr/thread/default_weaktoshared.cc execution test
+;tr1/2_general_utilities/shared_ptr/thread/mutex_weaktoshared.cc execution test
+;30_threads/timed_mutex/try_lock_for/3.cc execution test
+;20_util/shared_ptr/thread/default_weaktoshared.cc execution test
+;20_util/shared_ptr/thread/mutex_weaktoshared.cc execution test
+;23_containers/list/pthread5.cc execution test
+;23_containers/map/pthread6.cc execution test
+;27_io/basic_ofstream/pthread2.cc execution test
+;27_io/basic_ostringstream/pthread3.cc execution test
+:Failure due to limitations of the underlying Linux thread support.
+
+== GDB 7.2 ==
+
+Not yet available.
+
+== uClibc 0.9.32 ==
+
+Remote testing of the library is not currently supported in uClibc.
+
+== GCC 4.8.0 ==
+
+Tests have been performed 2012-10-10 against:
+
+github.com/skristiansson/or1k-gcc<br>
+github.com/skristiansson/or1k-src<br>
+github.com/skristiansson/uClibc-or1k<br>
+
+=== C compiler ===
+
+ <nowiki>
                 === gcc Summary ===
 
 # of expected passes            73112
@@ -309,78 +107,79 @@ github.com/skristiansson/uClibc-or1k<br />
 # of expected failures          103
 # of unresolved testcases       4
 # of unsupported tests          1286
-/opt/or1k/bin/or1k-linux-gcc  version 4.8.0 20120611 (experimental) (GCC)
-</pre>
-<h4> <span class="mw-headline" id="FAIL_tests_2"> FAIL tests </span></h4>
-<dl><dt>gcc.dg/attr-weakref-1.c (test for excess errors)
-</dt><dd>Fails in upstream as well. The problem seems to be that a weakref to a weakref isn't emitted in the asm output.
-</dd><dt>gcc.dg/builtin-object-size-10.c scan-tree-dump objsz "maximum object size 21"
-</dt><dd>Needs investigation.
-</dd><dt>gcc.dg/c99-stdint-1.c (test for excess errors)
-</dt><dd>Problem here seems to be that uClibc defines WCHAR_MIN to (-2147483647 - 1) and WCHAR_MAX to (2147483647), but __WCHAR_TYPE__  is defined to be unsigned int
-</dd><dt>gcc.dg/c99-stdint-7.c (test for excess errors)
-</dt><dd>Fails because WCHAR_MIN&#160;!= __WCHAR_MIN__
-</dd><dt>gcc.dg/lower-subreg-1.c scan-rtl-dump subreg1 "Splitting reg"
-</dt><dd>This has to do with splitting large types into registers.
-</dd><dd>According to the link below, lower subreg has changed upstream.
-</dd><dd><a href="https://blueprints.launchpad.net/gcc-linaro/+spec/investigate-lowersubreg" class="external free" rel="nofollow">https://blueprints.launchpad.net/gcc-linaro/+spec/investigate-lowersubreg</a>
-</dd><dd>This regression was not present in: GCC: (GNU) 4.8.0 20120303 (experimental), so it seems likely the upstream change is related.
-</dd><dd>Assembly looks correct, but inefficient.
-</dd><dt>gcc.dg/sibcall-3.c execution test
-</dt><dd>Needs investigation.
-</dd><dt>gcc.dg/sibcall-4.c execution test
-</dt><dd>Needs investigation.
-</dd><dt>gcc.dg/stack-usage-1.c (test for excess errors)
-</dt><dt>gcc.dg/stack-usage-1.c scan-file foo\t(256|264)\tstatic
-</dt><dd>Needs investigation.
-</dd><dt>gcc.dg/stack-usage-2.c  (test for bogus messages, line 9)
-</dt><dt>gcc.dg/stack-usage-2.c  (test for warnings, line 16)
-</dt><dt>gcc.dg/stack-usage-2.c  (test for warnings, line 26)
-</dt><dt>gcc.dg/stack-usage-2.c  (test for warnings, line 33)
-</dt><dd>Needs investigation.
-</dd><dt>gcc.dg/strlenopt-2f.c (test for excess errors)
-</dt><dd>Fails with an "undefined reference to `__memcpy_chk'", uClibc doesn't provide __memcpy_chk. Linking with libssp works.
-</dd><dt>gcc.dg/visibility-14.c scan-hidden hidden[ \t_]*foo
-</dt><dd>Needs investigation.
-</dd><dt>gcc.dg/pch/save-temps-1.c  -O0 -g assembly comparison
-</dt><dt>gcc.dg/pch/save-temps-1.c  -O3 -g  assembly comparison
-</dt><dd>Needs investigation.
-</dd><dt>gcc.dg/torture/pr51106-2.c  -O0  (internal compiler error)
-</dt><dt>gcc.dg/torture/pr51106-2.c  -O0  (test for excess errors)
-</dt><dt>gcc.dg/torture/pr51106-2.c  -O1  (internal compiler error)
-</dt><dt>gcc.dg/torture/pr51106-2.c  -O1  (test for excess errors)
-</dt><dt>gcc.dg/torture/pr51106-2.c  -O2  (internal compiler error)
-</dt><dt>gcc.dg/torture/pr51106-2.c  -O2  (test for excess errors)
-</dt><dt>gcc.dg/torture/pr51106-2.c  -O3 -fomit-frame-pointer  (internal compiler error)
-</dt><dt>gcc.dg/torture/pr51106-2.c  -O3 -fomit-frame-pointer  (test for excess errors)
-</dt><dt>gcc.dg/torture/pr51106-2.c  -O3 -g  (internal compiler error)
-</dt><dt>gcc.dg/torture/pr51106-2.c  -O3 -g  (test for excess errors)
-</dt><dt>gcc.dg/torture/pr51106-2.c  -Os  (internal compiler error)
-</dt><dt>gcc.dg/torture/pr51106-2.c  -Os  (test for excess errors)
-</dt><dt>gcc.dg/torture/pr51106-2.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error)
-</dt><dt>gcc.dg/torture/pr51106-2.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-</dt><dd>Fails in upstream as well.
-</dd><dt>gcc.dg/tree-prof/ic-misattribution-1.c compilation,  -fprofile-use -D_PROFILE_USE
-</dt><dd>Needs investigation.
-</dd></dl>
-<h4> <span class="mw-headline" id="XPASS_tests_2"> XPASS tests </span></h4>
-<dl><dt>gcc.dg/Wstrict-overflow-18.c  (test for bogus messages, line 20)
-</dt><dd>Needs investigation.
-</dd><dt>gcc.dg/tree-ssa/20040204-1.c scan-tree-dump-times optimized "link_error" 0
-</dt><dd>Needs investigation.
-</dd></dl>
-<h4> <span class="mw-headline" id="UNRESOLVED_tests_2"> UNRESOLVED tests </span></h4>
-<dl><dt>gcc.dg/attr-weakref-1.c compilation failed to produce executable
-</dt><dd>Unresolved in upstream as well.
-</dd><dt>gcc.dg/pr47793.c scan-file .
-</dt><dd>Needs investigation.
-</dd><dt>gcc.dg/strlenopt-2f.c compilation failed to produce executable
-</dt><dd>Needs investigation.
-</dd><dt>gcc.dg/tree-prof/ic-misattribution-1.c execution,    -fprofile-use -D_PROFILE_USE
-</dt><dd>Needs investigation.
-</dd></dl>
-<h3> <span class="mw-headline" id="C.2B.2B_compiler_2"> C++ compiler </span></h3>
-<pre>
+/opt/or1k/bin/or1k-linux-gcc  version 4.8.0 20120611 (experimental) (GCC)</nowiki>
+
+==== FAIL tests ====
+;gcc.dg/attr-weakref-1.c (test for excess errors)
+:Fails in upstream as well. The problem seems to be that a weakref to a weakref isn't emitted in the asm output.
+;gcc.dg/builtin-object-size-10.c scan-tree-dump objsz "maximum object size 21"
+:Needs investigation.
+;gcc.dg/c99-stdint-1.c (test for excess errors)
+:Problem here seems to be that uClibc defines WCHAR_MIN to (-2147483647 - 1) and WCHAR_MAX to (2147483647), but __WCHAR_TYPE__  is defined to be unsigned int
+;gcc.dg/c99-stdint-7.c (test for excess errors)
+:Fails because WCHAR_MIN != __WCHAR_MIN__
+;gcc.dg/lower-subreg-1.c scan-rtl-dump subreg1 "Splitting reg"
+:This has to do with splitting large types into registers.
+:According to the link below, lower subreg has changed upstream.
+:https://blueprints.launchpad.net/gcc-linaro/+spec/investigate-lowersubreg
+:This regression was not present in: GCC: (GNU) 4.8.0 20120303 (experimental), so it seems likely the upstream change is related.
+:Assembly looks correct, but inefficient.
+;gcc.dg/sibcall-3.c execution test
+:Needs investigation.
+;gcc.dg/sibcall-4.c execution test
+:Needs investigation.
+;gcc.dg/stack-usage-1.c (test for excess errors)
+;gcc.dg/stack-usage-1.c scan-file foo\t(256|264)\tstatic
+:Needs investigation.
+;gcc.dg/stack-usage-2.c  (test for bogus messages, line 9)
+;gcc.dg/stack-usage-2.c  (test for warnings, line 16)
+;gcc.dg/stack-usage-2.c  (test for warnings, line 26)
+;gcc.dg/stack-usage-2.c  (test for warnings, line 33)
+:Needs investigation.
+;gcc.dg/strlenopt-2f.c (test for excess errors)
+:Fails with an "undefined reference to `__memcpy_chk'", uClibc doesn't provide __memcpy_chk. Linking with libssp works.
+;gcc.dg/visibility-14.c scan-hidden hidden[ \t_]*foo
+:Needs investigation.
+;gcc.dg/pch/save-temps-1.c  -O0 -g assembly comparison
+;gcc.dg/pch/save-temps-1.c  -O3 -g  assembly comparison
+:Needs investigation.
+;gcc.dg/torture/pr51106-2.c  -O0  (internal compiler error)
+;gcc.dg/torture/pr51106-2.c  -O0  (test for excess errors)
+;gcc.dg/torture/pr51106-2.c  -O1  (internal compiler error)
+;gcc.dg/torture/pr51106-2.c  -O1  (test for excess errors)
+;gcc.dg/torture/pr51106-2.c  -O2  (internal compiler error)
+;gcc.dg/torture/pr51106-2.c  -O2  (test for excess errors)
+;gcc.dg/torture/pr51106-2.c  -O3 -fomit-frame-pointer  (internal compiler error)
+;gcc.dg/torture/pr51106-2.c  -O3 -fomit-frame-pointer  (test for excess errors)
+;gcc.dg/torture/pr51106-2.c  -O3 -g  (internal compiler error)
+;gcc.dg/torture/pr51106-2.c  -O3 -g  (test for excess errors)
+;gcc.dg/torture/pr51106-2.c  -Os  (internal compiler error)
+;gcc.dg/torture/pr51106-2.c  -Os  (test for excess errors)
+;gcc.dg/torture/pr51106-2.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error)
+;gcc.dg/torture/pr51106-2.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
+:Fails in upstream as well.
+;gcc.dg/tree-prof/ic-misattribution-1.c compilation,  -fprofile-use -D_PROFILE_USE
+:Needs investigation.
+
+==== XPASS tests ====
+;gcc.dg/Wstrict-overflow-18.c  (test for bogus messages, line 20)
+:Needs investigation.
+;gcc.dg/tree-ssa/20040204-1.c scan-tree-dump-times optimized "link_error" 0
+:Needs investigation.
+
+==== UNRESOLVED tests ====
+;gcc.dg/attr-weakref-1.c compilation failed to produce executable
+:Unresolved in upstream as well.
+;gcc.dg/pr47793.c scan-file .
+:Needs investigation.
+;gcc.dg/strlenopt-2f.c compilation failed to produce executable
+:Needs investigation.
+;gcc.dg/tree-prof/ic-misattribution-1.c execution,    -fprofile-use -D_PROFILE_USE
+:Needs investigation.
+
+=== C++ compiler ===
+
+ <nowiki>
                 === g++ Summary ===
 
 # of expected passes            46590
@@ -388,124 +187,61 @@ github.com/skristiansson/uClibc-or1k<br />
 # of expected failures          282
 # of unresolved testcases       2
 # of unsupported tests          751
-/opt/or1k/bin/or1k-linux-g++  version 4.8.0 20120611 (experimental) (GCC)
-</pre>
-<h4> <span class="mw-headline" id="FAIL_tests_3"> FAIL tests </span></h4>
-<dl><dt>g++.dg/compat/eh/unexpected1 cp_compat_x_tst.o-cp_compat_y_tst.o execute
-</dt><dd>Needs investigation.
-</dd><dt>g++.dg/cpp0x/lambda/lambda-eh2.C execution test
-</dt><dd>Needs investigation.
-</dd><dt>g++.dg/cpp0x/nullptr21.C output pattern test, is (no output), should match Test 1 OKTest 2 OK
-</dt><dd>Needs investigation.
-</dd><dt>g++.dg/eh/unexpected1.C -std=c++98 execution test
-</dt><dt>g++.dg/eh/unexpected1.C -std=c++11 execution test
-</dt><dd>Needs investigation.
-</dd><dt>g++.dg/opt/pr15551.C -std=gnu++98 execution test
-</dt><dt>g++.dg/opt/pr15551.C -std=gnu++11 execution test
-</dt><dd>Needs investigation.
-</dd><dt>g++.dg/opt/pr36449.C -std=gnu++98 execution test
-</dt><dt>g++.dg/opt/pr36449.C -std=gnu++11 execution test
-</dt><dd>Needs investigation.
-</dd><dt>g++.old-deja/g++.abi/cxa_vec.C -std=gnu++98 execution test
-</dt><dt>g++.old-deja/g++.abi/cxa_vec.C -std=gnu++11 execution test
-</dt><dd>Needs investigation.
-</dd><dt>g++.old-deja/g++.eh/spec2.C -std=c++98 execution test
-</dt><dt>g++.old-deja/g++.eh/spec2.C -std=c++11 execution test
-</dt><dd>Needs investigation.
-</dd><dt>g++.old-deja/g++.eh/spec3.C -std=c++98 execution test
-</dt><dt>g++.old-deja/g++.eh/spec3.C -std=c++11 execution test
-</dt><dd>Needs investigation.
-</dd><dt>g++.old-deja/g++.eh/spec4.C -std=c++98 execution test
-</dt><dt>g++.old-deja/g++.eh/spec4.C -std=c++11 execution test
-</dt><dd>Needs investigation.
-</dd><dt>g++.old-deja/g++.jason/rfg22.C -std=c++98  (test for errors, line 2)
-</dt><dt>g++.old-deja/g++.jason/rfg22.C -std=c++11  (test for errors, line 2)
-</dt><dd>Needs investigation.
-</dd><dt>g++.old-deja/g++.jason/thunk3.C -std=c++98 (test for excess errors)
-</dt><dt>g++.old-deja/g++.jason/thunk3.C -std=c++11 (test for excess errors)
-</dt><dd>Needs investigation.
-</dd><dt>g++.old-deja/g++.law/cvt2.C -std=c++98 execution test
-</dt><dt>g++.old-deja/g++.law/cvt2.C -std=c++11 execution test
-</dt><dd>Needs investigation.
-</dd><dt>g++.old-deja/g++.law/virtual3.C -std=c++98 execution test
-</dt><dt>g++.old-deja/g++.law/virtual3.C -std=c++11 execution test
-</dt><dd>Needs investigation.
-</dd><dt>g++.old-deja/g++.mike/eh33.C -std=gnu++98 execution test
-</dt><dt>g++.old-deja/g++.mike/eh33.C -std=gnu++11 execution test
-</dt><dd>Needs investigation.
-</dd><dt>g++.old-deja/g++.mike/eh50.C -std=gnu++98 execution test
-</dt><dt>g++.old-deja/g++.mike/eh50.C -std=gnu++11 execution test
-</dt><dd>Needs investigation.
-</dd><dt>g++.old-deja/g++.mike/eh51.C -std=gnu++98 execution test
-</dt><dt>g++.old-deja/g++.mike/eh51.C -std=gnu++11 execution test
-</dt><dd>Needs investigation.
-</dd></dl>
-<h4> <span class="mw-headline" id="UNRESOLVED_tests_3"> UNRESOLVED tests </span></h4>
-<dl><dt>g++.old-deja/g++.jason/thunk3.C -std=c++98 compilation failed to produce executable
-</dt><dd>Needs investigation.
-</dd><dt>g++.old-deja/g++.jason/thunk3.C -std=c++11 compilation failed to produce executable
-</dt><dd>Needs investigation.
-</dd></dl>
+/opt/or1k/bin/or1k-linux-g++  version 4.8.0 20120611 (experimental) (GCC)</nowiki>
 
-<!-- 
-NewPP limit report
-Preprocessor node count: 128/1000000
-Post-expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Expensive parser function count: 0/100
--->
+==== FAIL tests ====
 
-<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:18-0!*!0!!en!*!edit=0 and timestamp 20161008190055 -->
-<div class="printfooter">
-Retrieved from "<a href="http://opencores.org/or1k/UClibc_tool_chain_test_results">http://opencores.org/or1k/UClibc_tool_chain_test_results</a>"</div>
-            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
-                        <div class="visualClear"></div>
-        </div>
-        
-                
-        <div class="visualClear"><p></p></div>
-        
-        <div id="footer">
-            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 1 November 2012, at 05:22.<li id="lastmod"></li>This page has been accessed 7,233 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
-<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "UClibc_tool_chain_test_results", "wgTitle": "UClibc tool chain test results", "wgAction": "view", "wgArticleId": 18, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 865, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
-	mediaWiki.loader.go();
-}
-</script>
+;g++.dg/compat/eh/unexpected1 cp_compat_x_tst.o-cp_compat_y_tst.o execute
+:Needs investigation.
+;g++.dg/cpp0x/lambda/lambda-eh2.C execution test
+:Needs investigation.
+;g++.dg/cpp0x/nullptr21.C output pattern test, is (no output), should match Test 1 OKTest 2 OK
+:Needs investigation.
+;g++.dg/eh/unexpected1.C -std=c++98 execution test
+;g++.dg/eh/unexpected1.C -std=c++11 execution test
+:Needs investigation.
+;g++.dg/opt/pr15551.C -std=gnu++98 execution test
+;g++.dg/opt/pr15551.C -std=gnu++11 execution test
+:Needs investigation.
+;g++.dg/opt/pr36449.C -std=gnu++98 execution test
+;g++.dg/opt/pr36449.C -std=gnu++11 execution test
+:Needs investigation.
+;g++.old-deja/g++.abi/cxa_vec.C -std=gnu++98 execution test
+;g++.old-deja/g++.abi/cxa_vec.C -std=gnu++11 execution test
+:Needs investigation.
+;g++.old-deja/g++.eh/spec2.C -std=c++98 execution test
+;g++.old-deja/g++.eh/spec2.C -std=c++11 execution test
+:Needs investigation.
+;g++.old-deja/g++.eh/spec3.C -std=c++98 execution test
+;g++.old-deja/g++.eh/spec3.C -std=c++11 execution test
+:Needs investigation.
+;g++.old-deja/g++.eh/spec4.C -std=c++98 execution test
+;g++.old-deja/g++.eh/spec4.C -std=c++11 execution test
+:Needs investigation.
+;g++.old-deja/g++.jason/rfg22.C -std=c++98  (test for errors, line 2)
+;g++.old-deja/g++.jason/rfg22.C -std=c++11  (test for errors, line 2)
+:Needs investigation.
+;g++.old-deja/g++.jason/thunk3.C -std=c++98 (test for excess errors)
+;g++.old-deja/g++.jason/thunk3.C -std=c++11 (test for excess errors)
+:Needs investigation.
+;g++.old-deja/g++.law/cvt2.C -std=c++98 execution test
+;g++.old-deja/g++.law/cvt2.C -std=c++11 execution test
+:Needs investigation.
+;g++.old-deja/g++.law/virtual3.C -std=c++98 execution test
+;g++.old-deja/g++.law/virtual3.C -std=c++11 execution test
+:Needs investigation.
+;g++.old-deja/g++.mike/eh33.C -std=gnu++98 execution test
+;g++.old-deja/g++.mike/eh33.C -std=gnu++11 execution test
+:Needs investigation.
+;g++.old-deja/g++.mike/eh50.C -std=gnu++98 execution test
+;g++.old-deja/g++.mike/eh50.C -std=gnu++11 execution test
+:Needs investigation.
+;g++.old-deja/g++.mike/eh51.C -std=gnu++98 execution test
+;g++.old-deja/g++.mike/eh51.C -std=gnu++11 execution test
+:Needs investigation.
 
-<script>if ( window.mediaWiki ) {
-	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
-	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
-}
-</script><!-- Served in 1.581 secs. -->            
-        </div>
-        
-        
-        </div>
-	<div style="clear:both;margin-left:200px;">
-            <!-- 728x90 -->
-            <script type="text/javascript">
-            GA_googleFillSlot("728x90");
-            </script>
-	</div>
-    </div>
-    <div class="bot">
-	&copy; copyright 1999-2016
-OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
-    </div>
-</div>
-
-<!-- Google search -->
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-<!-- /Google search -->
-
-</body>
-</html>
+==== UNRESOLVED tests ====
+;g++.old-deja/g++.jason/thunk3.C -std=c++98 compilation failed to produce executable
+:Needs investigation.
+;g++.old-deja/g++.jason/thunk3.C -std=c++11 compilation failed to produce executable
+:Needs investigation.

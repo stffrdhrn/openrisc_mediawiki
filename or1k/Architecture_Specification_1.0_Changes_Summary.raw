@@ -1,332 +1,78 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-<head>
-            
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="generator" content="MediaWiki 1.17.0" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="search" type="application/opensearchdescription+xml" href="/wiki1/opensearch_desc.php" title="OR1K (en)" />
-<link rel="EditURI" type="application/rsd+xml" href="http://opencores.org/wiki1/api.php?action=rsd" />
-<link rel="alternate" type="application/atom+xml" title="OR1K Atom feed" href="/wiki1/index.php?title=Special:RecentChanges&amp;feed=atom" />        <link rel="stylesheet" href="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared&amp;only=styles&amp;skin=OpenCores&amp;*" />
-<link rel="stylesheet" href="/wiki1/skins/monobook/main.css?301" media="screen" />
-<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE50Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1/skins/monobook/IE55Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="/wiki1/skins/monobook/IE60Fixes.css?301" media="screen" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="/wiki1/skins/monobook/IE70Fixes.css?301" media="screen" /><![endif]-->
-<link rel="stylesheet" href="/wiki1/skins/OpenCores.css?301" media="screen" /><meta name="ResourceLoaderDynamicStyles" content="" />        
-        <!--[if lt IE 7]>
-        <script type="text/javascript" src="/wiki1/skins/common/IEFixes.js?301"></script>
-		<meta http-equiv="imagetoolbar" content="no" />
-        <![endif]-->
-        
-        <script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Architecture_Specification_1.0_Changes_Summary", "wgTitle": "Architecture Specification 1.0 Changes Summary", "wgAction": "view", "wgArticleId": 77, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 918, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>        
-        <script type="text/javascript" src="/wiki1/skins/common/wikibits.js?301"><!-- wikibits js --></script>
-		
-        <!-- Head Scripts -->
-                
-        		<script type="text/javascript" src="/wiki1/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=OpenCores"><!-- site js --></script>
-                
-                
-		        
-		        
-		        
-            <title>Architecture Specification 1.0 Changes Summary - OR1K :: OpenCores</title>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/compiled.css" />
-    <link rel="icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="http://cdn.opencores.org/img/favicon.png" />
-    <link type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold" rel="stylesheet" />
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
-        <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/jquery-1.6.2.min.js"></script>
-    <script defer="defer" type="text/javascript" src="http://cdn.opencores.org/compiled.js"></script>
-    <script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
-    <script type="text/javascript">
-    GS_googleAddAdSenseService("ca-pub-0097483751598630");
-    GS_googleEnableAllServices();
-    </script>
-    <script type="text/javascript">
-    GA_googleAddSlot("ca-pub-0097483751598630", "125x125");
-    GA_googleAddSlot("ca-pub-0097483751598630", "240x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "300x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "468x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "720x60");
-    GA_googleAddSlot("ca-pub-0097483751598630", "728x90");
-    </script>
-    <script type="text/javascript">
-    GA_googleFetchAds();
-    </script>
-    <!--[if IE 6]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie6.css" />
-    <![endif]-->
-    <!--[if (IE 7)|(IE 8)]>
-    <link rel="stylesheet" type="text/css" href="http://cdn.opencores.org/ie78.css" />
-    <![endif]-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <script type="text/javascript">
-        
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-2763846-2']);
-        _gaq.push(['_trackPageview']);
-        
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        
-    </script>
-    
-</head>
-<body>
-<div class="main">
-    <div class="top">
-        <a href="/"><img src="http://cdn.opencores.org/design/OpenCores.png" alt="OpenCores" width="235" height="80" /></a>
-    </div>
-    <div class="line">
-	<div></div>
-	<img src="http://cdn.opencores.org/design/corner.png" alt="" width="28" height="28" />
-    </div>
-    <div class="mid" id="dm">
-        <div class="mainmenu" id="dml">
-	            
-        <div class="menu menu-login">
-                Username:                                <form action="../login" method="post">
-                    <input class="design" name="user" type="text" />
-                    <br />
-                    Password:
-                    <br />
-                    <input class="design" name="pass" type="password" />
-                    <br />
-                    <input class="design" name="remember" type="checkbox" />Remember me
-                    <br />
-                    <input type="hidden" name="redirect" value="or1k/" />
-                    <input class="design" title="Login" type="submit" value="Login" />
-                </form>
-                <form action="../register" method="post">
-                    <input class="design" title="Register" type="submit" value="Register" />
-                </form>
-                        </div>
-        
-                
-        
-        <div class="menu" id="p-navigation">
-            <h2>Navigation</h2>
-		<ul><li id="n-mainpage-description" class=""><a href="/or1k/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-portal" class=""><a href="/or1k/OR1K:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-currentevents" class=""><a href="/or1k/OR1K:Current_events" title="Find background information on current events">Current events</a></li><li id="n-recentchanges" class=""><a href="/or1k/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage" class=""><a href="/or1k/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help" class=""><a href="/or1k/Help:Contents" title="The place to find out">Help</a></li></ul>        </div>
-        
-                
-        <div class="menu">
-            <h2><label for="searchInput">Search</label></h2>
-                <form action="/wiki1/index.php" id="searchform">
-                    <div>
-                        <input type='hidden' name="title" value="Special:Search"/>
-                        <input id="searchInput" name="search" type="text" title="Search OR1K [f]" accesskey="f" value="" />
-                        
-                        <input type="submit" name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if exists" />
-                        
-                                                <input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text" />
-                                                
-                    </div>
-                </form>
-        </div>
-        
-                
-        <div class="menu menu-tools">
-            <h2>Toolbox</h2>
-                <ul>
-                    <li id="t-whatlinkshere"><a href="/or1k/Special:WhatLinksHere/Architecture_Specification_1.0_Changes_Summary" title="List of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/or1k/Special:RecentChangesLinked/Architecture_Specification_1.0_Changes_Summary" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/or1k/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/wiki1/index.php?title=Architecture_Specification_1.0_Changes_Summary&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/wiki1/index.php?title=Architecture_Specification_1.0_Changes_Summary&amp;oldid=918" title="Permanent link to this revision of the page">Permanent link</a></li>                </ul>
-        </div>
-        
-        
-        </div>
-        <div class="content" id="dmc">
-	    
-<div class="banner" style="padding: 6px 0px; width: 1020px; overflow: visible;">
-    
-    <div style="float: left; width: 720px; height: 60px;">
-        <!-- 720x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("720x60");
-        </script>
-    </div>
-        <div style="float: left; width: 300px; height: 60px;">
-        <!-- 300x60 -->
-        <script type='text/javascript'>
-        GA_googleFillSlot("300x60");
-        </script>
-    </div>
-    
-</div>
-	                        
-        <a name="top" id="top"></a>
-        
-                
-        <div id="oc-actions">
-            <p id="ca-nstab-main" class="selected"><a href="/or1k/Architecture_Specification_1.0_Changes_Summary" title="View the content page [c]" accesskey="c">Page</a></p><p id="ca-talk" class="new"><a href="/wiki1/index.php?title=Talk:Architecture_Specification_1.0_Changes_Summary&amp;action=edit&amp;redlink=1" title="Discussion about the content page [t]" accesskey="t">Discussion</a></p><p id="ca-viewsource" class=""><a href="/wiki1/index.php?title=Architecture_Specification_1.0_Changes_Summary&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></p><p id="ca-history" class=""><a href="/wiki1/index.php?title=Architecture_Specification_1.0_Changes_Summary&amp;action=history" title="Past revisions of this page [h]" accesskey="h">History</a></p>        </div>
-        
-        <h1 id="firstHeading" class="firstHeading">
-            Architecture Specification 1.0 Changes Summary        </h1>
-        
-        <div id="bodyContent">
-            <h3 id="siteSub">From OR1K</h3>
-            <div id="contentSub"></div>
-                                    <div id="jump-to-nav">Jump to:<a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>            <!-- start content -->
-            <p>This page outlines the changes made for OR1K 1.0. It does not give the full details of all the changes at present. Please refer to <a href="http://opencores.org/websvn,filedetails?repname=openrisc&amp;path=%2Fopenrisc%2Ftrunk%2Fdocs%2Fopenrisc-arch-1.0-rev0.pdf" class="external text" rel="nofollow">the architecture manual document</a> (table 1-2) for full details.
-</p>
-<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Summary"><span class="tocnumber">1</span> <span class="toctext">Summary</span></a>
-<ul>
-<li class="toclevel-2 tocsection-2"><a href="#New_SPRs"><span class="tocnumber">1.1</span> <span class="toctext">New SPRs</span></a></li>
-<li class="toclevel-2 tocsection-3"><a href="#Modified_SPRs"><span class="tocnumber">1.2</span> <span class="toctext">Modified SPRs</span></a></li>
-<li class="toclevel-2 tocsection-4"><a href="#VR"><span class="tocnumber">1.3</span> <span class="toctext">VR</span></a></li>
-<li class="toclevel-2 tocsection-5"><a href="#VR2"><span class="tocnumber">1.4</span> <span class="toctext">VR2</span></a></li>
-<li class="toclevel-2 tocsection-6"><a href="#CPUCFGR_bits"><span class="tocnumber">1.5</span> <span class="toctext">CPUCFGR bits</span></a></li>
-<li class="toclevel-2 tocsection-7"><a href="#AECR.2C_AESR"><span class="tocnumber">1.6</span> <span class="toctext">AECR, AESR</span></a></li>
-<li class="toclevel-2 tocsection-8"><a href="#ISRs"><span class="tocnumber">1.7</span> <span class="toctext">ISRs</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-9"><a href="#Updates_to_implementations"><span class="tocnumber">2</span> <span class="toctext">Updates to implementations</span></a>
-<ul>
-<li class="toclevel-2 tocsection-10"><a href="#SPRs"><span class="tocnumber">2.1</span> <span class="toctext">SPRs</span></a></li>
-<li class="toclevel-2 tocsection-11"><a href="#Arithmetic_operations"><span class="tocnumber">2.2</span> <span class="toctext">Arithmetic operations</span></a></li>
-<li class="toclevel-2 tocsection-12"><a href="#Other_new_features"><span class="tocnumber">2.3</span> <span class="toctext">Other new features</span></a></li>
-</ul>
-</li>
-</ul>
-</td></tr></table>
-<h1> <span class="mw-headline" id="Summary"> Summary </span></h1>
-<h2> <span class="mw-headline" id="New_SPRs"> New SPRs </span></h2>
-<ul><li> VR2 (Version register 2), group 0, number 9
-</li><li> AVR (Architecture Version register), group 0, number 10
-</li><li> EVBAR (Exception Vector Base Address register) (optional), group 0, number 11
-</li><li> AECR (Arithmetic Exception Control register) (optional), group 0, number 12
-</li><li> AESR (Arithmetic Exception Status register) (optional), group 0, number 13
-</li><li> ISR0-ISR7 (Implementation-specific registers) (optional) group 0, numbers 21-28
-</li></ul>
-<h2> <span class="mw-headline" id="Modified_SPRs"> Modified SPRs </span></h2>
-<ul><li> VR (Version Register) - bit 6 now indicates the presence of the VR2
-</li><li> CPUCFGR - several bits added indicating
-<ul><li> bit 10, ND, whether CPU implements delay slot
-</li><li> bit 11, AVRP, AVR present
-</li><li> bit 12, EVBARP, EVBAR present
-</li><li> bit 13, ISRP, ISRs present
-</li><li> bit 14, AECSRP, AECR &amp; AESR present
-</li></ul>
-</li></ul>
-<h2> <span class="mw-headline" id="VR"> VR </span></h2>
-<p>The VR is deprecated in OR1K 1.0, software can check for the new version register, (VR2) by checking if bit 6 of VR is set. Bit 6 (previously reserved) of the VR is now defined as the <tt>Updated Version Register Present</tt> bit. This indicates the presence of the VR2 register.
-</p>
-<h2> <span class="mw-headline" id="VR2"> VR2 </span></h2>
-<p>The VR2 now holds 2 fields.
-</p>
-<ul><li> 8-bit CPU identifier - these are unique identifiers and there is one per CPU implementation as per <a href="/or1k/OR1K_CPU_Cores#CPU_ID_Table" title="OR1K CPU Cores">this table</a>
-</li><li> 24-bit CPU implementation version number (meaning is implementation-specific but version number overall should increment with newer versions)
-</li></ul>
-<h2> <span class="mw-headline" id="CPUCFGR_bits"> CPUCFGR bits </span></h2>
-<p>There have been additional bits added to the CPUCFGR SPR indicating features and presence of optional architectural features.
-</p>
-<h2> <span class="mw-headline" id="AECR.2C_AESR"> AECR, AESR </span></h2>
-<p>These registers make it possible to configure and determine which arithmetic exceptions trigger the range exception.
-</p><p>The addition of these registers, in combination with clarifying the signed and unsigned overflow conditions setting the carry and overflow flags for the add/subtract and multiplication instructions, now make OR1K's arithmetic exception handling clearer and more configurable.
-</p>
-<h2> <span class="mw-headline" id="ISRs"> ISRs </span></h2>
-<p>The implementation-specific registers allow CPU implementations to embed up to 256-bits of information. This space can be used for any purpose, but it's intended to be used to store things such as
-</p>
-<ul><li> implementation-level configuration information (ie, synthesis-time configuration settings)
-</li><li> local build version/date information
-</li><li> debug features 
-</li></ul>
-<h1> <span class="mw-headline" id="Updates_to_implementations"> Updates to implementations </span></h1>
-<p>It's suggested the following is done to bring implementations into line with OR1k 1.0:
-</p>
-<h2> <span class="mw-headline" id="SPRs"> SPRs </span></h2>
-<ul><li> Add new VR2, indicating the CPU implementation, and its version
-<ul><li> Also requires adding the UVRP bit in VR (set VR[6])
-</li></ul>
-</li><li> Add new AVR, indicating the architectural version
-<ul><li> Also requires adding the ARVP bit in CPUCFGR
-</li></ul>
-</li><li> If implementation does not implementation delay-slots on branches/jumps, set the CPUCFGR[ND] bit
-</li><li> Unimplemented SPR space (SPR addresses for which there are no registers) should read as zero and writing should have no effect
-</li></ul>
-<h2> <span class="mw-headline" id="Arithmetic_operations"> Arithmetic operations </span></h2>
-<p>Carry and overflow handling should now behave like so:
-</p>
-<ul><li> for all integer addition, subtraction and multiplication instructions, SR[CY] (the carry bit) should only be set on <b>unsigned</b> overflow, and SR[OV] should only be set for <b>signed</b> overflow
-</li><li> integer divide by zero has the following behaviour:
-<ul><li> on l.div sets SR[OV]
-</li><li> on l.divu sets SR[CY]
-</li></ul>
-</li><li> If the implementation supports the MAC instructions
-<ul><li> add similar overflow/carry setting logic for the addition stage
-</li></ul>
-</li></ul>
-<h2> <span class="mw-headline" id="Other_new_features"> Other new features </span></h2>
-<p>These are all optional.
-</p>
-<!-- 
-NewPP limit report
-Preprocessor node count: 47/1000000
-Post-expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Expensive parser function count: 0/100
--->
+This page outlines the changes made for OR1K 1.0. It does not give the full details of all the changes at present. Please refer to [http://opencores.org/websvn,filedetails?repname=openrisc&path=%2Fopenrisc%2Ftrunk%2Fdocs%2Fopenrisc-arch-1.0-rev0.pdf the architecture manual document] (table 1-2) for full details.
 
-<!-- Saved in parser cache with key opencores_or1k:pcache:idhash:77-0!*!0!!en!*!edit=0 and timestamp 20161009111713 -->
-<div class="printfooter">
-Retrieved from "<a href="http://opencores.org/or1k/Architecture_Specification_1.0_Changes_Summary">http://opencores.org/or1k/Architecture_Specification_1.0_Changes_Summary</a>"</div>
-            <div id='catlinks' class='catlinks catlinks-allhidden'></div>            <!-- end content -->
-                        <div class="visualClear"></div>
-        </div>
-        
-                
-        <div class="visualClear"><p></p></div>
-        
-        <div id="footer">
-            <a href="http://www.mediawiki.org/"><img src="/wiki1/skins/common/images/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki" /></a><div id="f-poweredbyico"></div><ul id="f-list"> This page was last modified on 16 December 2012, at 16:55.<li id="lastmod"></li>This page has been accessed 2,262 times.<li id="viewcount"></li><a href="/or1k/OR1K:Privacy_policy" title="OR1K:Privacy policy">Privacy policy</a><li id="privacy"></li><a href="/or1k/OR1K:About" title="OR1K:About">About OR1K</a><li id="about"></li><a href="/or1k/OR1K:General_disclaimer" title="OR1K:General disclaimer">Disclaimers</a><li id="disclaimer"></li></ul>
-<script src="/wiki1/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=OpenCores&amp;*"></script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Architecture_Specification_1.0_Changes_Summary", "wgTitle": "Architecture Specification 1.0 Changes Summary", "wgAction": "view", "wgArticleId": 77, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 918, "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
-}
-</script>
-<script>if ( window.mediaWiki ) {
-	mediaWiki.loader.load(["mediawiki.util", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
-	mediaWiki.loader.go();
-}
-</script>
+= Summary =
 
-<script>if ( window.mediaWiki ) {
-	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"opencores","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
-	"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mediaWiki.loader.state({"user.options":"ready"});
-}
-</script><!-- Served in 1.272 secs. -->            
-        </div>
-        
-        
-        </div>
-	<div style="clear:both;margin-left:200px;">
-            <!-- 728x90 -->
-            <script type="text/javascript">
-            GA_googleFillSlot("728x90");
-            </script>
-	</div>
-    </div>
-    <div class="bot">
-	&copy; copyright 1999-2016
-OpenCores.org, equivalent to ORSoC AB, all rights reserved. OpenCores&reg;, registered trademark.
-    </div>
-</div>
+== New SPRs ==
 
-<!-- Google search -->
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&amp;t13n_langs=en"></script>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
-<!-- /Google search -->
+* VR2 (Version register 2), group 0, number 9
+* AVR (Architecture Version register), group 0, number 10
+* EVBAR (Exception Vector Base Address register) (optional), group 0, number 11
+* AECR (Arithmetic Exception Control register) (optional), group 0, number 12
+* AESR (Arithmetic Exception Status register) (optional), group 0, number 13
+* ISR0-ISR7 (Implementation-specific registers) (optional) group 0, numbers 21-28
 
-</body>
-</html>
+== Modified SPRs ==
+
+* VR (Version Register) - bit 6 now indicates the presence of the VR2
+* CPUCFGR - several bits added indicating
+** bit 10, ND, whether CPU implements delay slot
+** bit 11, AVRP, AVR present
+** bit 12, EVBARP, EVBAR present
+** bit 13, ISRP, ISRs present
+** bit 14, AECSRP, AECR & AESR present
+
+== VR ==
+
+The VR is deprecated in OR1K 1.0, software can check for the new version register, (VR2) by checking if bit 6 of VR is set. Bit 6 (previously reserved) of the VR is now defined as the <tt>Updated Version Register Present</tt> bit. This indicates the presence of the VR2 register.
+
+== VR2 ==
+
+The VR2 now holds 2 fields.
+
+* 8-bit CPU identifier - these are unique identifiers and there is one per CPU implementation as per [[OR1K_CPU_Cores#CPU_ID_Table|this table]]
+* 24-bit CPU implementation version number (meaning is implementation-specific but version number overall should increment with newer versions)
+
+== CPUCFGR bits ==
+
+There have been additional bits added to the CPUCFGR SPR indicating features and presence of optional architectural features.
+
+== AECR, AESR ==
+
+These registers make it possible to configure and determine which arithmetic exceptions trigger the range exception.
+
+The addition of these registers, in combination with clarifying the signed and unsigned overflow conditions setting the carry and overflow flags for the add/subtract and multiplication instructions, now make OR1K's arithmetic exception handling clearer and more configurable.
+
+== ISRs ==
+
+The implementation-specific registers allow CPU implementations to embed up to 256-bits of information. This space can be used for any purpose, but it's intended to be used to store things such as
+* implementation-level configuration information (ie, synthesis-time configuration settings)
+* local build version/date information
+* debug features 
+
+= Updates to implementations =
+
+It's suggested the following is done to bring implementations into line with OR1k 1.0:
+
+== SPRs ==
+
+* Add new VR2, indicating the CPU implementation, and its version
+** Also requires adding the UVRP bit in VR (set VR[6])
+* Add new AVR, indicating the architectural version
+** Also requires adding the ARVP bit in CPUCFGR
+* If implementation does not implementation delay-slots on branches/jumps, set the CPUCFGR[ND] bit
+* Unimplemented SPR space (SPR addresses for which there are no registers) should read as zero and writing should have no effect
+
+== Arithmetic operations ==
+
+Carry and overflow handling should now behave like so:
+
+* for all integer addition, subtraction and multiplication instructions, SR[CY] (the carry bit) should only be set on '''unsigned''' overflow, and SR[OV] should only be set for '''signed''' overflow
+* integer divide by zero has the following behaviour:
+** on l.div sets SR[OV]
+** on l.divu sets SR[CY]
+* If the implementation supports the MAC instructions
+** add similar overflow/carry setting logic for the addition stage
+
+== Other new features ==
+
+These are all optional.
