@@ -1,3 +1,11 @@
+# Obsolete
+This project is my backup attempt, but there actually is a better backup stored
+in the [openrisc/community-wiki](https://github.com/openrisc/community-wiki) project.
+
+I will be updating there and my fork of that from now on until the wiki dies.
+
+---
+
 # opencores wiki backup
 
 This is a backup of the old media wiki found on opencores. 
